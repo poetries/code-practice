@@ -1,9 +1,13 @@
 <!DOCTYPE html>
+<!--suppress ALL -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>guess-alphabet-game-case</title>
+    <script src="js/modernizr-1.6.min.js"></script>
+
 </head>
+
 <body>
     <div style="position:absolute;top:50px;left:50px;">
         <canvas widht="500" height="300" id="canvasOne">
@@ -23,7 +27,7 @@
             return;
         }
     }
-    function eventWindowLoader() {
+    function eventWindowLoaded() {
         canvasApp();
     }
     function canvasSupport() {
@@ -43,11 +47,11 @@
     var lettersGuessed;
     var gameOver = false;
 
-    if (!canvasSupport()){
-        return;
-    }
+    //    if (!canvasSupport()){
+    //        return;
+    //    }
     var theCanvas = document.getElementById("canvasOne");
-    var context = theCanvas.getContent("2d");
+    var context = theCanvas.getContext("2d");
     initGame();
 
     function initGame() {
@@ -56,7 +60,7 @@
         guesses = 0;
         lettersGuessed = [];
         gameOver = false;
-        window.addEventListener("keyup",eventKeyPress,true);
+        window.addEventListener("keyup",eventKeyPressed,true);
         var formElement = document.getElementById("createImageData");
         formElement.addEventListener("click",createImageDataPressed,false);
         drawScreen();
@@ -94,7 +98,7 @@
         //边框
         context.strokeStyle = "#000";
         context.strokeRect(5,5,490,490);
-        context.textBaseline("top");
+        context.textBaseline="top";
 
         //日期
         context.fillStyle = "#000";
@@ -127,15 +131,10 @@
         }
     }
     function createImageDataPressed(e) {
-        window.open(theCanvas.toDataURL(),"canvasImage",left=0,top=0,width=" + theCanvas.width+",height="+theCanvas.height+",toolbar=0,resizable=0");
+        window.open(theCanvas.toDataURL(),"canvasImage","left=0,top=0,width=" + theCanvas.width+",height=" +theCanvas.height+",toolbar=0,resizable=0");
     }
 
-
-
-
-
-
-
-
 </script>
+
+
 </html>
