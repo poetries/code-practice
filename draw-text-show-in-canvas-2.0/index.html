@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>draw-text-show-in-canvas</title>
+	<script src="../guess-alphabet-game-case/js/modernizr-1.6.min.js"></script>
+</head>
+<body>
+	<div style="position:absolute;top:50px;left:50px;">
+	<canvas width="500" height="300" id="canvasOne">Your Browser does not support Canvas</canvas>
+	<form action="">
+		Text: <input id="textBox" placeholder="your text">
+		<br>
+		Text Font:
+		<select name="" id="textFont">
+			<option value="serif">serif</option>
+			<option value="sans-serif">sans-serif</option>
+			<option value="cursive">cursive</option>
+			<option value="fantasy">fantasy</option>
+			<option value="monospace">monospace</option>
+		</select>
+		<br>
+		Font Weight:
+		<select name="" id="fontWeight">
+			<option value="normal">normal</option>
+			<option value="bold">bold</option>
+			<option value="bolder">bolder</option>
+			<option value="lighter">lighter</option>
+		</select>
+		<br>
+		Font Style:
+		<select name="" id="fontStyle">
+			<option value="normal">normal</option>
+			<option value="italic">italic</option>
+			<option value="oblique">oblique</option>
+		</select>
+		<br>
+		Text Size:
+		<input type="range" id="textSize" min="0" max="200" step="1" value="50">
+		<br>
+		Fill Type:
+		<select name="" id="fillType">
+			<option value="colorFill">Color Fill</option>
+			<option value="LinearGradient">Linear Gradient</option>
+			<option value="radialGradient">radial Gradient</option>
+		</select>
+		<br>
+		Text Color:
+		<input class="color" id="textFillColor" value="FF0000">
+		<br>
+		Text Color2:
+		<input class="color" id="textFillColor2" value="000000">
+		<br>
+		Fill Or Stroke:
+		<select name="" id="fillOrStroke">
+			<option value="fill">fill</option>
+			<option value="stroke">stroke</option>
+			<option value="both">both</option>
+		</select>
+		<br>
+		Text Baseline
+		<select name="" id="textBaseline">
+			<option value="middle">middle</option>
+			<option value="top">top</option>
+			<option value="hanging">hanging</option>
+			<option value="alphabetic">alphabetic</option>
+			<option value="ideographic">ideographic</option>
+			<option value="bottom">bottom</option>
+		</select>
+		<br>
+		Text Align
+		<select name="" id="textAlign">
+			<option value="center">center</option>
+			<option value="start">start</option>
+			<option value="end">end</option>
+			<option value="left">left</option>
+			<option value="right">right</option>
+		</select>
+		<br>
+		Alpha: <input type="range" id="textAlpha" min="0.0" max="1.0" step="0.01" value="1.0">
+		<br>
+		Shadow X: <input type="range" id="shadowX" min="-100" max="100" step="1" value="1">
+		<br>
+		Shadow Y: <input type="range" id="shadowY" min="-100" max="100" step="1" value="1">
+		<br>
+		Shadow Blur: <input type="range" id="shadowBlur">
+		<br>
+		Shadow Color:  <input class="color" id="shadowColor" value="707070">
+		<br>
+		Canvas Width: <input type="range" id="canvasWidth" min="0" max="1000" step="1" value="500">
+		<br>
+		Canvas Height: <input type="range" id="canvasHeight" min="0" max="1000" step="1" value="300">
+		<br>
+		Canvas Style Width: <input type="range" id="canvasStyleWidth" min="0" max="1000" step="1" value="500">
+		<br>
+		Canvas Style Height: <input type="range" id="canvasStyleHeight" min="0" max="1000" step="1" value="500">
+		<br>
+		<input type="button" id="createImageData" value="Create Image Data">
+		<br>
+		<textarea name="" id="imageDataDisplay" cols="30" rows="10"></textarea>
+	</form>
+ </div>
+</body>
+<script src="js/index.js"></script>
+</html>
