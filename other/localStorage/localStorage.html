@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>localStorage</title>
+	</head>
+	<body>
+		
+	</body>
+	<script>
+		localStorage.setItem("poetries","yongxuan");
+	
+		var p = localStorage.getItem("poetries");
+//		alert(p);
+		
+		localStorage.setItem("price",129);
+		var price = parseInt(localStorage.getItem("price"));//localStorage只能存储串 这里129会转成字符串 
+		var num = price+1;
+//		alert(num);
+		
+		for(var i=0;i < localStorage.length; i++){
+			var key = localStorage.key(i);//key给出localStorage各项的建
+			var value = localStorage[key];//获取值
+			alert(value);
+		}
+	</script>
+</html>

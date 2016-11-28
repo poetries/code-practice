@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>localStorage应用</title>
+		<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" />
+		<style>
+			ul {
+				width: 800px;
+				height: 600px;
+				border: 1px solid red;
+			}
+			ul li {
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="row">
+			
+				<form action="" role="form" >
+					<div class="col-md-6 ">
+				<input type="input" name="" id="text"  class="form-control" placeholder="请输入内容..." /></div>
+				<div class="col-md-3 pull-right">
+					<input type="button"  id="button" class="btn btn-danger form-control" value="增加一条新便签"/>
+				</div>
+				<div class="col-md-3 pull-right">
+					<input type="button"  id="clearStorage" class="btn btn-success form-control" value="清空localStorage"/>
+				</div>
+				
+				</div>
+
+		</form>
+			
+		</div>
+		<ul id="stickies"></ul>
+		
+	</body>
+	<script>
+		window.onload = init;
+		
+		function init(){
+			
+			document.getElementById("button").addEventListener("click",createSticky,false);
+			document.getElementById("clearStorage").onclick = clearStorage;
+			
+			for(var i = 0; i < localStorage.length; i++){//迭代本地存储中所有数据项
+				var key = localStorage.key(i);
+				if(key.substring(0,6) == "sticky"){//检测数据项以sticky开头的
+					var value = localStorage.getItem(key);
+					addStickyToDOM(value);
+				}
+			}
+			
+		}
+		
+		function createSticky(){
+				var value = document.getElementById("text").value;
+				var key = "sticky_"+localStorage.length;
+				localStorage.setItem(key,value);
+				addStickyToDOM(value);
+			}
+		
+		function addStickyToDOM(value){
+			var stickies = document.getElementById("stickies");
+			var sticky = document.createElement("li");
+			var span = document.createElement("span");
+			span.innerHTML = value;
+			sticky.appendChild(span);
+			stickies.appendChild(sticky);
+		}
+		function clearStorage(){
+			localStorage.clear();
+		}
+	</script>
+</html>
