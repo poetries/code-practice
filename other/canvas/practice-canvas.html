@@ -10,7 +10,7 @@
 		</style>
 	</head>
 	<body>
-		<canvas id="oCanvas" width="600" height="200">
+		<canvas id="oCanvas" width="1000" height="450">
 			请升级你的浏览器
 		</canvas>
 		<form action="">
@@ -19,15 +19,17 @@
 				<select name="" id="backgroundColor">
 					<option value="white">white</option>
 					<option value="black">black</option>
+					<option value="blue">blue</option>
+					<option value="green" selected="selected">green</option>
 				</select>
 			</p>
 			
 			<p>
 				<label for="shape">Circles Or squares</label>
 				<select name="" id="shape">
-					<option value="none" selected="selected">white</option>
-					<option value="circles">circles</option>
-					<option value="squares">squares</option>
+					<option value="none" >white</option>
+					<option value="circles" selected="selected">circles</option>
+					<option value="squares" >squares</option>
 				</select>
 			</p>
 			
@@ -35,10 +37,10 @@
 				<label for="foregroundColor">请选择文本颜色</label>
 				<select name="" id="foregroundColor">
 					<option value="green" >green</option>
-					<option value="yellow" >yellow</option>
+					<option value="yellow" selected="selected">yellow</option>
 					<option value="black" >black</option>
 					<option value="pink" >pink</option>
-					<option value="blue" selected="selected">blue</option>
+					<option value="blue">blue</option>
 				</select>
 			</p>
 			
@@ -59,10 +61,14 @@
 		};
 		function previewHandler(){
 
+
 			var canvas = document.getElementById("oCanvas");
 			var context = canvas.getContext("2d");
+
+									
 			fillBackgroundColor(canvas,context);
 			drawText(canvas,context);
+			drawPicture(canvas,context);
 			
 			var selectObj = document.getElementById("shape");
 			var index = selectObj.selectedIndex;//selectedIndex 属性可设置或返回下拉列表中被选选项的索引号
@@ -139,5 +145,20 @@
 			context.textAlign = "center";
 			context.strokeText("Canvas is so funny!",280,180);
 		}
+		
+		//在canvas上画图像
+		
+		function drawPicture(canvas,context){
+			var img = new Image();
+			img.src = "img/texture.jpg";
+			
+			img.onload = function(){//确保图像完全加载完毕
+				context.drawImage(img,380,250,300,150);//x y w h
+			}
+		}
+		
+		
+		setInterval(previewHandler,1000);
+		
 	</script>
 </html>
