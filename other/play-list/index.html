@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>play list</title>
+  <style>
+      div {
+        margin: 100px 500px;
+      }
+      #playlist {
+        width: 131px;
+        height: 500px;
+        position: absolute;
+        top: 105px;
+        left: 508px;
+        border: 1px solid red;
+      }
+      li{
+        list-style: none;
+        padding-top: 10px;
+        margin-left: -40px;
+        font-family: "Microsoft Yahei";
+        border-bottom: 1px dotted #ccc;
+        padding-left: 12px;
+
+      }
+      li:hover {
+        background-color: #ddd;
+        color:#f00;
+      }
+      #btn {
+        border-radius: 5px;
+        background-color: #ccc;
+        padding: 3px;
+        outline: none;
+      }
+  </style>
+</head>
+<body>
+<div>
+  <input type="text" id="songText" placeholder="song name">
+  <input type="button" id="btn" value="添加一首歌" >
+</div>
+<ul id="playlist">
+
+</ul>
+
+<script src="playlist_store.js" ></script>
+  <script>
+      var btn = document.getElementById("btn");
+      var textInput = document.getElementById("songText");
+
+
+
+      btn.onclick = function (){
+          var songName = textInput.value;
+          var oLi = document.createElement("li");
+          oLi.innerHTML = songName;
+          document.getElementById("playlist").appendChild(oLi);
+          save(songName);
+      }
+      window.onload = function (){
+        loadPlaylist();
+      }
+
+  </script>
+</body>
+</html>

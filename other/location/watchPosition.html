@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>显示地图上的位置</title>
+	</head>
+	<body>
+		<div id="location"></div>
+		<div id="distance"></div>
+		<div id="map"></div>
+	</body>
+	<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+	<script src="js/myloc.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		window.onload = getMyLocation;
+			
+			function getMyLocation(){
+				if(navigator.geolocation){
+					navigator.geolocation.getCurrentPosition(displayLocation);
+				}else{
+					alert("No Location Support");
+				}
+			}
+	var ourCoords = {
+		latitude:36.204823999999995,
+		longitude:138.252924
+	};
+		
+		
+		//google map
+		
+		
+		
+		var map;
+		
+		function showMap(coords){
+			var googleLatAndLong = new google.maps.LatLng(coords.latitude,coords.longitude);
+			
+			var mapOptions = {
+			zoom:10,
+			center:googleLatAndLong,
+			mapTypeId:google.maps.MapTypeId.ROADMAP
+		};
+		
+		var mapDiv = document.getElementById("map");
+		map = new google.maps.Map(mapDiv,mapOptions);
+		
+		var title = "Your Location";
+		var content = "You are Here: "+coords.latitude + coords.longitude;
+		addMarker(map,googleLatAndLong,title,content);
+		}
+		
+		function displayLocation(position){
+				var latitude = position.coords.latitude;
+				var longitude = position.coords.longitude;
+				
+				document.getElementById("location").innerHTML = "Your Location 经度:"+latitude+",纬度:"+longitude;
+				document.getElementById("location").innerHTML +="精度"+position.coords.accuracy+"米";
+				
+				var km = computerDistance(position.coords,ourCoords);
+				var distance = document.getElementById("distance");
+				distance.innerHTML = "你的位置距离玉林师范学院 "+km+"km";
+				
+					showMap(position.coords);
+			}
+		
+			//显示大头钉
+			function addMarker(map,latlong,title,content){
+				var markerOptions = {
+					position: latlong,
+					map:map,
+					title:title,
+					clickable:true
+				};
+				var infoWindowOptions = {
+					content:content,
+					position:latlong 
+				};
+				var marker = new google.maps.Marker(markerOptions);
+				var infoWindow = new google.maps.InfoWindow(infoWindowOptions);
+				
+				google.maps.event.addListener(marker,"click",function(){
+					infoWindow.open(map);
+				})
+			}
+		
+	</script>
+</html>

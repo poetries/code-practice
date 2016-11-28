@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>location-demo</title>
+	</head>
+	<body>
+		<div id="location"></div>
+		<script>
+			window.onload = getMyLocation;
+			
+			function getMyLocation(){
+				if(navigator.geolocation){
+					navigator.geolocation.getCurrentPosition(displayLocation);
+				}else{
+					alert("No Location Support");
+				}
+			}
+			function displayLocation(position){
+				var latitude = position.coords.latitude;
+				var longitude = position.coords.longitude;
+				
+				document.getElementById("location").innerHTML = "Your Location 经度:"+latitude+",纬度:"+longitude;
+				
+			}
+		</script>
+	</body>
+</html>
