@@ -8,19 +8,40 @@
 		<div id="location"></div>
 		<div id="distance"></div>
 		<div id="map"></div>
+		<form action="">
+			<input type="button" value="watch me" id="watch" />
+			<input type="button" value="clear watch" id="clearWatch" />
+		</form>
 	</body>
 	<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
 	<script src="js/myloc.js" type="text/javascript" charset="utf-8"></script>
 	<script>
 		window.onload = getMyLocation;
-			
+		var watchId = null;	
 			function getMyLocation(){
 				if(navigator.geolocation){
-					navigator.geolocation.getCurrentPosition(displayLocation);
+					var watch = document.getElementById("watch");
+					var clearwatch = document.getElementById("clearWatch");
+					
+					watch.onclick = watchLocation;
+					clearwatch = clearwatch;
 				}else{
 					alert("No Location Support");
 				}
 			}
+			
+			function watchLocation(){
+				watchId = navigator.geolocation.watchPosition(displayLocation,displayError);
+			}
+			function clearWatch(){
+				if(watchId){
+					navigator.geolocation.clearWatch(watchId);
+					watchId = null;
+				}
+			}
+			
+			
+			
 	var ourCoords = {
 		latitude:36.204823999999995,
 		longitude:138.252924
@@ -61,7 +82,9 @@
 				var distance = document.getElementById("distance");
 				distance.innerHTML = "你的位置距离玉林师范学院 "+km+"km";
 				
-					showMap(position.coords);
+					if(map == null){
+						showMap(position.coords);
+					}
 			}
 		
 			//显示大头钉
@@ -86,3 +109,4 @@
 		
 	</script>
 </html>
+

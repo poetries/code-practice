@@ -1,3 +1,4 @@
+
 function computerDistance(startCoords,destCoords){
 	var startLatRads = degreesToRadians(startCoords.latitude);
 	var startLongRads = degreesToRadians(startCoords.longitude);
