@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>canvas绘制美丽花朵</title>
+	</head>
+	<body>
+		<h2>canvas绘制美丽花朵</h2>
+		<select name="" id="drawType">
+			<option value="1">蓬莱菊</option>
+			<option value="2">令箭荷花</option>
+			<option value="3">大丽花</option>
+		</select>
+		<input type="button" value="绘制" id="btn"  />
+		<canvas id="canvas" width="200" height="200"></canvas>
+	</body>
+	<script type="text/javascript">
+		var btn = document.getElementById("btn");
+		var canvas = document.getElementById("canvas");
+		var context = canvas.getContext("2d");
+		var selectValue = document.getElementById("drawType");
+		
+		btn.addEventListener("click",drawFlower,false);	
+	
+		
+		function drawFlower(){
+			
+			var  width = canvas.width;
+			var height = canvas.height;
+			var x0 = width / 2;
+			var y0 = height / 2;
+			var key = parseInt(selectValue.selectedIndex);
+			
+			if(key == 2 )
+				h = y0 * 0.25;
+			else
+				h = y0 * 0.75;
+				
+			context.save();//保存当前绘制的状态
+			context.clearRect(0,0,width,height);//清除绘图区域
+			context.translate(x0,y0);//移动坐标原点
+			context.beginPath();//创建绘图路径
+			
+			for(var i = 0; i <= 6.28; i = i +0.01){
+				draw(i);
+			}
+			
+			context.closePath();//将路径关闭后，路径的创建工作就完成了
+			
+			context.restore();//恢复之前保存的绘制状态
+			
+		}
+		
+		function draw(i){
+			var n = 10;
+			var r;
+			switch (parseInt(selectValue.selectedIndex)){
+				case 1:
+					r = h * Math.sin(n * i);
+					break;
+				case 2:
+					r = h * (Math.sin(n * i) +3*Math.sin(3 * n * i));
+					break;
+				case 3:
+					r = h * Math.sin(n * i) * Math.exp(-i / (20));
+					break;
+			}
+			x = r * Math.cos(i);
+			y = r * Math.sin(i);
+			
+			context.fillStyle = "green";//指定填充图形颜色
+			context.strokeStyle = "black";//指定图形边框样式
+			context.lineTo(-x,-y);//指定一条绘制直线的路径 绘制该直线的处理是依靠fill方法或stroke方法来执行
+			context.fill();//填充图形
+			context.stroke();//绘制图形边框 边框样式用strokeStyle指定
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</script>
+</html>
