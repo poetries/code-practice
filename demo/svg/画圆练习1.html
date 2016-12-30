@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>demo1</title>
+		<style type="text/css">
+			#wrap {
+				width:500px;
+				height:500px;
+				margin: 0 auto;
+				border: 1px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<svg id="svg" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" >
+				
+			
+			
+			</svg>
+		</div>
+	</body>
+	<script>
+		var svgNs = "http://www.w3.org/2000/svg";
+		var svg = document.getElementById("svg");
+		//document.createElementNs(svgNs,"path");
+		
+		//创建SVG标签 并添加属性值
+		function createTargetElement(tag,tagAttr){
+			var oTag = document.createElementNS(svgNs,tag);
+			for(var attr in tagAttr){
+				oTag.setAttribute(attr,tagAttr[attr]);
+			} 
+			return oTag;
+		}
+		
+		var num = [20,25,15,30,10]; //每一部分的占比
+		var angle = 360;
+		var outerR = 120;
+		var innerR = 70;
+		var centerX = 200;
+		var centerY = 200;
+		var color = ["red","blue","yellow","green","pink"];
+		var time = 1000;
+		
+		function move(){
+		
+			var nowTime = new Date();
+			var timer = setInterval(function(){
+				var prop = (new Date() - nowTime) / time;
+				if(prop >= 1){
+					prop = 1;
+					clearInterval(timer);
+				}
+				var angleNum = 0;
+				var outXY = [{x:320,y:200}];
+				var innerXY = [{x:270,y:200}];
+				
+				//计算圆弧上的每个坐标值
+		
+			for(var i = 0;i < num.length;i++){
+				var aNum = num[i]/100*angle;
+				angleNum += aNum;
+				
+				//循环完一周
+				if(i == num.length-1){
+					angleNum = 360;
+				}
+				//外圆坐标
+				var outerX = Math.cos(angleNum * prop * Math.PI / 180)*outerR + centerX;
+				var outerY = Math.sin(angleNum * prop * Math.PI / 180)*outerR + centerY;
+				outXY.push({x:outerX,y:outerY});
+				
+				//内圆坐标
+				var innerX = Math.cos(angleNum * prop * Math.PI / 180)*innerR + centerX;
+				var innerY = Math.sin(angleNum * prop * Math.PI / 180)*innerR + centerY;
+				innerXY.push({x:innerX,y:innerY}); 	
+				
+			}
+			for (var i=0;i<outXY.length;i++) {
+				if ( i == outXY.length -1) {
+					break;
+				}
+				var oPath = createTargetElement('path',{
+				fill : color[i],d:"M"+outXY[i].x+' '+outXY[i].y+"A"+outerR+" "+outerR+" 0 0 1 "+outXY[i+1].x+" "+outXY[i+1].y+"L"+innerXY[i+1].x+" "+innerXY[i+1].y+"A"+innerR+" "+innerR+" 0 0 0 "+innerXY[i].x+" "+innerXY[i].y
+	
+				});
+				svg.appendChild(oPath);
+			}
+		
+			},1000/60);
+			
+		}
+		
+		
+		move();
+		
+	</script>
+</html>
