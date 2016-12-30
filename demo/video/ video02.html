@@ -3,12 +3,43 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<style type="text/css">
+			video {
+				display: block;
+			}
+			button {
+				margin-top: 20px;
+			}
+			#btn {
+				margin-left: 100px;
+			}
+		</style>
 	</head>
 	<body>
-		<video id="media" src="examp.mp4" width="500" poster="examp1.jpg">您的浏览器不支持video</video>
+		<video id="media" src="examp.mp4" width="500" poster="examp1.jpg" controls="">您的浏览器不支持video</video>
+		<button id="btn" >播放</button>
 	</body>
 	<script>
 		var media = document.getElementById("media");
+		var btn = document.getElementById("btn");
+		var pause = document.getElementById("pause");
+		var mark = true;
 		
+		btn.onclick = function() {
+			if (mark) {
+				media.play();
+				this.innerHTML = "暂停";
+				console.log(media.duration);//返回当前音频/视频的长度（以秒计）
+				console.log(media.volume);//设置或返回音频/视频的音量
+				console.log(media.muted);//设置或返回音频/视频是否静音
+				console.log(media.currentTime);//设置或返回音频/视频中的当前播放位置（以秒计）
+				console.log(media.ended);//返回音频/视频的播放是否已结束
+				console.log(media.paused);
+			}else {
+				media.pause();
+				this.innerHTML = "播放";
+			}
+			mark = !mark;
+		}
 	</script>
 </html>
