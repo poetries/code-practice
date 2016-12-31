@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Keywords" content="">
+		<meta name="js数组去重" content="">
+		<title>Document</title>
+		<script src="../js/jquery-2.1.4.js"></script>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			html,body{
+				width:100%;
+				height:100%;
+			}
+
+		</style>
+	</head>
+	<body>
+  
+	</body>
+	<script>
+		var arr1 = ["JavaScript","java","php","linux","andriod","python","c++"];
+		var arr2 = ["JavaScript","lianying","xiaoming","linux","yinghong","xiaoxuan","c++"];
+		var arr= fnConcat(arr1,arr2);
+		function fnConcat(arr1,arr2){
+			for (var i=0;i<arr2.length ;i++ )
+			{
+				arr1.push(arr2[i]);
+			}
+			return arr1;
+		}
+		alert(arr);
+
+		for (var i=0;i<arr.length ;i++ )
+		{
+			for (var j=i+1;j<arr.length ;j++ )
+			{
+				if (arr[i]==arr[j])
+				{
+					arr.splice(j,1);
+					j--;
+				}
+			}
+		}
+		alert(arr);
+	</script>
+</html>

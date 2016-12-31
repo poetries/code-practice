@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>Document</title>
+		<script src="../js/jquery-2.1.4.js"></script>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			html,body{
+				width:100%;
+				height:100%;
+			}
+			p{
+				width:300px;
+				height:400px;
+				border:1px solid red;
+				overflow:hidden;
+				white-space:nowrap; /*让文本只在一行显示*/
+				text-overflow:ellipsis;/*多余部分省略号代替*/
+			}
+			
+		</style>
+	</head>
+	<body>
+		<p>这导致的直接结果是当我们希望页面呈现的盒子的宽度是200px的时候，我们需要减去它的左右边框和左右补白，然后设置为对应的CSS宽度。例如上图，我们设置希望盒子宽度为`200px`，则需要先减去左右补白各`20px`，左右边框各`1px`，然后设置对应的`CSS`宽度`158px`</p>
+	</body>
+	<script>
+		
+	</script>
+</html>
+

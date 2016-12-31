@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>Document</title>
+		<script src="../js/jquery-2.1.4.js"></script>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			html,body{
+				width:100%;
+				height:100%;
+			}
+			#banners{
+				width:100%;
+				height:300px;
+				border:1px  solid red;
+				background-color:blue;
+				
+			}
+			#banners div.banner{
+				width:760px;
+				height:100%;
+				background:green;
+				margin:auto;
+				position:relative;
+			}
+			#banners a.btn{
+				position: absolute;
+				width: 46px;
+				height: 70px;
+				top: 110px;
+				background-image:url("images/button.png");
+				z-index:10;
+
+			}
+			#banners a.prev{
+				left:0px;
+				background-position:0 -133px;
+			}
+			#banners a.prev:hover{
+				background-position:-133px 0;
+			}
+			#banners a.next{
+				right:0px;
+				background-position:-51px -133px;
+			}
+			#banners a.next:hover{
+				background-position:-184px 0;
+			}
+			#banners ul li{
+				position:absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="banners">
+			<div class="banner">
+				<a href="javascript:void(0);" class="btn prev"></a>
+				<a href="javascript:void(0);" class="btn next"></a>
+				<ul>
+					<li><img src="images/banner1.jpg"></li>
+					<li><img src="images/banner2.jpg"></li>
+					<li><img src="images/banner3.jpg"></li>
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script>
+		
+	</script>
+</html>

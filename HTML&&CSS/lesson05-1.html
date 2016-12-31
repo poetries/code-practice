@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+	*{
+		padding:0;
+		margin:0;
+		font-family:"微软雅黑";
+		font-size:14px;
+	}
+	html,body{
+		width:100%;
+		height:100%;
+		background-color:#FAFAFA;
+	}
+
+	#top{
+		width:100%;
+		height:36px;
+		line-height:36px;
+		text-align:center;
+		color:#666;
+	}
+	#top ul.nav{
+		width:300px;
+		height:100%;
+		margin:auto;
+		list-style:none;
+	}
+	#top ul.nav li{
+		display:inline-block;
+		position:relative;
+	}
+	#top ul.nav li a{
+		color:#666;
+		text-decoration:none;
+		border:1px solid #FAFAFA;
+		padding:0 25px 5px 15px;
+		
+	}
+	#top ul.nav li:hover div.menu{
+		display:block;
+		
+	}
+
+	#top ul.nav li div.menu{
+		border:1px solid #bbb;
+		background:#FAFAFA;
+		padding:5px;
+		display:none;
+		position:absolute;
+		top:35px;
+		right:0;
+		z-index:1;
+	}
+	#top ul.nav em.icon{
+		border:1px solid  #bbb;
+		width:9px;
+		height:9px;
+		border-radius:2px;
+		position:absolute;
+		top:12px;
+		right:10px;
+		z-index:3;
+		overflow:hidden;
+	}
+	#top ul.nav em.icon b{
+		border:4px solid #FAFAFA;
+		border-top:4px solid #bbb;
+		position:absolute;
+		top:3px;
+		right:1px;
+	}
+	#top ul.nav li:hover em.icon b{
+		border:4px solid #FAFAFA;
+		border-bottom:4px solid #bbb;
+		top:-2px;
+		
+	}
+	#top ul.nav li div.link{
+		height:30px;
+		padding:0 25px 5px 15px;
+		border:1px solid #bbb;
+		border-bottom:none;
+		cursor:pointer;
+		position:absolute;
+		left:0;
+		top:0;
+		background:#FAFAFA;
+		color:#f00;	
+		display:none;
+		z-index:2;
+	}
+	#top ul.nav li:hover div.link{
+		display:block;
+	}
+	#top ul.nav li a:hover{
+		color:#f00;	
+		border:1px solid #bbb;
+		border-bottom:none;
+		
+	}
+	#banner{
+		width:100%;
+		height:60px;
+		background-image:url(images/banner.jpg);
+	}
+  </style>
+ </head>
+ <body>
+	<div id="top">
+		<ul class="nav">
+			<li><a href="#">收藏店</a>
+				<div class="link">收藏店</div>
+				<div class="menu">
+					<img src="images/phone.png">
+				</div>
+				<em class="icon">
+					<b></b>
+				</em>
+			</li>
+			<li><a href="#">手机1号店</a></li>
+		</ul>
+	</div>
+	<div id="banner"></div>
+ </body>
+</html>

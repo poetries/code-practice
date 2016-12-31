@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			video {
+				display: block;
+			    background: #000;
+			}
+			button {
+				margin-top: 20px;
+			}
+			
+			#wrap {
+				margin: 0 auto;
+				width: 500px;
+				height: 400px;
+				margin-top: 50px;
+			}
+			#progress {
+				height: 20px;
+			}
+			#progress input {
+				float: left;
+				width: 50px;
+				border: none;
+				outline: none;
+			    margin-top: 9px;
+			}
+			.pro {
+				background: #000;
+				width: 400px;
+				float: left;
+				height: 20px;
+				border-radius: 5px;
+				margin-top: 8px;
+			}
+			#controls {
+				display: inline-block;
+			    margin-left: 103px;
+			    margin-top: 10px;
+			}
+			#controls a {
+				padding: 8px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<video id="media" src="examp.mp4" width="500" poster="examp1.jpg">您的浏览器不支持video</video>
+			
+			<div id="progress">
+				<input type="text" name="" value="00:00:00" id="" />
+				<div class="pro">
+					<div class="bg"></div>
+					<div class="bar"></div>
+				</div>
+				<input type="text" name="" value="duration" id="" />
+			</div>
+			<div id="controls">
+				<a href="javascript:void(0)">上一步</a>
+				<a href="javascript:void(0)" id="btn">播放</a>
+				<a href="javascript:void(0)">下一步</a>
+				<a href="javascript:void(0)">音量</a>
+				<a href="javascript:void(0)">全屏</a>
+			</div>
+		</div>
+	</body>
+	<script>
+		var media = document.getElementById("media");
+		var btn = document.getElementById("btn");
+		var mark = true;
+		
+		btn.onclick = function() {
+			if (mark) {
+				media.play();
+				this.innerHTML = "暂停";
+				
+			}else {
+				media.pause();
+				this.innerHTML = "播放";
+			}
+			mark = !mark;
+		}
+	</script>
+</html>

@@ -1,2 +1,2 @@
-# h5-demos
-h5 练手项目
+# code-practice
+code-practice repository

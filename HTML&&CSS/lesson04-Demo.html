@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+	<head>
+	  <meta charset="UTF-8">
+	  <meta name="Generator" content="EditPlus®">
+	  <meta name="A	uthor" content="">
+	  <meta name="Keywords" content="">
+	  <meta name="Description" content="">
+	  <title>Document</title>
+  <style>
+*{
+	padding:0;
+	margin:0;
+}
+
+
+/**导航**/
+
+ div.menu{
+	width:190px;
+	font-family:'microsoft Yahei';
+	font-size:14px;
+	margin:auto;
+ }
+ div.menu div.title{
+	width:100%;
+	height:35px;
+	background-color:#c40000;
+	color:#fff;
+	text-align:center;
+	
+	line-height:35px;
+	
+	font-weight:bold;
+ }
+ div.menu div.title span{
+
+  padding-right:10px;
+
+ }
+ div.menu ul.items{
+	list-style-type:none;
+	padding:0;
+	text-align:center;
+ }
+div.menu ul.items li{
+	height:33px;
+	background-color:#272727;
+	color:#fff;
+	line-height:33px;
+	position:relative;
+}
+div.menu ul.items li:hover{
+	background:#c40000;
+}
+div.menu ul.items li div.submenu{
+	width:300px;
+	height:300px;
+	border:1ps solid blue;
+	background-color:red;
+	opacity:.2;
+	display:none;
+	position:absolute;
+	top:0;
+	left:190px;
+
+}
+div.menu ul.items li div.submenu{
+	text-align:center;
+}
+div.menu ul.items li:hover div.submenu{
+	display:block;
+}
+
+  </style>
+ </head>
+	<body>
+	
+	<div class="menu">
+		<div class="title"><span>商品服务分类</span></div>
+		<ul class="items">
+			<li>精选市场
+				<div class="submenu">精选市场子菜单
+					
+				</div>
+			</li>
+			<li>女装/内衣
+				<div class="submenu">女装/内衣子菜单</div>
+			</li>
+			<li>男装/运动户外
+				<div class="submenu">男装/运动户外子菜单</div>
+			</li>
+		</ul>
+	</div>
+
+
+
+</body>
+</html>

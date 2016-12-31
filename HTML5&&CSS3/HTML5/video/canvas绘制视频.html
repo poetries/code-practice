@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			video {
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<video autoplay src="examp.mp4" id="video"></video>
+		<canvas id="canvas" width="" height=""></canvas>
+	</body>
+	<script type="text/javascript">
+		var canvas = document.getElementById("canvas");
+		var video = document.getElementById("video");
+		
+		var ctx = canvas.getContext("2d");
+		var _width = window.innerWidth;
+		var _height = window.innerHeight;
+		canvas.width = _width;
+		canvas.height = _height;
+		
+		video.addEventListener("timeupdate",function(){
+			ctx.drawImage(video,0,0);
+		});
+		
+	</script>
+</html>

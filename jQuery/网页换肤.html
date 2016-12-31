@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>Document</title>
+		<link rel="stylesheet" href="css/skin.css" id="cssfile">
+		<style>
+			#skin li {
+				width: 50px;
+				height: 10px;
+				float: left;
+				cursor: pointer;
+				padding: 10px;
+			}
+			.selected {
+				color:#fff;
+			}
+		</style>
+	</head>
+	<body>
+		<ul id="skin">
+			<li id="skin_0">red</li>
+			<li id="skin_1">blue</li>
+			<li id="skin_2">black</li>
+		</ul>
+	</body>
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="jquery.cookie.js"></script>
+	<script>
+		var $li = $("#skin li");
+		$li.click(function(){
+			
+			$("#"+this.id).addClass("selected").siblings().removeClass("selected");
+			$("#cssfile").attr("href","css/"+(this.id)+".css");//设置不同皮肤
+
+			//cookie setting
+			$.cookie("MyCssSkin",this.id,{path: '/',expires: 10});//计入cookie
+		});
+
+		var cookie_skin = $.cookie("MyCssSkin");//获取cookie值
+
+		if(cookie_skin) {//确实存在cookie
+			$("#"+cookie_skin).addClass("selected").siblings().removeClass("selected");
+			$("#cssfile").attr("href","css/"+cookie_skin+".css");//设置不同皮肤
+			$.cookie("MyCssSkin",this.id,{path: '/',expires: 10});
+		}
+		
+
+
+	</script>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>Document</title>
+		<script src="../js/jquery-2.1.4.js"></script>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			html,body{
+				width:100%;
+				height:100%;
+			}
+			div{
+				width:100%;
+				height:300px;
+				background-color:black;
+				position:relative;
+			}
+			span{
+				width:100px;
+				height:100px;
+				background:url(images/button.png);
+				position:absolute;
+				top:110px;
+				
+			}
+			span.prev{
+				background-position:0 -133px;
+				left:10px;
+			}
+			span.next{
+				right:-20px;
+				background-position:-30px -80px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<span class="prev next"></span>
+		</div>
+	</body>
+	<script>
+		
+	</script>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>流媒体技术</title>
+		<style type="text/css">
+			body {
+				margin: 0;
+				padding: 0;
+				background: gray;
+				font-family: "微软雅黑";
+			}
+			#video {
+				width: 610px;
+				height: 450px;
+				margin: 100px auto;
+				background: #fff;
+				border-radius: 10px;
+				margin-bottom: 10px;
+			}
+			.video-top {
+				height: 50px;
+				line-height: 50px;
+				background: #ddd;
+				
+			}
+			.video-top a {
+			    float: left;
+			    color: #000;
+			    text-decoration: none;
+			    text-indent: 16px;
+			}
+			.video-top p {
+				margin-left: 250px;
+			}
+			.video-footer {
+				background: #ddd;
+    			height: 50px;
+			}
+			#canvas {
+				display: block;
+				margin: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="video">
+			<div class="video-top">
+				<a href="javascript:void(0)" onclick="getPhoto();">截图</a>
+				<a href="javascript:void(0)" onclick="getMedia();">打开摄像头</a>
+				<p>在线直播系统</p>
+			</div>
+			<div class="video-content">
+				<video src="" id="vid" width="610" height="350" autoplay=""></video>
+			</div>
+			<div class="video-footer"></div>
+		</div>
+		<canvas id="canvas" width="610" height="400"></canvas>
+		
+		<script type="text/javascript">
+			var video = document.getElementById("vid");
+			var canvas = document.getElementById("canvas");
+			var ctx = canvas.getContext("2d");
+			
+			//获取系统用户摄像头信息
+			navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia ||navigator.msGetUserMedia;
+		window.URL = window.URL || window.webkitURL || window.mozURL || window.msURL;
+			
+			//获取每个设备源
+			var exArr = [];//保存设备源id
+			MediaStreamTrack.getSources(function(sourcesInfos){
+				for (var i = 0;i!=sourcesInfos.length;i++ ) {
+					var sourcesInfo = sourcesInfos[i];
+					if(sourcesInfo.kind === "video"){
+						exArr.push(sourcesInfo.id);
+					}
+				}
+			});
+			
+			//调用摄像头
+			function getMedia() {
+				if(navigator.getUserMedia){
+					navigator.getUserMedia({
+						"video":{
+							"optional":[{
+								"sourceId":exArr[0] //0前置摄像头 1 后置摄像头 
+							}]
+						},
+						"audio": true
+					},successFn,errorFn);
+				}else {
+					alert("您当前的浏览器不支持摄像头功能");
+				}
+			}
+			
+			//成功回调
+			function successFn(stream) {
+				if (video.mozSrcObject !==undefined){
+					video.mozSrcObject = stream;	
+				}else {
+					video.src = window.URL && window.URL.createObjectURL(stream) || stream;
+				}
+			}
+			
+			//失败回调 
+			function errorFn(ev){
+				alert("出错了!!!"+ev);
+			}
+		
+			//截图
+			function getPhoto(){
+				ctx.drawImage(video,0,0,610,400);
+				
+			}
+		</script>
+	</body>
+</html>

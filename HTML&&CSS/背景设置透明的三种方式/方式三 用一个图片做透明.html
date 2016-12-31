@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>方式三 用一个图片做透明</title>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			html,body{
+				width:100%;
+				height:100%;
+				background-image:url("bg.jpg");
+			}
+			div.top{
+				height:135px;
+				width:100%;
+				position:absolute;
+				
+				
+
+			}
+			div.top div{
+				width:100%;
+				height:100%;	
+				background-image:url('bg.png');
+				position:absolute;
+				top:0px;
+				left:0px;
+			}
+
+		</style>
+	</head>
+	<body>
+		<!--方式三 用一个图片做透明 兼容所有的浏览器 -->
+		<div class="top">
+			<div>
+				
+			</div>
+		</div>
+	</body>
+</html>
