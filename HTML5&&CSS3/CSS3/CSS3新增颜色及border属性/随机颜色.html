@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>随机色</title>
+		<style type="text/css">
+			#test1 {
+				width: 200px;
+				height: 200px;
+				background: red;
+			}
+			#test2 {
+				width: 200px;
+				height: 200px;
+				background: blue;
+			}
+			#test3 {
+				width: 200px;
+				height: 200px;
+				background: green;
+			}
+			#test4 {
+				width: 200px;
+				height: 200px;
+				background: black;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="test1"></div>
+		<button id="btn1">rgba随机色</button>
+		<div id="test2"></div>
+		<button id="btn2">十六进制随机色</button>
+		<div id="test3"></div>
+		<button id="btn3">十六进制和十进制转换随机色-方法一</button>
+		<div id="test4"></div>
+		<button id="btn4">十六进制和十进制转换随机色-方法二</button>
+	</body>
+	<script type="text/javascript">
+		var test1 = document.getElementById("test1");
+		var btn1 = document.getElementById("btn1");
+		var test2 = document.getElementById("test2");
+		var btn2 = document.getElementById("btn2");
+		var test3 = document.getElementById("test3");
+		var btn3 = document.getElementById("btn3");
+		var test4 = document.getElementById("test4");
+		var btn4 = document.getElementById("btn4");
+		
+		//rgba随机色
+
+		btn1.onclick = function(){
+			var r = Math.floor(Math.random()*255);
+			var g = Math.floor(Math.random()*255);
+			var b = Math.floor(Math.random()*255);
+			var a = Math.random();
+			test1.style.background = "rgba("+r+","+g+","+b+","+a+")";
+		}
+		//十六进制
+		function color1(){
+			var colors = [0,1,2,3,4,5,6,7,8,9,"a","b","c","d","e","f"];
+			var color = "";
+			for (var i=0;i<6;i++) {
+				var n = Math.floor(Math.random()*15);
+				color += ""+colors[n];
+				if(i == 5){
+					return "#"+color;
+				}
+			}
+		}
+		btn2.onclick = function(){
+			test2.style.background = color1();
+		}
+		
+		//十六进制和十进制转换随机色 方法一
+		function color2(){
+			var color = Math.ceil(Math.random()*16777215).toString(16);//转成16进制
+			while(color.length < 6){
+				color = "0"+color;
+			}
+			return "#"+color;
+		}
+		
+		btn3.onclick = function(){
+			test3.style.background = color2();
+			console.log(color2());
+		}
+		
+		//十六进制和十进制转换随机色 方法二
+		function color3(){
+			return "#"+(function(color){
+				return new Array(7-color.length).join("0")+color;
+			})((Math.random()*0x1000000 << 0).toString(16));
+		}
+		btn4.onclick = function(){
+			test4.style.background = color3();
+		}
+		
+	</script>
+</html>

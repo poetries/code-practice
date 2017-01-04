@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>poetries 视频播放器</title>
+		<link rel="stylesheet" href="css/reset.css"/>
+		<link rel="stylesheet" href="lib/bootstrap.min.css"/>
+		<link rel="stylesheet" href="css/font.css"/>
+		<link rel="stylesheet" href="css/index.css"/>
+		<script src="lib/jquery-3.1.0.min.js"></script>
+		<script src="lib/bootstrap.min.js"></script>
+		<script src="js/data.js"></script>
+		<script src="js/index.js"></script>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<header class="head">
+				<p class="text-center head-txt">poetries 视频播放器</p>
+			</header>
+			<div class="main">
+				<div class="content">
+					<video src="video/examp.mp4" id="video" class="video" ></video>
+					<div class="controls">
+						<span class="prev" id="prev"><i class="iconfont">&#xe61b;</i></span>
+						<span class="play" id="play"><i class="iconfont">&#xe605;</i></span>
+						<span class="next" id="next"><i class="iconfont">&#xe62b;</i></span>
+					</div>
+					<div class="pro" id="pro">
+						<p class="pro_bg" id="pro_bg"></p>
+						<p class="pro_bar" id="pro_bar"></p>
+						<p class="currTime" id="nowTime">00:00:00</p>
+						<p class="totalTime" id="totalTime">00:00:00</p>
+					</div>
+					<div class="muteControls">
+						<i class="iconfont" id="ylj">&#xe621;</i>
+						<div class="mute" id="mute">
+							<span class="mute_bg" id="mute_bg"></span>
+							<span class="mute_bar" id="mute_bar"></span>
+						</div>
+					</div>
+					<div id="full" class="full">
+						<span class="iconfont">&#xe6ff;</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+
+</html>
