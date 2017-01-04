@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				position: relative;
+				top:0;
+				left: 0;
+				height: 100px;
+				width: 100px;
+				background: red;
+				animation: mov 5s infinite alternate;
+			}
+			.wrap {
+				width: 500px;
+				height: 500px;
+				border: 1px solid blue;
+			}
+			@-webkit-keyframes mov{
+				0%{
+					left: 0;
+					top: 0;
+				}
+				25%{
+					left: 400px;
+					top: 0;
+				}
+				50%{
+					left: 400px;
+					top: 400px;
+				}
+				75%{
+					left: 0;
+					top: 400px;
+				}
+				100%{
+					left: 0;
+					top: 0;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="box"></div>
+		</div>
+	</body>
+</html>
