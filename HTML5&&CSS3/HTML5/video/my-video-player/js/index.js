@@ -70,7 +70,7 @@ window.onload = function(){
 		
 		//全屏
 		full.onclick = function(){
-			oVideo.webkitRequestFullScreen();
+			video.webkitRequestFullScreen();
 		}
 
 		prev.onclick = function (){
