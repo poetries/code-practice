@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100px;
+				height: 100px;
+				background: red;
+				transition: left 2s linear,background-color 1s linear;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box" id="box"></div>
+		<script type="text/javascript">
+			var box = document.getElementById("box");
+			box.onclick = function(){
+				this.style.left = "500px";
+				this.style.top = "100px";
+			}
+			function changeColor(){
+				this.style.backgroundColor = "green";
+			}
+			function end(obj,fn){
+				obj.addEventListener("webkitTransitionEnd",fn);
+				obj.addEventListener("transitionend",fn);
+			}
+			end(box,changeColor);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box {
+				position: absolute;
+				top: 80px;
+				left: 0;
+				width: 10px;
+				height: 10px;
+				background: red;
+				transition: 10ms linear;
+
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box" id="box"></div>
+		<button id="play">播放</button>
+		<button id="pause">暂停</button>
+		<script type="text/javascript">
+			var box = document.getElementById("box");
+			var play = document.getElementById("play");
+			var pause = document.getElementById("pause");
+			
+			play.onclick = function(){
+				progress();
+				addEnd(box,progress)
+			}
+			pause.onclick = function(){
+				removeEnd(box,progress);
+			}
+			function progress(){
+				
+				if(box.offsetWidth >=500){
+					box.style.width = "500px";
+					removeEnd(box,progress);
+				}else {
+					box.style.width = box.offsetWidth +1+"px";
+				}
+			}
+			function addEnd(obj,fn){
+				obj.addEventListener("webkitTransitionEnd",fn);
+				obj.addEventListener("transitionend",fn);
+			}
+			function removeEnd(obj,fn){
+				obj.removeEventListener("webkitTransitionEnd",fn);
+				obj.removeEventListener("transitionend",fn);
+			}
+			
+			
+		</script>
+	</body>
+</html>
