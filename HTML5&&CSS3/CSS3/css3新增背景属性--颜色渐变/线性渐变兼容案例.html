@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box {
+				width: 300px;
+				height: 300px;
+				background:#000;
+				background:-webkit-gradient(linear,left top,left  bottom,color-stop(0%,#f00),color-stop(100%,#0f0)); /*chrome*/
+				background:-webkit-linear-gradient(top,#f00 0%,#0f0 100%); /*chrome*/
+				background:-moz-linear-gradient(top,#f00 0%,#0f0 100%); /*firefox*/
+				background:-ms-linear-gradient(top,#f00 0%,#0f0 100%); /*IE*/
+				background:-o-linear-gradient(top,#f00 0%,#0f0 100%); /*opeara*/
+				background:linear-gradient(to bottom,#f00 0%,#0f0 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f00",endColorstr="#0f0",GradientType="0");
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+	</body>
+</html>
