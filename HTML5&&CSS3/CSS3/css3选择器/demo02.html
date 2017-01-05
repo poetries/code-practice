@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			p{
+				width: 399px;
+				height: 20px;
+				background: #ccc;
+			}
+			p ~ p{/*选择E元素后面的所有兄弟元素F*/
+				background: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div><p></p></div>
+			<p></p>
+			<p></p>
+			<p></p>
+		</div>
+	</body>
+</html>

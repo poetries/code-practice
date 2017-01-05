@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>:target应用</title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			a{
+				display: inline-block;
+				width: 50px;
+				float: left;
+				margin-right: 20px;
+				font-size: 30px;
+				color: #fff;
+				height: 50px;
+				line-height: 50px;
+				background: #000;
+				border-radius: 50%;
+				text-align: center;
+			}
+			
+			.box {
+				width: 200px;
+				height: 300px;
+				background: #ccc;
+				display: none;
+				position: absolute;
+				top: 70px;
+				left: 0;
+			}
+			#box1{
+				background:red;
+			}
+			#box2 {
+				background:blue;
+			}
+			#box3 {
+				background:green;
+			}
+			:target{
+				display:block;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div>
+			<a href="#box1">1</a>
+			<a href="#box2">2</a>
+			<a href="#box3">3</a>
+		</div>
+		<div class="box" id="box1">1</div>
+		<div class="box" id="box2">2</div>
+		<div class="box" id="box3">3</div>
+	</body>
+</html>

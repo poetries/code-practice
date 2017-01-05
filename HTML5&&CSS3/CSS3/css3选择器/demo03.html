@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			p{
+				width: 399px;
+				height: 20px;
+				background: #ccc;
+			}
+			.box1 + p{/*相邻兄弟选择器*/
+				background: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="box1"><p></p></div>
+			<p></p>
+			<p></p>
+			<p></p>
+		</div>
+	</body>
+</html>
