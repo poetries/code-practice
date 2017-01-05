@@ -1,0 +1,416 @@
+body {
+	background: url(../images/xqx4.jpg) no-repeat;
+	width:100%;
+	height: 100%;
+	background-size: 100%;
+
+}
+
+/* header */
+
+.head {
+	width: 100%;
+	height: 60px;
+}
+.head .skin_content {
+	position: absolute;
+	top: 60px;
+	right: 14px;
+	z-index: 1;
+	width: 360px;
+	height: 260px;
+	display: none;
+	background: rgba(143, 148, 150, 0.1);
+}
+.head .skin_content .skin_title {
+	width: 100%;
+	height: 10px;
+	margin-top: 10px;
+	text-align: center;
+	color: #fff;
+	font-family: "微软雅黑";
+}
+.head .skin_content .skin_title span.active {
+	color: #000;
+}
+.head .skin_content .skin_title span {
+	display: inline-block;
+	padding-left: 50px;
+	cursor: pointer;
+	font-size: 14px;
+}
+.head .skin_content .skin_img {
+	position: relative;
+	width: 100%;
+	height: 210px;
+	padding-top: 10px;
+	margin-top: 14px;
+}
+.head .skin_content .skin_img .pic_comm {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 96%;
+	height: 98%;
+	margin: 0 auto;
+	display: none;
+}
+.head .skin_content .skin_img .pic_comm.active {
+	display: block;
+}
+.head .skin_content .skin_img .pic_comm_item{
+	float: left;
+	width: 150px;
+	height: 100px;
+	margin-left: 20px;
+	margin-top: 6px;
+	background: #fff;
+	
+}
+.head .skin_content .skin_img .pic_comm_item img {
+	display: inline-block;
+	width: 140px;
+	height: 90px;
+	padding:5px;
+	cursor: pointer;
+}
+.head .skin_btn {
+	border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 15px;
+    background: rgba(143, 148, 150, 0.34);
+    color: #fff;
+    padding: 5px;
+
+}
+#skin{
+	position: absolute;
+    top: 30px;
+    left: 1100px;
+}
+.head .skin_btn .iconfont {
+	font-size: 24px;
+    vertical-align: middle;
+}
+
+/* song */
+.music {
+    position: absolute;
+    top: 80px;
+    left: 430px;
+    width: 390px;
+    height: 500px;
+    box-shadow: 0 0 10px #ccc;
+    background: #fff;
+}
+/* 滚动条样式 */
+.music .menu .scrollCon {
+    position: absolute;
+    top: 0px;
+    left: -281px;
+    width: 280px;
+    height: 500px;
+    display: none;
+    background: rgba(139,143,135,0.5);
+	overflow: hidden;
+}
+
+.scrollText {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 280px;
+    height: auto;
+}
+.scrollText li {
+    position: relative;
+    text-indent: 22px;
+    line-height: 37px;
+    border-bottom: 1px dashed #666;
+    cursor: pointer;
+    font-family: "微软雅黑";
+    color: rgba(0, 0, 0, 0.89);
+}
+.scrollText li:before {
+	content: "";
+	margin-top: 2px;
+	display: block;
+	position: absolute;
+	top: 15px;
+	left: 13px;
+	width: 5px;
+	height: 5px;
+	border-radius: 10px;
+	background-color: #9a3e3e;
+	
+}
+.scrollText .singer{
+	position:absolute;
+	top:0;
+	right:25px;
+}
+.scrollText .song {
+	margin-left: 10px;
+}
+.scrollBar {
+    width: 10px;
+    height: 500px;
+    background: #000;
+    opacity: .7;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+.scrollBar .scrollBtn {
+	width: 10px;
+    height: 40px;
+    background: orangered;
+    opacity:.9;
+    position: absolute;
+    top:0px;
+    right: 0px;
+    cursor: pointer;
+}
+
+.music .menu  .menu_btn .iconfont{
+	display: inline-block;
+	padding-left: 8px;
+    padding-top: 5px;
+	font-size: 21px;
+	
+}
+.music .music_song_content {
+    position: absolute;
+    top: -1px;
+    left: 391px;
+    width: 424px;
+    height: 500px;
+    display: none;
+    background: rgba(139,143,135,0.5);
+}
+.music .music_song .iconfont {
+	position: absolute;
+    top: 5px;
+    right: 10px;
+    display: inline-block;
+    font-size: 21px;
+    color: palevioletred;
+    cursor: pointer;
+}
+
+/* music-content*/
+.singer_pic {
+	position: relative;
+	width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    margin: auto;
+    border: 10px dashed rgba(125, 125, 116, 0.05);
+}
+.singer_pic img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	border-radius: 50%;
+	width: 200px;
+	height: 200px;
+}
+.singer_pic img.rorate {
+	animation: rot 2.5s linear infinite;
+}
+/* 歌手旋转*/
+@keyframes rot {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.song_info {
+	margin-top: 30px;
+	line-height: 30px;
+	text-align: center;
+}
+.song_info .song_title {
+	font-size: 20px;
+	color: rgba(0,0,0,1);
+	font-family: "微软雅黑";
+}
+.song_info .song_author {
+	color: rgba(0,0,0,.7);
+}
+.music_func {
+	margin-left: 19px;
+    margin-top: 30px;
+}
+.music_func .love {
+	color: #f00;
+}
+
+.music_func .music_func_item{
+    display: inline-block;
+    font-size: 26px;
+    margin-left: 63px;
+}
+.music_func .music_func_item .iconfont {
+	font-size: 24px;
+}
+.music_func .mutePro {
+	background: #ccc;
+    width: 35px;
+    height: 4px;
+    display: inline-block;
+    position: relative;
+    top: -7px;
+}
+.music_func .ylj,.download {
+	color: #0086B3;	
+	cursor: pointer;
+}
+#download {
+	text-decoration: none;
+}
+.music_func .muteBar {
+    background: #50f14f;
+    width: 40px;
+    height: 4px;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.music_func .mutePro .muteBar_circle {
+    display: block;
+    width: 6px;
+    height: 6px;
+    margin-top: -1px;
+    cursor: pointer;
+    position: absolute;
+    top: -2px;
+    left: 0;
+    background: #fbf8f8;
+    border: 2px solid #ada6a6;
+    border-radius: 34px;
+} 
+.progress {
+	margin-top: 15px;
+}
+.progress .pro_bar1 {
+    display: inline-block;
+    width: 250px;
+    height: 3px;
+    margin-left: 20px;
+    background: #bebebe;
+    position: relative;
+}
+.progress .pro_bar {
+    position: absolute;
+    top: 434px;
+    width: 250px;
+    cursor: pointer;
+    left: 73px;
+}
+.progress .pro_bar_bg {
+    display: inline-block;
+    height: 3px;
+    background: rgb(0,255,66);
+}
+.progress .curTime {
+	float: left;
+	margin-left: 11px;
+	margin-top: 2px;
+}
+.progress .allTime {
+	float: right;
+	margin-top: 2px;
+	margin-right: 8px;
+}
+.progress .pro_bar_btn {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 5px;
+    border-radius: 21px;
+    position: absolute;
+    bottom: -4px;
+    background: #fbf8f8;
+    border: 2px solid #ada6a6;
+}
+
+.music_play {
+	text-align: center;
+}
+.music_play .play {
+    width: 58px;
+    height: 57px;
+    background: url(../images/play.png) 7px 10px no-repeat;
+    cursor: pointer;
+    display: inline-block;
+    background-size: 58%;
+}
+.music_play .prev {
+    display: inline-block;
+    width: 40px;
+    height: 36px;
+    background: url(../images/houtui.png) 1px 0px no-repeat;
+    cursor: pointer;
+}
+.music_play .next {
+	background: url(../images/qianjin.png) 12px 1px no-repeat;
+    display: inline-block;
+    width: 40px;
+    height: 36px;
+    cursor: pointer;
+}
+
+.music_play span .iconfont {
+	font-size: 20px;
+}
+#canvas {
+	position: absolute;
+	bottom: 0px;
+	left: 320px;
+	width: 600px;
+	height: 80px;
+
+}
+
+/* 歌词 */
+.m_lyric{
+	width: 423px;
+    height: 498px;
+    float: left;
+    box-shadow: 0 0 5px #ddd;
+    margin-left: 0px;
+    margin-top: 3px;
+}
+.m_lyric h2{
+    height: 30px;
+    font-size: 16px;
+    font-family: "微软雅黑";
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    box-shadow: 0 0 5px #ddd;
+}
+.m_lyric #lrcCon{
+	margin-top:20px;
+	transition:0.5s linear;
+}
+.m_lyric .content{
+	height:370px;
+	overflow:hidden;
+}
+.m_lyric #lrcCon p{
+    text-align: center;
+    line-height: 24px;
+    color: #ccc;
+    font-family: "微软雅黑";
+}

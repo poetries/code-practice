@@ -1,0 +1,5 @@
+src/data/*.mp3
+node_modules
+src/music
+src/NeteaseCloudMusicApi
+music-player-oop

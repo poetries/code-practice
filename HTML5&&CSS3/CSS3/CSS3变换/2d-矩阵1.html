@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box {
+				width: 500px;
+				height: 500px;
+				border: 1px solid red;
+				margin: 100px auto;
+			}
+
+			.div1{
+				width: 100px;
+				height: 100px;
+				background: blue;
+				transition: 1s;
+				margin-bottom: 10px;
+			}
+			.box:hover .div2{
+				transform: matrix(1.5,0,0,1.5,0,0);/*缩放改变a d*/
+			}
+			.box:hover .div3{
+				transform: matrix(1,0,0,1,100,0);/*位移改变e f值*/
+			}
+			.box:hover .div4{
+				transform: matrix(1,0,1,1,0,0);/*倾斜x改变c值*/
+			}
+			.box:hover .div5{
+				transform: matrix(1,0.5,0,1,0,0);/*倾斜y改变b值*/
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="div1 div2"></div>
+			<div class="div1 div3"></div>
+			<div class="div1 div4"></div>
+			<div class="div1 div4"></div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>poetries's music player</title>
+		<link rel="stylesheet" href="css/reset.css"/>
+		<link rel="stylesheet" href="css/font.css"/>
+		<link rel="stylesheet" href="css/index.css"/>
+		<script src="lib/jquery-3.1.0.min.js" ></script>
+		<script src="lib/html5shiv-printshiv.min.js" ></script>
+		<script src="js/tools.js" ></script>
+		<script src="js/scroll.js" ></script>
+		<script src="js/bg-menu.js" ></script>
+		<script src="data/data.js" ></script>
+		<script src="js/audio.js" ></script>
+		<script src="js/music.js" ></script>
+
+	</head>
+	<body>
+		<header id="head" class="head">
+			<div class="skin" id="skin">
+				<a href="javascript:;" class="skin_btn" id="skin_btn">
+					<i class="iconfont">&#xf0001;</i>
+					皮肤设置
+				</a>
+				<div class="skin_content">
+					<p class="skin_title">
+						<span class="xqx active">小清新</span>
+						<span class="person">人物</span>
+						<span class="fj">风景</span>
+					</p>
+					<div class="skin_img">
+						<div class="xqx_pic pic_comm active">
+							<div class="xqx_pic_item pic_comm_item">
+								<img src="images/xqx1.jpg" alt="" />
+							</div>
+							<div class="xqx_pic_item pic_comm_item">
+								<img src="images/xqx2.jpg" alt="" />
+							</div>
+							<div class="xqx_pic_item pic_comm_item">
+								<img src="images/xqx3.jpg" alt="" />
+							</div>
+							<div class="xqx_pic_item pic_comm_item">
+								<img src="images/xqx4.jpg" alt="" />
+							</div>
+						</div>
+						<div class="person_pic pic_comm">
+							<div class="person_pic_item pic_comm_item">
+								<img src="images/person1.jpg" alt="" />
+							</div>
+							<div class="person_pic_item pic_comm_item">
+								<img src="images/person2.jpg" alt="" />
+							</div>
+							<div class="person_pic_item pic_comm_item">
+								<img src="images/person3.jpg" alt="" />
+							</div>
+							<div class="person_pic_item pic_comm_item">
+								<img src="images/person4.jpg" alt="" />
+							</div>
+						</div>
+						<div class="fj_pic pic_comm">
+							<div class="fj_pic_item pic_comm_item">
+								<img src="images/fj1.jpg" alt="" />
+							</div>
+							<div class="fj_pic_item pic_comm_item">
+								<img src="images/fj2.jpg" alt="" />
+							</div>
+							<div class="fj_pic_item pic_comm_item">
+								<img src="images/fj3.jpg" alt="" />
+							</div>
+							<div class="fj_pic_item pic_comm_item">
+								<img src="images/fj4.jpg" alt="" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="music" id="music">
+			<div class="menu">
+				<a href="javascript:;" class="menu_btn" id="menu_btn"><i class="iconfont">&#xe602;</i></a>
+				<div class="scrollCon">
+					<ul class="menu_aside_content scrollText" id="menu_aside_content">
+					</ul>
+					<div class="scrollBar">
+						<span class="scrollBtn"></span>
+					</div>
+				</div>
+			</div>
+			<div class="music_song">
+				<i class="iconfont" id="music_song_btn">&#xe64c;</i>
+				<ul class="music_song_content" id="music_song_content">
+					<div class="m_lyric">
+						<h2>歌词展示</h2>
+						<div class="content">
+							<div id="lrcCon"></div>
+						</div>
+					</div>
+				
+				</ul>
+				
+			</div>
+			<div class="music_content">
+				<div class="singer_pic" id="singer_pic">
+					<img src="images/singer1.jpg"/>
+				</div>
+				<div class="song_info">
+					<p class="song_title" id="song_title">海阔天空</p>
+					<p class="song_author" id="song_author">Beyond</p>
+				</div>
+				<div class="music_func">
+					<span class="iconfont music_func_item" id="love"  style="cursor: pointer;" >&#xe611;</span>
+					<a  href="music/光辉岁月.mp3" download="music/光辉岁月.mp3" class="iconfont music_func_item " style="cursor: pointer;" id="download">&#xe60a;</a>
+					<span class=" music_func_item" id="yl" >
+					<i class="iconfont" style="cursor: pointer;" id="ylj">&#xe621;</i>
+					</span>
+					<span class="mutePro" id="mutePro" >
+							<span class="muteBar" id="muteBar"></span>
+							<a href="javascript:;" class="muteBar_circle" id="muteBar_circle"></a>
+						</span>
+				</div>
+			
+						
+				<div class="progress">
+					<span class="curTime" id="curTime">00:00</span>
+					<p class="pro_bar1">
+						<a href="javascript:;" class="pro_bar_btn" id="pro_bar_btn"></a>
+					</p>
+					<p id="pro_bar" class="pro_bar">
+						<span class="pro_bar_bg" id="pro_bar_bg"></span>
+					</p>
+					
+					<span class="allTime" id="allTime">00:00</span>
+				</div>
+				<div class="music_play">
+					<span class="prev" id="prev"></span>
+					<span class="play" id="play"></span>
+					<span class="next" id="next"></span>
+				</div>
+			</div>
+		</div>
+		<canvas id="canvas" ></canvas>
+		<audio src="music/1.mp3" id="audio"></audio>
+		
+		<a href="https://github.com/poetries/music-player" target="_blank">
+	<img data-v-6bf44b32="" src="http://o6x2vif88.bkt.clouddn.com/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f7265645f6161303030302e706e67.png" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png" style="z-index: 200000; position: absolute; top: 0px; left: 0px; border: 0px;" title="">
+</a>
+	</body>
+</html>
