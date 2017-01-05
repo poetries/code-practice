@@ -1,0 +1,37 @@
+<!doctype html><!--声明当前文档为html文档-->
+<html lang="en"><!--语言为英语-->
+	<head><!--头部-->
+		<meta charset="UTF-8"><!--字符编码：utf-8国际编码  gb2312中文编码-->
+		<meta name="Keywords" content="关键词">
+		<meta name="Description" content="描述">
+		<title>Document</title>
+		<style>/*css样式表的衣柜*/
+		*{
+			margin:0px;padding:0px;
+		}
+		.box{
+			height:200px;border:2px solid red;
+			display:-webkit-box;
+			display:-moz-box;
+			display:-o-box;
+			-webkit-box-direction:reverse;/*反序*/
+			-webkit-box-pack:end;/*右对齐*/
+		}
+		.box div{
+			width:100px;height:100px;background:blue;
+			font-size:40px;line-height:100px;text-align:center;
+			font-weight:bold;color:#fff;
+			margin:10px;
+		}
+		</style>
+	</head>
+	<body><!--身体-->
+		<div class="box">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+			<div>5</div>
+		</div>
+	</body>
+</html>
