@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>选项卡</title>
+		<style type="text/css">
+			.wrap {
+				position:relative;
+				width:500px;
+				padding-top:400px;
+				margin:100px auto;
+				box-shadow:0 10px 5px #000;
+
+			}
+			.wrap > img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 500px;
+				height: 400px;
+				opacity: 0;
+				transition: 1s;
+			}
+			input[type=radio]{
+				display: none;
+			}
+			label > img {
+				border: 5px solid #ccc;
+				width: 80px;
+				height: 60px;
+			}
+			:checked + label > img {
+				border: 5px solid #00FF00;
+			}
+			:checked + label + img {
+				opacity: 1;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<input type="radio" name="lunbo" id="rd1" checked/>
+			<label for="rd1"><img src="img/1.jpg"/></label>
+			<img src="img/1.jpg"/>
+			
+			<input type="radio" name="lunbo" id="rd2" />
+			<label for="rd2"><img src="img/2.jpg"/></label>
+			<img src="img/2.jpg"/>
+			
+			<input type="radio" name="lunbo" id="rd3" />
+			<label for="rd3"><img src="img/3.jpg"/></label>
+			<img src="img/3.jpg"/>
+			
+			<input type="radio" name="lunbo" id="rd4" />
+			<label for="rd4"><img src="img/4.jpg"/></label>
+			<img src="img/4.jpg"/>
+			
+			<input type="radio" name="lunbo" id="rd5" />
+			<label for="rd5"><img src="img/5.jpg"/></label>
+			<img src="img/5.jpg"/>
+
+		</div>
+	</body>
+</html>
