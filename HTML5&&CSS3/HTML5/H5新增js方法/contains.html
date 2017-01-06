@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box {
+				width: 200px;
+				height: 300px;
+				border: 1px solid red;
+			}
+			.bg {
+				background: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box" class="div1 div2 div3">
+			
+		</div>
+		<script type="text/javascript">
+			var box = document.querySelector("#box");
+			box.onclick = function(){
+				if(box.classList.contains("div5")){ //contains用来判断类是否存在
+					box.classList.toggle("bg"); //toggle切换class
+				}else {
+					console.log("classList中不包含div类");
+				}
+			}
+		</script>
+	</body>
+</html>

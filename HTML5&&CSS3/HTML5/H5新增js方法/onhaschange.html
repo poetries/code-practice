@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>onhaschange</title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			ul {
+				width: 300px;
+				height: 50px;
+				margin: 100px auto;
+				
+			}
+			ul > li {
+				width: 50px;
+				height: 45px;
+				line-height: 45px;
+				border: 1px solid blue;
+				text-align: center;
+				list-style: none;
+				float: left;
+				cursor: pointer;
+				font-weight: bold;
+			}
+			.curr {
+				background:green;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li class="curr" data-num="0">主页</li>
+			<li data-num="1">说说</li>
+			<li data-num="2">相册</li>
+			<li data-num="3">日志</li>
+			<li data-num="4">留言</li>
+		</ul>
+		
+		<script type="text/javascript">
+			var oLi = document.querySelectorAll("li");
+			for(var i = 0;i < oLi.length;i++){
+				oLi[i].index = i;
+				oLi[i].onclick = function(){
+					for(var i = 0;i < oLi.length; i++){
+						oLi[i].classList.remove("curr");
+					}
+					this.classList.add("curr");
+					window.location.hash = this.dataset.num;
+				}
+				window.onhashchange = function(){
+					var n = window.location.hash.substring(1,2);
+					//console.log(n);
+					for(var i = 0;i < oLi.length;i++){
+						oLi[i].classList.remove("curr");
+					}
+					oLi[n].classList.add("curr");
+				}
+			}
+		</script>
+	</body>
+</html>
