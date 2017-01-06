@@ -1,0 +1,36 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>逻辑运算符</title>
+	<script type="text/javascript">
+		/**
+		 * @Author:     poetries
+		 * @DateTime:	2016-06-03 19:38:53
+		 */
+		
+		//逻辑运算符 
+		//----特殊性（注意）---一定要记住（这个特性和其他编程语言不一样）：在js里返回不是布尔值
+		//或 ||  与&&
+		//|| 短路运算 第一个条件为真 后面不执行
+		
+		var house = 3;
+		var car = null;
+		if ((house>0) && (car=1)) {
+		 	document.write('嫁');
+		 } else{
+		 	document.write('不嫁');
+		 }
+		document.write(car);//car = 1
+
+		var res = house && car;//js中返回的不是布尔值   判断到car  取car的值
+		alert(res);//1
+
+		var res = house || car;//短路运算 第一个条件为真 后面不执行
+		alert(res);//3
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

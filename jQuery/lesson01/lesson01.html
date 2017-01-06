@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>lesson01</title>
+	<script src="../js/jquery-2.1.4.js"></script>
+	<style>
+		ul.nav{
+			width:100px;
+			border:5px  solid #abcdef;
+		}
+		ul.nav li{
+			border-bottom:2px  solid pink;
+			line-height:20px;
+			height:20px;
+		}
+	</style>
+</head>
+<body>
+	<!--div id="mydiv" class="mydiv">div1</div>
+	<div class ="mydiv2">div2</div>
+	<span class="myspan">span</span-->
+
+	<ul id='nav'class="nav">
+		<li>aa</li>
+		<li>bb</li>
+		<li></li>
+		<li></li>
+		<li>cc</li>
+		<li>dd</li>
+		<li>ee</li>
+	</ul>
+</body>
+	<script>
+		//$("div.mydiv").css("color","red");
+		//$("span.myspan").css("border","1px solid red");
+
+		//alert($);
+
+		//$(".mydiv,.myspan").css("color","red");
+
+		//var mydiv = document.getElementsByClassName("mydiv");//找原生DOM对象
+		//var $mydiv1 = $(".mydiv");//$mydiv1代理对象
+
+		//alert($mydiv1.size());//size()获取代理对象的个数
+
+		//alert(mydiv1 == $mydiv);//false  说明了： mydiv和$mydiv不是同一个对象 但是都能操作同一个DOM对象
+		
+		//var $mydiv2 = $("div");
+		//alert($mydiv1 == $mydiv2);//false 说明了：$mydiv1 $mydiv2不是同一个内存地址
+
+
+		//var $mydiv = $("#div");
+		//alert($mydiv);//找不到 返回的是一个对象  相当于母鸡找不到小鸡 但是母鸡还在
+
+		var $divele = $("div");//找到所有的div 母鸡找到所有小鸡
+		//$divele.css("color","red"); //通过代理对象操作 能操作多个
+		//$divele.get(0).style.color = "red";//通过代理对象$divele.get(0) 拿到原生对象操作 只能操作一个 get()方法 找到具体的某一个小鸡
+
+
+		//代理对象 原生对象相比
+		
+		//alert(document.getElementsByClassName("mydiv")[0] == $divele.get(0));//$divele.get(0)通过代理对象拿到的第一个原生对象 和原生对象相比较   结果：true
+
+//--------------------------------------------------------------------------------
+
+		//$("ul.nav li:first").css("borderTop","2px solid pink");
+		//$("ul.nav li:last").css("borderBottom","none");
+		//$("ul.nav li:even").css("backgroundColor","red");
+		//$("ul.nav li:odd").css("backgroundColor","green");
+		//$("ul.nav li:eq(2)").css("backgroundColor","yellow");
+
+		//$('ul.nav li:empty').css("backgroundColor","green");
+		//$('ul.nav li:contains("aa")').css("backgroundColor","green");
+
+		//原生对象转化成jQuery对象 方便迭代对象
+		var nav = document.getElementById("nav");
+		var $nav = $(nav);
+		//alert($nav.get(0) == nav);//true
+
+		$nav.children().css('backgroundColor','red');
+
+
+	</script>
+</html>

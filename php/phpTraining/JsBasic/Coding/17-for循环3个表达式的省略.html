@@ -1,0 +1,54 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>for循环3个表达式的省略</title>
+	<script type="text/javascript">
+		/**
+		 * @Author:     poetries
+		 * @DateTime:	2016-06-04 10:46:28
+		 */
+		
+		// for (var i = 0; i < 10; i++) {
+		// 	document.write(i+'<br>');
+		// }
+
+		//for循环省略表达式1
+		// var i = 1
+		// for (; i <=10; i++) {
+		// 	document.write(i+'<br>');
+		// }
+
+		//for循环省略表达式3
+/*		var i = 1
+		for (; i <=10;) {
+			document.write(i+'<br>');
+			 i++;
+		}*/
+		//for循环省略3个表达式
+		var i = 1
+		for (; ;) {//表达式2没写 不受限制 死循环
+
+			if(i>10){
+				break;
+			}
+			document.write(i+'<br>');
+			 i++;
+
+			 //简化
+			 document.write((i++)+'<br>');
+		}
+
+		//三个表达式全部略 相当于while的true
+		
+		var i = 1; while (true) {     if(i>10){ break;     }
+
+			 document.write((i++)+'<br>');
+		}
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

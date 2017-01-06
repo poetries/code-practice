@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../src/css/bootstrap.css">
+    <style>
+        .a{
+            background: #ccc;
+            height: 50px;
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+<form action="" class="role form-inline">
+    <div class="form-group col-md-3">
+        <label for="">用户名：</label><input type="text" name="" id="" class="form-control">
+    </div>
+    <div class="form-group col-md-3">
+
+        <label for="">邮箱：</label><input type="text" name="" id="" class="form-control">
+    </div>
+    <div class="form-group col-md-3">
+        <label for="">密码：</label><input type="password" name="" id="" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="">File Input:</label> <input type="file" name="" id="">
+    </div>
+    <div class="checkbox">
+        <label for=""><input type="checkbox" name="" id=""> 网球</label>
+        <label for=""><input type="checkbox" name="" id=""> 篮球</label>
+        <label for=""><input type="checkbox" name="" id=""> 棒球</label>
+    </div>
+    <input type="submit" value="提交" class="btn btn-info">
+</form>
+
+    <div class="input-group">
+        <input type="text" class="form-control">
+        <span class="input-group-addon">@</span>
+    </div>
+<hr>
+
+<form action="" class="form-horizontal" role="form">
+    <div class="form-group">
+        <div class="input-group">
+            <span class="input-group-addon">@</span>
+            <input type="text" name="" class="form-control" id="">
+            <span class="input-group-addon">$</span>
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon">@</span>
+            <input type="text" name="" class="form-control" id="">
+            <span class="input-group-addon">$</span>
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon">@</span>
+            <input type="text" name="" class="form-control" id="">
+            <span class="input-group-addon">$</span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="sr-only" for="exampleInputPassword2">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
+    </div>
+</form>
+
+<form action="" role="form" class="form-horizontal">
+    <div class="form-group">
+        <label for="" class="col-sm-2 control-label">Email</label>
+        <div class="col-sm-4">
+            <input type="text" name="" placeholder="请输入邮箱" id="" class="form-control">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="" class="col-sm-2 control-label">密码</label>
+        <div class="col-sm-4">
+            <input type="password" name="" placeholder="请输入密码" id="" class="form-control">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-4">
+            <div class="checkbox">
+                <label for="chk">
+                    <input type="checkbox" name="" id="chk"> Click Me
+                </label>
+            </div>
+        </div>
+
+    </div>
+    <div class="form-group">
+       <div class="col-sm-offset-2 col-sm-4">
+           <input type="submit" value="提交表单" class="btn btn-default">
+       </div>
+    </div>
+</form>
+
+<textarea class="form-control" rows="3">
+</textarea>
+
+<div class="checkbox">
+    <label for="">
+        <input type="checkbox" name="" id=""> Option one is this and that&mdash;be sure to include why it's great
+    </label>
+</div>
+
+<div class="checkbox disabled">
+    <label for="">
+        <input type="checkbox" name="" id=""> Option one is this and that&mdash;be sure to include why it's great
+    </label>
+</div>
+<div class="radio">
+    <label for="">
+        <input type="radio" name="" id=""> Option one is this and that&mdash;be sure to include why it's great
+    </label>
+</div>
+<div class="radio disabled">
+    <label for="">
+        <input type="radio" name="" id=""> Option one is this and that&mdash;be sure to include why it's great
+    </label>
+</div>
+
+<div class="checkbox-inline">
+    <input type="checkbox">1
+</div>
+<div class="checkbox-inline">
+    <input type="checkbox">2
+</div>
+<div class="checkbox-inline">
+    <input type="checkbox">3
+</div>
+<div class="checkbox-inline">
+    <input type="checkbox">4
+</div>
+
+<select class="form-control">
+    <option value="">1</option>
+    <option value="">2</option>
+    <option value="">3</option>
+    <option value="">4</option>
+</select>
+<select class="form-control" multiple>
+    <option value="">1</option>
+    <option value="">2</option>
+    <option value="">3</option>
+    <option value="">4</option>
+</select>
+
+
+<form action="" class="form-inline" role="form">
+    <div class="form-group">
+        <label for="email" class="sr-only">Email</label>
+        <input type="text" name="" class="form-control" id="email" disabled>
+    </div>
+    <div class="form-group has-error">
+        <label for="pwd" >密码</label>
+        <input type="password" name="" class="form-control" id="pwd">
+    </div>
+    <div class="form-group has-success has-feedback">
+        <label for="username">用户名</label>
+        <input type="text" name="" class="form-control" id="username">
+        <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+    </div>
+
+</form>
+
+<div class="form-group has-success has-feedback">
+    <label for="" class="control-label">Input success</label>
+    <input type="text" name="" class="form-control" id="">
+    <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+</div>
+<div class="form-group has-success has-feedback">
+    <label for="" class="control-label">Input </label>
+    <input type="text" name="" class="form-control" id="">
+    <span class="glyphicon glyphicon-random form-control-feedback"></span>
+</div>
+<div class="form-group has-success has-feedback">
+    <label for="" class="control-label">Input cess</label>
+    <input type="text" name="" class="form-control input-lg" id="">
+    <span class="glyphicon glyphicon-record form-control-feedback"></span>
+</div>
+
+<div class="form-group">
+    <label for="">姓名</label>
+    <input type="text" name="" class="form-control" id="">
+    <span class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+</div>
+
+
+<button class="close"><span aria-hidden="true">&times;</span></button>
+
+<span class="glyphicon glyphicon-asterisk"></span>
+
+
+
+
+</body>
+</html>

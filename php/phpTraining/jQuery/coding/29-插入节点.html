@@ -1,0 +1,64 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>插入节点</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-11 21:15:30
+ */
+
+/**
+ * 插入节点：
+ * 
+ *内部插入：
+ *
+ *1、append()向每个匹配元素尾部插入DOM，匹配元素在前面
+ *
+ * 2、appendTo()向每个匹配元素尾部插入DOM，匹配元素在后面
+ *
+ * 3、prepend() 向每个匹配元素头部插入DOM，匹配元素在前面
+ *
+ * 4、prependTo() 向每个匹配元素头部插入DOM，匹配元素在后面
+ *
+ * 外部插入
+ *
+ * 1、after()在匹配元素之后插入DOM 匹配元素在前
+ *
+ * 2、insertAfter()在匹配元素之后插入DOM 匹配元素在后
+ *
+ * 3、before()在匹配元素之前插入DOM 匹配元素在前
+ *
+ * 4、insertBefore()在匹配元素之前插入DOM 匹配元素在后
+ * 
+ * 
+ * 
+ */
+
+
+$(function(){
+
+	var strong = $('<strong>我是被插入的新标签</strong>');
+	//$('p').append(strong);
+	// strong.appendTo($('p'));//内容一样 学会一种即可
+
+	// $('p').prepend(strong);//插入到前面
+	// strong.prependTo($('p'));//内容一样
+	
+	//after()
+	 // $('p').after(strong);
+	 // strong.insertAfter($('p'));//内容一样
+
+	 //before()
+	  // $('p').before(strong);
+	  strong.insertBefore($('p'));//内容一样
+
+});
+	</script>
+</head>
+<body>
+	<p>我是p标签</p>
+</body>
+</html>

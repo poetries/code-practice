@@ -1,0 +1,48 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>事件对象</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-15 23:10:45
+ */
+/**
+ * 事件对象:
+ *
+ * 1、event.pageX 获取鼠标相对于文档的x轴坐标
+ * 2、event.pageY 获取鼠标相对于文档的y轴坐标
+ *
+ * 3、event.preventDefault()阻止浏览器默认行为
+ *
+ * 4、event.stopPropagation 阻止冒泡
+ *
+ * 5、event.which 监听键盘输入和鼠标操作
+ *
+ * 
+ */
+
+
+
+$(function(){
+
+$(document).click(function(e){
+ var x = e.pageX;
+ var y = e.pageY;
+ $('input').val(x+','+y);
+});
+
+
+
+});
+
+
+	</script>
+</head>
+<body >
+	<input type="text" name="">
+</body>
+</html>

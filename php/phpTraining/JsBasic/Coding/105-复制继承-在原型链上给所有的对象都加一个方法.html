@@ -1,0 +1,43 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>105-在原型链上给所有的对象都加一个方法</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-10 08:51:41
+ */
+
+//复制继承 又称对象继承 其实就是复制父对象的属性到子对象身上
+
+//105-在原型链上给所有的对象都加一个方法
+
+Object.prototype.extend = function(obj){
+	//在函数里把obj属性复制到自身
+	for(k in obj){
+		if(obj.hasOwnProperty(k)){
+			if(this[k] == undefined){//如果自身没有属性 则把obj上的属性复制到自身
+				this[k] = obj[k];
+			}
+		}
+	}
+}
+
+//现在heihu没有Kitty的climb方法 需要通过继承Kitty的climb方法 如下操作
+var kitty = {color:'white',climb:function(){alert('在树上')}};
+var heihu = {color:'black'};
+heihu.extend(kitty);
+
+console.log(heihu);
+heihu.climb();
+
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>ajax完整封装版</title>
+		<script src="../js/jquery-2.1.4.js"></script>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			html,body{
+				width:100%;
+				height:100%;
+			}
+			input{
+				margin-left:100px;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button"  value="按钮">
+	</body>
+	<script>
+	//ajax请求后台数据
+
+
+	var btn =  document.getElementsByTagName("input")[0];
+
+	btn.onclick = function(){
+		
+		ajax({//json格式
+			type:"post",
+			url:"post.php",
+			data:"username=poetries&pwd=123456",
+			asyn:true,
+			success:function(data){
+				document.write(data);
+			}
+		});
+	}
+
+	//封装ajax
+
+	function ajax(aJson){
+		var ajx = null;
+		var type = aJson.type || "get";
+		var asyn = aJson.asyn || true;
+		var url = aJson.url;		// url 接收 传输位置
+		var success = aJson.success;// success 接收 传输完成后的回调函数
+		var data = aJson.data || '';// data 接收需要附带传输的数据
+		
+
+		if(window.XMLHttpRequest){//兼容处理
+			ajx = new XMLHttpRequest();//一般浏览器
+		}else
+		{
+			ajx = new ActiveXObject("Microsoft.XMLHTTP");//IE6+
+		}
+		if (type == "get" && data)
+		{
+			url +="/?"+data+"&"+Math.random();
+		}
+
+		
+		//初始化ajax请求
+		ajx.open( type , url , asyn );
+
+		//规定传输数据的格式
+		ajx.setRequestHeader('content-type','application/x-www-form-urlencoded');
+
+		//发送ajax请求（包括post数据的传输）
+		type == "get" ?ajx.send():ajx.send(aJson.data);
+		
+
+		//处理请求
+		ajx.onreadystatechange = function(aJson){
+			
+			if(ajx.readState == 4){
+				
+				if (ajx.status == 200 && ajx.status<300)//200是HTTP 请求成功的状态码
+				{
+					//请求成功处理数据
+					success && success(ajx.responseText);
+
+				}else{
+					alert("请求出错"+ajx.status);
+					
+				}
+			}
+			
+		};
+	}
+
+		
+	</script>
+</html>

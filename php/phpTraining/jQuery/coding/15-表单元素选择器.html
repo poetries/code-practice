@@ -1,0 +1,77 @@
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>15-表单元素选择器</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-11 13:38:29
+ */
+
+/**
+ * 15-表单元素选择器
+ *
+ * :input
+ * :text
+ * :password
+ * :radio
+ * :checkbox
+ * :submit
+ * :image
+ * :reset
+ * :button
+ * :file
+ * :hidden
+ * 
+ * 
+ */
+
+
+$(function(){
+	//input 用属性选择器 也可以 input[type=xxx]
+	//input选择所有input textarea select button元素
+	//alert($(':input').length);//10
+	$(':text').css('background','red');
+	$(':password').css('background','red');
+	$('textarea[name=us]').css('background','red');//属性选择textarea[name=us]
+	alert($(':button').val());
+	alert($(':radio').val());
+	alert($(':checkbox').val());
+	alert($(':submit').val());
+	alert($(':reset').val());
+	alert($('input:hidden').val());//hidden 选择器条件：网页上看不到元素 且不占空间 （opacity:0;visible:）hidden选择不到
+	
+	
+	
+});
+
+	</script>
+	<style type="text/css">
+
+	</style>
+</head>
+<body>
+
+<form>
+	<input type="hidden" name="" value="我是隐藏的"><br />
+	<input type="text" name="" value="我是文本框" id=""><br />
+	<input type="password" name="" value="我是密码框" id=""><br />
+	<input type="button" name="" value="我是按钮" id=""><br />
+	<input type="radio" name="" value="我是单选按钮" id=""><br />
+	<input type="submit" name="" value="我是提交" id=""><br />
+	<input type="checkbox" name="" value="我是复选框" id=""><br />
+	<input type="reset" name="" value="我是重置" id=""><br />
+	<textarea name="us" id="" cols="30" rows="10"></textarea><br />
+	<select name="" id=""><br />
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+	</select>
+	<input type="file" name="" value='File' id="">
+	<input type="image" src="../notes/images/1-1.png" alt="">
+</form>
+</body>
+</html>

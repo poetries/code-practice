@@ -1,0 +1,129 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>94-this是谁</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-09 12:22:39
+ */
+
+/**
+ * 94-this是谁:
+ *
+ *this是指调用上下文
+ *
+ * 针对函数的应用场景讨论：
+ *
+ * 函数的4中调用方式（改变this的指向方式）
+ * 
+ * 1、函数方式  直接调用函数名 或函数表达式的返回值 This指代全局对象 window（函数：this就指window）
+ * 
+ * 2、属性方式（对象方式方法）：此时this指代该对象（方法的额属主）（属性：this就指对象）
+ * 
+ * 3、构造器方式:通过new 函数名() 创建对象  在js里面 构造函数与对象的关系比较松散 对象就是  属性->值 的集合
+ *
+ * 构造器的作用就是知道一个对象 把this指向该对象（构造器this就指新返回的对象）
+ * 
+ * 4、call apply方式(this就指：传哪个对象就指代哪个对象)
+ *
+ *
+ *还有改变this的方法：with语句：
+ *
+ *  * with（对象）{
+ * 		语句1
+ * 		语句2}
+ *
+ *在with内部的语句 就把参数中的对象当成了上下文环境
+ *
+ * 
+ * 函数本身即是对象，对象就有方法
+ *
+ * 函数名.call(对象,参数1，参数2，参数3)
+ *
+ * 以fn.call(obj，'a','b')为例：
+ * 
+ * 实际效果相当于：
+ * 1、fn内部的this指向了obj
+ * 2、fn('a','b')  
+ *
+ *
+ *apply的效果与call一样，只是传参数时把所有参数包装在数组里传过去
+ *
+ * 例如：
+ * fn.call(obj,'a','b') ===等价 fn.apply(obj,['a','b'])
+ * 
+ */
+
+//第一种函数调用方法：以函数形式来调用
+//this指代 全局对象 window-->全局对象
+
+/*function t() {
+	alert(this);//this此时指代window对象
+}
+t();//window对象 相当于window.t()
+
+
+function s(){
+	t();
+
+}
+s();
+*/
+
+
+
+//第二种函数调用方法：以对象的属性来调用
+//this指代 该对象
+/*
+function t() {
+	//alert(this);//此时this指代
+	//alert(this.id);//test
+	this.style.background='red';
+}
+
+window.onload = function (){document.getElementById('test').onclick = t; 
+} 
+
+*/
+
+/**
+ * 第三种：在js里面 没有类的概念 但是有对象的概念 对象可以通过字面值直接创建 也可通过构造函数来创建 构造函数就是普通函数 当一个函数通过一个new关键字来调用时 此函数充当的就是构造函数
+ * 
+ */
+
+/*function dog(){
+	this.legs = 4;
+	this.bark = function(){
+		alert('哈哈哈');
+	}
+
+	//alert(typeof dog);//function
+	//如果直接运行dog()出现问题  效果是this指向window 给window全局增加了2个全局变量
+	
+	var gou= new dog();
+	//alert(typeof gou);//Object
+	*/
+
+//通过字面值 创建对象
+
+var hei = 175;
+var wcai = {age:20,hei:180,say:function(){alert(this.hei)}};
+
+wcai.say();//180
+
+var fn = wcai.say;//从wcai的属性say读过来 仅仅是获得say属性的值即函数而已 赋值操作 把函数赋值给window.fn属性（fn全局变量） --此时window对象上多了一个fn(控制台DOM中可见)
+alert(fn());//180 
+alert(fn);//fn函数
+
+alert((wcai.say=wcai.say)());//175 表达式必有返回值 因此wcai.say=wcai.say右侧的值是一个函数  是表达式的返回值是function在运行   返回到全局
+
+
+
+	</script>
+</head>
+<body>
+	<p id="test">哈哈哈</p>
+</body>
+</html>

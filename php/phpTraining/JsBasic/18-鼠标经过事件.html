@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 200px;
+            height:200px;
+            background: gray;
+        }
+    </style>
+    <script>
+    function t1(){
+      //  alert('who');
+    }
+    function t2(){
+        alert('请填写完成');
+        return false;
+        }
+    </script>
+</head>
+<body>
+        <h1>鼠标经过事件</h1>
+        <div onmouseover="t1();"></div>
+        <form action="18-1.html" onsubmit="return t2();"><!--阻拦提交效果 使得数据无法提交 特例 return t2()-->
+            <p><input type="text" name="username" id="" /></p>
+            <p><input type="text" name="email" id="" /></p>
+            <p><input type="submit"  value="提交" /></p>
+        </form>
+</body>
+</html>

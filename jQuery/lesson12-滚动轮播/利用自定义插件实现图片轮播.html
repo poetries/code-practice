@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>利用插件实现图片轮播</title>
+		<link rel="stylesheet" href="css/index.css">
+	</head>
+	<body>
+		<div class="theme">
+			<div id="themes" class="pagebar" page-size="4" mode="page" page-loop="true|false">
+				<ul class="content">
+					<li>
+						<div class="set_theme_item on" data-src="theme_bg_1.png">
+							<img src="img/theme.png" alt="" width="182px" height="100px">
+							<p>测试</p>
+							<i class="icon"></i>
+						</div>
+					</li>
+					<li>02</li>
+					<li>03</li>
+					<li>04</li>
+					<li>05</li>
+					<li>06</li>
+					<li>07</li>
+					<li>08</li>
+					<li>09</li>
+					<li>10</li>	
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script src="../js/jquery-2.1.4.js"></script>
+	<script src="js/实现无缝滚动.js"></script>
+	<script>
+		$("div.pagebar").pagebar();
+	</script>
+</html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>弹出框</title>
+    <link rel="stylesheet" href="../src/css/bootstrap.css">
+</head>
+<body>
+<div class="container-fluid" style="margin: 40px;">
+    <button class="btn btn-danger example" title="popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click Me</button>
+
+    <button class="btn btn-default exp1" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-toggle="popover" data-placement="left"> Popover on left</button>
+    <button class="btn btn-default exp2" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-toggle="popover" data-placement="right"> Popover on left</button>
+    <button class="btn btn-default exp3" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-toggle="popover" data-placement="top"> Popover on left</button>
+    <button class="btn btn-default exp4" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-toggle="popover" data-placement="bottom"> Popover on left</button>
+
+</div>
+
+<script src="../src/js/jquery-1.11.0.js"></script>
+<script src="../src/js/bootstrap.min.js"></script>
+<script>
+    $(".example").popover();
+    $(".exp1,.exp2,.exp3,.exp4").popover();
+</script>
+</body>
+</html>

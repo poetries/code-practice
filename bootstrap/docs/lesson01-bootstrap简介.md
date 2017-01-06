@@ -1,0 +1,15 @@
+- `bootstrap`简介
+   - `Bootstrap`，来自 `Twitter`（全国最大的微博），是目前最受欢迎的前端框架。
+   - `bootstrap`下载及演示 http://v3.bootcss.com/
+- 什么是`bootstrap`？
+   - `Bootstrap `是基于 `HTML`、`CSS`、`JAVASCRIPT` 的开源框架，它简洁、直观、强悍、灵活，使得 `Web `开发更加快捷，
+   - 用于开发响应式布局、移动设备优先的 `WEB `项目。
+- 为什么使用 `Bootstrap`？
+   - 1）跨设备
+   - 2）跨浏览器（`chrome`，`IE9`以上，`Firefox`，`Safari`，`Opera`...）
+   - 3）响应式布局
+   - 4）具有实用性强的组件
+   - 5）内置`jquery`插件
+- `bootstrap`的结构
+   - 主要分为三大核心模块：`css`、`js`、`font`
+- `bootstrap`的基本模板

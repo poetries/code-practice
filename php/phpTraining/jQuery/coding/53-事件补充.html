@@ -1,0 +1,79 @@
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>事件补充</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-17 16:42:06
+ */
+
+/**
+ * hover事件
+ *
+ * trigger()事件 模拟事件发生 能阻止冒泡
+ *
+ * live()、die()已经作废
+ * 
+ */
+
+
+$(function(){
+
+	//hover是模拟鼠标进入（mouseenter（mouseleave）和鼠标离开的事件
+	//hover(fn1,fn2);
+	
+/*	$('p').hover(function(){
+		$(this).css('background','red')
+	},function(){
+		$(this).css('background','none')
+	});
+*/
+
+
+//trigger() 模拟事件的发生 自动去执行指定的DOM元素上的方法
+
+/*$('a').click(function(){
+	alert('hahha');
+});
+$('a').mouseover(function(){
+	alert('鼠标进入');
+});
+
+// $('a').trigger('click mouseover'); //error  不能写两个
+$('a').trigger('click');
+*/
+
+
+//下面是冒泡事件测试
+$('a').click(function(){
+	alert('a被点击');
+});
+
+$('p').click(function(){
+	alert('p被点击');
+});
+
+// $('a').trigger('click');
+$('a').triggerHandler('click');//triggerHandler阻止冒泡
+
+
+});
+
+
+
+
+	</script>
+	<style type="text/css">
+		p{background: #f00;padding: 20px}
+		a{background: #f90;padding: 20px}
+	</style>
+</head>
+<body >
+	<p><a href="#">点击</a></p>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding="utf-8" ?>
+
+<root>
+    <!--自闭合标签-->
+    <br/>
+    <!--在xml中 select属性必须要有值才行 必须用双引号括起来-->
+    <select>
+        <opeiton>大</opeiton>
+        <opeiton selected="selected">中</opeiton>
+        <opeiton>小</opeiton>
+    </select>
+    <!--特殊字符要用实体来代替-->
+    <article title="哈哈哈&gt;">
+        小于号：&lt;,
+        大于号：&gt;
+
+    </article>
+
+    <spcial>
+        <![CDATA[6.1 特殊字符要用实体来代替
+如：>&gt;< &lt;]]>
+    </spcial>
+</root>

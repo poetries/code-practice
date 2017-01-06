@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style></style>
+    <script>
+        //获取焦点
+    function t1(){
+        document.getElementsByName('email')[0].style.border = '2px solid red';
+    }
+        //失去焦点
+    function t2(){
+        document.getElementsByName('email')[0].style.border = '';
+    }
+    </script>
+</head>
+<body>
+<h1>onfocus_onblus事件</h1>
+<p>
+    Username:<input type="text" name="username" />
+</p>
+
+<p>
+    Email:<input type="text" name="email"  onfocus="t1();" onblur="t2();" />
+</p>
+
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title>DOM查找练习</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<link rel="stylesheet" href="images/reset.css" type="text/css" />
+<style type="text/css">
+img {
+	display:block;
+}
+
+#container {
+	width:1002px;
+}
+
+
+#header {
+	width:1002px;
+	height:256;
+	background:green url(images/top_bg.jpg);
+}
+#lianying {
+	width:1002px;
+	height:128px;
+	background:red;
+}
+
+#nav li {
+	list-style:none;
+	float:left;
+	width:90px;
+	height:37px;
+	margin-right:2px;
+}
+
+
+#nav li a:link {
+	display:block;
+	width:90px;
+	height:37px;
+	background:url(images/nav_bg.gif);
+
+	text-align:center;
+	
+	/*
+		font: 必须加字体,否则可能引来解析错误
+	*/
+	font:15px/37px simhei;
+	
+	color:#363636;
+}
+
+#nav li a:visited {
+	color:#363636;
+}
+
+#nav li a:hover {
+	background:url(images/nav_on.gif);
+	color:#FFF;
+}
+
+
+#banner {
+	width:1000px;
+	height:237px;
+	margin:8px 0;
+	padding:0 1px;
+
+}
+
+#main {
+	width:1002px;
+	height:464px;
+	background:pink;
+}
+
+
+#mleft {
+	width:694px;
+	height:464px;
+	background:purple;
+	float:left;
+}
+
+
+.yewu {
+	width:337px;
+	height:222px;
+	margin:5px;
+	float:left;
+	background:orange;
+}
+
+
+
+#mrig {
+	width:294px;
+	height:464px;
+	background:silver;
+	float:right;
+}
+
+#view {
+	width:294px;
+	height:227px;
+	margin-bottom:10px;
+	background:purple;
+
+}
+
+#contact {
+	width:294px;
+	height:227px;
+	background:#CCC;
+}
+
+#footer {
+	margin-top:10px;
+	width:1002px;
+	height:53px;
+	background:yellow;
+}
+
+
+</style>
+
+</head>
+	<body>
+		<div id="container">
+			<div id="header">
+				<img src="images/logo.jpg" alt="logo" />
+				<ul id="nav">
+					<li><a href="#">首页</a></li>
+					<li><a href="#">业务介绍</a></li>
+					<li><a href="#">技术优势</a></li>
+					<li><a href="#">精品案例</a></li>
+					<li><a href="#">关于灵犀</a></li>
+					<li><a href="#">文章观点</a></li>
+					<li><a href="#">联系我们</a></li>
+				</ul>
+			</div>
+			<div id="banner">
+				<img src="images/about_banner.jpg" alt="banner" />
+			</div>
+			<div id="main">
+				<div id="mleft">
+					<div class="yewu"></div>
+					<div class="yewu"></div>
+					<div class="yewu"></div>
+					<div class="yewu"></div>
+				</div>
+				<div id="mrig">
+					<div id="view"></div>
+					<div id="contact"></div>
+				</div>
+			</div>
+			<div id="footer">
+				<script type="text/javascript">
+				/**
+				 * @CreateBy:   SublimeText3
+				 * @Author:     poetries
+				 * @DateTime:   2016-06-05 10:01:01
+				 */
+
+				 function t1(){
+					var header = document.getElementById('header');
+					header.style.background = 'url(./images/e.gif)';
+				 }
+
+				 function t2(){
+					var mleft = document.getElementById('mleft');
+					// alert(mleft.childNodes.length);//9  空白文本也是的当成文本节点来算  childNodes是w3c的标准写法
+					//还可以这样写 children不是w3c标准 但是各大浏览器兼容性很好
+					//alert(mleft.children.length);//4
+					//mleft.firstChild.nextSibling.style.background = 'red';//这里需要注意 firstChild没有发挥作用 因为第一个子元素理解成空格处理 
+					
+				 //这个推荐使用children 来处理空白节点
+				 mleft.children[0].style.background = 'red';
+
+				 
+				}
+
+				</script>
+
+				<p>
+					<input type="button" value="findHeader" onclick="t1();" />
+				</p>
+
+				<p>
+					<input type="button" value="ById结合子元素" onclick="t2();" />
+				</p>
+				<p>
+					<input type="button" value="ByName" onclick="t3();" />
+				</p>
+			</div>
+		</div>
+	</body>
+</html>

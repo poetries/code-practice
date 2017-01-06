@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--样式分离-->
+    <style>
+        div{width: 300px;height: 300px;border: 1px solid blue;}
+    </style>
+
+</head>
+<body>
+<!--结构分离-->
+<div></div>
+</body>
+<script>
+/*    //行为分离 写法一
+    function bian(){
+
+         document.getElementsByTagName('div')[0].style.border = "1px solid red";
+    }
+    //行为分离 这里的onclick属性 相当于与上边的<div onclick="">效果一样 因为onclik是div的属性看待本质一样
+    //属性可以是一个函数方法
+    document.getElementsByTagName('div')[0].onclick = bian;//这里不能这样bian() 我们要把函数赋给div的属性 而不是返回值赋给*/
+
+    //写法二
+/*    document.getElementsByTagName('div')[0].onclick = function (){//这里用匿名函数 不用起名字
+
+        document.getElementsByTagName('div')[0].style.border = "1px solid red";
+    }*/
+
+    //写法三 推荐
+
+document.getElementsByTagName('div')[0].onclick = function (){//这里用匿名函数 不用起名字
+
+   this.style.border = "1px solid red";//this指的是 document.getElementsByTagName('div')[0]这个对象
+}
+
+
+</script>
+
+</html>

@@ -1,0 +1,49 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jquery类级插件开发</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript" src='demo.js'></script>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-23 08:54:56
+ */
+
+/**
+ * 编写插件的两种方式
+ *
+ * 1、类级别开发(不常用)
+ *
+ * 	添加新的全局函数
+ *
+ *  使用$.extend(obj)
+ *
+ *  使用命名空间
+ *  
+ *
+ * 2、对象级别开发（常用）
+ * 
+ */
+
+$(function(){
+
+	// var str = '我是通过调用参数的形式';
+	// var str = '我是通过调用extend方法的';
+	var str = '我是通过命名空间调用的';
+	$('input').click(function(){
+		// $.myAlert(str);
+		// $.myAlert2();
+		$.lianying.myAlert(str);
+	});
+
+
+});
+
+	</script>
+</head>
+<body>
+	<input type="button" value="点击">
+</body>
+</html>

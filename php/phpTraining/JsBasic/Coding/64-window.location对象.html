@@ -1,0 +1,49 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>location对象</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-06 12:09:15
+ */
+
+/**
+ *
+ * location对象：
+ *
+ * host 主机
+ * port 端口
+ * href 地址
+ * pathname 路径
+ * protocol 协议
+ * search 查询字符串
+ * assign(url) 页面跳转  	assign() 方法可加载一个新的文档
+ * 
+ */
+alert('地址是'+window.location.href);
+alert('host 主机'+window.location.host);
+alert('port 端口'+window.location.port);
+alert('pathname 路径'+window.location.pathname);
+alert('protocol 协议'+window.location.protocol);
+
+
+
+	function baidu(){
+		window.location.href = 'http://www.baidu.com';
+	}
+
+	function newDoc()
+	  {
+  		window.location.assign("http://www.w3school.com.cn");
+ 	 }
+
+
+	</script>	
+</head>
+<body>
+	<input type="button" value="去百度" onclick="baidu();">
+	<input type="button" value="Load new document" onclick="newDoc()" />
+</body>
+</html>

@@ -1,0 +1,69 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>内置对象</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-05 00:31:32
+ */
+
+/**
+ * 内置对象:
+ *
+ * 在js中 所有的变量 都可以被js引擎包装秤对象来处理
+ *
+ * 比如：str='abd'  字符串本身没有length 属性
+ *
+ * 但是你去调用str.length 在调用一瞬间 js引擎会把它包装成一下 当做对象来处理 并且给这个赋了一些方法
+ *
+ *
+ *
+ * 对于字符串 布尔值 数值类型 数组 null 这些变量 虽然没有属性 但是在调用的前一瞬间 js会为他们包装一些属性和方法
+ *
+ *
+ *还有一些内置对象，是通过new 得来的 比如：日期时间对象 先new 在调用方法和属性
+ *
+ *Math对象  和字符串一样 不用new 也能直接其方法
+ *
+
+ * 字符串对象的属性和方法：
+ *
+ * length 属性： 长度
+ *
+ * concat方法：连接两个或者更多个字符串
+ *
+ * indexOf（String）返回出现字符串的位置  找不到就返回-1
+ *
+ * substr(num1,[num2])//截取字符串  num2截取的宽度
+ *
+ * toUpperCase() 转换成大写
+ *
+ * toLowerCase()转换成小写
+ *
+ * replace(oldstr1,newstr2) //字符串替换
+ *
+ * 
+ */
+
+ var str = 'helloworld';//这是一个字符串变量
+ // alert(str.length);
+ 
+ alert(str.concat('中国'));//concat方法：连接两个或者更多个字符串
+
+ alert(str.indexOf('o'));//4 
+
+ alert(str.substr(str.indexOf('o')));//substr截取字符串 一般从开始位置截取 
+ 									//如有特殊：需要指定截取位置 indexOf（String）返回出现字符串的位置  从当前位置开始截取
+ 									
+ alert(str.toUpperCase());
+ alert(str.replace('hello','连英'));// replace(oldstr1,newstr2) 字符串替换
+
+ 
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

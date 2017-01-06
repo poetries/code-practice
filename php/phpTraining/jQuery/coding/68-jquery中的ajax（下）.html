@@ -1,0 +1,64 @@
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title><html>
+<head>
+	<meta charset="UTF-8">
+	<title>检验表单post方法</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript" src="./src/js/jquery.easing.1.3.js"></script>
+		<script type="text/javascript">
+
+	
+	$(function(){
+
+		$('input[type=button]').click(function(){
+			//不用jQueryDOM
+			// alert(data);
+			//$.get("ajaxtest.txt?data="+Math.random(),function(data){
+			// });
+				$.get("process.php",{"username":$('#username').val()},function(data){
+					// alert(data);
+					//把返回的data放到div中
+					// $('div').html(data);
+					
+					//针对后台返回的true false判断
+					if(data == "true"){
+						$('div').html('用户名不能为admin');
+					}else{
+						$('div').html('用户名可以注册');
+					}
+				});
+				
+			
+
+		});
+
+
+	});
+
+		</script>
+		<style type="text/css">
+			div{
+				color:red;
+				width: 200px;
+				height: 200px;
+				border: 1px solid blue;
+			}
+		</style>
+
+</head>
+<body>
+	
+</body>
+</html></title>
+</head>
+<body>
+
+<input type="text" name="username" id="username">
+<input type="button" value="检验">
+<div></div>
+
+</body>
+</html>

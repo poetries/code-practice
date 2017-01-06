@@ -1,0 +1,121 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>while面试题</title>
+	<script type="text/javascript">
+		/**
+		 * @Author:     poetries
+		 * @DateTime:	2016-06-04 00:01:27
+		 */
+		
+		/**
+		 * 面试题1
+		 *
+		 * 写一个程序：打印1-100这些数字 但是遇到数字为3的倍数时候 打印Fizz替换数字 5的倍数用Buzz替换 既是3又是5的倍数打印FizzBuzz
+		 */
+		
+		//错误写法
+/*		var i = 0;
+		while (++i<=100) {
+			if(i%3 == 0){
+				document.write(i+'----Fizz'+'<br>');
+			}else if(i%5 == 0){
+				document.write(i+'-----Buzz'+'<br>');
+			}else if((i%3 == 0) && (i%5 ==0)) {//返是碰到15的部分都被3拦截了 这里需要重新写
+				document.write(i+'FizzBuzz'+'<br>');
+			}else{
+				document.write(i+'<br>');
+			}
+
+			
+		}*/
+
+		//先把交替过滤掉 while 写法
+		
+/*		var i = 0;
+		while (++i<=100) {
+			if((i%3 == 0) && (i%5 ==0)){
+				document.write(i+'----FizzBuzz'+'<br>');
+			}else if(i%3 == 0){
+				document.write(i+'-----Fizz'+'<br>');
+			}else if(i%5 == 0) {//返是碰到15的部分都被3拦截了 这里需要重新写
+				document.write(i+'-----Buzz'+'<br>');
+			}else{
+				document.write(i+'<br>');
+			}
+
+			
+		}
+*/
+		//for循环写法
+		
+/*		for(var i =1;i<=100;i++)
+		{
+			if((i%3 == 0) && (i%5 ==0)){
+				document.write(i+'----FizzBuzz'+'<br>');
+			}else if(i%3 == 0){
+				document.write(i+'-----Fizz'+'<br>');
+			}else if(i%5 == 0) {//返是碰到15的部分都被3拦截了 这里需要重新写
+				document.write(i+'-----Buzz'+'<br>');
+			}else{
+				document.write(i+'<br>');
+			}
+		}*/
+
+
+/**
+ * 面试题二
+ *
+ * 假设某人有100000现金 每经过一次路口需要一次交费 缴费规则为 当大于 50000每次交5% 如果现金小于等于50000时 每次交5000 写一个程序 计算此人可经过多少次路口
+ */
+/*
+var money = 100000;
+ var cnt = 1;
+
+ while (money>5000) {
+ 	if(money>50000){
+ 		money = money-0.05*money;
+ 		document.write('第'+cnt+'次经过路口，本次交的%5费用是:'+(0.05*money)+'还剩'+money+'元'+'<br>');
+
+ 	}else{
+ 		money -=5000;
+ 		document.write('第'+cnt+'次经过路口，本次交的费用是:5000'+'还剩'+money+'元'+'<br>');
+ 		
+ 	}
+ 	cnt++;
+	
+
+ }*/
+
+//简化写法
+
+/*for(var money = 100000,num=0;money >= 5000;num++) {
+if(money > 50000) {
+money *= 0.95; // 扣了5%,即原来的0.95倍
+} else {
+money -= 5000;
+}
+}
+
+document.write(num);//23*/
+
+
+for($money = 100000,$num=0;$money >= 5000;) { // 看此处,第2个";"号后竟然是空的??
+    if($money > 50000) {
+        $money *= 0.95; // 扣了5%,即原来的0.95倍
+    } else {
+        $money -= 5000;
+    }
+
+    ++$num; // 把过桥记录加1
+     document.write('第'+$num+'次过桥后,剩余,'+$money+'元<br />');
+}
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

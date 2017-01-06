@@ -1,0 +1,49 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>闭包</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-09 17:31:10
+ */
+/**
+ * 闭包1：
+ * 函数的作用域不取决于运行时的环境 而是取决于声明时的环境
+ */
+
+
+ function t(){
+ 	var age = 22;
+ 	var say = function(){
+ 		return age;
+ 	}
+ 	return say;//return 一个函数
+ }
+var age= 33;
+ var temp = t();//temp等于函数 
+ alert(temp());//等价于t()()  打印22
+
+
+//对比下面的程序
+/*
+var age =  22;
+function t(){
+	alert(age);
+}
+function fn1(){//age是fn1上的一个激活对象 
+	var age = 33;
+	t();//调用t函数时 去t内部找age 不属于运行时的环境 而是属于声明时的环境 也就是age = 22
+}
+
+fn1();//22
+
+*/
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

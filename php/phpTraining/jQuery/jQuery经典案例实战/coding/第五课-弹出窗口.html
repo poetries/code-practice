@@ -1,0 +1,188 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>弹出窗口</title>
+    <script type="text/javascript" src="../src/js/jquery.js"></script>
+    <script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:   2016-06-24 09:35:15
+ */
+
+/**
+ left的值等于浏览器可视区域的宽度除以2减去弹出窗口的宽度的一半
+ top的值等于浏览器可视区域的高度除以2减去弹出窗口的高度的一半
+ $(window).height()获取浏览器可视区域的高度
+ $(window).width()获取浏览器可视区域的宽度
+
+
+弹出窗口的宽度和高度innerWidth() innerHeight()获取到了有padding值的宽度和高度 
+innerWidth()计算宽度只是包括padding 不包括border margin
+outWidth()包括padding border 和选择性的margin  如果写true 就包括了margin
+在项目中一般用outWidth()加一个参数 来获取元素的真实宽度 应对改需求很有帮助
+var popWindowWidth = popWindow.innerWidth();
+var popWindowheight = popWindow.innerHeight();
+
+ */
+
+
+
+$(function(){
+
+ var oBtn = $('#show');
+    var popWindow = $('.popWindow');
+    var oClose = $('.popWindow h3 span');
+
+    //浏览器可视区域的宽度
+    var browserWidth = $(window).width();
+
+    //浏览器可视区域的高度
+    var browserHeight = $(window).height();
+
+    //浏览器纵向滚动条距离上边界的值
+    var browserScrollTop = $(window).scrollTop();
+
+    //浏览器横向滚动条距离左边界的值
+    var browserScrollLeft = $(window).scrollLeft();
+    
+    
+    
+    //弹出窗口的宽度
+    var popWindowWidth = popWindow.outerWidth(true);
+    //弹出窗口的高度
+    var popWindowHeight = popWindow.outerHeight(true);
+
+    //left的值＝浏览器可视区域的宽度／2－弹出窗口的宽度／2+浏览器横向滚动条距离左边界的值
+    var positionLeft = browserWidth/2 - popWindowWidth/2+browserScrollLeft;
+
+    //top的值＝浏览器可视区域的高度／2－弹出窗口的高度／2+浏览器纵向滚动条距离上边界的值
+    var positionTop = browserHeight/2 - popWindowHeight/2+browserScrollTop;
+
+
+    var oMask = '<div class="mask"></div>';
+    //遮照层的宽度
+    var maskWidth = $(document).width();
+
+    //遮照层的高度
+    var maskHeight = $(document).height();
+
+    
+
+    oBtn.click(function(){
+        popWindow.show().animate({
+                    'left':positionLeft+'px',
+                    'top':positionTop+'px'
+        },500);
+
+        $('body').append(oMask);
+        $('.mask').width(maskWidth).height(maskHeight);
+
+    });
+
+
+    $(window).resize(function(){    
+        if(popWindow.is(':visible')){
+            browserWidth = $(window).width();
+            browserHeight = $(window).height();
+            positionLeft = browserWidth/2 - popWindowWidth/2+browserScrollLeft;
+            positionTop = browserHeight/2 - popWindowHeight/2+browserScrollTop;
+
+            popWindow.animate({
+                        'left':positionLeft+'px',
+                        'top':positionTop+'px'
+            },500);     
+        }
+    });
+
+    $(window).scroll(function(){
+        if(popWindow.is(':visible')){
+            browserScrollTop = $(window).scrollTop();
+            browserScrollLeft = $(window).scrollLeft();
+            positionLeft = browserWidth/2 - popWindowWidth/2+browserScrollLeft;
+            positionTop = browserHeight/2 - popWindowHeight/2+browserScrollTop;
+            popWindow.animate({
+                        'left':positionLeft+'px',
+                        'top':positionTop+'px'
+            },500).dequeue();
+        }
+                
+    });
+
+    
+
+    oClose.click(function(){
+        popWindow.hide();
+        $('.mask').remove();
+    });
+
+
+});
+
+    </script>
+    <style type="text/css">
+        *{
+    padding: 0;
+    margin: 0;
+}
+
+.hide{
+    display: none;
+}
+
+.popWindow{
+    width: 300px;
+    height: 300px;
+    background: #abcdef;
+    padding: 2px;
+    margin: 10px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    /*border: 2px solid #abcdef;*/
+}
+
+.popWindow h3{
+    height: 30px;
+    line-height: 30px;
+}
+
+.popWindow h3 span{
+    float: right;
+    font-size: 14px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.popWindow h3 span:hover{
+    color: #f00;
+}
+
+.popWindow .content{
+    height: 270px;
+    background: #fff;
+}
+
+.mask{
+    background: #000;
+    opacity: 0.4;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+    </style>
+</head>
+<body style="width:2000px">
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <a href="javascript:;" id="show">显示窗口</a>
+
+    <div class="popWindow hide">
+        <h3>弹出窗口的标题<span>关闭</span></h3>
+        <div class="content">弹出窗口的内容</div>
+    </div>
+    
+    
+</body>
+</html>

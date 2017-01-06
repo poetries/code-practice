@@ -1,0 +1,66 @@
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title><html>
+<head>
+	<meta charset="UTF-8">
+	<title>$.ajax</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript" src="./src/js/jquery.easing.1.3.js"></script>
+		<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-22 20:31:52
+ */
+
+/**
+ * $.ajax  在项目中用的最多
+ */
+	
+	$(function(){
+
+		$('input[type=button]').click(function(){
+			var url = 'process.php';
+			var sendData = {"username":$('#username').val()};
+
+			$.ajax({//json格式 $.ajax  在项目中用的最多 速度最快 推荐
+				url:url,
+				type:'get',
+				data:sendData,
+				success:function(data){
+					if(data == "true"){
+						$('div').html('用户名不能为admin');
+					}else{
+						$('div').html('用户名可以注册');
+					}
+				}
+			});
+
+	});
+	});
+
+
+		</script>
+		<style type="text/css">
+			div{
+				color:red;
+
+			}
+		</style>
+
+</head>
+<body>
+	
+</body>
+</html></title>
+</head>
+<body>
+
+<input type="text" name="username" id="username">
+<input type="button" value="检验">
+<div></div>
+
+</body>
+</html>

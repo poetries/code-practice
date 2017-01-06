@@ -1,0 +1,56 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>innerHTML</title>
+
+</head>
+<body>
+	<div id="container">
+		<p>
+			<ul>
+				<li>哈哈</li>
+			</ul>
+		</p>
+	</div>
+	<input type="button" value="内部的HTML代码" onclick="t1();">
+	<input type="button" value="替换内部的HTML代码" onclick="t2();">
+	<input type="button" value="加个图片" onclick="t3();">
+</body>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-05 22:20:23
+ */
+/**
+ * innerHTML属性：
+ *
+ * 是可读可写：读是把某个节点内部的html代码读出来
+ * 如果赋值，则是把html代码更新
+ */
+
+ 	function t1(){
+ 		var cont = document.getElementById('container');
+ 		//alert(cont.innerHTML);//innerHTML是一个属性  读取内部的HTML
+
+
+ 	}
+
+ 	//innerHTML 修改页面内的html代码
+ 	function t2(){
+ 		var cont = document.getElementById('container');
+
+ 		// alert(cont.innerHTML);
+
+	 	var htmlcode = "<ul><li>东</li><li>南</li><li>西</li><li>北</li></ul>";
+		cont.innerHTML=htmlcode;
+ 	}
+
+ 	function t3(){
+ 		var cont = document.getElementById('container');
+ 		var addpic = "<img src='./images/logo.png'>";
+ 		cont.innerHTML = addpic;
+;	}
+
+	</script>
+</html>

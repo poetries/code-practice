@@ -1,0 +1,74 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>onmouserover</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-06 01:13:22
+ */
+ function t1(){
+ 	alert('来了');
+ 	
+ }
+
+ function t2(){
+ 	alert('走了');
+ }
+
+ function t3(){
+ 	var bd = document.getElementById('baidu');
+ 	bd.style.display = 'block';
+ }
+ function t4(){
+ 	 var bd = document.getElementById('baidu');
+ 	bd.style.display = 'none';
+ }
+
+ function t5(){
+ 	var sel = document.getElementsByTagName('select')[0];
+ 	// alert(sel.value);
+ 	if(sel.value == ''){
+ 		alert('至少选择一个');
+ 	}
+ }
+
+ function t6(){
+ 	 var con = document.getElementsByName('email')[0].value;
+ 	if(con == ''){
+ 			document.getElementsByName('email')[0].value = prompt('请输入邮件地址：');
+ 			return false;//和67行结合才能阻拦提交
+ 		}
+ }
+	</script>
+	<style type="text/css">
+		#img{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<a href="#" onmouseover="t3();"  onmouseout="t4();">百度</a>
+	<p id="baidu">
+		百度详细介绍
+		<img src="./images/logo.png">
+	</p>
+	
+	<p>
+	<select name="xueli" onchange="t5();">
+		<option value="">请选择学历</option>
+		<option value="大学" >大学</option>
+		<option value="中学">中学</option>
+		<option value="初中">初中</option>	
+		<option value="小学">小学</option>	
+	</select></p>
+
+	<form action="" onsubmit="return t6();"> <!-- onsubmit 和return false结合才能阻止提交  地址栏没变化说明阻拦 -->
+		<p>Email:<input type="text" name="email" value="" ></p>
+		<p>姓名:<input type="text" name="username"></p>
+		<p><input type="submit" value="提交 "></p>
+</form>
+	
+</body>
+</html>

@@ -1,0 +1,156 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>实例1</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-12 07:54:28
+ */
+
+$(function(){
+
+	//动态获取浏览器的宽度 高度
+	var maskHeight = $(document).height();
+	var maskWidth = $(document).width();
+
+
+var arr = [];//获取的数据放这里
+
+//查看
+$('.view').click(function(event) {
+
+	//添加遮罩层
+	$('<div class="mask"></div>').appendTo($('body'));
+	$('div.mask').css({
+		'opacity':0.4,
+		'background':'#000',
+		'position':'absolute',
+		'left':0,
+		'top':0,
+		'width':maskWidth,
+		'height':maskHeight,
+		'z-index':2
+
+	});
+
+
+	$(this).parent().siblings().each(function(){
+		// alert($(this).text());
+		arr.push($(this).text());
+
+
+	});//$('p').parent()获取td这一行 siblings获取其他的兄弟的元素 each遍历分别弹出value
+	// alert(arr);
+	$('.popDiv').show().children().each(function(i) {//children()这里是所有的p标签
+		$(this).children('span').text(arr[i]);//这里的i是each中默认的
+	});
+
+
+	//关闭
+	$('.close').click(function(){
+		$(this).parent().hide();
+		$('.mask').remove();
+	});
+
+});
+
+	//刪除
+	
+	// parents()选取祖先元素
+	$('a.del').click(function(){
+		$(this).parents('tr').remove();//parents('tr') 获得的是tr这一行
+	});
+
+
+});
+	</script>
+
+ <style type="text/css">
+ 	#table{
+ 		border:1px solid blue;
+ 		border-collapse: collapse;
+ 		width: 600px;
+	
+}
+td,th{
+	border:1px solid blue;
+	text-align: center;
+}
+tr{
+	height: 30px;
+}
+td a{
+	margin-right: 5px;
+	color: red;
+}
+.popDiv{
+	width: 500px;
+	padding: 10px;
+	border:1px solid red;
+	position: absolute;
+	left: 50%;
+	top: 100px;
+	margin-left: -250px;
+	background: #fff;
+	display: none;
+	z-index: 4;
+
+}
+
+.popDiv p{
+	border-bottom:1px solid red;
+
+}
+
+
+
+
+ </style>
+</head>
+<body>
+
+
+<table id="table">
+	<tr>
+		<th>姓名</th>
+		<th>年龄</th>
+		<th>职位</th>
+		<th>工资</th>
+		<th>操作</th>
+	</tr>
+	<tr>
+		<td>张三</td>
+		<td>23</td>
+		<td>前端工程师</td>
+		<td>6000</td>
+		<td><a href="#"  class="view">查看</a><a href="#" class="del">删除</a><a href="#">修改</a></td>
+	</tr>
+
+	<tr>
+		<td>李四</td>
+		<td>26</td>
+		<td>java</td>
+		<td>10000</td>
+		<td><a href="#" class="view">查看</a><a href="#" class="del">删除</a><a href="#">修改</a></td>
+	</tr>
+
+	<tr>
+		<td>王五</td>
+		<td>26</td>
+		<td>经理</td>
+		<td>9000+</td>
+		<td><a href="#" class="view">查看</a><a href="#" class="del">删除</a><a href="#">修改</a></td>
+	</tr>
+</table>
+	<div class="popDiv">
+	<p><strong>姓名</strong><span></span></p>
+	<p><strong>年龄</strong><span></span></p>
+	<p><strong>职位</strong><span></span></p>
+	<p><strong>工资</strong><span></span></p>
+	<a href="" class="close">关闭</a>
+</div>
+</body>
+</html>

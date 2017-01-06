@@ -1,0 +1,34 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>36-样式操作-css()方法详解</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-11 23:39:38
+ */
+
+/**	
+ * 36-样式操作-css()方法详解
+ * 
+ */
+
+$(function(){
+	// $('p').css('background','red').css('border','10px solid #abcdef');
+	
+	//下面写法更好 json格式
+	$('p').css({
+
+		'background':'red', //'background' 不加单引号也可以 对于这种background-color 要写成写成这样backgroundColor  建议属性用引号引起来
+		'border':'10px solid #abcdef'//最后一个不要加,否则出错
+		});
+
+});
+	</script>
+</head>
+<body>
+	<p>dafsf</p>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>下拉菜单二</title>
+	<script type="text/javascript" src="../src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript" src="../src/js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:   2016-06-24 07:58:44
+ */
+
+$(function(){
+$.easing.def = 'easeOutElastic';
+
+var Btn = $('h3'); 
+
+Btn.click(function(){
+	$(this).next('ul').slideToggle().siblings('ul').slideUp();//next获取紧邻的下一个兄弟元素怒
+});
+
+});
+
+
+	</script>
+	<style type="text/css">
+		*{
+			padding: 9;
+			margin: 0;
+		}
+		body{
+			margin: 50px;
+		}
+		li{
+			list-style: none;
+		}
+		a{
+			text-decoration: none;
+			color: red;
+		}
+		h3{
+			cursor: pointer;
+		}
+
+	</style>
+</head>
+<body>
+	
+	<h3>Kiwis</h3>
+	<ul style="display:none">
+		<li><a href="#">1111</a></li>
+		<li><a href="#">1111</a></li>
+		<li><a href="#">1111</a></li>
+		<li><a href="#">1111</a></li>
+	</ul>
+	<h3>Oranges</h3>
+	<ul style="display:none">
+		<li><a href="#">2222</a></li>
+		<li><a href="#">2222</a></li>
+		<li><a href="#">2222</a></li>
+		<li><a href="#">2222</a></li>
+	</ul>
+	<h3>Grapes</h3>
+	<ul style="display: none">
+		<li><a href="#">3333</a></li>
+		<li><a href="#">3333</a></li>
+		<li><a href="#">3333</a></li>
+		<li><a href="#">3333</a></li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>10-jquery选择器的容错机制</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-11 08:48:52
+ */
+
+
+
+$(function(){
+	$('#p1').css('color','red');//在 jquery中即便选择器写错了  也不会报错  这是jQuery的容错机制
+});
+
+	</script>
+
+</head>
+<body>
+	<div>
+		<a href="www.baidu.com">百度</a>
+		<p id="p1">12134</p>
+	</div>
+</body>
+</html>

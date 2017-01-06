@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>lesson03</title>
+	<script type="text/javascript">
+  //算数运算符
+
+var a = 1;
+var b = "小明";
+var c = 3;
+//alert(a+b+c);//1小明3   字符串拼接 遇到字符 就不在相加
+
+//左右都是数字：数字相加
+//左右有一个字符串：字符串拼接
+//左右边有一个null:null看做0
+//左右边有一个undefined：结果是NAN（not is number）
+
+var d = ["小红","映红","连英","小明"];
+var rd = parseInt(Math.random()*10);
+//alert(rd);
+//alert(d[rd%4]);
+
+
+
+//比较运算符
+
+//全等于
+
+var aa = 10;
+var bb = '10';//string
+//alert(aa==bb);//true
+//alert(aa===bb);//false 比较值和类型
+
+//==和!=在比较之前首先让双方的值做隐士类型转换，===不转换
+//两个==相比较 都会转型 true会转成1
+var a = true;//true=1
+//var b = 2;
+var b = '1'; //'1'会转成数字1
+//alert(a==b);//true
+
+//alert(a!==b);//true
+//alert(a!=b);//false
+
+
+//逻辑运算符
+
+
+var age = 22;
+var tj = false;
+var dd = true;
+var a = 1;
+
+var res = (age>=20) && tj && dd;
+var res1 = (age>=30) || tj || a++;
+//alert(res);
+alert(res1);//1
+alert(a);//2
+
+
+
+//在js中 有四种被认为是非：
+//1、undefined
+//2、null
+//3、false
+//4、0
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

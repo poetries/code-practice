@@ -1,0 +1,93 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>表单事件</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-13 20:17:28
+ */
+
+/**
+ * 表单事件：
+ *
+ *1、foucs()获得焦点事件
+ *
+ * 2、blur()失去焦点事件
+ *
+ * 3、change()表单值改变事件
+ *
+ * 4、select()表单元素被选中时的事件，只能用于input[text]和textarea
+ *
+ * 5、submit()表单提交事件
+ *
+ * 
+ * 
+ */
+
+$(function(){
+
+//不是每个标签都有focus事件  基本上 标签元素都有focus事件
+/*$('input').focus(function(){
+	$('span').show();
+});
+
+
+$('input').blur(function(){
+	$('span').hide();
+});
+*/
+
+
+//change  在input里用的不多 input:file用的多
+
+//当有focus事件的元素里面的值改变的时候 并且触发了blur事件 才算完成一次change事件
+/*$('input').change(function(){
+	$('span').show();
+});
+*/
+/*$('input[type=file]').change(function(){
+	$('span').show();
+});
+*/
+
+//select
+// $('input').select(function(){
+// 	$('span').show();
+// });	
+
+//password
+// $('input[type=password]').select(function(){//去掉[type=password]也能选中password
+// 	$('span').show();
+// });	
+
+//textarea
+// $('textarea').select(function(){
+// 	$('span').show();
+// });	
+
+//表单验证经常用到submit
+$('#sub').submit(function() {
+	/* Act on the event */
+	alert('提交成功');
+	
+});
+
+
+});
+
+
+	</script>
+</head>
+<body>
+	<form action="http://www.imooc.com/" id="sub" method="GET">
+	<input type="password" name="password" >
+		<input type="text"  name="username" >
+		<span style="display: none">333</span>
+		<textarea cols="5" rows="10">44655746</textarea>
+		<input type="submit" value="提交">
+	</form>
+</body>
+</html>

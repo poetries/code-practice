@@ -1,0 +1,49 @@
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title><html>
+<head>
+	<meta charset="UTF-8">
+	<title>62-动画的累加和累减效果</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript" src="./src/js/jquery.easing.1.3.js"></script>
+		<script type="text/javascript">
+	/**
+	 * @CreateBy:   SublimeText3
+	 * @Author:     poetries
+	 * @DateTime:	2016-06-19 13:02:21
+	 */
+	
+	$(function(){
+ 
+		$('input').click(function(){
+			$('div').animate({'left':'-=100px'},2000);//'+=100px'动画的累加效果  -=100px累减效果
+		});
+
+
+
+	});
+
+		</script>
+<style type="text/css">
+	div{
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		left: 1000px;
+		top: 40px;
+		background: blue;
+	}
+</style>
+</head>
+<body>
+	
+</body>
+</html></title>
+</head>
+<body>
+<input type="button" value="点击">
+<div></div>
+</body>
+</html>

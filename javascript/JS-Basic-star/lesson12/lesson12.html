@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+
+	div.date{
+		font-size:18px;
+		line-height:40px;
+	}
+  </style>
+ </head>
+ <body>
+ <pre>
+  <script>
+
+  //var myDate = new Date();
+  /**
+  alert(myDate.getFullYear());
+
+  //月是从0--11算的 加1 从1-12
+   alert(myDate.getMonth()+1);
+ alert(myDate.getDate());
+
+  alert(myDate.getHours());
+   alert(myDate.getMinutes());
+   alert(myDate.getSeconds());
+
+*/
+  // var dateStr = myDate.getFullYear()+"年"+(myDate.getMonth()+1)+"月"+myDate.getDate()+"号"+myDate.getHours()+":"+myDate.getMinutes()+":"+myDate.getSeconds();
+
+//alert(dateStr);
+
+
+
+//alert(myDate.toLocaleTimeString());
+//alert(myDate.toLocaleDateString());
+
+//alert(myDate.toLocaleString());//上面两个的拼合
+
+
+//var y = 2017;
+//var m = 6;
+//var d = 10;
+//var myDate1 = new Date(y,m,d);
+
+//alert(myDate1.toLocaleString());
+
+//唯一注意的是月从0开始数的
+
+//var myDate2 = new Date();
+
+//alert(myDate2.getHours());
+
+//alert(myDate2.toLocaleString());
+//myDate2.setMonth(7);
+//myDate2.setFullYear(2017);
+//myDate2.setDate(23);
+//myDate2.setDate(0);//0代表这个月的最后一天 1代表这个月的第一天 -1 代表上个月的倒数第二天  32这个月没有 自动切换到下个月
+//myDate2.setMonth(0 );
+//alert(myDate2.toLocaleString());
+
+
+
+//===============================日历练习(方法简洁 高效)======================================
+
+
+
+//var year = parseInt(prompt("请输入日历年份："));
+//var month = parseInt(prompt("请输入日历月份："))-1;
+
+Date.prototype.printCalendar = function(){
+
+var year = this.getFullYear(),month = this.getMonth();
+var date = new Date(year,month,1);
+
+//alert(date.toLocaleString());
+document.write("<div class='date'>"+year+"年"+(month+1)+"月</div>");
+document.write("日	一	二	三	四	五	六<br />");
+
+
+var day = date.getDay();
+for(var i=0;i<day;i++){
+	document.write('	');
+}
+
+var count = new Date(year,month+1,0).getDate();//这里的0返回一个月的最后一天
+for(var i=1;i<=count;i++){
+	document.write(i+'	');
+	if((i+day)%7==0){
+		document.write('<br/>');
+	}
+}
+
+
+}
+new Date(2012,2).printCalendar();
+
+
+
+//==================数组==========================
+
+
+var pukeCards = ['♠A','♥A','♦A','♣A',
+             '♠K','♥K','♦K','♣K',
+             '♠Q','♥Q','♦Q','♣Q',
+             '♠J','♥J','♦J','♣J',
+             '♠10','♥10','♦10','♣10',
+             '♠9','♥9','♦9','♣9',
+             '♠8','♥8','♦8','♣8',
+             '♠7','♥7','♦7','♣7',
+             '♠6','♥6','♦6','♣6',
+             '♠5','♥5','♦5','♣5',
+             '♠4','♥4','♦4','♣4',
+             '♠3','♥3','♦3','♣3',
+             '♠2','♥2','♦2','♣2'];
+
+Array.prototype.shuffle = function(){
+
+  this.sort(function(){
+
+    return (Math.random()*100%3)-1
+  });
+}
+
+//alert(pukeCards[parseInt(Math.random()*1000)%52]);
+
+
+console.log(pukeCards);//排序前
+pukeCards.shuffle();
+console.log(pukeCards);//乱序
+
+
+console.log(pukeCards);//排序前
+pukeCards.shuffle();
+console.log(pukeCards);//乱序
+
+
+//======sort===
+
+
+var number = [1,32,423,523,13,576];
+number.sort(function(a,b){
+  console.log(a+":"+b);
+  return a - b;//升序 b-a降序
+
+});
+console.log(number);
+
+//=============简单正则===========
+
+var exp = /^1\d{10 }$/;
+
+var str = '18878554070';
+
+alert(exp.test(str));
+
+  </script>
+  </pre>
+ </body>
+</html>

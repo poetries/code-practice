@@ -1,0 +1,43 @@
+- 表格
+   - 1）基本表格 `<table class="table">`
+   - 2）条纹表格 `<table class="table table-striped">`
+   - 3）边框表格  `<table class="table table-bordered">`
+   - 4）悬停表格`<table class="table table-hover">`
+   - 5）精简表格`<table class="table table-condensed">`
+   - 6）状态表格`active`、`success`、`info`、`warning`、`danger`
+   - 7）隐藏某一行`<tr class="sr-only">`
+   - 8）响应式表格
+      - 表格父元素设置响应式，小于 `768px` 出现边框
+      `<div class="table-responsive">`
+
+- 按钮
+    - 1）按钮标签
+       - 转化成普通按钮
+       - `<a href="###" class="btn btn-default">Link</a>`
+       - `<button class="btn btn-default">Button</button>`
+       - `<input type="button" class="btn btn-default" value="input">`
+       - 注意：为了跨浏览器展现，尽量使用`button`
+    - 2）按钮大小
+       - `.btn-lg`	这会让按钮看起来比较大。
+       - `.btn-sm`	这会让按钮看起来比较小。
+       - `.btn-xs`	这会让按钮看起来特别小。
+    - 3）预定义样式
+       - `.btn-default`	默认/标准按钮
+       - `.btn-primary`	首选项样式
+       - `.btn-success`	成功样式
+       - `.btn-info	`一般信息样式
+       - `.btn-warning`	警告样式
+       - `.btn-danger`	危险样式
+       - `.btn-link`	链接样式
+    - 4）块级按钮
+       - `.btn-block`	块级按钮(拉伸至父元素100%的宽度)
+    - 5）激活状态
+       - `<button class="btn active">Button</button>`
+    - 6）禁用状态
+       - `<button class="btn active disabled">Button</button>`
+
+- 图片
+    - `.img-rounded `   圆角 (`IE8` 不支持)
+    - `.img-circle` 圆形 (`IE8` 不支持)
+    - `.img-thumbnail`  缩略图功能
+    - `.img-responsive`	图片响应式 (将很好地扩展到父元素)

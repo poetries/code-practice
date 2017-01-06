@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+
+<input type="button" value="按钮">
+<input type="text">
+<input type="text">
+<input type="button" value="按钮">
+
+<script type="text/javascript">
+
+function onClick1(){
+	alert("按钮被点击了");
+
+}
+
+var btn = document.getElementsByTagName("input")[0];
+var inp = document.getElementsByTagName("input")[1];
+var inp1 = document.getElementsByTagName("input")[2];
+var btn1 = document.getElementsByTagName("input")[3];
+//btn.onclick = onClick1; 
+
+btn.onmouseover = function(event){
+	event = event||window.event;//浏览器兼容
+	event.target = event.target || event.srcElement;
+	event.target.style.color = "red";
+}
+btn.onmouseout = function(event){
+	event = event||window.event;
+	event.target = event.target || event.srcElement;
+	event.target.style.color = "black";
+}
+btn.onmousemove = function(event){
+	console.log("在按钮上移动");
+}
+btn.onmousedown = function(event){
+	console.log("鼠标按下");
+}
+btn.onmouseup = function(event){
+	if(event.button==0){
+		console.log("鼠标抬起");
+	}
+}
+
+inp.onfocus = function(event){
+	inp.style.border = "1px solid red";
+	console.log("获得光标");
+
+}
+inp.onblur = function(event){
+	console.log("失去光标");
+	inp.style.border = "1px solid blue"
+}
+
+inp.onkeypress = function(event){
+	console.log("键盘按下");
+
+}
+inp.onchange = function(event){
+	console.log(this.value);
+	console.log("内容改变");
+}
+/*
+//非IE下的addEventListener
+inp1.addEventListener("click",function(){
+	this.style.background ='red';
+})
+
+
+//IE下的attachEvent
+inp1.attachEvent("onclick",function(){
+	this.style.background ='blue';
+})
+*/
+
+//兼容大多数浏览器的API
+
+Object.prototype.addEventHandler = function(type,produce){
+	if(this.addEventListener){
+		this.addEventListener(type,produce,false);
+	}else{
+		this.attachEvent('on'+type,produce);
+	}
+}
+
+function Onclick1(event){
+	alert("按钮被点击了Onclick1");
+}
+function Onclick2(event){
+	alert("按钮被点击了Onclick2");
+}
+btn1.addEventHandler("click",Onclick1);
+btn1.addEventHandler("click",Onclick2);
+
+
+  </script>
+ </body>
+</html>

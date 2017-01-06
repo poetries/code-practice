@@ -1,0 +1,53 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>数组长度的变化</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-04 22:16:49
+ */
+
+/**
+ * 数组length属性的变化：
+ *
+ * 设某数组length = N
+ * 如果修改length 且length<N 则数组被截断 数据丢失
+ *
+ * 如果：length>N 数组自动补到length个 新添加的元素以undefined来填充
+ */
+
+var arr = ['a','b','c','d','e','f','g','h','i'];
+
+arr.length = 4;//数组长度的变化  数组长度如果变小 数组自动被截断  数组丢失
+
+arr.length = 15;
+for(var i = 0,len = arr.length;i<len;++i){
+		document.write(arr[i]+'<br>');
+	}
+
+	/**
+	 * 	a
+		b
+		c
+		d
+		undefined
+		undefined
+		undefined
+		undefined
+		undefined
+		undefined
+		undefined
+		undefined
+		undefined
+		undefined
+		undefined
+	 */
+	
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

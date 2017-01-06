@@ -1,0 +1,36 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>对象的单元删除</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-04 23:29:52
+ */
+
+/**
+ * 对象的单元删除:对象单元的删除delete obj.属性
+ */
+
+ var stu = {name:'小明',age:22,number:007,score:99};
+
+
+	for(var i in stu){
+		document.write(stu[i]+'<br>');
+	}
+
+	document.write('<hr>');
+	delete stu.score;
+
+		for(var i in stu){
+		document.write(stu[i]+'<br>');
+	}
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

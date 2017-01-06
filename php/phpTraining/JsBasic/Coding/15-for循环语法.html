@@ -1,0 +1,40 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>for循环语法</title>
+	<script type="text/javascript">
+		/**
+		 * @Author:     poetries
+		 * @DateTime:	2016-06-04 09:44:58
+		 */
+		
+		//利用了两次变量打印
+/*		for (var money = 10050,cnt=1; money > 300; ++cnt) {
+				document.write('今天够钱可以出差'+'<br>');
+				money -= 300;
+				document.write('出差'+cnt+'次'+'还剩'+money+'钱'+'<br>');
+		
+			}
+			
+		}*/
+
+		var money = 10500;
+		var cnt = 0;
+		while (money>300) {
+			if (money>300) {
+				document.write('今天够钱可以出差'+'<br>');
+				money -= 300;
+				document.write('出差'+(++cnt)+'次'+'还剩'+money+'钱'+'<br>');
+			}
+			else
+			{
+				document.write('钱不够了，不能出差'+'<br>');
+			}
+		}
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	//写法一
+	<script type="text/javascript"></script>
+</head>
+<body>
+
+</body>
+//写法二
+<script type="text/javascript" src=""></script>
+
+//写法三
+
+<script type="text/javascript"></script>
+
+//错误写法  因为js 执行了外部引用的js 里面的就不去解析了
+<script type="text/javascript" src="">
+var name = '小明';
+
+//多种方式混合使用按顺序执行
+//script可以写在head body内 但是有时出现意外 在head内的代码去访问body内的DOM对象 就会提示找不到
+
+</script>
+
+</html>

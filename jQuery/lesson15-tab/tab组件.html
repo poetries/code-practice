@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>tab切换组件</title>
+		<script src="jquery-1.11.2.min.js"></script>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			html,body{
+				width:100%;
+				height:100%;
+			}
+			#container{
+				width:220px;
+				border:1px  solid red;
+			}
+			.content{
+				width:90%;
+				height:200px;
+				margin:10px;
+			}
+			ul.tab{
+				width:100%;
+				height:31px;
+				margin:0 auto;
+				border-bottom:1px solid #bbb;
+			}
+			ul.tab li{
+				width:50%;
+				float:left;
+				list-style:none;
+				font-size:14px;
+				height:30px;
+				line-height:30px;
+				text-align:center;
+			}
+			ul.tab li.on{
+				border-bottom:2px solid #0066b3;
+				font-weight:bold;
+			}
+			ul.tab li a{
+				text-decoration:none;
+				color:#000;
+				font-family:"Microsoft Yahei";
+			}
+			ul.tab li.on a{
+				color:#0066b3;
+			}
+			div.content div.pages{
+				position:relative;
+				margin-left:10px;
+				
+				
+			}
+			div.content div.pages div.page{
+				position:absolute;
+				top:0;
+				left:0;
+				display:none;
+			}
+			div.content div.pages div.on{
+				display:block;
+				
+			}
+		</style>
+	</head>
+	<body>
+	<div id="container">
+		<div class="content">
+			<ul class="tab">
+				<li class="on"><a href="#" for="#transform">建行转建行</a></li>
+				<li><a href="#" for="#charge">话费充值</a></li>
+			</ul>
+			<div class="pages">
+				<div id="transform" class="page on">
+					<form action="">
+						<input type="text" name="" id="">
+						<input type="text" name="" id="">
+						<input type="text" name="" id="">
+						<input type="text" name="" id="">
+					</form>
+				</div>
+				<div id="charge" class="page">page2</div>
+			</div>
+		</div>
+	</div>
+		
+		
+	</body>
+	<script>
+	
+		$("ul.tab li").click(function(){
+			$(this).addClass("on").siblings().removeClass("on");
+			$($("a",$(this)).attr("for")).addClass("on").siblings().removeClass("on");
+			
+		});
+	</script>
+</html>

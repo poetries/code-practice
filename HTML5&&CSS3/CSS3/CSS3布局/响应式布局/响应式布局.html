@@ -2,12 +2,69 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>响应式布局</title>
+		<title>CSS3响应式布局</title>
 		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			@media screen and (min-width:1000px){
+				#wrap {
+					width: 1000px;
+					margin: auto;
+					-webkit-column-width: 200px; /*最小宽度*/
+					-webkit-column-count: 4;
+				}
+			}
+			@media screen and (min-width:640px) and (max-width:1000px){
+				#wrap {
+					margin: auto;
+					-webkit-column-width: 200px; /*最小宽度*/
+					-webkit-column-count: 3;
+				}
+			}
+			@media screen and (max-width:640px){
+				#wrap {
+					margin: auto;
+					-webkit-column-width: 200px; /*最小宽度*/
+					-webkit-column-count: 2;
+				}
+			}
+			#wrap img{
+				width: 100%;
+				display: block;
+				
+			}	
 		</style>
-			
 	</head>
 	<body>
-		
+
+		<div id="wrap">
+			<img src="images/1.jpg" alt="" />
+			<img src="images/2.jpg" alt="" />
+			<img src="images/3.jpg" alt="" />
+			<img src="images/4.jpg" alt="" />
+			<img src="images/5.jpg" alt="" />
+			<img src="images/6.jpg" alt="" />
+			<img src="images/7.jpg" alt="" />
+			<img src="images/8.jpg" alt="" />
+			<img src="images/9.jpg" alt="" />
+			<img src="images/1.jpg" alt="" />
+			<img src="images/2.jpg" alt="" />
+			<img src="images/3.jpg" alt="" />
+			<img src="images/4.jpg" alt="" />
+			<img src="images/5.jpg" alt="" />
+			<img src="images/6.jpg" alt="" />
+			<img src="images/7.jpg" alt="" />
+			<img src="images/8.jpg" alt="" />
+			<img src="images/9.jpg" alt="" />
+			<img src="images/2.jpg" alt="" />
+			<img src="images/3.jpg" alt="" />
+			<img src="images/4.jpg" alt="" />
+			<img src="images/5.jpg" alt="" />
+		</div>
+		<script type="text/javascript">
+			
+		</script>
 	</body>
 </html>

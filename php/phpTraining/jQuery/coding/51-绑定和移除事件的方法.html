@@ -1,0 +1,86 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>绑定和移除事件的方法</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-16 22:43:43
+ */
+
+/**	
+ *1、bind()绑定事件
+ *
+ * 2、unblind()移除事件
+ *
+ * 3、on()绑定事件
+ *
+ * 4、off()移除事件
+ *
+ * 5、one()执行一次事件，然后销毁该事件
+ *
+ * 6、delegate()虽然未被废弃，但是官方推荐使用on()替代
+ *
+ * 7、undelegate()用off()代替
+ * 
+ * 
+ */
+
+
+
+$(function(){
+
+
+
+/*$('p').click(function(){
+	// alert($(this).text());
+	
+});*/
+
+	//bind()绑定事件
+/*	$('p').bind('click',function(){
+		alert($(this).text());
+	});
+
+	$('p').mouseover(function(){
+		$(this).css('background','red');
+	});
+
+	//unblind()移除事件
+	$('p').unbind('click mouseover');//可以同时移除几个方法*/
+
+/*	$('p').one('click',function(){//one只执行一次事件
+		alert($(this).text());
+	});
+*/
+
+	//事件委托
+	
+
+/*$('body').delegate('p','click',function(){
+	$('body').append('<p>新p标签</p>');
+});
+*/
+
+/*$('p').bind('click',function(){//新增的标签要想绑定事件必须要用delegate
+	$('body').append('<p>新p标签</p>');*/
+
+
+	$('p').on('click',function(){//
+		$('body').append('<p>新p标签</p>');
+});
+
+
+
+
+});
+
+
+	</script>
+</head>
+<body >
+	<p>p标签</p>
+</body>
+</html>

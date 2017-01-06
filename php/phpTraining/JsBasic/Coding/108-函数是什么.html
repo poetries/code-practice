@@ -1,0 +1,39 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>108-函数是什么</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-10 09:39:46
+ */
+
+/**	
+ * 108-函数是什么
+ * 
+ */
+
+//1、函数是变量
+var t = function (){};
+
+//2、函数是对象
+// var sum = function sum(x,y){return x*y};
+
+var  sum = new Function('x','y','return x+y');
+
+alert(sum(3,2));
+
+
+
+
+
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

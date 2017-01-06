@@ -1,0 +1,69 @@
+
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>34-操作DOM节点属性</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-11 22:12:17
+ */
+
+/**	34-操作DOM节点属性
+ *
+ * 1、attr(key,value) 获取添加属性值
+ *
+ * 2、removeAttr()删除属性值
+ *
+ * 3、prop同attr()
+ *
+ * 4、removeProp()同removeA ttr()
+ * 
+ */
+
+
+$(function(){
+
+
+// $('a').attr('href','http://www.baidu.com');
+
+// $('a').attr('class','b');//通过属性改变背景的颜色
+
+// $('a').removeAttr('class');
+
+$('a').removeClass('aa');//去除aa的样式
+
+
+
+});
+
+
+
+
+
+	</script>
+
+	<style type="text/css">
+		.a{
+			background: red;
+		}
+		.b{
+			background: blue;
+		}
+		.aa{
+			color: white;
+		}
+
+
+	</style>
+</head>
+<body>
+	
+
+	<a class="a aa" href="#">a标签</a>
+</body>
+</html>

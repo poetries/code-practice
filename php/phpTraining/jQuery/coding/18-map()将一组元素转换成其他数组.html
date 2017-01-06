@@ -1,0 +1,42 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>map()将一组元素转换成其他数组</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-11 15:18:00
+ */
+//map()将一组元素转换成其他数组
+
+$(function(){
+
+var arr = $('input').map(function(){//不用each 用map也可以获取每个value值
+
+	alert($(this).val());//map在jq中用的不多 有个序列化的函数会比map更加高效
+
+
+})
+
+alert(typeof arr);
+
+$('p').html(arr);
+
+
+
+});
+
+	</script>
+
+</head>
+<body>
+	<form action="">
+		<input type="text" name="" id="" value="1">
+		<input type="text" name="" id="" value="2">
+		<input type="text" name="" id="" value="3">
+	</form>
+	<p></p>
+</body>
+</html>

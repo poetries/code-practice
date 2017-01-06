@@ -1,0 +1,104 @@
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>原生js表格隔行变色</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-11 17:18:27
+ */
+window.onload = function ()
+{
+	var table = document.getElementById('table');
+	var tds = document.getElementsByTagName('tr');
+	for (var i = 0,len = tds.length; i < len; i++) {
+		if(i%2 == 0){
+			tds[i].style.background = 'green';
+		}else{
+			tds[i].style.background = 'blue';
+		}
+	}
+
+}
+
+	</script>
+
+<style type="text/css">
+	#table{
+		width: 500px;
+		border:1px solid red;
+		border-collapse: collapse;
+	}
+	#table td{
+		border:1px solid red;
+	}
+</style>
+</head>
+<body>
+	<table id="table">
+		<tr>
+			<td>abcd</td>
+			<td>abcd</td>
+			<td>abcd</td>
+			<td>abcd</td>
+		</tr>
+		<tr>
+			<td>1111</td>
+			<td>2222</td>
+			<td>3333</td>
+			<td>4444</td>
+		</tr>
+				<tr>
+			<td>abcd</td>
+			<td>abcd</td>
+			<td>abcd</td>
+			<td>abcd</td>
+		</tr>
+		<tr>
+			<td>1111</td>
+			<td>2222</td>
+			<td>3333</td>
+			<td>4444</td>
+		</tr>
+				<tr>
+			<td>abcd</td>
+			<td>abcd</td>
+			<td>abcd</td>
+			<td>abcd</td>
+		</tr>
+		<tr>
+			<td>1111</td>
+			<td>2222</td>
+			<td>3333</td>
+			<td>4444</td>
+		</tr>
+				<tr>
+			<td>abcd</td>
+			<td>abcd</td>
+			<td>abcd</td>
+			<td>abcd</td>
+		</tr>
+		<tr>
+			<td>1111</td>
+			<td>2222</td>
+			<td>3333</td>
+			<td>4444</td>
+		</tr>
+				<tr>
+			<td>abcd</td>
+			<td>abcd</td>
+			<td>abcd</td>
+			<td>abcd</td>
+		</tr>
+		<tr>
+			<td>1111</td>
+			<td>2222</td>
+			<td>3333</td>
+			<td>4444</td>
+		</tr>
+	</table>
+</body>
+</html>

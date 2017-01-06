@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>lesson07</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+
+ //person保存了对象的地址 通过person访问堆中的属性
+
+//写法一
+ var person1 = {//对象
+
+	name:"小明",
+	age:20,
+	sex:'男',
+	height:175,
+	eat:function(){
+		//这里不能只写name 否则就会当成window作用域下的name属性
+		alert(this.name+'正在吃饭');//这里写person.name 是不对的 person只是一个地址 当person改变指向的时候 就出问题了
+		//this指代当前的这块空间里面的name 而不是windows这块内存
+	}
+
+ };
+
+//alert(person.age);
+//person1.eat();//小明正在吃饭
+alert(person1.eat());//undefined	因为函数没有返回值 返回调用时 自动创建一个内存空间 调用结束销毁空间
+
+alert(person1.name);
+alert(person1['name']);//两种写法意义不一样
+//可以通过变量来修改key 方便灵活 动态访问某个属性 推荐person1[key]
+var key = 'age';
+alert(person1[key]);//22
+
+
+
+//写法二
+//new 动态开辟内存空间 没有被引用的内存空间 会在适当的时候被销毁
+
+/*
+var person2 = new Object()
+var person1 = {}//简写形式 两种方式一样 一般用简写形式 好初始化
+person2.name = '小明'
+person2.age = 22;
+
+*/
+
+var person3 = {name:'小明'};//这种方式称为初始化 一开始就有这个属性name
+person3.name = '连英';//这种方式称为赋值 后面才有name这个属性
+//alert(person3.name);
+
+/*
+//数组
+
+var arr = new Array()
+var arr = []
+
+//一般用[]
+*/
+
+
+//foreach 遍历 迭代
+
+
+var person4 = {
+
+	name:"小明",
+	age:20,
+	sex:'男',
+	height:175,
+	eat:function(){
+
+		alert(this.name+'正在吃饭');
+	}
+
+ };
+
+
+//遍历对象 for in  in后面一定是对象
+
+var val;//不放到for循环里面 提高效率
+for(var prop in person4){//迭代对象中的所有的属性 每次给prop
+
+	//alert(prop);
+	//alert(typeof prop);//迭代的属性是字符串类型
+
+	val = person4[prop];//动态取得属性
+	if(typeof val == 'number'){
+
+		//alert(val);// 20 175
+		//alert(prop+':'+val);
+	}
+}
+
+//--------------面向对象开始----------------
+
+//new Object()什么都没有 属性都需要自己添加
+//new DOM 只要是new出来的DOM对象 都有children style等属性
+
+
+//JavaScript中没有类的概念
+
+function eat(){//普通函数
+	alert('eat...');
+}
+
+function Person(){//构造函数 首字母大写
+
+	alert('Person....');
+}
+
+//坚决不能这样使用：Person();
+
+//eat();
+
+var person5 = new Person();//应该new 对象
+
+//alert(person5);//输出的是对象
+//共同点：
+//调用函数 都会动态创建一块内存空间，闭包
+
+//不同点：
+//函数调用是没有办法拿到空间地址的 而且这块空间地址是一块临时的地址 执行完销毁
+
+//new的过程 代表动态开辟内存空间 并把这块空间的地址返回 除了引用被修改 没有被引用的空间在适当的时候才被销毁
+
+
+//所有构造器原型本质就是一个对象
+
+function Person(name,age){
+
+	this.name = name;//this.name 指代这块空间中的name属性
+	this.age = age;
+	this.work = function(){
+
+		return this.name+'在工作';//函数要返回一个值
+	}
+
+}
+
+Person.prototype = {//所有通过Person构造器创建出来的对象 都有这个原型
+
+	name:'无名氏',
+	age:0,
+	eat:function(){alert('吃饭');},
+	run:function(){alert('跑步');},
+	work:function(){alert('工作');},
+	sleep:function(){alert('睡觉');}
+};
+
+var p1 = new Person("小明",30);
+var p2 = new Person("小轩",18);
+
+p1.eat();
+alert(p1.work());
+p2.eat();
+alert(p2.work());
+
+
+</script>
+</html>

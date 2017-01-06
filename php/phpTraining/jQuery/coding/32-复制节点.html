@@ -1,0 +1,44 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>复制节点</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-11 21:52:50
+ */
+
+
+/**	克隆节点：
+ *clone(bool) 默认false方法也一起克隆 false值克隆节点
+ * 
+ * 
+ */
+
+$(function(){
+
+
+$('a').click(function(){
+	alert('aaa');
+});
+
+
+//克隆一份点击 clone(true) 默认false方法也一起克隆 false值克隆节点
+//克隆对象和要被克隆对象放置顺序不同也影响到
+
+var newA = $('a').clone(true);
+$('body').append(newA);
+
+
+
+});
+
+
+	</script>
+</head>
+<body>
+	<a href="#" id="">点击</a>
+</body>
+</html>

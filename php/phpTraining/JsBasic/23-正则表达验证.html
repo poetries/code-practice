@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style></style>
+
+</head>
+<body>
+<pre>
+    1、用户名只能是字母及6-11位
+    2、email为正确邮箱
+</pre>
+<form action="">
+    <p>用户名:<input type="text" name="username" id=""></p>
+    <p>Email:<input type="text" name="email" id=""></p>
+    <p><input type="submit" value="提交"></p>
+</form>
+</body>
+<script>
+    document.getElementsByTagName('form')[0].onsubmit = function(){
+        var patt = /^[a-zA-Z0-9]{6,11}$/;
+
+        if(!patt.test(document.getElementsByName('username')[0].value)){
+            alert('用户名由6-11位数字组成');
+            return false;
+        }
+        patt = /^\w+@\w+(\.\w+)+$/
+        if(!patt.test(document.getElementsByName('email')[0].value)){
+            alert('请输入正确的email');
+            return false;
+        }
+    }
+</script>
+</html>

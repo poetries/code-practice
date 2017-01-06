@@ -1,0 +1,89 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>js基础与页面特效的关系</title>
+	<script type="text/javascript">
+		/**
+		 * @Author:     poetries
+		 * @DateTime:	2016-06-04 11:23:20
+		 */
+		/**
+		 * 思路：
+		 * 1、先把所有的多选框对象找到 放到数组里面
+		 * 2、获取数组的长度 for循环数组
+		 * 3、每循环一次 checked = 'checked';
+		 */
+		
+
+		//粗劣写法
+/*		//全选
+		 function selAll(){
+		 	for (var i = 0; i < document.getElementsByName('hobby').length; i++) {
+		 		document.getElementsByName('hobby')[i].checked = 'checked';
+		 	}
+		 }
+
+		 //全不选
+		 function unAll(){
+		 	for (var i = 0; i < document.getElementsByName('hobby').length; i++) {
+		 		document.getElementsByName('hobby')[i].checked = false;
+		 	}
+		 }
+
+		//反选
+		 function fanAll(){
+		 	for (var i = 0; i < document.getElementsByName('hobby').length; i++) {
+		 		if (document.getElementsByName('hobby')[i].checked) {
+		 			document.getElementsByName('hobby')[i].checked = false;
+		 		}else{
+		 			document.getElementsByName('hobby')[i].checked = "checked";
+		 		}
+		 	}
+		 }*/
+
+
+		 /**
+		  * 优化写法
+		  * 因为for循环里面 表达式1 至始至终值执行一次 所以为了减少函数的使用次数 把调用的额多的函数 写在第一个表达式简化
+		  */
+		 
+		 //全选
+		 function selAll(){
+		 	for (var i = 0,s = document.getElementsByName('hobby'),len = s.length; i<len; i++){
+		 		s[i].checked = 'checked';
+		 	}
+		 }
+
+		 //全不选
+		 function unAll(){
+		 	for (var i = 0,s = document.getElementsByName('hobby'),len = s.length; i<len; i++) {
+		 		s[i].checked = false;
+		 	}
+		 }
+
+		//反选
+		 function fanAll(){
+		 	for (var i = 0,s = document.getElementsByName('hobby'),len = s.length; i<len; i++) {
+		 		if (s[i].checked) {
+		 			s[i].checked = false;
+		 		}else{
+		 			s[i].checked = "checked";
+		 		}
+		 	}
+		 }
+
+
+	</script>
+</head>
+<body>
+	<p><input type="checkbox" name="hobby">篮球</p>
+	<p><input type="checkbox" name="hobby">足球</p>
+	<p><input type="checkbox" name="hobby">排球</p>
+	<p><input type="checkbox" name="hobby">羽毛球</p>
+	<p><input type="checkbox" name="hobby">网球</p>
+	<p><input type="checkbox" name="hobby">棒球</p>
+	<p><input type="button" value="全选" onclick="selAll();">全选</p>
+	<p><input type="button" value="全不选" onclick="unAll();">全不选</p>
+	<p><input type="button" value="反选" onclick="fanAll();">反选</p>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>do_while循环</title>
+	<script type="text/javascript">
+		/**
+		 * @Author:     poetries
+		 * @DateTime:	2016-06-04 08:38:56
+		 */
+		 //do..while do()语句体至少执行一次
+		 
+		 //对应现实中 先上菜吃饭了 在交钱 有可能碰到没钱情况
+		 
+		 //先执行在判断
+		 var money = 1000;
+		 var cnt = 0;
+		 do {
+		 	document.write('上菜'+'<br>');
+		 	money -= 50;
+		 	++cnt;
+		 	document.write('一共吃了'+cnt+'次饭'+'<br>');
+
+		 } while (money>=50);
+		 
+		 document.write('<hr>');
+
+		 var i = 0;
+		 while (i++<3) {
+		 	document.write('while<br>'); //3打印
+
+		 }
+		 
+		 var j = 0;
+		 do {
+		 	document.write('do-while<br>');//4打印
+		 } while (j++<3);
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

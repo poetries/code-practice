@@ -1,0 +1,37 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>反向引用</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-07 21:52:58
+ */
+
+function t1(){
+	var cont = document.getElementById('cont');
+	var cv = cont.value;
+
+	var reg = /<a[\s]+[^>]+>([^<>]+)<\/a>/; //链接表达式  这个一部分是子表达式 ([^<>]+)
+        // alert(reg.exec(cv)); 
+        
+        alert(cv.replace(reg,'<a href="#"">$1</a>'));
+}
+
+	</script>
+	<style type="text/css">
+		textarea{
+			width: 400px;
+			height: 200px; 
+		}
+	</style>
+
+</head>
+<body>
+	<textarea id='cont'></textarea>
+	<p><input type="button" value="把连接换成空连接，保留文字" onclick="t1();"></p>
+
+
+</body>
+</html>

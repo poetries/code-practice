@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>瀑布流</title>
+		<script src="../js/jquery-2.1.4.js"></script>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			html,body{
+				width:100%;
+				height:100%;
+			}
+			#wrap {
+				width:830px;
+				border:2px  solid #f00;
+				margin:0 auto;
+				padding:20px;
+
+			}
+			#wrap ul li{
+				list-style:none;
+				width:260px;
+				float:left;
+				margin-right:25px;
+				
+			}
+			.pic{
+				width:258px;
+				border:1px  solid #ccc;
+				margin-bottom:10px;
+			}
+			.pic img{
+				width:258px;
+			}
+			.pic p{
+				width:238px;
+				padding:10px;
+				line-height:25px;
+				font-family:"Microsoft Yahei";
+				text-align:center;
+			}
+			.pic p a{
+				text-decoration:none;
+				color:black;
+				display:block;
+			}
+			.pic p a:hover{
+				color:#ff00cc;
+			}
+			#btn{
+				width:100px;
+				height:40px;
+				background:#999;
+				color:#fff;
+				font-size:14px;
+				font-family:"Microsoft Yahei";
+				margin:20px auto;
+				display:block;
+				text-align:center;
+				cursor:pointer;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<ul>
+				<li>
+					<!--div class="pic">
+						<img src="../images/img07/1.jpg">
+						<p><a href="#">朴信惠靠衣品成为最美女医生</a></p>
+					</div-->
+				</li>
+				<li></li>
+				<li style="margin:0"></li>
+				<div style="clear:both"></div>
+			</ul>
+		</div>
+		<input type="button" id="btn" value="加载更多">
+	</body>
+	<script src="ajax.js"></script>
+	<script>
+		window.onload= function(){
+			var oWrap = document.getElementById("wrap");
+			var oLi = document.getElementsByTagName("li");//返回的是数组[]
+			var oBtn = document.getElementById("btn");
+			var Num = 0;
+			load(Num);
+			oBtn.onclick = function(){
+				Num +=8;
+				load(Num);
+			}
+
+			function load(Num){
+					ajax({
+					url: "data.php",
+					success: function(data){
+						//document.write(data);
+
+						var data = eval("("+data+")");//responseText是一个字符串 eval是把这个字符串转换成js中的对象
+						var html = "";
+						for (var i=Num;i<Num+8 ;i++ )
+						{
+							html = '<div class="pic"><img src="'+data[i].src+'"><p><a href="#">'+data[i].title+'</a></p></div>';
+							oLi[getShortLiIndex()].innerHTML +=html;
+						}
+						
+					}
+				});
+			}
+			
+			
+
+			function getShortLiIndex(){//获取那个li高度最小
+				
+				var index = 0;
+				var iH = oLi[index].offsetHeight;
+				for (var i=1;i<oLi.length ;i++ )
+				{
+					if(oLi[i].offsetHeight<iH){
+						index = i;
+						iH = oLi[i].offsetHeight;
+					}
+				}
+				return index;
+			}
+			
+
+		}
+	</script>
+</html>

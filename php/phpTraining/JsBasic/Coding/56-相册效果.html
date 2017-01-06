@@ -1,0 +1,47 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>相册效果</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-06 09:37:46
+ */
+/**
+ * 点小图 改大图路径
+ * 改大图路径 获取大图的对象 改其src属性
+ * 
+ */
+ 	function chpic(num){
+ 		var pics = ['','Sunset','Blue','Winter','Water'];
+ 		var bigpic = document.getElementsByTagName('p')[0].children[0];
+ 		bigpic.src = './images/'+pics[num]+'.jpg';
+ 	}
+
+
+	</script>
+
+	<style type="text/css">
+		li{
+			float: left;
+			margin: 4px;
+		}
+		ul{
+			list-style: none;
+		}
+	</style>
+</head>
+<body>
+	<p>
+		<img src="./images/Blue.jpg">
+	
+	</p>
+	<ul>
+		<li><img src="./images/1.gif" alt="" onclick="chpic(1);"></li>
+		<li><img src="./images/2.gif" alt="" onclick="chpic(2);"></li>
+		<li><img src="./images/3.gif" alt="" onclick="chpic(3);"></li>
+		<li><img src="./images/4.gif" alt="" onclick="chpic(4);"></li>
+	</ul>
+</body>
+</html>

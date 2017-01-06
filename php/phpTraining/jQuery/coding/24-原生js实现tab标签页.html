@@ -1,0 +1,87 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>js实现tab标签页</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-11 18:26:44
+ */
+window.onload = function (){
+	var ul = document.getElementById('ul');
+	var li = document.getElementsByTagName('li');
+	var div = content = document.getElementById('content');
+	var div = content.getElementsByTagName('div');
+
+	for (var i = 0; i < li.length; i++) {
+		li[i].index = i;
+		li[i].onclick = function(){
+			for (var i = 0; i < li.length; i++) {
+				li[i].className = '';
+
+				div[i].style.display = 'none';
+			}
+
+
+			this.className = 'current';
+			div[this.index].style.display = 'block';
+
+		}
+	}
+}
+
+	</script>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		body{
+			margin: 50px;
+		}
+		ul{
+			list-style: none;
+		}
+		#ul li{
+			height: 30px;
+			line-height: 30px;
+			padding: 0 15px;
+			border:1px solid blue;
+			float: left;
+			margin-right: 3px; 
+			cursor: pointer;
+		}
+		#ul li.current{
+			background: #abcdef;
+		}
+		#ul{
+			height: 30px;
+			margin-bottom: 10px;
+		}
+		#content div{
+			width: 300px;
+			height: 200px;
+			border:1px solid red;
+			display: none;
+		}
+		#content .show{
+			display: block;
+
+		}
+
+	</style>
+</head>
+<body>
+	<ul id="ul">
+		<li class="current">php</li>
+		<li>ruby</li>
+		<li>java</li>
+	</ul>
+	<div id="content">
+		<div class="show">php...介绍</div>
+		<div>ruby...介绍</div>
+		<div>java...介绍</div>
+	</djava
+</bjava
+</html>

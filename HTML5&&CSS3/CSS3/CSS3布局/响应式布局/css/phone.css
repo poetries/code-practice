@@ -1,0 +1,5 @@
+#wrap {
+	margin: auto;
+	-webkit-column-width: 200px; /*最小宽度*/
+	-webkit-column-count: 2;
+}

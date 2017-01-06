@@ -1,0 +1,73 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>滚动公告</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-12 09:31:26
+ */
+
+/**
+ * 思路：
+ *
+ * 1、获取第一条的li 克隆一份 append到ul的结尾 remove第一条的li
+ *
+ * 2、setInterval定时
+ *
+ * 3、这种方法不推荐 太频繁的操作DOM
+ */
+
+$(function(){
+
+// $('ul :first').css('background','red');// 或者ul>:first 获取第一条li
+//获取第一条的第二种写法 查找快
+// $('ul').children().first().css('background','red');
+
+setInterval(function(){
+	var newLi = $('ul>:first').clone(true);
+	$('ul').append(newLi);
+	$('ul>:first').remove();
+},1000);
+
+
+
+
+});
+
+	</script>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		body{
+			margin: 50px;
+		}
+		ul{
+			list-style: none;
+		}
+		li{
+			height: 30px;
+			line-height: 30px;
+		}
+
+	</style>
+</head>
+<body>
+	<ul>
+		<li>我是第1条公告...</li>
+		<li>我是第2条公告...</li>
+		<li>我是第3条公告...</li>
+		<li>我是第4条公告...</li>
+		<li>我是第5条公告...</li>
+		<li>我是第6条公告...</li>
+		<li>我是第7条公告...</li>
+		<li>我是第8条公告...</li>
+		<li>我是第9条公告...</li>
+		<li>我是第10条公告...</li>
+	</ul>
+</body>
+</html>

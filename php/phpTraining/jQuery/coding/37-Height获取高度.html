@@ -1,0 +1,34 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Heigth获取高度</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-11 23:52:40
+ */
+
+$(function(){
+	// alert($('p').height());//height方法不能获取到p标签的真实高度
+	
+	alert('我是outerHeight'+$('p').outerHeight());
+	alert('innerHeight'+$('p').innerHeight());//innerHeight方法获得高度不把border和margin计算进去 但是会把padding值计算进去 
+	//outerHeight方法不写为默认false 不会把margin值计算进去 如果参数为true 会把border padding margin计算进去
+
+});
+	</script>
+	<style type="text/css">
+		p{
+			height: 20px;
+			border:10px solid #abcdef;
+			padding: 10px;
+			margin: 10px;
+		}
+	</style>
+</head>
+<body>
+	<p>(⊙o⊙)…r</p>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-11 14:51:22
+ */
+/**
+ * 筛选：
+ *
+ * 1、eq() 选择指定索引的元素
+ * 2、filter(表达式) 筛选指定表达式的元素
+ *
+ * 3、first() 选择第一个元素
+ * 4、last()选择最后一个元素
+ * 5、is()检测是否返回布尔值
+ * 6、has()保留包含特定后代的元素 去掉那些不含有指定后代的元素
+ * 7、not() 从匹配的元素集合中移除指定的元素
+ * 8、map()将一组元素转换成其他数组
+ * slice()根据指定的下标范围 选取匹配的元素集合
+ *
+ * 
+ *
+ * 
+ * 
+ */
+
+$(function(){
+	// $('p:eq(0)').css('background','red');
+	//$('p').filter(':odd').css('background','red');
+	// $('p').filter('.p1').css('background','red');
+	// $('p').first().css('background','red');
+	// $('p').last().css('background','red');
+	
+/*	$('p').click(function() {
+		
+		if ($(this).is('.p1')) {
+			$(this).css('background','red');
+		}
+	});*/
+
+
+	// $('p').not(':first').css('background','red');//去掉第一个
+	// $('p').not('.p1').css('background','red');//去掉第一个
+	
+	// slice()根据指定的下标范围 选取匹配的元素集合
+	
+	// $('p').slice(1, 2).css('background','red');//数学上表示[1,2)
+	$('p').slice(-6, -1).css('background','red');
+});
+
+	</script>
+
+</head>
+<body>
+	<p>第1个标签</p>
+	<p>第2个标签</p>
+	<p>第3个标签</p>
+	<p class="p1">第4个标签</p>
+	<p id='p2'>第5个标签</p>
+	<p>第6个标签</p>
+</body>
+</html>

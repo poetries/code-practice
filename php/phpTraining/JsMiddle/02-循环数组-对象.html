@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+    //循环数组
+        var arr = ['赵','钱','孙','李'];
+        for(var i=0;i<arr.length;i++){
+            console.log(arr[i]);
+        }
+
+        //循环对象  把obj的键 分别赋给k
+        var obj = {name:'lisi',age:29,area:'bj'};//键不用单引号包起来也行 值一定要用
+        for(var k in obj){
+            console.log(k+'--'+obj[k]);//此处不能写obj.k 会造成冲突 写成obj['k']会把k的键取出来
+
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

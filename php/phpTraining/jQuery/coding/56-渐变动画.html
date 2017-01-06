@@ -1,0 +1,80 @@
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title> 渐变动画</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-17 17:27:49
+ */
+
+/**
+ * jquery中的动画:
+ *
+
+ * 渐变动画:
+ *
+ * 1、fadeIn()//渐入
+ *
+ * 2、fadeOut() //渐出
+ *
+ * 3、fadeTo()
+ *
+ * 4、fadeToggle()
+ *
+
+ * 
+ */
+
+$(function(){
+
+/*$('a').click(function(){
+	//opacity从0变成1
+	$('p').fadeIn(1000);
+});
+*/
+
+/*$('a').click(function(){
+	//opacity从1变成0
+	$('p').fadeOut(1000);
+});
+*/
+
+/*$('a').click(function(){
+
+	//推荐去掉0.3中的0 
+	$('p').fadeTo(1000,.3,function(){
+		alert('fadeTo方法执行完成');// function()是回调函数 当执行完动画 才去执行
+	});
+});*/
+
+//fadeToggle  切fadeIn和fadeOut
+
+$('a').click(function(){
+	$('p').fadeToggle(1000);
+});
+
+});
+
+
+
+
+	</script>
+	<style type="text/css">
+		p{
+			width: 300px;
+			padding: 10px;
+			border: 1px solid red;
+			
+		}
+	</style>
+</head>
+<body >
+	<a href="#">点击</a>
+	<p>af发发放大看涸鲋得水</p>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>while循环</title>
+	<script type="text/javascript">
+		/**
+		 * @Author:     poetries
+		 * @DateTime:	2016-06-03 23:25:10
+		 */
+		
+		 var time = 100;
+		 var cnt =null;
+
+		while (--time) {
+			document.write('映红'+'<br />');
+			cnt ++;
+		}
+		document.write(cnt+'<hr />');//99
+
+
+		//用while循环打印1-100数字在页面上  并输出 我爱你
+		
+		var num = null;
+		var love = '';
+		while (++num<=100) {
+			document.write(num+'<br />');
+			love = '我爱你'+'<br />';
+			document.write('映红'+love);
+		}
+
+		//for循环实现
+		
+		for(var i=1;i<=100;i++){
+			document.write(i+'<br>');
+		}
+
+		document.write('<hr>');
+
+		//while实现1+100值
+		
+		var i = 0;
+		var sum1 = 0;
+		while (++i<=100) {//这里注意自增自减的用法
+			sum1 +=i;
+
+		}
+		document.write(sum1+'<br>'); //5050
+		document.write(i);//101
+
+		document.write('<hr>');
+
+		
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

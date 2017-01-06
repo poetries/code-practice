@@ -1,0 +1,47 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>62-window-history对象</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-06 11:45:02
+ */
+/**
+ *62-window-history对象:
+ *
+ * 一个属性三个方法：
+ * 
+ * length:历史记录的数目
+ *
+ * back(); 后退
+ * forward() 前进
+ * g() 
+ *
+ * 
+ */
+
+ function tui(){
+ 	window.history.back(-1);
+ }
+
+ function much(){
+ 	alert(window.history.length);
+ }
+
+ function  qianjin(){
+ 	history.forward();
+ }
+ function go(){
+ 	history.go();
+ }
+	</script>
+</head>
+<body>
+	<input type="button" value="多少个里历史记录" onclick="much();">
+	<input type="button" value="后退" onclick="tui();">
+	<input type="button" value="前进" onclick="qianjin();">
+	<input type="button" value="GO" onclick="go(-1);">
+</body>
+</html>

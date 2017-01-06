@@ -1,0 +1,70 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>事件的中断传播与行为阻止</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-08 20:44:09
+ */
+/**
+ * 事件的中断传播与行为阻止:
+ *
+ * 如何中断事件的传播？
+ * stopPropagation() //w3c 取消冒泡
+ * cancleBubble = true //IE取消冒泡
+ *
+ * 取消事件默认效果：
+ * 
+ * returnValue = false //IE 取消事件效果
+ * defaultPrevent()  //w3c取消事件效果
+ * 
+ */
+window.onload = function(){
+	//捕捉写法停止传播 从最顶层开始往下
+/*	document.getElementById('aa').addEventListener('click',function (ev){alert('aa');ev.stopPropagation();},true);// 结果捕捉到aa 加true 由冒泡变为捕捉 从上到下
+	document.getElementById('bb').addEventListener('click',function (){alert('bb')},true);
+	document.getElementById('cc').addEventListener('click',function (){alert('cc')},true);*/
+
+	//冒泡写法停止传播  从下往上
+	document.getElementById('aa').addEventListener('click',function (){alert('aa');});//加true 由冒泡变为捕捉 从上到下
+	document.getElementById('bb').addEventListener('click',function (){alert('bb')});
+	document.getElementById('cc').addEventListener('click',
+	function (ev){
+	alert('cc');
+	ev.stopPropagation();
+	// ev.cancleBubble = true;//IE下 取消冒泡方法
+	}); //结果是冒出cc 停止传播
+}
+
+
+	</script>
+	<style type="text/css">
+		#aa{
+			width: 600px;
+			height: 600px;
+			background: gray;
+		}
+		#bb{
+			width: 400px;
+			height: 400px;
+			background: green;
+		}
+		#cc{
+			width: 200px;
+			height: 200px;
+			background: red;
+		}
+	</style>
+</head>
+<body>
+	<div id='aa'>
+		<div id='bb'>
+			<div id ='cc'></div>
+		</div>
+	</div>
+	
+	
+</body>
+</html>

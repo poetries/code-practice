@@ -1,0 +1,104 @@
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jquery表格隔行变色</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-11 17:51:45
+ */
+
+$(function(){
+	//获取所有的tr
+/*	$("#table tr:even").css('background','blue'); //16
+	$("#table tr:odd").css('background','yellow');//17*/
+
+	//简化16 17 行  filter(表达式) 筛选指定表达式的元素  做法在filter和end用法
+	// end()作用返回到这一句$("#table tr") 重新开始下一次
+	
+	$("#table tr").filter(':even').css('background','blue').end().filter(':odd').css('background','yellow');
+
+});
+
+	</script>
+
+<style type="text/css">
+	#table{
+		width: 500px;
+		border:1px solid red;
+		border-collapse: collapse;
+	}
+	#table td{
+		border:1px solid red;
+	}
+</style>
+
+</head>
+<body>
+	<table id="table">
+		<tr>
+			<td>abcd</td>
+			<td>abcd</td>
+			<td>abcd</td>
+			<td>abcd</td>
+		</tr>
+		<tr>
+			<td>1111</td>
+			<td>2222</td>
+			<td>3333</td>
+			<td>4444</td>
+		</tr>
+				<tr>
+			<td>abcd</td>
+			<td>abcd</td>
+			<td>abcd</td>
+			<td>abcd</td>
+		</tr>
+		<tr>
+			<td>1111</td>
+			<td>2222</td>
+			<td>3333</td>
+			<td>4444</td>
+		</tr>
+				<tr>
+			<td>abcd</td>
+			<td>abcd</td>
+			<td>abcd</td>
+			<td>abcd</td>
+		</tr>
+		<tr>
+			<td>1111</td>
+			<td>2222</td>
+			<td>3333</td>
+			<td>4444</td>
+		</tr>
+				<tr>
+			<td>abcd</td>
+			<td>abcd</td>
+			<td>abcd</td>
+			<td>abcd</td>
+		</tr>
+		<tr>
+			<td>1111</td>
+			<td>2222</td>
+			<td>3333</td>
+			<td>4444</td>
+		</tr>
+				<tr>
+			<td>abcd</td>
+			<td>abcd</td>
+			<td>abcd</td>
+			<td>abcd</td>
+		</tr>
+		<tr>
+			<td>1111</td>
+			<td>2222</td>
+			<td>3333</td>
+			<td>4444</td>
+		</tr>
+	</table>
+</body>
+</html>

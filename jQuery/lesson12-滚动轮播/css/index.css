@@ -1,0 +1,76 @@
+*{
+	margin:0;
+	padding:0;
+}
+html,body{
+	width:100%;
+	height:100%;
+}
+div.pagebar{
+	width:710px;
+	height:100%;
+	position:relative;
+	overflow:hidden;
+	margin:30px auto;
+}
+div.pagebar ul.content{
+	width:1000%;
+	height:100%;
+	background-color:#abcef;
+	display:none;
+	position:relative;
+}
+div.pagebar ul.content li{
+	height:100%;
+	text-align:center;
+	float:left;
+	list-style-type:none;
+}
+div.pagebar ul.content li div.card{
+	width:175.5px;
+	height:128px;
+	border:1px  solid #abcdef;
+	border-radius:3px;
+	margin:0px auto;
+}
+div.pagebar a.bar{
+	width:26px;;
+	height:39px;
+	background-image:url("../img/focus_arrow.png");
+	background-position:0 0;
+	position:absolute;
+	top:50%;
+	margin-top:-20px;
+}
+div.pagebar a.prev{
+	left:0;
+}
+div.pagebar a.prev:hover{
+	background-position:0px -39px;
+}
+div.pagebar a.next{
+	right:-3px;
+	background-position:-3px -80px;
+}
+div.pagebar a.next:hover{
+	background-position:-3px -120px;
+}
+
+/*theme style start*/
+
+div.theme{
+	width:100%;
+	height:170px;
+	background-image:url("../img/theme b_0.png");
+}
+#themes{
+	width:960px;
+	height:100%;
+	margin:auto;
+}
+#themes div.set_theme_item{
+	width:192px;
+	height:142px;
+	margin-top:20px;
+	margin:auto;
+}

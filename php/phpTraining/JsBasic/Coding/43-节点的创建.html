@@ -1,0 +1,75 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>节点的创建</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-05 14:13:42
+ */
+/**
+ * 节点的增加：
+ * 1、你想增加什么样的节点？
+ * 2、你增加在哪里
+ *
+ * 假设在body的container div里增加一个p标签
+ * 先造出一个p节点，然后把p节点放到div里面
+ *
+ * 1、创建元素节点：document.createElement
+ * 
+ * 2、创建文本节点：document.createTextNode
+ * 
+ * 3、附加节点:appendchild()
+ *
+ * 节点.appendchild()--追加子元素
+ *
+ * 
+ *
+ * 
+ * 
+ */
+
+ 	function t1(){
+ 		//要在container里面增加一个p节点
+ 		//分两步：1、创建p节点  2、把p节点附加到container里面
+ 		
+ 		//创建p节点
+ 		
+ 		var nodep = document.createElement('p');
+ 		var cont = document.getElementById('container');
+
+ 		cont.appendChild(nodep);
+
+ 		//创建文本节点
+ 		var art = document.createTextNode(Math.random());
+ 		nodep.appendChild(art);
+
+ 		// nodep.innerHTML = '映红';//在标签里面添加文字
+
+ 		
+ 	}
+
+
+	</script>
+	<style type="text/css">
+		p{
+			width: 100px;
+			height: 100px;
+			background: blue;
+		}
+		#container p{
+			width: 100px;
+			height: 100px;
+			background: green;
+		}
+	</style>
+</head>
+<body>
+	<p></p>
+	<div id="container">
+		<p></p>
+	</div>
+	<input type="button" value="增加p节点" onclick="t1();">
+</body>
+</html>

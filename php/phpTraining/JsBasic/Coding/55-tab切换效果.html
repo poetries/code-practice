@@ -1,0 +1,70 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>55-tab切换效果</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-06 09:10:06
+ */
+
+function t1(pid){
+	// alert('a');
+	var ps = ['mil','news','people','tech'];
+
+	//传过来的参数等于那个id就让那个id的p标签block 不等于就变成none
+	 for (var i = 0,len = ps.length; i < len; i++) {
+	 	if(ps[i]== pid){
+	 		document.getElementById(ps[i]).style.display = 'block';
+	 	}else{
+	 		document.getElementById(ps[i]).style.display = 'none';
+	 	}
+	 	
+	 }
+}
+
+	</script>
+	<style type="text/css">
+		li{
+			float: left;
+			list-style: none;
+			margin: 5px;
+		}
+		ul{
+			width: 200px;
+			height: 30px;
+		}
+		p{
+			width: 200px;
+			height: 200px;
+			border: 1px solid red;
+		}
+		#news,#people,#tech{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<ul>
+			<li onmouseover="t1('mil');">军事</li>
+			<li onmouseover="t1('news');">新闻</li>
+			<li onmouseover="t1('people');">人物</li>
+			<li onmouseover="t1('tech');">科技</li>
+		</ul>
+		<p id="mil">
+			军事频道
+		</p>
+		<p id="news">
+			新闻频道
+		</p>
+		<p id="people">
+			人物频道
+		</p>
+		<p id="tech">
+			科技频道
+		</p>
+	</div>
+</body>
+</html>

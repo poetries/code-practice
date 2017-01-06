@@ -1,0 +1,42 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>节点的复制</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-05 20:57:56
+ */
+/**
+ * 节点的克隆：
+ *
+ * 不仅可以创建节点 还可以复制节点
+ *
+ * 语法：oldNOde.cloneNOde(true/false) --//代表克隆节点 不克隆子节点
+ * 
+ */
+ 	function t1(){
+        var oldul = document.getElementsByTagName('ul')[0];
+        var newul = oldul.cloneNode(true);
+ 		// alert(newul);
+ 		
+ 		var cart = document.getElementById('cart');
+ 		cart.appendChild(newul);
+
+ 	}
+	</script>
+</head>
+<body>
+	<ul>
+		<li>东</li>
+		<li>南</li>
+		<li>西</li>
+		<li>北</li>
+	</ul>
+	<div id="cart">
+	</div>
+
+	<input type="button" value="创建一个和ul相同的节点在div里面" onclick="t1();">
+</body>
+</html>

@@ -1,0 +1,53 @@
+
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>ajax与XML数据处理</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-23 07:58:42
+ */
+		$(function(){
+
+
+			$('input[type=button]').click(function(){
+				$.ajax({
+					url:'demo3.php?'+Math.random(),
+					type:'get',
+					dataType:'xml',
+					success:function(xml){
+
+						// alert(xml);
+						$(xml).find('title').each(function(){
+							// alert($(this).text()); //操作xml不能用html()方法 只能用text()
+							
+							$('#info>ul').append("<li>"+$(this).text()+"</li>")
+							
+						});
+						
+					}
+				});
+			});
+
+		});
+	</script>
+	<style type="text/css">
+		#info{
+			width: 200px;
+			height: 200px;
+			color: red;
+			border: 1px solid blue;
+		}
+	</style>
+</head>
+<body>
+	<input type="button" value="获取信息">
+	<div id="info">
+		<ul></ul>
+	</div>
+</body>
+</html>

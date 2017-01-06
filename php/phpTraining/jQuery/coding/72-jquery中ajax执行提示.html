@@ -1,0 +1,52 @@
+
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>72-jquery中ajax执行提示.html</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-22 22:38:10
+ */
+
+		$(function(){
+
+
+			$('input[type=button]').click(function(){
+				$.ajax({
+					url:'demo2.php?'+Math.random(),
+					type:'get',
+					success:function(data){
+						// alert(typeof data);
+						// alert(data);
+						var res = eval(data);
+						for (var i = 0; i < res.length; i++) {
+							// alert(res[i].title);
+							$('#info>ul').append('<li>'+res[i].title+'<em>'+res[i].hobby+'</em>'+'</li>');
+						}
+				
+						
+					}
+				});
+			});
+			//ajax执行提示
+			$(document).ajaxStart(function(){
+				$('#loading').show();
+			}).ajaxStop(function(){
+				$('#loading').hide();
+			});
+
+		});
+	</script>
+</head>
+<body>
+	<input type="button" value="获取信息">
+	<div id="info">
+	<img src="./src/img/ajax-loader.gif" alt="" id="loading" style="display: none">
+		<ul></ul>
+	</div>
+</body>
+</html>

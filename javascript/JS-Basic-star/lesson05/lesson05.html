@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>lesson05</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+
+
+var exp = ['上','下','左','右'];
+
+/*for (var i = 0; i < exp.length; i++) {
+	switch(i) {
+		case 0:
+			document.write(exp[0]+'<br>');
+			break;
+		case 1:
+			document.write(exp[1]+'<br>');
+			break;
+		case 2:
+			document.write(exp[2]+'<br>');
+			break;
+		case 3:
+			document.write(exp[3]+'<br>');
+			break;
+		default:
+			document.write('您输入不正确');
+	}
+
+}*/
+
+//var message = prompt('请输入0-3之间的任意一个数字：');
+
+/*switch(parseInt(message)) {
+	case 0:
+		document.write(exp[0]+'<br>');
+		break;
+	case 1:
+		document.write(exp[1]+'<br>');
+		break;
+	case 2:
+		document.write(exp[2]+'<br>');
+		break;
+	case 3:
+		document.write(exp[3]+'<br>');
+		break;
+	default:
+		document.write('您输入不正确');
+}
+*/
+
+
+
+
+/*for (var i = 0; i <= 31; i++) {
+	document.write('今天是'+i+'号,星期'+(i%7==0?"天":i%7)+'<br>');
+	if(i%7==0 ){
+		document.write('周末休息'+'<br><br>');
+	}else{
+		document.write('正常上班'+'<br>');
+	}
+}
+*/
+
+//输出方形
+for (var i = 0; i < 10; i++) {
+	for (var j = 0; j < 10; j++) {
+		document.write('*');
+	}
+	document.write('<br>');
+}
+
+
+document.write('<br>');
+
+//输出三角形
+
+for (var i = 0; i < 10; i++) {
+	for (var j = 0; j <= i; j++) {
+		document.write('*');
+	}
+	document.write('<br>');
+}
+document.write('<br>');
+
+//输出99乘法表
+
+for (var i = 1; i <=9; i++) {
+	for (var j = 1; j <= i; j++) {
+		document.write(i+'*'+j+'='+(i*j)+' ');
+	}
+	document.write('<br>');
+}
+
+
+
+
+</script>
+</html>

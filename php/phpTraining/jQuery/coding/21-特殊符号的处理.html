@@ -1,0 +1,40 @@
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>特殊符号处理</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-11 17:07:43
+ */
+
+$(function(){
+
+$('input[name=gender\\[\\]]').click(function() {// 转义 []需要两个 单引号用一个 有的特殊符号加两个转移符
+	
+	alert($(this).val());
+});
+
+
+});
+
+	</script>
+
+</head>
+<body>
+	<form action="">
+	<input type="submit" value="提交">
+	<input type="reset" value="重选">
+<!-- 		<input type="checkbox" name="gender" id="" value="男">
+		<input type="checkbox" name="gender" id="" value="女">
+		<input type="checkbox" name="gender" id="" value="保密"> -->
+		<!-- 实际开发中 把gender当做数组来处理 -->
+		<input type="checkbox" name="gender[]" id="" value="男">
+		<input type="checkbox" name="gender[]" id="" value="女">
+		<input type="checkbox" name="gender[]" id="" value="保密">
+	</form>
+</body>
+</html>

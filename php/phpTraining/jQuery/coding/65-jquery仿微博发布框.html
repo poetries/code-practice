@@ -1,0 +1,55 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title><html>
+<head>
+	<meta charset="UTF-8">
+	<title>jquery仿微博发布框</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+		<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-19 16:03:40
+ */
+
+
+	$(function(){
+		var maxLength = 140;
+ 	$('textarea').keyup(function(){
+ 		//keyup键盘按下去抬起的时候 触发事件
+ 		
+
+ 		var l = $(this).val().length;
+ 		$('strong').text(maxLength-l);
+
+ 		if(parseInt($('strong').text())<0){
+ 			// alert('最多只能输入140个字');
+ 			$('strong').text('0');
+
+ 			var text = $(this).val().substring(0,140);//substring截取140个字符  substr也可以截取  不推荐使用 ECMA 没有标准化substr()方法
+ 			$(this).val(text);
+ 		}
+ 	});
+
+
+	});
+
+		</script>
+<style type="text/css">
+
+
+</style>
+</head>
+<body>
+	
+</body>
+</html></title>
+</head>
+<body>
+<textarea cols="30" rows="10">
+	
+</textarea>
+<span>你还可以输入<strong style="color: red;">140</strong>个字</span>
+</body>
+</html>

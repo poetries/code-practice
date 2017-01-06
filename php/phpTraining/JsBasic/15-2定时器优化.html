@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style></style>
+    <script>
+        //window.setTimeout('语句',毫秒)指定毫秒后执行一次语句
+        //注意：定时器不属于js的知识 它是window对象提供的功能
+
+        function bom()
+        {
+            var inp = document.getElementsByName('time')[0];
+           var time =  parseInt(inp.value)-1;//document.getElementsByName('time')[0].value返回的是字符 需要转换
+            inp.value = time;
+
+            if(time==0){
+                var img = document.getElementsByTagName('img')[0];
+               img.src = 'http://img4.imgtn.bdimg.com/it/u=2867134626,2930357954&fm=21&gp=0.jpg';
+                clearInterval(clock); //清除定时器
+            }
+        }
+       var clock = setInterval('bom()',1000);//clock指定哪个定时器
+
+    </script>
+</head>
+<body>
+<h1>setInterval定时器</h1>
+<input type="button" name= "time" value="5"><br>
+<img src="http://img1.imgtn.bdimg.com/it/u=2362032990,3347819021&fm=21&gp=0.jpg" alt="">
+</body>
+</html>

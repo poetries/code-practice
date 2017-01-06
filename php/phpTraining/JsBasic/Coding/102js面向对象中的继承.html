@@ -1,0 +1,72 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>102js面向对象中的继承</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-09 23:57:22
+ */
+
+/**
+ * js中没有类的概念 只有对象的概念
+ * 
+ *
+ * 
+ */
+// Kitty实际是由new Object创建来的 这里用了字面值构造 方便一些
+// Kitty的构造函数是Object 原型是：
+var kitty = {color:'yellow',bark:function(){alert('喵喵')},climb:function(){alert('在树上')}};
+
+console.log(kitty);
+
+function Tiger(){
+	this.color = 'gray';
+	this.bark = function (){
+		alert('呼呼');
+	}
+}
+
+//给构造函数声明原型  构造出的对象就会有一个祖先 就是该原型
+Tiger.prototype = kitty;
+
+var heihu = new Tiger();
+
+//重写原型上的属性  原型链上有了 就不去找了
+heihu.color = 'white';
+console.log(heihu.color);
+
+console.log(heihu);
+console.log(heihu.climb());
+
+//老虎是如何找到climb方法的？
+//是hiehu对象上有了climb方法还是？
+
+
+kitty.climb = function (){
+	alert('你好');
+}
+console.log(heihu.climb());//你好
+
+
+//当调用老虎的属性或方法时 首先在老虎的对象上查找属性或方法 如找不到就去老虎的构造函数的原型对象上查找（查找的过程 这个达到重写方法 属性的目的）  并不是把原型上的属性复制到自身
+
+
+
+//因为Kitty是Object构造出来的 Object有toString方法
+
+console.log(heihu.toString());//[object Object]
+
+
+//在查找属性或方法的过程中 沿着原型链来查找属性  对象--->原型-->原型的原型.....->空对象-->NULL  形参一条链
+//这个查找属性方式 称为js的原型连
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

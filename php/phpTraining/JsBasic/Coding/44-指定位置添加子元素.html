@@ -1,0 +1,41 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>指定位置添加子元素</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-05 20:31:55
+ */
+/**指定位置添加子元素:insertBefore
+ * 
+ */
+ 	function t1(){
+	 	var zhong = document.createTextNode('中');
+	 	var nodeli = document.createElement('li');
+	 	nodeli.appendChild(zhong);
+
+	 	var uln = document.getElementsByTagName('ul')[0];
+	 	var xi = uln.children[2];
+
+	 	//uln.appendchild(nodeli);
+	 	uln.insertBefore(nodeli,xi);//第一个参数是待插入节点 第二参数是定位用的
+
+
+
+ 	}
+
+	</script>
+
+</head>
+<body>
+	<ul>
+		<li>东</li>
+		<li>南</li>
+		<li>西</li>
+		<li>北</li>
+	</ul>
+	<input type="button" value="把中插入到西前" onclick="t1();">
+</body>
+</html>

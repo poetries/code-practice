@@ -1,0 +1,73 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>第六课-拖拽</title>
+	<style type="text/css">
+		*{
+			padding:0;
+			margin:0;
+		}
+		div{
+			width:100px;
+			height:100px;
+			background:red;
+			cursor: pointer;
+			position:absolute;
+			left:0;
+			top:0;
+		}
+	</style>
+	<script type="text/javascript" src="../src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+$(function(){
+
+	//移动窗口的步骤
+	//1、按下鼠标左键
+	//2、移动鼠标
+
+	$('div').mousedown(function(e){
+
+		// e.pageX
+		var positionDiv = $(this).offset();
+		var distenceX = e.pageX - positionDiv.left;
+		var distenceY = e.pageY - positionDiv.top;
+		//alert(distenceX)
+		// alert(positionDiv.left);
+		
+
+
+		$(document).mousemove(function(e){
+			var x = e.pageX - distenceX;
+			var y = e.pageY - distenceY;
+			
+			if(x<0){
+				x=0;
+			}else if(x>$(document).width()-$('div').outerWidth(true)){
+				x = $(document).width()-$('div').outerWidth(true);
+			}
+
+			if(y<0){
+				y=0;
+			}else if(y>$(document).height()-$('div').outerHeight(true)){
+				y = $(document).height()-$('div').outerHeight(true);
+			}
+
+			$('div').css({
+				'left':x+'px',
+				'top':y+'px'
+			});
+		});
+
+		$(document).mouseup(function(){
+			$(document).off('mousemove');
+		});
+	});
+
+		
+});
+	</script>
+</head>
+<body>
+	<div></div>
+</body>
+</html>

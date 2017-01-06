@@ -1,0 +1,69 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>isNaN</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-04 19:39:22
+ */
+
+/**
+* NaN--一个特殊变量 代表非数字
+*
+* isNaN()用来判断某个变量为 非数字正无穷大 负无穷大  isNan()返回一个布尔值
+*
+* isNaN()只是用来判断parseInt parseFloat的返回值
+*
+* 提示：在数学里 1/0  -->没有意义 无穷大
+*
+*
+* isFinity()用于判断一个数值是否有限 对于1/0  -1/0这样的结果判断为false 因为它们为正负无穷大
+*
+*/
+
+/*
+		var age = '45fafd123';
+		age = parseInt(age);
+
+		if(isNaN(age)){
+			alert('是非数字');
+		}else{
+			alert('你的年龄是'+age);
+		}
+*/
+
+
+/*		var age = 1/0;
+		alert(age);//Infinity(正无穷大)
+
+		var age = -1/0;
+		alert(age);//-Infinity*/
+
+
+		//isfinity  
+		
+		var age = 1/0;
+		if (isFinite(age)) {
+			alert('你的年龄是有有限的'+age);
+		}else{
+			alert('你不可能这么大');
+		}
+
+		var age = -1/0;
+		if (isFinite(age)) {
+			alert('你的年龄是有有限的'+age);
+		}else{
+			alert('你不可能这么大');
+		}
+
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

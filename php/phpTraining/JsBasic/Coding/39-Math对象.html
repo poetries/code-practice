@@ -1,0 +1,73 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Math对象</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-05 01:57:57
+ */
+/**	
+ * Math对象  和字符串一样 不用new 也能直接其方法
+ *
+ * ceil(数值) 大于或等于该数的最小整数
+ * floor(数值) 小于或等于该数的最大整数
+ * min(数值1,数值2) 返回最小值
+ * max()返回最大值
+ * pow(num1,num2)//返回num1的那么次方
+ * random() 返回随机数  0--1
+ * round(数值)  四舍五入 
+ * sqrt(数值)  开平方根
+ * 
+ */
+/*
+
+/*
+for (var i = 0; i < 20; i++) {
+document.write(5+Math.random()*5+'<br>');//5-10之间的随机
+}
+
+alert(Math.round(3.6658));//4
+alert(Math.sqrt(2));//1.4
+
+*/
+	
+	var big = parseInt(prompt('请输入第一个数字:'));
+	var small = parseInt(prompt('请输入第二个数字:'));
+
+	//输入任意两个数字 返回两个数之间的随机数
+/*	function rd(big,small){
+		return Math.random()*(big-small)+small;
+
+	}
+	for(var i = 0; i < 10; i++) {
+		document.write(rd(big,small)+'<br>');
+	}
+*/
+
+
+	//输入任意两个数字 返回两个数之间的随机数的整数 
+	function rd(big,small){
+		return Math.ceil(Math.random()*(big-small))+small;
+
+	}
+	for(var i = 0; i < 30; i++) {
+		document.write(rd(big,small)+'<br>');
+	}
+	//javascript中prompt方法可以让用户输入一个文本，从而作为返回值 prompt返回的是字符串类型
+	//需要用到parseInt 转成数字型  比如：输入12  实际返回的是'12'
+	//alert(typeof(window.prompt()));//string
+
+
+
+
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

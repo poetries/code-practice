@@ -1,0 +1,35 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>103-扩充系统内建对象的功能</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-10 00:46:12
+ */
+
+//103-扩充系统内建对象的功能
+
+//字符串str的原型
+String.prototype.ltrim = function(){
+	var reg = /^\s+/;
+	return this.replace(reg,'#'); //去左侧的空格的正则
+}
+
+var str = ' Hello '; //str 是一个字符串对象  实际是来自new String(' hello ')
+//alert(str.toUpperCase());
+
+// alert(str.trim());
+
+//现在给系统的字符串对象扩充一个ltrim 方法 去掉字符串左侧的空格
+
+alert(str.ltrim()+'#');
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

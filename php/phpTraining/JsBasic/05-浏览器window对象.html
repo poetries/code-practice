@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //浏览器window对象
+      /*  注：window对象时浏览器宿主对象 和JS语言无关
+
+        window对象的方法：
+
+        window.alert(message)
+        window.confirm(message)
+        window.prompt(message,[,defaultstr])
+        window.close()
+        window.print()
+
+        window.setInterval(表达式,毫秒)
+        window.clearInterval(定时器对象)
+        window.setTimeout(表达式，毫秒)
+        window.clearTimeout(定时器对象)
+
+        window对象的子对象
+
+            navigator浏览器信息对象
+                appCodeName 内部代码
+                appName 浏览器名称
+                appVersion 浏览器版本
+                platform操作系统类型
+                userAgent 用户代理信息
+                cookieEnable是否支持cookie
+
+            location地址栏对象
+                host主机
+                port 端口
+                href 地址
+                pathname 路径
+                protocol 协议
+                search 查询字符串
+                assign(url)页面跳转
+
+             history历史记录
+                length 历史记录的数目
+                back()
+                forward()
+                go()
+
+             screen 屏幕对象
+                height 屏幕高度
+                width 宽度
+                avaiHeight 可用高度
+                avaiWidth 可用宽度
+                colorDepth 颜色
+
+              document HTML文档对象
+                即HTML代码形成的对象，操作此对象，可动态改变页面内容
+
+
+
+        */
+
+      //  window.alert('hahha');
+      //  window.confirm('你要关闭吗');
+
+        console.log(window.navigator.cookieEnabled);
+
+        console.log(window.location);
+       // window.location.href = 'http://www.baidu.com';//改变地址栏网址
+        console.log(window.history);
+
+        console.log(window.screen.width);//获取屏幕分辨率
+        console.log(window.screen.height);
+        console.log(window.screen.availHeight);
+        console.log(window.screen.availWidth);
+
+       alert( window.document);
+
+    </script>
+</head>
+<body>
+<input type="button" value="前进" onclick="javascript:window.history.forward();">
+<input type="button" value="后退" onclick="javascript:window.history.back();">
+</body>
+</html>

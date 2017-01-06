@@ -1,0 +1,96 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>75-从哪里开始匹配</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-07 18:59:57
+ */
+
+function t1(){
+	var cont = document.getElementById('cont');
+	var cv = cont.value;
+
+	var reg = /\Bhi\B/;//查找中间含有hi的单词
+	alert(cv.match(reg));
+
+}
+function t2(){
+	var cont = document.getElementById('cont');
+	var cv = cont.value;
+
+	var reg = /\Bhi\B/g;//查找所有中间含有hi的单词
+	alert(cv.match(reg));
+
+}
+function t3(){
+	var cont = document.getElementById('cont');
+	var cv = cont.value;
+
+	var reg = /\Bhi\B/gi;//查找所有中间含有hi的单词  g是全局 i ignore 忽略大小写
+	alert(cv.match(reg));
+
+}
+
+
+function t4(){
+	var cont = document.getElementById('cont');
+	var cv = cont.value;
+
+	var  reg = /<script.*<\/script>/;//替换JavaScript标签
+	alert(cv.replace(reg,'哈哈哈'));
+
+}
+function t5(){
+	var cont = document.getElementById('cont');
+	var cv = cont.value;
+
+	  /*
+            . 代表任意,但不包括换行
+            可以用一对反义词来匹配所有. \d\D等
+            不能跨行（贪婪模式）
+      */
+     
+	var reg = /<a[\s]+[\d\D]*<\/a>/; //正则替换链接
+        alert(cv.replace(reg,'<a href="#">文字</a>')); 
+
+}
+function t6(){
+	var cont = document.getElementById('cont');
+	var cv = cont.value;
+
+	var  reg = /\d+$/gm;//把每一行的结尾的数字换成#   m 多行模式
+	alert(cv.replace(reg,'#'));
+
+}
+function t7(){
+	var cont = document.getElementById('cont');
+	var cv = cont.value;
+
+	var  reg = /go{3,}?ds/;//替换goods中多余的O
+	alert(cv.replace(reg,'goods'));
+
+}
+	</script>
+	<style type="text/css">
+		textarea{
+			width: 400px;
+			height: 200px; 
+		}
+	</style>
+
+</head>
+<body>
+	<textarea id='cont'></textarea>
+	<p><input type="button" value="查找中间含有hi的单词" onclick="t1();"></p>
+	<p><input type="button" value="查找所有中间含有hi的单词" onclick="t2();"></p>
+	<p><input type="button" value="查找所有中间含有hi的单词，不区分大小写" onclick="t3();"></p>
+	<p><input type="button" value="替换JavaScript标签" onclick="t4();"></p>
+	<p><input type="button" value="把连接换成空连接" onclick="t5();"></p>
+	<p><input type="button" value="把每一行的结尾的数字换成#" onclick="t6();"></p>
+	<p><input type="button" value="替换goods中多余的O" onclick="t7();"></p>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>lesson10</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+		Function.prototype.extends = function(parent,actions){
+			for(var prop in parent.prototype){
+				this.prototype[prop] = parent.prototype[prop];
+			}
+			for(var prop in actions){
+				this.prototype[prop] = actions[prop];
+			}
+		}
+		//人玩家   电脑玩家   猜拳系统
+		function Player(name){
+			this.name = name;
+			this.point = -1;//1：石头 2：剪刀 3：布
+		}
+		Player.prototype = {
+			guess:function(){
+				//人和电脑是不一样的
+				alert('猜拳方法是个抽象方法');
+			}
+		};
+
+		function NormalPlayer(name){
+			Player.call(this,name);
+		}
+		//继承玩家类，覆盖guess功能
+		NormalPlayer.extends(Player,{
+			guess:function(){
+				do{
+					this.point = window.prompt('请猜拳(1:石头,2:剪刀,3:布)：');
+				}while(!(this.point==1||this.point==2||this.point == 3));
+			}
+		});
+
+		function ComptPlayer(name){
+			Player.call(this,name);//Person.call(this,name,age) 的 意思就是使用 Person构造函数（也是函数）在this对象下执行 那么 ComptPlayer就有了Person的所有属性和方法
+		}
+
+		ComptPlayer.extends(Player,{
+			guess:function(){
+				this.point = parseInt(Math.random()*100)%3+1;
+			}
+		});
+
+		function GuessSystem(player1,player2){
+			this.p1 = player1;
+			this.p2 = player2;
+		}
+		GuessSystem.prototype = {
+			play:function(){
+				var res;
+				do{
+					this.p1.guess();
+					this.p2.guess();
+					res = this.verdict(this.p1.point,this.p2.point);
+					this.show(res);
+					var next = window.prompt('请问继续玩吗?(Y/O)');
+				}while(next=='Y');
+
+				alert('游戏结束欢迎下次再来玩!');
+			},
+			//p1代表是玩家1的点数，p2代表是玩家2的点数  
+			//-1：玩家1输，0：平局，1:玩家1赢
+			verdict:function(p1,p2){
+				var res = p1-p2;
+				if(res==0){
+					return 0;
+				}else if(res==-1||res==2){
+					return -1;
+				}else{
+					return 1;
+				}
+			},
+			//显示结果
+			show:function(res){
+				switch(res){
+					case 0:
+						alert("平局");
+						break;
+					case 1:
+						alert(this.p1.name+"赢,"+this.p2.name+"输");
+						break;
+					case -1:
+						alert(this.p1.name+"输,"+this.p2.name+"赢");
+						break;
+				}
+			}
+		};
+		var player = new NormalPlayer('哪吒');
+		var computer = new ComptPlayer('电脑e号');
+		var system = new GuessSystem(player,computer);
+		system.play();
+	</script>
+</html>

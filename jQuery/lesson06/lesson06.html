@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>please enter your title</title>
+		<meta name="keywords" content="关键词" />
+		<meta name="description" content="描述" />
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta name="author" content="" />
+		<style>
+		*{ margin:0; padding:0;}
+
+		</style>
+		<script type="text/javascript">
+		window.onload = function(){
+			var oBtn = document.getElementById("btn");
+			
+			oBtn.onclick = function(){
+				
+				var xhr = null;
+				if ( window.XMLHttpRequest )
+				{
+					xhr = new XMLHttpRequest();
+				}else{
+					xhr = new ActiveXObject( 'Microsoft.XMLHTTP' );
+				}
+				xhr.open("get","ajaxprocess.php?username="+encodeURI('连英')+"&pwd=123456&"+Math.random(),true);
+				xhr.send();
+				xhr.onreadystatechange = function(){
+					if (xhr.readyState == 4)
+					{
+						if ( xhr.status == 200)
+						{
+							document.write( xhr.responseText );
+						}else{
+							alert('不好意思，出错啦')
+						}
+					}
+
+				};
+			};
+
+		
+		};
+		</script>
+	</head>
+	<body>
+		
+		<input type="button" value="按钮" id="btn" />
+
+	</body>
+</html>

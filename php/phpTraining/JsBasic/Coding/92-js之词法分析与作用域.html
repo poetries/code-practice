@@ -1,0 +1,183 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>js之词法分析与作用域</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-08 22:25:29
+ */
+
+/**
+ * 在函数运行时 会进词法分析（预编译）
+ *
+ * 预编译做了哪些工作
+ *
+ * 1、分析参数
+ * 2、分析变量声明(分析带var的变量声明)
+ * 3、分析函数声明 
+ *
+ * 如何分析变量声明？
+ * 答：对于var声明的变量 以var str = ‘local’为例，分为 分析过程 和执行过程 先分析后执行
+ * 先分析var str 即仅仅声明了一个str变量 str变量此时没有赋值 值是undefined 然后在进行执行过程
+ * 
+ */
+
+/*var age = 22;
+var num = 99;
+
+ function t(){
+ 	var num = 88;
+ 	var str = 'hello';
+
+ 	function a(){
+
+ 		var  str = 'world';
+ 		alert(str);//world
+ 		alert(num);//88
+ 		alert(age);//22
+ 	}
+ 	a();
+
+
+ }
+
+ t();*/
+
+/*var str = 'global';
+
+function t(){
+	alert(str);//undefined
+	var str = 'local';//local
+	alert(str);
+
+	//词法分析
+	var str;
+
+	//执行语句
+	alert(str)
+	str = 'local'
+	alert(str)
+
+
+}
+
+t();*/
+
+
+/**
+ * 活动对象、激活对象 Active Object
+ *
+ * AO上有哪些属性：
+ *
+ * 对于函数的AO属性来自三个方面
+ *
+ * 1、参数
+ * 2、局部变量声明
+ * 3、函数声明
+ *
+ * 在函数调用瞬间 AO这样形成
+ * 首先分析参数 把分析的的参数形成AO属性 如果传来实参 则把实参赋给相应的属性
+ *
+ * 其次分析var声明 以var str= hello为例 把str声明为AO的属性 值为undefined  
+ *
+ * 如果var声明的变量名与形参名称一致 不产生影响 因为AO的str已经存在
+ *
+ * 最后分析函数声明， function 函数名(){}//有函数名
+ *
+ *
+ * 
+ * 
+ * 函数的变量有其作用域，引用某变量时，在某个范围内查询该变量，这个范围又在哪里？在AO上找 在函数调用的瞬间  会产生一个AO 这个AO对象的属性 即存储着该函数所能引用的到的变量
+ * 
+ * 
+ * 
+ */
+
+/*
+var str = 'global';
+
+function t(age){
+	alert(age);//99
+	var age = 12;
+	alert(age);//12
+
+
+}
+
+t();
+
+对上面的结果进行分析：
+
+AO：{age:undefined} //词法分析得到
+AO：{age:99} //实参赋值 AO.age属性
+AO:{age:12}  //修改AO.age的值
+
+
+*/
+
+
+function f(age,hei){
+	var age;
+	alert(age);
+	function age(){
+		alert('he');
+	}
+}
+
+//分析过程：
+//AO:{}
+//AO:{age:undefined,hei:undefined}
+//AO:{age:32,hei,undefined}
+//分析完形参 紧接着分析var age  不产生影响 因为AO的age已经存在
+//AO:{age:function(){aler..},hei:undefined}
+//执行
+//alert(age)---》AO.age---》函数
+
+//函数就是变量 函数声明就是变量声明
+/**
+ * 函数声明：假设函数名fn 函数声明会把函数赋值为AO.fn属性的值 
+ *
+ * 
+ */
+
+
+ //函数声明与函数表达式的区别
+ //表达式必有一个返回值 （即 匿名函数赋给了一个变量 此时 就是普通的赋值过程）
+ //函数表达式返回返回 并把函数作为值 赋给变量
+ //函数声明的优先级高 例如
+ //function fn(){} 则会把AO.fn = function fn(){}
+ 
+//函数表达式
+ function fn1(){
+ 	alert(age);
+
+ 	var age = function(){
+ 		alert('hahh');
+ 	}
+ 	alert(age);
+ }
+ fn1(32);
+
+ //结果： 32 function
+ 
+ //函数声明
+ function fn1(){
+ 	alert(age);
+
+ 	function age(){
+ 		alert('hahh');
+ 	}
+ 	alert(age);
+ }
+ fn1(32);
+
+ //结果： function function
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

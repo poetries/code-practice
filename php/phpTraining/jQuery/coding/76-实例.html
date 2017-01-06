@@ -1,0 +1,45 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>实例</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript" src='demo1.js'></script>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-23 09:20:24
+ */
+
+$(function(){
+
+	//不使用插件 用jQuery写
+	
+/*	var div = $('div');
+	div.css({
+		'top':($(window).height()-div.height())/2,
+		'left':($(window).width()-div.width())/2,
+		'position':'absolute'
+	});
+*/
+
+//使用插件来写  使用插件的方法出现了问题 暂时找不出
+var div = $('div');
+$.yongxuan.centerDiv(div);
+
+});
+
+	</script>
+<style type="text/css">
+	div{
+		height: 150px;
+		width: 150px;
+		background: red; 
+	}
+</style>
+</head>
+<body>
+	<div></div>
+</body>
+
+</html>

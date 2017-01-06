@@ -1,0 +1,56 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>创建对象</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-04 22:56:35
+ */
+
+/**
+ * 对象的概念：
+ * 		每个编号-->内容
+ * 		属性-->值
+ *
+ * 对象和数组的本质一样 都是组织一堆数据
+ *
+ * 只不过 对象的下表不为数字而且无序
+ *
+ * 创建对象：（不仅给值 还给属性）
+ * 
+ *1、创建爱你数组的[]不一样 
+ *2、和创建对象用{}
+ *3、和创建数组直接放置的值不一样 创建对象时值前面还要加上属性
+ *4、创建语法:{属性1:值1,属性2:值2}
+ *
+ *
+ * 对象单元值的引用：（两种方法）
+ *
+ * 1、Obj.属性
+ * 2、Obj['属性']
+ *
+ * 
+ * 
+ */
+
+
+var stu = {name:'小明',age:22,number:007,score:99};
+// alert(stu);
+
+//这种方法不推荐
+//alert(stu['name']);// name需要加上单引号 不然就和变量一样了
+
+//推荐用法
+alert(stu.score);
+
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

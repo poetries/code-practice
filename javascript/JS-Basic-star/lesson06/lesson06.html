@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lesson06</title>
+</head>
+<body>
+
+
+</body>
+<script type="text/javascript">
+
+//输出空心菱形
+
+/*var line = parseInt(prompt("输入菱形的上半部行数")||0);
+for (var i = 1,c = line-1; i <=line; i++,c--) {//i控制行数 c用来控制每一行输入的空格数
+    for(var j = 1;j<=c;j++){
+        document.write('&nbsp;');
+    }
+    for(var j = 1;j<=i*2-1;j++){
+        document.write('* ');
+    }
+    document.write('<br >');
+}
+
+for (var i = line-1,c = 1; i >=1; i--,c++) {
+    for(var j = 1;j<=c;j++){
+        document.write('&nbsp;');
+    }
+    for(var j = 1;j<=i*2-1;j++){
+        document.write('* ');
+    }
+    document.write('<br >');
+}
+*/
+document.write('<br >');
+
+//猜拳游戏 do..while应用 先执行一次在判断
+
+alert('欢迎进入游戏.......');
+var user;
+
+do{//只要不是0 1 2就让你重新输入 是合法值才能输入其他的
+    user = parseInt(prompt('请输入您要猜的拳(0:石头,1:剪刀,2:布)'));//prompt返回的是string类型 转成数字类型
+}while(!(user == 0||user==1||user==2));
+
+// console.log(user);
+// console.log(typeof user);//确认是number类型 接下来用switch case 对数值的比较
+
+var comp;//让电脑来输入
+comp = parseInt(10*Math.random())%3; //随机生成 0 1 2
+var res = user-comp;
+
+
+
+
+//优化前
+/*var iswin = false;//用来判断输赢
+if (user==comp) {
+    console.log('平局');
+}else{
+
+    switch(user) {
+        case 0:
+            console.log('用户输入的是：石头');
+            switch(comp) {
+                
+                case 1:
+                    console.log('电脑输入的是：剪刀');
+                    swin = true;
+                    break;
+                case 2:
+                    console.log('电脑输入的是：布');
+                    swin = false;
+                    break;
+            }
+            break;
+        case 1:
+            console.log('用户输入的是：剪刀');
+            switch(comp) {
+                case 0:
+                    console.log('电脑输入的是：石头');
+                    swin = false;
+                    break;
+                
+                case 2:
+                    console.log('电脑输入的是：布');
+                    swin = true;
+                    break;
+            }
+            break;
+        case 2:
+            console.log('用户输入的是：布');
+            switch(comp) {
+                case 0:
+                    console.log('电脑输入的是：石头');
+                    swin = true;
+                    break;
+                case 1:
+                    console.log('电脑输入的是：剪刀');
+                    swin = false;
+                    break;
+                
+            }
+            break;
+    }
+    console.log(iswin?"赢":"输");
+
+}*/
+
+
+
+//优化后
+
+/*switch(user) {
+        case 0:
+            console.log('您输入的是：石头');
+            break;
+        case 1:
+            console.log('您输入的是：剪刀');
+            break;
+        case 2:
+            console.log('您输入的是：布');
+            break;
+
+}
+
+switch(comp) {
+        case 0:
+            console.log('电脑输入的是：石头');
+            break;
+        case 1:
+            console.log('电脑输入的是：剪刀');
+            break;
+        case 2:
+            console.log('电脑输入的是：布');
+            break;
+
+}
+*/
+
+
+//函数封装后的代码简化 函数==功能 动作 方法 行为
+
+//传入一个0 1 2之间的值 得到是 石头 剪刀 布
+function show(num){
+    switch(num) {
+            case 0:
+                return '石头';
+                break;
+            case 1:
+                return '剪刀';
+                break;
+            case 2:
+                return '布';
+                break;
+
+    }
+
+}
+
+console.log('用户输入的是：'+show(user));
+console.log('电脑输入的是：'+show(comp));
+
+
+
+//判断的结果
+switch(res) {
+    case 0:
+        console.log('平局');
+        break;
+    case -1:
+    case 2:
+        console.log('赢')
+        break;
+    case 1:
+    case -2:
+        console.log('输')
+        break;
+}
+
+ //闭包 作用域
+
+//记住：先定义var  function  在从上往下执行  
+//函数执行完立即销毁
+//定义定义在自己的栈里面 执行在自己的堆里面
+//运行在运行的环境中
+
+
+function m(){
+    
+    c = 50;//在局部变量中找不到定义的c 沿着作用域链找到了全局变量的c 
+    alert('哈哈哈');
+    //var c;
+}
+
+var c = 150; // 函数m()还未执行到 还没被销毁 此时全局c的值c=50  
+m();
+var c = 20;//到这里一步 m()已经执行完了 函数已经销毁了  这里的c还是20
+alert(c);
+
+
+</script>
+</html>

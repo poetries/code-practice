@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>lesson02</title>
+		<script src="../js/jquery-2.1.4.js"></script>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			html,body{
+				width:100%;
+				height:100%;
+			}
+			div.mydiv{
+				background:red;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div style="border:1px solid red">div1</div>
+		<div>div2</div>
+		<div>div3</div>
+		<div class="mydiv">div4</div>
+
+		<input type="text" name="username" value=""/>
+		<input type="password" name="pwd" value=""/>
+		<input type="radio" name="" value=""/>
+		<input type="reset" value="重置"/>
+		<button>点一下</button>
+	</body>
+	<script>
+
+		//$("div").css("border","1px solid red").filter(":odd,:first").css("backgroundColor","green");
+		//$("div.mydiv:hidden").show();
+		//$("div.mydiv:hidden").text("divdivdiv").show();
+		//$("div.mydiv:hidden").css({"backgroundColor":"black","display":"block"});
+		//$("div:contains('div3')").css("border","5px  solid blue");
+
+		//$("input:text").css("border","1px solid red");
+		//$("input:password").css("border","2px solid blue");
+		//$("input:radio").css("backgroundColor","red");
+		//$("input:reset").css("backgroundColor","green");
+		
+		/**$("button").click(function(){
+			$(this).css("backgroundColor","red");//this指代被点击的DOM元素  this==document.getElementsByClassName("button")
+		});
+		*/
+
+		/**
+			操作原生DOM的时候用的方式：一下只能操作一个
+
+			操作属性：setAttribute/getAttribute
+			操作样式：style.xx = value
+			操作类样式：className=''
+			获取DOM的子元素children属性
+			DOM里面添加一个子元素appendChild()
+
+
+			操作jQuery代理对象的时候：批量操作DOM对象(全都是通过方法操作)
+
+			操作属性：attr()、prop()
+			操作样式：css()
+			操作类样式：addClass() removeClass()
+			操作DOM子元素：children()
+			添加子元素：append()
+		*/
+
+		var $divs = $("div");
+		//$divs.attr("lianying","I love you");
+		
+		//console.log($divs.css("border"));//1px solid rgb(255, 0, 0)
+		$divs.eq(3).addClass("yellow").removeClass("mydiv");
+		$divs.eq(3).append("<div>哈哈哈哈</div>");
+		$("<div>曦和嘻嘻</div>").appendTo($divs.eq(3));
+	</script>
+</html>

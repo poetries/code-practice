@@ -1,0 +1,97 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jquery对象级插件开发</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript" src='jquery.table.1.0.js'></script>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poethies
+ * @DateTime:	2016-06-23 09:59:19
+ */
+/**
+ * 基本上不用：类级别方法开发插件
+ *
+ * 大部分用：对象级插件开发
+ * 
+ */
+
+$(function(){
+
+	$('#table1').table({//这里的属性重写了插件的属性
+		evenRowClass:'evenRow1',
+		oddRowClass:'oddRow1',
+		currentClass:'currentRow1',
+		eventType1:'click'
+	});
+
+
+});
+
+	</script>
+	<style type="text/css">
+		table{
+			width: 100%;
+			border: 1px solid blue;
+			border-collapse: collapse;
+
+		}
+		th,td{
+			height: 28px;
+			border: 1px solid red;
+			text-align: center;
+		}
+		.evenRow1{background: #09f; } /*偶数*/
+		.oddRow1{background: #38a38a; }
+		.currentRow1{background: yellow;}/*当前*/
+	</style>
+</head>
+<body>
+<!-- 需求 开发一个插件 要求奇数行的颜色是#38a38a 偶数行的颜色是#09f  当鼠标移动到当前行的颜色变成yellow 当鼠标离开时 还是现实原来的颜色 -->
+	<table id='table1'>
+		<tr>
+			<th>姓名</th>
+			<th>年龄</th>
+			<th>身高</th>
+			<th>体重</th>
+		</tr>
+		<tr>
+			<td>张三</td>
+			<td>23</td>
+			<td>170</td>
+			<td>70kg</td>
+		</tr>
+		<tr>
+			<td>夏明</td>
+			<td>33</td>
+			<td>160</td>
+			<td>80kg</td>
+		</tr>
+		<tr>
+			<td>李遂</td>
+			<td>25</td>
+			<td>150</td>
+			<td>50kg</td>
+		</tr>
+		<tr>
+			<td>张三</td>
+			<td>23</td>
+			<td>170</td>
+			<td>70kg</td>
+		</tr>
+		<tr>
+			<td>夏明</td>
+			<td>33</td>
+			<td>160</td>
+			<td>80kg</td>
+		</tr>
+		<tr>
+			<td>李遂</td>
+			<td>25</td>
+			<td>150</td>
+			<td>50kg</td>
+		</tr>
+	</table>
+</body>
+</html>

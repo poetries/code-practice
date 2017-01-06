@@ -1,0 +1,33 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>with语句</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-09 17:12:27
+ */
+
+/**
+ * with（对象）{
+ * 		语句1
+ * 		语句2}
+ *
+ *在with内部的语句 就把参数中的对象当成了上下文环境
+ */
+window.onload = function (){
+	with(document){
+		alert(getElementById('test'));
+
+	}
+}
+
+
+
+	</script>
+</head>
+<body>
+	<p id="test">哈哈</p>
+</body>
+</html>

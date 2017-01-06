@@ -1,0 +1,38 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>3-编写第一个jquery程序</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-10 21:40:01
+ */
+/**
+ * window.onload和$(document).ready()区别
+ *
+ * 1、window.onload执行时机的不同：等我网页中所有的资源加载完毕后（包括图片 音频）才执行  window.onload只能编写一个
+ *
+ * 2、$(document).ready()等DON树加载完后就可以执行 $(document).ready()可以写N个  简化写法 $(function(){});
+ * 
+ */
+
+
+//在js中这样写加载页面
+window.onload = function(){
+	alert('hahah');
+}
+
+//jQ中这样写
+$(document).ready(function(){
+	alert('学习jquery');
+});
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

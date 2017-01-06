@@ -1,0 +1,45 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>删除节点</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-11 21:44:09
+ */
+
+/**	
+ * 删除节点：
+ *
+ * remove()删除节点
+ * empty() 清空节点
+ * unwrap()删除元素的父元素  保留里面的元素和文本内容
+ * detach() 删除节点 但保留jQuery对象 detach和remove一样
+ * 
+ * 
+ */
+
+$(function(){
+
+
+// $('p').remove('p');
+// $('div').empty();//empty()清空div里面的所有内容 包括标签
+
+$('strong').unwrap();
+
+
+
+
+});
+
+
+	</script>
+</head>
+<body>
+	<p>我是p标签</p>
+	<span>我是span标签</span>
+	<div>div标签<strong></strong></div>
+</body>
+</html>

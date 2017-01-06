@@ -1,0 +1,46 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>属性选择器</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-11 12:01:00
+ */
+
+/**
+ * 属性选择器：
+ *
+ * 1、[attr]选择拥有此属性的选择器
+ * 2、[attr=value]指定属性值的选择器
+ * 3、[attr1][attr2][attr3]复合属性选择器
+ * 4、坑爹属性选择器（手册过一遍）
+ *
+ * 
+ */
+
+$(function(){
+	//只要元素里面有这个属性 不管属性名什么都可以选择得到
+	$('p[myattr=xi]').css('background','red');//myarr是自己定义的
+	$('div[title=language]').css('background','red');
+	$('a[href]').css('background','red');
+
+	//复合属性选择器
+	$('p[title][myattr=xi]').css('background','blue');
+	
+});
+
+	</script>
+	<style type="text/css">
+
+	</style>
+</head>
+<body>
+<p title='js' myattr='xi'>选取含有子元素<strong>javascript</strong>或文本的元素</p>
+<p>选择不包含子元素或文本空元素</p>
+<a href="">选择不包含子元素或文本空元素</a>
+<div title="language">含子元素或文本空含子元素或文本空含子元素或文本空</div>
+</body>
+</html>

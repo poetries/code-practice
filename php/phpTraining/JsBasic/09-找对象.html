@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>找对象</title>
+
+</head>
+<body>
+<h1>关键是找对象</h1>
+<div id="test1">
+    <p>p1</p>
+    <p>p2</p>
+    <p>p3</p>
+</div>
+<div class="test2">test2 Class</div>
+<input type="text" name="username" id="" value="ploy">
+</body>
+
+<script>
+   //按id 找 返回值是对象
+   // alert(document.getElementById('test1'));
+
+    //按标签找 div p input  返回的是对象的集合 哪怕找打一个 也包装成数组 返回
+
+    var con = document.getElementsByTagName('p');
+   con[0].style.background = 'red';
+   con[1].style.background = 'green';
+   con[2].style.background = 'black';
+
+
+    //对于表单元素 按name找 返回值是NodeList 对象集合
+ //   alert(document.getElementsByName('username')[0]);
+ //   alert(document.getElementsByName('username')[0].value);
+
+    //按类名来找 返回集合 返回集合的都得加上[]
+
+ //   document.getElementsByClassName('test2')[0].style.background = 'yellow';
+
+    //找子对象 children parent
+  //  alert(document.getElementById('test1').childNodes.length); //返回7 说明在DOM里面哪怕一个空白符 换行都是被当作节点
+    alert(document.getElementById('test1').children.length); //返回3 不符合w3c规范 childen 非标准属性 但是各大浏览器都支持
+
+   //找父节点
+    document.getElementsByTagName('p')[0].parentNode.style.border = '2px solid red';
+
+
+  /* var chils= s.childNodes; //得到s的全部子节点
+
+   var par=s.parentNode; //得到s的父节点
+
+   var ns=s.nextSbiling; //获得s的下一个兄弟节点
+
+   var ps=s.previousSbiling; //得到s的上一个兄弟节点
+
+   var fc=s.firstChild; //获得s的第一个子节点
+
+   var lc=s.lastChile; //获得s的最后一个子节点 */
+
+
+</script>
+</html>

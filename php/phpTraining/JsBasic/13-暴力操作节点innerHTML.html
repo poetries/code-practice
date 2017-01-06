@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style></style>
+    <script>
+        //innerHTML代表节点的内容 能都能写
+        //不是一个w3c规定的标准属性 但是浏览器支持很好
+    function  add3(){
+        var con = document.getElementsByTagName('ul')[0];
+        con.innerHTML = '<li>春</li><li>夏</li><li>秋</li>';//往ul添加li
+
+    }
+        function add1(){
+            var con = document.getElementsByTagName('ul')[0];
+            //alert(con.innerHTML);//测试innerHTML是否能读
+            con.innerHTML += '<li>冬</li>';
+        }
+
+    </script>
+</head>
+<body>
+
+<input type="button" value="添加春夏秋" onclick="add3();">
+<input type="button" value="添加冬" onclick="add1();">
+<ul></ul>
+</body>
+</html>

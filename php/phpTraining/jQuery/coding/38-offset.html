@@ -1,0 +1,37 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>offset</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-12 00:05:30
+ */
+
+/**
+ * offset()获取元素的位置
+ */
+
+$(function(){
+	var a = $('p').offset();
+	alert(a.left);//58 8个像素是浏览器默认的 需要设置初始化css才可以
+
+	alert(a.top);
+
+});
+	</script>
+	<style type="text/css">
+	*{
+		margin: 0;
+	}
+		p{
+			margin: 50px;
+		}
+	</style>
+</head>
+<body>
+	<p>gfsd</p>
+</body>
+</html>

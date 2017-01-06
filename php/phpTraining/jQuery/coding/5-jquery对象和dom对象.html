@@ -1,0 +1,36 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jquery对象和dom对象</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-10 22:52:47
+ */
+$(function(){
+	var p =$('p');//用jQuery选择器得到的额对象就是jQuery对象
+
+	
+	//jquery对象不能使用DOM对象中的方法 只能使用jQ中的方法
+	//alert(p.innerHTML);//error  
+	alert(p.html());
+
+	//如果DOM对象中的方法在jq库中被改写过  可以使用DOM对象中的方法
+
+});
+
+
+var p = document.getElementsByTagName('p')[0];//用DOM方法得到的对象就是DOM对象
+
+// alert(p.h());//error DOM对象不能使用任何jQ中的方法 只能使用DOM中的方法
+alert(p.innerHTML);
+
+
+	</script>
+</head>
+<body>
+	<p>p标签</p>
+</body>
+</html>

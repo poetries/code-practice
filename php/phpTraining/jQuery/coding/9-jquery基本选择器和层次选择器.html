@@ -1,0 +1,29 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-11 08:20:31
+ */
+
+//jquery基本选择器和层次选择器
+//jQuery选择器与css很相似 当作用不同
+
+$(function(){
+	$('div>a').css('color','red');//div>a 这个选择器在IE的低版本不支持  jQ很好的兼容了
+});
+
+	</script>
+
+</head>
+<body>
+	<div>
+		<a href="www.baidu.com">百度</a>
+		<p><a href="#">1234</a></p>
+	</div>
+</body>
+</html>

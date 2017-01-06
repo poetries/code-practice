@@ -1,0 +1,43 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<title>2-隐式迭代，不需要用for循环</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-10 21:12:53
+ */
+
+//js原生写法
+
+/*window.onload = function (){
+	var p = document.getElementsByTagName('p');
+	for (var i = 0; i < p.length; i++) {
+		p[i].onclick = function(){
+			alert(this.innerHTML);
+		}
+	}
+}*/
+
+
+// jQ 写法 不需要for循环
+
+window.onload = function (){
+	var p = $('p');
+	p.click(function() {
+		alert($(this).html());
+	});
+}
+
+
+	</script>
+
+</head>
+<body>
+	<p>第1个标签</p>
+	<p>第2个标签</p>
+	<p>第3个标签</p>
+</body>
+</html>

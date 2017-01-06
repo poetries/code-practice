@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>页面滚动轮播</title>
+		<script src="../js/jquery-2.1.4.js"></script>
+		<link rel="stylesheet" href="css/index.css">
+	</head>
+	<body>
+		<div class="pagebar" page-size="3" mode="page" page-loop="true|false">
+			<ul class="content">
+				<li>
+					<div class="card">1</div>
+				</li>
+				<li>
+					<div class="card">2</div>
+				</li>
+				<li>
+					<div class="card">3</div>
+				</li>
+				<li>
+					<div class="card">4</div>
+				</li>
+				<li>
+					<div class="card">5</div>
+				</li>
+				<li>
+					<div class="card">6</div>
+				</li>
+				<li>
+					<div class="card">7</div>
+				</li>
+			</ul>
+			
+		</div>
+	</body>
+	<!-- <script src="js/pagebar.js"></script> -->
+	<script src="js/实现无缝滚动.js"></script>
+	<script>
+		$("div.pagebar").pagebar();
+	</script>
+</html>

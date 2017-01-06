@@ -1,0 +1,120 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>动态改变tab标签页</title>
+	<script type="text/javascript" src="../src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-23 15:01:55
+ */
+/**
+ * tab标签页思想：如果想要一组元素控制另一组元素的显示或隐藏 要用到索引
+ *
+ *
+ * $(this)属于哪个元素 $(this)就指代那个元素
+ * 
+ */
+
+$(function(){
+
+	var ali = $('ul>li');
+	var aDiv = $('.tabContent div');
+	var timeId = null;//这里设置鼠标离开后清理定时器的变量
+	ali.mouseover(function(){//鼠标移入  开定时器
+		// alert($);
+		// 用延迟函数 延迟代码的执行 使之减轻服务器压力 使得tab标签页 鼠标放上去 停留几秒执行 
+		_this = $(this);//不能写在setTimeout里面  这样才能使得 $(this)属于ali
+		timeId = setTimeout(function(){
+			//$(this)属于哪个元素 $(this)就指代那个元素
+			
+			_this.addClass(function(){
+				//addClass的回调函数
+				return 'current'+ _this.index();//写成动态的current
+				
+
+			}).siblings().removeClass();//removeClass不写参数会把所有的class移除掉
+
+			var index = _this.index();
+			// alert(index);
+			aDiv.eq(index).show().siblings().hide();
+		},300);
+		}).mouseout(function() {//鼠标离开 清理定时器 
+			clearTimeout(timeId);
+		
+		
+		
+
+
+	});
+
+
+});
+
+
+	</script>
+	<style type="text/css">
+		*{padding: 0;margin: 0}
+		li{
+			list-style: none;
+		}
+		body{
+			margin: 50px;
+		}
+		.tabTitle ul{
+			overflow: hidden;/*清除浮动*/
+			_height:1px;/*IE 6清除浮动*/
+		}
+		.tabTitle li{
+			float: left;
+			border: 1px solid #abcdef;
+			height: 30px;
+			line-height: 30px;
+			padding: 0 15px;
+			margin-right: 3px;
+			border-bottom: none;
+			cursor: pointer;
+
+		}
+		.tabContent div{
+			border: 1px solid #f60;
+			width: 300px;
+			height: 250px;
+			padding: 15px;
+		}
+		.hide{
+			display: none;
+		}
+		.current0{
+			background: #abcdef;
+			color: white;
+		}
+		.current1{
+			background: red;
+			color: teal;
+		}
+		.current2{
+			background: green;
+			color: yellow;
+		}
+
+	</style>
+</head>
+<body>
+	<!-- 这是里标签标题 -->
+	<div class="tabTitle">
+		<ul>
+			<li class="current0">HTML</li>
+			<li>css</li>
+			<li>jquery</li>
+		</ul>
+	</div>
+
+	<div class="tabContent">
+		<div>html内容</div>
+		<div class='hide'>css内容</div>
+		<div class='hide'>jQuery内容</div>
+	</div>
+</body>
+</html>

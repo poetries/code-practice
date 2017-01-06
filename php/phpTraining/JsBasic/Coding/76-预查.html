@@ -1,0 +1,65 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>预查</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-07 18:59:57
+ */
+
+function t1(){
+	var cont = document.getElementById('cont');
+	var cv = cont.value;
+
+	var reg = /\b[\w]+ing\b/;
+	alert(cv.match(reg));
+
+} 
+
+function t2(){
+	var cont = document.getElementById('cont');
+	var cv = cont.value;
+
+	var reg = /\b[\w]+(?=ing)/g;//匹配进行时的单词的词根部分  不要ing结尾  预查不消耗字符
+	alert(cv.match(reg));
+
+} 
+
+function t3(){
+	var cont = document.getElementById('cont');
+	var cv = cont.value;
+
+	var reg = /\bwin(?!95)/g;//win98 win97 win95 win32 winxp win2003要求把win95过滤
+	alert(cv.match(reg));
+
+} 
+function t4(){
+	var cont = document.getElementById('cont');
+	var cv = cont.value;
+
+	//var reg = /\w+(?<=un)/g;//找出un*系列单词的词根  js不支持向前正向预查
+	alert(cv.match(reg));
+
+} 
+ 
+	</script>
+	<style type="text/css">
+		textarea{
+			width: 400px;
+			height: 200px; 
+		}
+	</style>
+
+</head>
+<body>
+	<textarea id='cont'></textarea>
+	<p><input type="button" value="匹配进行时的单词" onclick="t1();"></p>
+	<p><input type="button" value="匹配进行时的单词的词根部分,正向预查" onclick="t2();"></p>
+	<p><input type="button" value="查找winxp,负向预查" onclick="t3();"></p>
+	<p><input type="button" value="找出un*系列单词的词根" onclick="t4();"></p>
+
+
+</body>
+</html>

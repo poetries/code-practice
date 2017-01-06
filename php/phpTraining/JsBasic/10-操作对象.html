@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        .test1{
+            background: red;
+        }
+        .test2{
+            background: green;
+        }
+    </style>
+    <script>
+        //操作对象的属性 <img src ='' title='' style = 'width:200px;heiht:300px"'>
+        //操作css属性这样写：obj.style.属性名
+        //操作标签属性这样写：obj.属性名 有一个特殊情况 class的要写成 obj.className
+
+        //第一步 找对象
+        function t() {
+            var con = document.getElementsByTagName('div')[0];
+            if (con.className.indexOf('test1') >= 0) {
+                con.className = 'test2';
+            } else {
+                con.className = 'test1';
+            }
+
+            con.style.width = parseInt(con.style.width)+5+'px';
+            con.style.height = parseInt(con.style.height)+5+'px';
+            //当碰到带有css属性时这样处理 border-bottom
+            con.style.borderBottomWidth = parseInt(con.style.borderBottomWidth)+5+'px';
+
+        }
+    </script>
+</head>
+<body>
+<div class="test1" onclick="t();" style="width: 300px;height: 300px;border-bottom: 1px solid black">
+    点击div，使其背景色红绿交替
+    宽高增加5px
+    下边框增粗1px
+</div>
+</body>
+</html>

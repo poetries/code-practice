@@ -1,0 +1,57 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>去除绑定 </title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-08 11:58:52
+ */
+
+// 去除绑定 不能用匿名函数 匿名函数 当时产生 当时消失 
+
+var fn1 = function () {alert('blue');this.style.background ='blue'};
+var fn2 = function () {alert('red');this.style.background ='red'};
+
+		
+function adde(){
+			var d = document.getElementById('school');
+
+			d.addEventListener('click',fn1);
+			d.addEventListener('click',fn2);
+
+		}
+
+function reme(){
+	var d = document.getElementById('school');
+
+	//d.removeEventListener('click',fn1);//只剩fn1
+	d.removeEventListener('click',fn2);
+}
+
+
+
+
+
+
+
+	</script>
+	<style type="text/css">
+		#school{
+			width: 300px;
+			height: 200px;
+			background: gray;
+		}
+	</style>
+
+</head>
+<body>
+
+	<div id="school">
+		
+	</div>
+	<input type="button" value="加事件" onclick="adde();">
+	<input type="button" value="减事件" onclick="reme();">
+</body>
+</html>

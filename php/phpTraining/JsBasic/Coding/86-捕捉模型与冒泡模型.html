@@ -1,0 +1,47 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>86-捕捉模型与冒泡模型</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-08 13:01:21
+ */
+/**
+ * 86-捕捉模型与冒泡模型
+ *
+ *在w3c模型中 addEventListener支持第3个参数来声明事件的模型为冒泡还是捕捉，如果声明为false，则为冒泡方式
+ *
+ *
+ * 
+ */
+
+window.onload = function (){//ev激发的过程自动为函数传一个参数  鼠标的一系列动作包装成对象自动传给函数
+	document.getElementById('par').addEventListener ('click',function (ev){alert(ev.pageX)},true);
+	document.getElementById('son').addEventListener ('click',function (){alert('son')});
+	
+
+}
+
+	</script>
+	<style type="text/css">
+		#par{
+			width: 400px;
+			height: 400px;
+			background: gray;
+		}
+		#son{
+			width: 300px;
+			height: 300px;
+			background: blue;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="par">
+		<div id="son"></div>
+	</div>
+</body>
+</html>

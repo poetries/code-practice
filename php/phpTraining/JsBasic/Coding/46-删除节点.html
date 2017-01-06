@@ -1,0 +1,53 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>删除一个子节点</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-05 21:46:48
+ */
+/**
+ * 删除节点必须得站在其父节点的高度上 通过removeChild()删除
+ * 父节点.removeChild（待删除的子节点）
+ *
+ * 
+ * 
+ */
+
+/**
+ * 删除的思路：
+ *
+ * 1、找到中 在找到中的父元素
+ * 2、在中的父元素 调用 removeChild()
+ */
+
+ 	function t1(){
+ 		var con = document.getElementsByTagName('ul')[0];
+ 		 con.removeChild(con.children[2]);
+
+/* 		var zhong = con.children[2];
+ 		con.removeChild(zhong);
+ 		*/
+ 	
+ 	
+ 	}
+
+
+	</script>
+</head>
+<body>
+	<ul>
+		<li>东</li>
+		<li>南</li>
+		<li>中</li>
+		<li>西</li>
+		<li>北</li>
+	</ul>
+	<div id="cart">
+	</div>
+
+	<input type="button" value="把中删除" onclick="t1();">
+</body>
+</html>

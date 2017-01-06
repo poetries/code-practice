@@ -1,0 +1,86 @@
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title><html>
+<head>
+	<meta charset="UTF-8">
+	<title>jquery页面搜索实例</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+		<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-19 14:14:10
+ */
+	
+	$(function(){
+ 
+	$('input[type=button').click(function() {
+		
+		// alert(1);
+		var text = $('input[type=text]').val();
+		// alert(text);
+		$('table tr:not("#thead")').hide().filter(':contains(" '+text+' ")').show();//这里有问题 待修复
+
+
+	});
+
+
+	});
+
+		</script>
+<style type="text/css">
+
+table{
+	width: 700px;
+	border: 1px solid red;
+	border-collapse: collapse;
+}
+tr{
+	height: 30px;
+}
+th,td{
+	border: 1px solid red;
+	text-align: center;
+}
+	
+</style>
+</head>
+<body>
+	
+</body>
+</html></title>
+</head>
+<body>
+<table>
+<tr id="thead">
+	<th>姓名</th>
+	<th>性别</th>
+	<th>电话</th>
+</tr>
+<tr>
+	<td>张三</td>
+	<td>男</td>
+	<td>18878551001</td>
+</tr>
+<tr>
+	<td>李四</td>
+	<td>男</td>
+	<td>18878551002</td>
+</tr>
+<tr>
+	<td>王五</td>
+	<td>女</td>
+	<td>18878551008</td>
+</tr>
+<tr>
+	<td>小明</td>
+	<td>男</td>
+	<td>18878554080</td>
+</tr>
+</table>
+<input type="text" name="" id="">
+<input type="button" value="搜素">
+</body>
+</html>

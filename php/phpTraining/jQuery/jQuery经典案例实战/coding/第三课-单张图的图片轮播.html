@@ -1,0 +1,233 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>第三课-单张图的图片轮播</title>
+	<script type="text/javascript" src="../src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript" src="../src/js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:   2016-06-23 20:14:16
+ */
+
+$(function(){
+
+ var oul = $('.wrap ul');
+ var numLi = $('.wrap ol li'); 
+ var ali = $('.wrap ul li');    
+ var aliWidth = $('.wrap ul li').eq(0).width();
+ var _now = 0;//这里是控制数字样式的计数器
+ var _now2 = 0;//这个是控制图片运动距离的计数器
+ var timeId = null;
+ var aimg = $('.wrap ul img');
+ var op = $('.wrap p');
+
+//初始动画效果
+var m = 'easeOutBounce';
+
+ // alert(ali);//500
+ numLi.click(function(){
+	var index = $(this).index();
+	_now = index;
+	_now2 = index;
+
+	var imgAlt = aimg.eq(_now).attr('alt');
+	op.html(imgAlt);
+
+	$(this).addClass('current').siblings().removeClass();
+	oul.animate({
+		//json格式
+		'left':-aliWidth*index
+	},1500,m);
+ });
+ function slide(){
+	if(_now == numLi.length-1){
+		ali.eq(0).css({
+			'position':'relative',//用了relative 第一个图片的位置还保留
+			'left':oul.width()//把第一张图片移动到最后
+		});
+		_now = 0;
+	}else{
+		_now++;
+	}
+	_now2++;
+
+	$('.wrap ul li').eq(_now).addClass('current').siblings().removeClass();
+
+	var imgAlt = aimg.eq(_now).attr('alt');
+	// alert( imgAlt);
+	op.html(imgAlt);
+	oul.animate({'left':-aliWidth*_now2},1500,function(){
+		//回调函数 运动完后执行
+		
+		if(_now == 0){
+			ali.eq(0).css('position','static');//去掉relative属性);
+			oul.css('left', 0);
+			_now2 = 0;
+		}
+	});
+
+  }
+
+ timeId = setInterval(slide,3500);
+
+
+
+//鼠标移入移出
+/*$('.wrap').mouseover(function(){
+	clearInterval(timeId);
+}).mouseout(function(){
+	timeId = setInterval(slide,2000);
+});
+*/
+//hover合并 鼠标移入 移出
+
+$('.wrap').hover(function(){
+	clearInterval(timeId);
+},function(){
+	timeId = setInterval(slide,3500);
+});
+
+//动画效果
+var sMethod = ['easeInQuad','easeInCubic','easeInQuart','easeInQuint','easeInSine','easeInExpo','easeInElastic','easeInBack','easeInBounce','easeOutQuad','easeOutCubic','easeOutQuart','easeOutQuint','easeOutSine','easeOutExpo','easeOutElastic','easeOutBack','easeOutBounce','easeInOutQuad','easeInOutCubic','easeInOutQuart','easeInOutQuint','easeInOutSine','easeInOutExpo','easeInOutElastic','easeInOutBack','easeInOutBounce'];
+
+
+$('#a input').click(function(){
+	var index = $(this).index();
+	m = sMethod[index];
+	$('#selectedEffect>span').html('<font color="blue">动画'+$(this).val()+'</font><br /><font color="red">动画参数为：'+m+'</font>');
+});
+
+
+
+});
+	</script>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		body{margin: 50px;}
+		.wrap ul li{
+			list-style: none;
+			float: left;
+			width: 500px;
+		}
+		.wrap{
+			width: 500px;
+			height: 350px;
+			border: 3px solid red;
+			cursor: pointer;
+			overflow: hidden;
+			position: relative;
+		}
+		.wrap ul{
+			width:  2000px;
+			/*要使某个元素具有移动属性 必须有position*/
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		.wrap ol{
+			position: absolute;
+			bottom: 10px;
+			right: 10px;
+		}
+
+		.wrap ol li{
+			float: left;
+			width: 16px;
+			height: 16px;
+			list-style: none;
+			line-height: 16px;
+			text-align: center;
+			border: 1px solid yellow;
+			background: #000;
+			color: white;
+			margin-right: 3px;
+			cursor: pointer;
+		}
+		.wrap ol li.current{
+			background: #fff;
+			color: #000;
+		}
+		.wrap p.intro{
+			height: 30px;
+			line-height: 30px;
+			width: 400px;
+			background: rgba(0,0,0,0.5);
+			color: #fff;
+			position: absolute;
+			bottom: 10px;
+			left: 0;
+	/*      opacity: 0.5;
+			filter: alpha(opacity=50);/*兼容IE6*/*/
+		}
+	</style>
+
+</head>
+<body>
+	
+	<div class="wrap">
+		<ul>
+			<li><img src="../src/img/lession3/1.jpg" alt="第1张图片">第1张图片</li>
+			<li><img src="../src/img/lession3/2.jpg" alt="第2张图片">第2张图片</li>
+			<li><img src="../src/img/lession3/3.jpg" alt="第3张图片">第3张图片</li>
+			<li><img src="../src/img/lession3/4.jpg" alt="第4张图片">第4张图片</li>
+		</ul>
+		<ol class="current">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ol>
+
+			<p class="intro">第1张图片</p>
+	</div>
+
+	<br>
+	<br>
+	<hr>
+	<br>
+	<br>
+	
+	<div id="a">
+		
+		<input type="button" value="效果1">
+		<input type="button" value="效果2">
+		<input type="button" value="效果3">
+		<input type="button" value="效果4">
+		<input type="button" value="效果5">
+		<input type="button" value="效果6">
+		<input type="button" value="效果7">
+		<input type="button" value="效果8">
+		<input type="button" value="效果9">
+		
+		<input type="button" value="效果10">
+		<input type="button" value="效果11">
+		<input type="button" value="效果12">
+		<input type="button" value="效果13">
+		<input type="button" value="效果14">
+		<input type="button" value="效果15">
+		<input type="button" value="效果16">
+		<input type="button" value="效果17">
+		<input type="button" value="效果18">
+		
+		<input type="button" value="效果19">
+		<input type="button" value="效果20">
+		<input type="button" value="效果21">
+		<input type="button" value="效果22">
+		<input type="button" value="效果23">
+		<input type="button" value="效果24">
+		<input type="button" value="效果25">
+		<input type="button" value="效果26">
+		<input type="button" value="效果27">
+	</div>
+	
+	<br>
+	<br>
+	<p id="selectedEffect">你选择的效果是：<br><span></span></p>
+
+</body>
+</html>

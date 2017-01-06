@@ -1,0 +1,147 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>鼠标事件</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-13 17:42:37
+ */
+
+/**	
+ *
+ * 鼠标事件：
+ *
+ * 1、click单击左键事件
+ *
+ * 2、dblclick()双击左键事件
+ *
+ * 3、focusin()获得焦点事件 可作用于父级 父级的后代元素 都可以获得到
+ * 	  focusout()失去焦点事件 可作用于父级
+ *
+ * 4、mousedown()鼠标按下事件和click()有区别
+ *
+ * 5、mouseup()鼠标抬起事件
+ *
+ * 6、mousemove()鼠标移动事件
+ *
+ * 7、mouseover()鼠标进入事件
+ *
+ * 8、mouseout()鼠标离开事件
+ *
+ * 9、mouseenter()鼠标进入事件 阻止冒泡进入
+ *
+ * 10、mouseleave()鼠标离开事件  阻止冒泡离开  一般推荐这两个
+ *
+ * 11、hover()同时绑定mouseenter和mouseleave()事件
+ * 
+ *
+ * 
+ * 
+ */
+
+
+$(function(){
+
+	//当鼠标左键 按下 然后在抬起 才完成一次click事件
+/*	$('p'). click(function(event) {
+		alert($(this).text());
+	});*/
+
+	//dblclick()双击左键事件  一般情况下用不到dblclick()
+	// $('p').dblclick(function(event) {
+	// 	alert($(this).text());
+	// });
+
+//focusin()获得焦点事件
+$('div').focusin(function() {
+	$(this).children('span').show();
+});
+
+
+//focusin()可直接作用于input上面
+
+
+/*$('input').focusin(function(event) {
+	$('span').show();
+});
+*/
+
+//mousedown
+// $('p').mousedown(function(event) {
+// 		alert($(this).text());
+// 	});
+
+//mouseup
+// $('p').mouseup(function(event) {
+// 		alert($(this).text());
+// 	});
+
+//mousemove
+
+// $(document).mousemove(function(e){
+// 	var x = e.pageX+'px';
+// 	var y = e.pageY+'px';
+// 	$('input').val(x+','+y);
+	
+// });
+
+
+//mouseover
+
+// $('p').mouseover(function
+// 	(){
+// 		$(this).css('background','red');
+// 	});
+
+	
+// //mouseout
+
+// $('p').mouseout(function
+// 	(){
+// 		$(this).css('background','none');
+// 	});
+
+
+// });
+// 合并
+/*$('p').mouseover(function
+	(){
+		$(this).css('background','red');
+	}).mouseout(function
+	(){
+		$(this).css('background','none');
+	});*/
+
+
+//阻止冒泡的鼠标进入事件和鼠标离开事件 
+
+$('p').mouseenter(function
+	(){
+		$(this).css('background','red');
+	});
+
+$(document).mouseleave(function
+	(){
+		$('p').css('background','none');
+	});
+
+
+});
+
+
+
+
+
+	</script>
+</head>
+<body>
+	<p>p标签</p>
+	<div>
+		<input type="text" name="" value="123" id="">
+		<span style="display: none">已获得焦点</span>
+	</div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>解决this在FF，IE下指向的问题</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-09 14:30:55
+ */
+
+/**
+ * 解决this在FF，IE下指向的问题:
+ *
+ * 下面的程序this的指向在FF chrome下都是指向了绑定的对象，但是在IE下出现了this指向了window对象
+ *
+ *
+ * 在IE8及以下 事件监听函数中 this指window
+ *
+ * w3c中 this指向DOM对象
+ */
+
+/* window.onload = function (){
+
+ 	id = 120;
+ 	var dd = document.getElementById('test');
+
+ if(dd.addEventListener){//在火狐下
+ 	dd.addEventListener('click',function(){alert(this.id)},false);//冒泡方式  结果：test
+ }else{//IE下
+ 	dd.attachEvent('onclick',function(){alert(this.id)});//结果：120  在IE下无法使this指向绑定的对象
+ }
+
+ }*/
+
+/*
+ * 4、call
+ *
+ * 
+ * 函数本身即是对象，对象就有方法
+ *
+ * 函数名.call(对象,参数1，参数2，参数3)
+ *
+ * 以fn.call(obj，'a','b')为例：
+ * 
+ * 实际效果相当于：
+ * 1、fn内部的this指向了obj
+ * 2、fn('a','b') 
+ * 
+  */
+
+//通过call修改IE下得this指向 使之指向DOM对象
+
+window.onload = function (){
+
+ 	id = 120;
+ 	var dd = document.getElementById('test');
+ 	var clc = function(){alert(this.id)};
+
+ if(dd.addEventListener){//在火狐下
+ 	dd.addEventListener('click',clc,false);//冒泡方式  结果：test
+ }else{//IE下
+ 	dd.attachEvent('onclick',function(){clc.call(china)});//多包装了一层匿名函数  修改this的指针 使之由指向window变为指向china对象
+ }
+
+ }
+
+/*
+ window.onload = function (){
+ 	var age=22;
+ 	function fn1(apple,pear){
+ 		alert(apple);
+ 		alert(pear);
+ 		alert(this.age);
+ 	}
+ 	
+
+ 	var ming = {age:24,hei:189};
+
+	fn1('草莓','番茄');//草莓 番茄  22
+	ming.eat = fn1;//利用对象属性来调用 每个对象多了一个属性 不好
+	ming.eat('苹果','香蕉');//苹果 香蕉 24
+
+ }
+
+
+fn1.call(ming,'A','B');//24 A B*/
+
+	</script>
+</head>
+<body>
+	<p id="test">yinghong</p>
+</body>
+</html>

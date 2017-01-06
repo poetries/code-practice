@@ -1,0 +1,46 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>数据格式约定</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+		/**
+		 * @CreateBy:   SublimeText3
+		 * @Author:     poetries
+		 * @DateTime:	2016-06-22 20:57:49
+		 */
+		 /**
+		  * 前端与程序员数据之间的约定
+		  * 
+		  * 1、只需要纯文本数据
+		  *
+		  * 2、返回标识符  如 1  2 3 4... true/false
+		  *
+		  * 3、返回一个数组与json结合的格式
+		  */
+
+
+		$(function(){
+
+
+			$('input[type=button]').click(function(){//不管是load  get  post 底层都是用ajax实现 用ajax快
+				$.ajax({
+					url:'demo1.php?'+Math.random(),//Math.random()解决IE下缓存问题
+					type:'get',
+					success:function(data){
+						var res = eval(data);//eval()函数可计算某个字符串 并执行其中的JavaScript代码
+						//alert(typeof data[0].title)//string data)返回的是字符串 需要用eval；来转换成对象
+						$('#info').html(res[1].title);
+
+					}
+				});
+			});
+
+		});
+	</script>
+</head>
+<body>
+	<input type="button" value="获取信息">
+	<div id="info"></div>
+</body>
+</html>

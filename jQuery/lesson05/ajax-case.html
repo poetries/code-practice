@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>Document</title>
+		<script src="../js/jquery-2.1.4.js"></script>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			html,body{
+				width:100%;
+				height:100%;
+			}
+			input{
+				margin-left:100px;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" value="按钮">
+		<p id ='op' style="color:red"></p>
+	</body>
+	<script>
+	//ajax请求后台数据
+
+
+	var btn =  document.getElementsByTagName("input")[0];
+	var oP = document.getElementById("op");
+
+	btn.onclick = function(){
+		
+		var ajx = null;
+		
+		if(window.XMLHttpRequest){//兼容处理
+			ajx = new XMLHttpRequest();//一般浏览器
+		}else
+		{
+			ajx = new ActiveXObject("Microsoft.XMLHTTP");//IE6+
+		}
+		
+		//准备发送请求
+		ajx.open("get","teacher.php",true);
+
+		//正式发送请求
+		ajx.send();
+		
+		//处理请求
+		ajx.onreadystatechange = function(){
+			
+			if(ajx.readState == 4){
+				
+				if (ajx.status == 200)//200是HTTP 请求成功的状态码
+				{
+					//请求成功处理数据
+					var res = eval(ajx.responseText);
+					var pHTML = '';
+					for (var i=0;i<res.length ;i++ )
+					{
+						pHTML += "姓名"+res[i].name+"年龄"+res[i].age;
+					}
+					oP.innerHTML = pHTML;
+
+				}else{
+					alert("请求出错");
+					
+				}
+			}
+			
+		};
+	}
+
+		
+	</script>
+</html>

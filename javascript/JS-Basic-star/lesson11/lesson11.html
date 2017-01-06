@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>lesson11</title>
+</head>
+<body>
+
+<script type="text/javascript">
+		//var s = "Call Me efbb";//new String("");
+		//var json = "{name:'zs',age:15}";
+		//alert(s.constructor);//构造器函数
+		//console.log(s.length);//得到字符串的长度
+		//字符
+		//2.使用IndexOf与LastIndexOf以及substring截取出Me。
+		//var start = s.indexOf(' ');
+		//var end = s.lastIndexOf(' ');
+		//console.log(s.substring(start+1,end));
+		//console.log(s.substr(5,2));
+		//console.log(s.substr(s.indexOf('Me'),2));
+
+		//3.使用CharAt 与Character的IsUpperCase()方法显示所有的大写字母
+		//console.log(s.toUpperCase());
+		//ASCII码的概念
+		//a 97
+		//b 98
+		//c 99
+		//d
+		//A 65
+		//B 66
+		/*for(var i=0;i<s.length;i++){
+			var c = s.charAt(i);
+			if(c>='A'&&c<='Z'){
+				console.log(c);
+			}
+		}*/
+		/*var s = 'qweasdsaewq';
+		var slipt = parseInt(s.length/2);
+		var reves = true;
+		for(var i=0,j=s.length-1;i<slipt;i++,j--){
+			var start = s.charAt(i);
+			var end = s.charAt(j);
+			console.log(start+":"+end);
+			if(start!=end){
+				reves = false;
+				break;
+			}
+		}
+		console.log('是不是回文数字:'+reves);*/
+		/*
+		var email = "yf4581@hotmail.com";
+		String.prototype.isEmail = function(){
+			var email = this;
+			if(email.indexOf('@')!=-1&&email.indexOf('.')!=-1){
+				if(email.indexOf('@')==email.lastIndexOf('@')){
+					//2.不能以@或.开头以及结尾
+					var s = email.charAt(0);
+					var e = email.charAt(email.length-1);
+					if(s!='@'&&s!='.'&&e!='@'&&e!='.'){
+						//3.@必须出现在.之前
+						if(email.indexOf('@')<email.indexOf('.')){
+							return true;
+						}else{
+							return false;
+						}
+					}else{
+						return false;
+					}
+				}else{
+					return false;
+				}
+			}else{
+				return false;
+			}
+		}
+		console.log(email.isEmail());
+		*/
+		</script>
+</body>
+</html>

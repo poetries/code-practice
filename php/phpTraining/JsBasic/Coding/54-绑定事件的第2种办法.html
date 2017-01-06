@@ -1,0 +1,50 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>绑定事件的第2种办法</title>
+
+
+</head>
+<body>
+
+<select name="xueli" >
+	<option value="">请选择学历</option>
+	<option value="大学" >大学</option>
+	<option value="中学">中学</option>
+	<option value="初中">初中</option>	
+	<option value="小学">小学</option>	
+</select>
+
+<form action="">
+	<p>Email:<input type="text" name="email">
+	  姓名：<input type="text" name="ming" >
+
+	 </p>
+</form>
+
+</body>
+
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-06 08:24:46
+ */
+
+/**
+ * 绑定事件的第2种办法:
+ *
+ * 
+ */
+
+document.getElementsByTagName('select')[0].onclick= function (){
+ 	 alert('嘻嘻');
+
+ }
+
+document.getElementsByName('email')[0].onblur=function (){
+	alert('哈哈哈');
+
+}
+	</script>
+</html>

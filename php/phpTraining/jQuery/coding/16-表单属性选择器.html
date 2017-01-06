@@ -1,0 +1,71 @@
+
+
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>16-表单属性选择器.</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-11 14:21:19
+ */
+
+/**
+ * 16-表单属性选择器
+ *
+ * :enabled 选择所有可用的元素
+ * :disabled 选择所有不可用的元素
+ * :checked 选择可有选中元素
+ * :selected 选取所有被选中的选项元素
+ * :focus 选择当前获取焦点的元素
+ * 
+ */
+
+
+$(function(){
+
+	alert($('input:disabled').val());	
+	alert($('input:enabled').val());	
+	//alert($('input[enabled]=enabled]').val());//这个很有用 属性选择器	
+	
+	alert($(':checked').val());
+	// alert($('input[checked=checked]').val());
+	
+	// alert($('select:selected').val());//undefined  select没有selected这个属性
+	alert($('select[selected=selected]').val());//undefined
+
+	alert($('select option[selected=selected]').val()); //ok
+	alert($('select option:selected').val());//ok
+	alert($(':selected').val());//ok
+
+
+
+	
+});
+
+	</script>
+	<style type="text/css">
+
+	</style>
+</head>
+<body>
+
+<form>
+	<input type="text" name="" id="" value="不能修改的文本框" disabled="disabled">
+	<input type="text" name="" id="" value="能修改的文本框" >
+	<input type="checkbox" name="" id=""  value="a" checked="checked">
+	<input type="checkbox" name="" id=""  value="b">
+	<input type="checkbox" name="" id=""  value="c" >
+
+	<select name="" id="">
+		<option value="第一个">第一个</option>
+		<option value="第二个" selected="selected">第二个</option>
+		<option value="第三个">第三个</option>
+	</select>
+</form>
+</body>
+</html>

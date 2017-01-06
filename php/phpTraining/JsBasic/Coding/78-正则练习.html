@@ -1,0 +1,89 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>练习</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-07 22:30:10
+ */
+
+function t1(){
+	var cont = document.getElementById('cont');
+	var cv = cont.value;
+
+	var reg = /\b([\w])[\w]*\1\b/g;// \1注意引用方式 [\w]任意一个 [\w]*任意多个 找首尾相同的单词
+	/**
+	 *  *如何引用子表达式所匹配的结果？
+ *
+ * 答： 在表达式内部 反向引用时 \n来匹配第N个子表达式的结果 子表达式当成变量来传递时，$N来匹配第N个子表达式的匹配结果
+ * 
+	 */
+	alert(cv.match(reg));
+
+}
+
+function t2(){
+	var cont = document.getElementById('cont');
+	var cv = cont.value;
+
+	var reg = /(1(3|5|8|)\d)\d{4}(\d{4})/;//字表达式(3|5|8|)  (\d{4})  {4}代表任意4个  
+
+	// alert(cv.match(reg));//打印结果18878553070，188，3070
+	alert(cv.replace(reg,'$1****$3'));//188****4070
+
+}
+function t3(){
+	var cont = document.getElementById('cont');
+	var cv = cont.value;
+
+	var reg = /[ \t\u3000]+/g;//找空白符  第一个是半角的空格  \s包含所有空白符  \u3000表示 全角空格的16进制Unicode编码
+	alert(cv.replace(reg,','));//
+
+}
+
+function t4(){
+	var cont = document.getElementById('cont');
+	var cv = cont.value;
+
+var reg = /([\u4E00-\u9FA0]),([\u4E00-\u9FA0])/g;  // 找中文用Unicode编码表的中文范围
+
+	alert(cv.replace(reg,','));
+
+}
+function t5(){
+	var cont = document.getElementById('cont');
+	var cv = cont.value;
+
+var reg = //;  
+
+	alert(cv.replace(reg,','));
+
+}
+
+
+
+
+	</script>
+	<style type="text/css">
+		textarea{
+			width: 400px;
+			height: 200px; 
+		}
+	</style>
+
+</head>
+<body>
+	<textarea id='cont'></textarea>
+	<p><input type="button" value="1-找首尾相同的单词" onclick="t1();"></p>
+	<p><input type="button" value="2-手机号第4位到第七位换成*" onclick="t2();"></p>
+	<p><input type="button" value="3-统一空格" onclick="t3();"></p>
+	<p><input type="button" value="4-把名字中的,去掉" onclick="t4();"></p>
+	<p><input type="button" value="5-把aaabb换成ab" onclick="t5();"></p>
+
+  
+
+
+</body>
+</html>

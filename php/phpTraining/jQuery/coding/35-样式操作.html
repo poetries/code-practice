@@ -1,0 +1,99 @@
+
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>样式操作</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-11 22:31:16
+ */
+
+
+/**	样式操作
+ *
+ * 操作样式：
+ *
+ * 1、addClass()添加样式
+ * 
+ * 2、removeClass()移除样式
+ * 
+ * 3、toggleClass()切换样式
+ * 
+ * 4、hasclass()判断是否有样式
+ * 
+ * 5、css()设置匹配元素的css样式（行内样式）
+ * 
+ * 6、height()获取高度
+ * 
+ * 7、innerHeight()获取padding的高度 不包括border
+ * 
+ * 8、outHeight(bool)参数为true时获取内外边距和border的高度
+ * 
+ * 9、width()获取宽度
+ * 
+ * 10、innerWidth()获取包括padding的宽度 不包括border
+ * 
+ * 11、outWidth()参数为true时获取内外边距和border的宽度
+ * 
+ * 12、offset()获取元素的位置
+ *
+ * 13、offsetParent()离匹配元素最近的有position属性的元素
+ *
+ * 14、position()相对于offsetParent()的坐标
+ *
+ * 15、scrollTop()纵向滚动条位置
+ * scrollLeft()横向滚动条位置
+ * 
+ */
+
+
+$(function(){
+
+// $('p').addClass('bgred').addClass('white');
+// $('p').addClass('bgred white');//放两个样式 空格隔开
+// $('p').removeClass('white').removeClass('bgred');
+// $('p').removeClass('white bgred');
+
+//toggleClass()切换样式
+/*$('p').click(function(){
+	$(this).toggleClass('bgred white');
+});
+*/
+
+//hasclass()判断是否有样式
+
+
+$('p').click(function(){
+	if($(this).hasClass('bgred white')){//返回一个布尔值 true false
+	$(this).removeClass('bgred');
+}else{
+	$(this).addClass('bgred');
+}
+});
+
+
+
+});
+
+
+
+	</script>
+	<style type="text/css">
+		.bgred{
+			background: red;
+		}
+		.white{
+			color: white;
+		}
+	</style>
+
+</head>
+<body>
+<p class="bgred white">p标签</p>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding="utf-8" ?>
+
+<bookstore>
+    <book>
+        <title>天龙八部</title>
+        <price>28.8</price>
+    </book>
+    <book>
+        <title>连城诀</title>
+        <price>40</price>
+    </book>
+</bookstore>

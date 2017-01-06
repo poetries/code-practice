@@ -1,0 +1,303 @@
+
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>从后台动态加载数据</title>
+		
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			html,body{
+				width:100%;
+				height:100%;
+			}
+			div.menu_func{
+				width:100%;
+				height:200px;
+				background:#abcdef;
+			}
+			div.menu_func span{
+				display:block;
+				padding:10px;
+				color:#cc0033;
+				font-family:"Microsoft Yahei";
+				font-size:20px;
+				cursor:pointer;
+			} 
+			div.menu_func ul.menu_list{
+				width:100%;
+				display:block;
+				text-align:center;
+
+				
+			}
+			
+				div.menu_func ul.menu_list:after{
+				content:'';
+				display:inline-block;
+				width:100%;
+			}
+			div.menu_func ul.menu_list li{
+				margin-top:50px;
+				width:65px;
+				height:100%;
+				display:inline-block;
+				
+				float:left;
+				width:16.6%;
+			}
+			div.menu_func ul.menu_list li i{
+
+				background-image:url("img/icon_65_aask.png");
+				width:65px;
+				height:65px;
+				display:block;
+				background-position:0 -65px;
+				margin:auto;
+				
+			}
+			div.menu_func ul.menu_list li p{
+				margin-top:10px;
+				font-size:14px;
+				color:#fff;
+			}
+			div.menu_func ul.menu_list li a{
+				text-decoration:none;
+			}
+			div.mask{
+				background-color:rgba(0,0,0,.7);
+				position:fixed;
+				top:0px;
+				left:0px;
+				right:0px;
+				bottom:0px;
+				display:none;
+			}
+			div.mask div.select_dialog{
+				width:700px;
+				height:520px;
+				position:fixed;
+				top:50%;
+				left:50%;
+				margin-left:-350px;
+				margin-top:-260px;
+				background-color:#fff;
+				text-align:center;
+			}
+			div.mask div.select_dialog p.title{
+				color:#fff;
+				height:40px;
+				line-height:40px;
+				text-indent:10px;
+				background-color:#0066b3;
+				text-align:left;
+			}
+			div.mask div.select_dialog p.text{
+				text-align:right;
+				margin:20px 20px 5px 20px;
+			}
+			div.mask div.select_dialog a.close{
+				background-image:url("img/icon_24_close.png");
+				width:24px;
+				height:24px;
+				position:absolute;
+				top:10px;
+				right:10px;
+			}
+			div.mask div.select_dialog a.close:hover{
+				background-position:0 -24px;
+			}
+			div.mask div.select_dialog div.selected{
+				width:660px;
+				height:20px;
+				line-height:20px;
+				padding:10px;
+				background-color:#ddd;
+				text-indent:10px;
+				margin:auto;
+				text-align:left;
+			}
+			div.mask div.select_dialog div.menu_list{
+				width:660px;
+				margin:auto;
+				background-color:#ddd;
+				margin-top:4px;
+				height:320px;
+				padding:10px;
+				overflow:auto;
+				margin-bottom:10px;
+				
+
+			}
+			div.mask div.select_dialog div.menu_list ul{
+				width:100%;
+			}
+			div.mask div.select_dialog div.menu_list ul li{
+				width:16.6%;
+				height:110px;
+				float:left;
+				list-style:none;
+				position:relative;
+			}
+			div.mask div.select_dialog div.menu_list ul li input{
+				position:absolute;
+				left:0px;
+				top:87px;
+			}
+			div.mask div.select_dialog div.menu_list ul li i{
+				width:65px;
+				height:65px;
+				display:block;
+				margin:10px auto;
+			}
+			div.mask div.select_dialog div.menu_list ul li input:checked + i{
+				background-position:0px -65px;
+			}
+			div.mask div.select_dialog div.menu_list ul li p{
+				font-size:14px;
+				display:inline;
+			}
+			div.mask div.select_dialog  p.text span.index{
+				color:#cc0000;
+			}
+
+
+			div.mask div.select_dialog .btn{
+				width:200px;
+				height:30px;
+				background-color:#abcdef;
+				color:#0066cc;
+				
+				
+			}
+
+
+		</style>
+	</head>
+	<body>
+	<!-- 不兼容IE8以下的浏览器 -->
+		<div class="menu_func">
+			<span>定制</span>
+			<ul class="menu_list">
+				
+			</ul>
+		</div>	
+		<div class="mask">
+			<div class="select_dialog">
+				<p class="title">请选择定制功能</p>
+				<a class= "close" href="#"></a>
+				<p class="text">您已设置<span class="index">0</span>/6个常用功能</p>
+				<div class="selected">已选中功能</div>
+				<div class="menu_list">
+					<ul>
+						
+					</ul>	
+				</div>
+				<button class="btn">保存</button>
+			</div>
+		</div>
+	</body>
+	<script src="../js/jquery-2.1.4.js"></script>
+	<script>
+		var menuJson = [
+					{id : "1",src : "icon_65_wyzz.png",text : "我要转账",checked : false},
+					{id : "2",src : "icon_65_zhcx.png",text : "账户查询",checked : false},
+					{id : "3",src : "icon_65_khzjgj.png",text : "跨行资金归集",checked : false},
+					{id : "4",src : "icon_65_sysy.png",text : "速盈首页",checked : true},
+					{id : "5",src : "icon_65_xykhk.png",text : "信用卡还款",checked : true},
+					{id : "6",src : "icon_65_zhgl.png",text : "账户管理",checked : true},
+					{id : "7",src : "icon_65_jfzf.png",text : "缴费支付",checked : false},
+					{id : "8",src : "icon_65_jfjl.png",text : "缴费记录",checked : false},
+					{id : "9",src : "icon_65_dqck.png",text : "定期存款",checked : true},
+					{id : "10",src : "icon_65_jj.png",text : "基金",checked : true},
+					{id : "11",src : "icon_65_whjh.png",text : "外汇结汇",checked : false},
+					{id : "12",src : "icon_65_plzz.png",text : "批量转账",checked : false},
+					{id : "13",src : "icon_65_aask.png",text : "AA收款",checked : true},
+					{id : "14",src : "icon_65_gzdcx.png",text : "工资单查询",checked : false},
+					{id : "15",src : "icon_65_dhhz.png",text : "定活互转",checked : false},
+					{id : "16",src : "icon_65_gjs.png",text : "贵金属",checked : false},
+					{id : "17",src : "icon_65_lccp.png",text : "理财产品",checked : false},
+					{id : "18",src : "icon_65_grzd.png",text : "个人账单",checked : false},
+					{id : "19",src : "icon_65_grxjgl.png",text : "个人现金管理",checked : false},
+					{id : "20",src : "icon_65_zdcx.png",text : "账单查询",checked : false}
+					];
+			var $menuList = $("div.menu_func ul.menu_list");
+			var $menu = $("div.mask div.select_dialog div.menu_list ul");
+			
+			function refreshMenuList(){
+				$menuList.empty();
+				for(var i=0;i<menuJson.length;i++){
+					if(menuJson[i].checked){
+						$menuList.append(
+							"<li>"+
+								"<a href=\"#\">"+
+								"	<i style=\"background-image:url('img/"+menuJson[i].src+"');\"></i>"+
+								"	<p>"+menuJson[i].text+"</p>"+
+								"</a>"+
+							"</li>");
+					}
+				}
+				
+			}
+			refreshMenuList();
+			for(var i=0;i<menuJson.length;i++){
+					$menu.append(
+					"<li>"+
+					"<a href=\"#\">"+
+							"<input type=\"checkbox\" "+(menuJson[i].checked?"checked":"")+" id=\""+menuJson[i].id+"\">"+
+							"<i style=\"background-image:url('img/"+menuJson[i].src+"');\"></i>"+
+							"<p><label for=\""+menuJson[i].id+"\">"+menuJson[i].text+"</label></p>"+
+						"</a>"+
+					"</li>");
+				}
+			
+			
+		var $mask = $("div.mask");
+
+		$("div.menu_func span").click(function(){
+			$mask.fadeIn(200);
+		});
+		
+		$("div.select_dialog a.close",$mask).click(function(){
+			$mask.fadeOut(200);
+			
+		});
+		
+		var $inps = $('div.mask div.select_dialog div.menu_list ul li input');
+		$inps.change(function(){
+			//alert($inps.filter(":checked").size());
+			var checked = $inps.filter(":checked").size();
+			if (this.checked && checked == 7)
+			{
+				this.checked = false;
+			}
+			$('span.index').text($inps.filter(":checked").size());
+
+			
+			
+		});
+
+		//点击保存
+
+		$('div.mask div.select_dialog .btn').click(function(){
+			$inps.parents("li").each(function(){//迭代选中的对象
+				//console.log($(this).index());
+				menuJson[$(this).index()].checked = $('input',this).is(":checked");
+			
+			});
+			
+			refreshMenuList();
+			$mask.fadeOut(200);
+		});
+		
+		
+
+
+		
+	</script>
+</html>

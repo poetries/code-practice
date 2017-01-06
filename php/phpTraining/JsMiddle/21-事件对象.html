@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img{
+            width:130px;
+            height:130px;
+            position: relative;
+            left: 0px;
+            top:0px;
+        }
+    </style>
+
+</head>
+<body>
+<img src="http://g.hiphotos.baidu.com/image/h%3D360/sign=e763ca26b11bb0519024b52e067ada77/0df3d7ca7bcb0a46bc0b4d3d6963f6246b60af8d.jpg" alt="">
+
+</body>
+<script>
+    /*
+     * 1、事件对象：事件发生的瞬间 发生位置 时间 鼠标按键 触发的节点等信息 被打包成一个对象
+     * 2、此对象系统自动传递给事件函数的第一个参数
+     * 3、事件对象的属性在IE/w3c下略有不同
+     * 4、有一个重要的事件属性：target，srcElement(IE下)代表事件发生的所在DOM对象
+     *
+     *
+     * */
+
+    document.getElementsByTagName('img')[0].onmouseover = function (ev){
+   // console.log(ev);
+        //pageX pageY 当时鼠标在浏览器中的偏移量
+        this.style.left = ev.pageX+10+'px';
+        this.style.top = ev.pageY+10+'px';
+    }
+
+    document.getElementsByTagName('img')[0].click() = function(){
+        alert('哈哈哈');
+    }
+</script>
+</html>

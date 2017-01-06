@@ -1,0 +1,101 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>遍历查找</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+/**
+ * 遍历查找:
+ *
+ * //返回一组元素的才可以加参数siblings()  parents()  nextAll() preALl() 返回一个的不需要加 加了也没有
+ * 
+ * children()选取子元素
+ * parent()选取父元素
+ * parents()选取祖先元素
+ * parentsUntil()所有的父辈元素 直到遇到匹配的那个元素为止  parentsUntil()和parents加参数是一样的 --基本不用
+ * offsetParent()返回父元素中第一个其position设为relative或者absolute的元素 仅对可见元素有效--基本不用
+ * next() 选择后面紧跟的兄弟元素
+ * nextAll() 下面所有的效果兄弟元素
+ * nextUntil()所有的同辈元素 直到遇到匹配的那个元素为止
+ * pre()前一个兄弟元素
+ * preALl()前面所有的兄弟元素
+ * preUntil()所有的兄弟元素 ，直到遇到匹配的那个元素为止  -- 不常用 和preALl()加参数情况一样
+ *
+ *
+ * siblings()前后所有的兄弟元素 可加参数  -- 非常常用
+ * 
+ * closest()从元素本身开始 在DOM树上一级级向上级元素匹配 并返回最先匹配的祖先元素 --基本不用
+ *
+ * contents()元素的子元素 包括文字和注释节点
+ * end()终止在当前链的最新过滤操作 并返回匹配的元素的以前状态 -- 用的多
+ *
+ * addBack() 添加堆栈中元素到当前集合 一个选择性的过滤选择器
+ *
+ * each()遍历一个jQuery对象 为每个匹配元素执行一个函数
+ * 
+ * 
+ * 
+ */
+
+$(function(){
+
+
+	// $('#wrap>p').css('background','red');//#wrap>p 取父元素是 <div> 元素的每个 <p> 元素，并设置其背景色：
+	//$('#wrap').children().css('background','red');//同上效果
+	//$('#wrap').children().not('div').css('background','red');//
+	// $('#wrap').children('p').css('background','red');//同上效果  子元素是p标签的才改变背景
+
+	//通过p1找到父亲节点
+	// $('#p1').parent().css('background','blue');
+	
+	// $('#p1').parents('#out').css('background','red');//此时一直往上面找...找到document  parents通常加上参数
+	
+
+	// $('#p1').offsetParent().css('background','red');
+	// $('#p1').next().css('background','red');
+	// $('#p1').nextAll().css('background','red');//next()不加参数
+	// $('#p1').nextAll().css('background','red');//nextAll返回参数集合  可加参数过滤
+	
+
+	// $('#p2').prev().css('background','red');
+	// $('#p2').prevAll('div').css('background','red');//加参数说明只反回div的元素
+	
+	 // $('#p2').siblings().css('background','red'); // 除了p2  siblings()前后所有的兄弟元素  可加参数 -- 非常常用
+	$('#p2').siblings('div').css('background','red'); //  siblings()前后所有的兄弟元素  可加参数 -- 非常常用
+	
+	// $('span').parent().css('background','red');//60
+	// $('span').css('background','blue');//61
+
+	// $('span').parent().css('background','red').end().css('background','blue');;//60和61合并等价于这一行 
+	//$('span').parent()选取了p2标签 end 返回到span标签
+	//end()终止在当前链的最新过滤操作 并返回匹配的元素的以前状态 en()返回最原始的$('span')节点 并相当于执行了 61行
+	
+	// $('#p1').nextAll().css('background','blue').end().css('background','blue');//ok
+	//$('#p1').nextAll().css('background','blue').addBack().css('background','blue');//ok
+	//addBack() 把本身的元素加上去
+	
+	
+
+
+
+
+
+});
+
+	</script>
+
+</head>
+<body>
+	<div id="out" style="position:relative">out
+		<div id="wrap" style="position: absolute;left: 20px;top: 10px">wrap
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<p id='p1'>我是第1个标签</p>
+			<p id='p2'>我是第2个标签</p>
+			<p>我是<span>第3个</span>标签</p>
+			<div>我是div标签</div>
+		</div>
+	</div>
+</body>
+</html>

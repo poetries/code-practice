@@ -1,0 +1,86 @@
+
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title> 基础动画</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-17 17:13:28
+ */
+
+/**
+ * jquery中的动画:
+ *
+ *基础动画:
+ *
+ * 1、show()显示
+ *
+ * 2、hide()隐藏
+ *
+ * 3、toggle()切换show或者隐藏
+
+ * 
+ * 
+ */
+
+$(function(){
+
+
+/*$('a').click(function(){
+	$('p').hide(500);//毫秒数
+	$('p').hide('fast');//fast slow normal  传字符串要有引号
+
+});*/
+
+//显示
+
+/*$('a').click(function(){
+	$('p').show(500);
+	});
+*/
+
+//toggle切换show  hide方法
+
+/*$('a').click(function(){
+	$('p').toggle(500);
+});
+*/
+
+//模拟toggle
+
+$('a').click(function(){//:visible选择可见元素
+	if($('p').is(':visible')){
+		$('p').hide(500);
+	}else{
+		$('p').show(500);
+	}
+
+
+});
+
+});
+
+
+
+	</script>
+
+	<style type="text/css">
+		p{
+			width: 300px;
+			padding: 10px;
+			border: 1px solid red;
+			display: none;
+		}
+	</style>
+
+</head>
+<body >
+	<a href="#">点击</a>
+	<p>af发发放大看涸鲋得水</p>
+</body>
+</html>

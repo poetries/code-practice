@@ -1,0 +1,60 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jquery中ajax的实例及细节5-ajax请求出错处理</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-23 08:22:32
+ */
+		$(function(){
+
+
+			$('input[type=button]').click(function(){
+				$.ajax({
+					url:'demo4.php?'+Math.random(),
+					type:'get',
+					timeout:1000,
+					success:function(data){
+						$('#info').html(data);
+					},
+					//捕捉错误
+			/*		error:function(jqXHR,textStatus,errorThrown){
+						// alert('textStatus'+textStatus);
+						// alert('errorThrown');
+						if (errorThrown == 'Not Found') {
+							$('span').html('您请求的地址不存在');
+						}
+						if(textStatus == 'timeout'){
+							$('span').html('请求超时,情刷新页面重新操作');
+						}
+					}*/
+				});
+			});
+
+			//ajaxError()方法只要发生错误就给出错误提示 这个方法用的比较多
+			$(document).ajaxError(function(){
+				$('span').html('您请求的地址不存在');
+			});
+
+		});
+	</script>
+	<style type="text/css">
+		#info{
+			width: 200px;
+			height: 200px;
+			color: red;
+			border: 1px solid blue;
+		}
+	</style>
+</head>
+<body>
+	<input type="button" value="获取信息">
+	<div id="info">
+
+	</div>
+	<span style="color:blue"></span>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jquery中设置获取文本和htm</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-12 07:41:42
+ */
+
+/**
+ * jquery中设置获取文本和htm:
+ *
+ * 1、text()获取匹配元素的文本节点
+ *
+ * 2、html()获取匹配元素dom节点或文本节点
+ * 
+ */
+
+
+$(function(){
+
+// alert($('p').text());
+
+//text()如果没有参数会获得匹配元素的文本节点 如果有参数 会修改匹配元素的文本节点
+
+// alert($('p').text('223242432'));
+
+//如果匹配标签内有子元素 用html才可以或得到匹配元素里面的额内容
+// alert($('p').html());
+
+	alert($('p').html('22<span>999999</span>222'));
+
+});
+	</script>
+
+ 
+</head>
+<body>
+<p>1stron<strong style="background: red">555</strong>>3strong	4124</p>
+	
+</body>
+</html>

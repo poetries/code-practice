@@ -1,0 +1,47 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>对象的遍历</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-04 23:12:43
+ */
+/**
+ * 遍历对象：
+ * 因为对象的属性和数组的下标不一样  数组的下表从0开始并且有规律的递增  因此可以用for循环遍历
+ *
+ * 对象的属性 没有规律的
+ *
+ *
+ * for in结构来遍历
+ *
+ * For(per in Obj){
+ * 	......
+ * }
+ *
+ * 注意：在for in 结构中循环得到的属性取值时不能用Obj.属性的方式  只能用中括号
+ *
+ *
+ * 对象和数组本质一个键值对
+ * 
+ */
+
+
+	var stu = {name:'小明',age:22,number:007,score:99};
+
+//注意：在for in 结构中循环得到的属性取值时不能用Obj.属性的方式  只能用obj[属性]
+
+	for(var i in stu){//把stu里面的所有属性依次赋给i遍历输出
+		document.write(stu[i]+'<br>');//stu['i'] 不能这样写   stu['name'] 必须加上单引号 否则系统理解为name是变量  name是属性 是一个字符
+	}
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,151 @@
+#lc {
+    width:694px;
+    height:464px;
+	border-left:solid 1px #D9D9D9;
+	border-right:solid 1px #D9D9D9;
+	border-bottom:solid 1px #D9D9D9;
+	-moz-border-radius:0 0 5px 5px;
+	-webkit-border-radius:0 0 5px 5px;
+}
+
+#bigtitle{
+    width:694px;
+    height:36px;
+    background:gray url(index_main_top_bg.gif);
+}
+
+#bigtitle img{
+float:left;
+margin:5px 10px 0 14px;
+_display:inline;
+}
+
+#core {
+font:16px/36px Arial,"微软雅黑","黑体",sans-serif;
+float:left;
+color:#151515;
+}
+
+.more {
+display:block;
+float:right;
+font:12px/36px Arial,"微软雅黑","黑体",sans-serif;
+color:#363636;
+text-decoration:none;
+height:36px;
+margin-right:10px;
+_display:inline;
+}
+
+.more:hover{
+color:#FF832C;
+}
+
+
+#rc {
+    width:294px;
+    height:464px;
+}
+
+.intro{
+    width:331px;
+    height:202px;
+    background:#EEE;
+    margin:8px 8px 0 8px;
+    float:left;
+	_display:inline;
+}
+
+.intro h2 {
+margin:12px 0 0 11px;
+font:16px/19px Arial,"微软雅黑","黑体",sans-serif;
+color:#A0A0A0;
+}
+
+.intro img {
+border:solid 5px #FFF;
+float:left;
+margin-left:8px;
+_display:inline;
+
+}
+
+.intro ul{
+float:left;
+list-style:none;
+margin-left:12px;
+_display:inline;
+
+}
+
+.intro ul li{
+margin-bottom:10px;
+padding-left:12px;
+background:url(service_intro_bg.gif) no-repeat left center;
+}
+
+.intro li a {
+font:12px Times,"宋体",serif;
+color:#858585;
+text-decoration:none;
+}
+
+.intro li a:hover{
+text-decoration:underline;
+}
+
+.subtitle{
+    width:294px;
+    height:36px;
+    background:gray url(sub_bar_title_bg.gif);
+	margin-bottom:1px;
+}
+
+.subtitle h2 {
+	font:14px/36px Arial,"微软雅黑","黑体",sans-serif;
+	margin-left:40px;
+	float:left;
+_display:inline;
+
+}
+
+#newlist {
+    width:294px;
+    height:203px;
+	background:#EEE url(left_nav_bottom_bg.gif) no-repeat bottom;
+	list-style:none;
+	margin-bottom:8px;
+	padding:5px 0 6px 0;
+}
+
+#newlist li{
+width:294px;
+height:29px;
+}
+
+#newlist li a {
+display:block;
+padding-left:30px;
+height:29px;
+font:12px/29px "宋体",serif;
+color:#808080;
+text-decoration:none;
+background:#EEE url(article_head.gif) no-repeat;
+}
+
+#newlist li a:hover{
+background:url(article_on_bg.gif);
+color:#FF832C;
+}
+
+#info {
+    width:294px;
+    height:168px;
+	background:#EEE url(left_nav_bottom_bg.gif) no-repeat bottom;
+}
+
+#info table{
+font:12px/29px "宋体",serif;
+color:#808080;
+margin:20px 0 0 20px;
+}

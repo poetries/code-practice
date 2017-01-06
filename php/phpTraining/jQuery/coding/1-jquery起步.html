@@ -1,0 +1,35 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Demo</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-10 20:22:14
+ */
+
+//js原生写法 
+/*window.onload = function(){
+	var a = document.getElementsByTagName('a')[0];
+	a.style.color = 'red';
+	a.onclick = function(){
+		this.style.border = '1px solid blue';
+	}
+}*/
+
+
+//jQ写法  方便的链式操作
+window.onload = function(){
+var a = $('a');
+a.css('color','red').click(function() {
+	$(this).css('border','2px solid blue');
+});
+}
+	</script>
+</head>
+<body>
+	<a href="#">aaaa</a>
+</body>
+</html>

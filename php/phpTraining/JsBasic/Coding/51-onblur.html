@@ -1,0 +1,37 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>onblur失去焦点</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-06 00:28:41
+ */
+
+/**
+ * 
+ */
+//失去焦点
+ 	function t1(){
+ 		var con = document.getElementsByName('email')[0].value;
+ 		if(con == ''){
+ 			document.getElementsByName('email')[0].value = prompt('请输入邮件地址：');
+ 		}
+ 	}
+
+//获得焦点
+ 	function t2(){
+ 		var con = document.getElementsByName('username')[0];
+ 		con.style.border = '2px solid red';
+ 	}
+	</script>
+</head>
+<body>
+	
+</body>
+<form action="">
+	<p>Email:<input type="text" name="email" value="" onblur="t1();"></p>
+	<p>姓名:<input type="text" name="username" onfocus="t2();"></p>
+</form>
+</html>

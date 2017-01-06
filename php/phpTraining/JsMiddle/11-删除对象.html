@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script>
+        //删除对象
+        //步骤：找到对象 找到他的父对象parentobj  parentObj.removeChild(子对象)
+
+        function del(){
+            var lis = document.getElementsByTagName('li');
+            var lastli = lis[lis.length-1];
+            lastli.parentNode.removeChild(lastli);
+            alert('lis[lis.length-1]');
+        }
+
+    </script>
+</head>
+<body>
+<input type="button" value="删除最后一个li" onclick="del();">
+<ul>
+    <li>春</li>
+    <li>夏</li>
+    <li>秋</li>
+    <li>冬</li>
+</ul>
+
+</body>
+</html>

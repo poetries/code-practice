@@ -1,0 +1,73 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>42-根据父子元素-兄弟元素的关系在定位</title>
+
+</head>
+<body>
+	<div>第0个</div>
+	<div>第1个
+		<ul id="season">
+			<li>春</li>
+			<li>夏</li>
+			<li>秋</li>
+			<li>冬</li>
+		</ul>
+		<div></div>
+	</div>
+
+	<div id="banner">
+		第2个
+		<p>p1</p>
+		<p>p2</p>
+		<span>span</span>
+		
+		<div>子div</div>
+	</div>
+	<div>第3个</div>
+	<div>第4个</div>
+    <p>
+        <input type="button" value="父元素" onclick="t1();" />
+    </p>
+
+    <p>
+        <input type="button" value="第一个子元素" onclick="t2();" />
+    </p>
+    <p>
+        <input type="button" value="元素中再根据标签查找" onclick="t3();" />
+    </p>
+
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-05 11:15:39
+ */
+
+	function t1(){
+		var uls = document.getElementById('season');
+		// alert(uls.parentNode);
+		uls.parentNode.style.background = 'red';
+	}
+
+	function t2(){
+		var uls = document.getElementById('season');
+		//uls.firstChild.nextSibling.style.background = 'red'; //这里需要注意 firstChild没有发挥作用 因为第一个子元素理解成空格处理
+	
+		//这个推荐使用children 来处理空白节点
+		
+		uls.children[1].style.background = 'yellow'; 
+		
+
+	}
+
+	function t3(){
+		var banner = document.getElementById('banner');
+		var ps = banner.getElementsByTagName('p');//再次选择只能选ByTagName属性了
+		ps[0].style.background = 'green';
+	}
+
+	</script>
+
+</body>
+</html>

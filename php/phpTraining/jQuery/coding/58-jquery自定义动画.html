@@ -1,0 +1,57 @@
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title> jquery自定义动画</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-17 22:44:55
+ */
+
+/**
+ * jquery自定义动画
+ * 
+ */
+
+$(function(){
+
+$('input').click(function() {
+	/* Act on the event */
+	$('div').animate({//用animate 一定要设置position属性
+		'left':'700px',
+		'top':'500px',
+		'opacity':'0.2'//最后一个不写逗号  json格式
+
+	},3000,function(){//默认值是400 
+		//回调函数 执行完动画在执行
+		$(this).css('background','blue');
+	});
+});
+
+});
+
+
+
+
+	</script>
+	<style type="text/css">
+		div{
+			width: 100px;
+			height:100px;
+			background:red;
+			position: absolute;
+			left: 0;
+			top: 30px;
+			
+			
+		}
+	</style>
+</head>
+<body >
+	<div></div>
+	<input type="button" value="点击">
+</body>
+</html>

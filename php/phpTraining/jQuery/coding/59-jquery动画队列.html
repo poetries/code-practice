@@ -1,0 +1,92 @@
+
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title> jquery动画队列</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-17 23:13:28
+ */
+/**
+ * jquery动画队列:
+ *
+ * 1、stop()
+ *
+ * 2、finish()
+ *
+ * 3、delay()
+ *
+ * 4、jQuery.fx.interval() 设置运动的时间，不推荐
+ */
+
+$(function(){
+
+$('button').click(function(){
+	$('div').animate({
+		'top':'500px'
+	},3000).animate({
+		'left':'800px'
+	},3000).animate({
+		'top':'40px'
+	},3000).animate({
+		'left':'10px'
+	},3000);
+});
+
+$('#stop').click(function(){
+	$('div').stop(true,true);//默认是false false
+});
+
+$('#dequeue').click(function(){
+	$('div').dequeue();
+});
+
+$('#finish').click(function(){
+	$('div').finish();
+});
+
+$('#delay').click(function(){
+	$('p').slideUp(1000).delay(1000).fadeIn(500);//delay延迟动画 其他的不呢能延迟
+});
+
+});
+
+
+
+
+	</script>
+	<style type="text/css">
+		div{
+			width: 50px;
+			height:50px;
+			background:red;
+			position: absolute;
+			left: 10px;
+			top: 40px;
+			/*display: none;*/
+			
+			
+			
+			p{
+				width: 500px;
+				height:500px;
+				background: yellow;
+			}
+		}
+	</style>
+</head>
+<body >
+	<button>Run</button>
+	<input id = 'stop' type="button" value="stop">
+	<input id = 'dequeue' type="button" value="dequeue">
+	<input id = 'finish' type="button" value="finish">
+	<input id = 'delay' type="button" value="测试delay">
+	<div></div>
+
+	<p>pppppppppp</p>
+</body>
+</html>

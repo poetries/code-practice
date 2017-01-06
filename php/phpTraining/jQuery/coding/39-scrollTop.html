@@ -1,0 +1,38 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>scrollTop</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-12 00:25:08
+ */
+
+/**
+ * scrollTop()纵向滚动条位置
+ * scrollLeft()横向滚动条位置
+ * 
+ */
+
+$(function(){
+$('button').click(function(){
+	alert($(window).scrollTop());
+})
+
+});
+	</script>
+	<style type="text/css">
+		button{
+			position: fixed;
+			top: 50px;
+		}
+	</style>
+
+</head>
+<body style="height: 8000px">
+<button>弹出滚动条距离顶部的距离</button>
+	
+</body>
+</html>

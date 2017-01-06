@@ -1,0 +1,93 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>74-从哪里开始匹配</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-07 14:05:24
+ */
+
+
+function t1(){
+	var cont = document.getElementById('cont');
+	var cv = cont.value;
+
+	var reg = /hi/;//仅仅是看字符串中有没有hi
+	alert(reg.test(cv));//满足 返回true  不满足 返回false
+
+}
+function t2(){
+	var cont = document.getElementById('cont');
+	var cv = cont.value;
+
+	//var reg = /\bhi.+/;// 错误1 匹配hi开头的单词
+	////var reg = /\bhi\w+/;// 错误2
+	var reg = /\bhi\w*/; 
+	alert(reg.exec(cv));//exec返回一个对象  没找到返回none
+
+}
+function t3(){
+	var cont = document.getElementById('cont');
+	var cv = cont.value;
+
+	var reg = /\bhi/;//正则测试hi开头的单词但不是hi
+	alert(reg.exec(cv));//exec返回一个对象  没找到返回none
+
+} 
+function t4(){
+	var cont = document.getElementById('cont');
+	var cv = cont.value;
+
+	var reg = /\b[\w]+ing\b/;//*表示匹配0-无穷  +表示匹配1-无穷
+	alert(reg.exec(cv));
+
+} 
+function t5(){
+	var cont = document.getElementById('cont');
+	var cv = cont.value;
+
+	var reg = /\bun[\w]+\b/;//匹配un前缀的反义词
+	alert(reg.exec(cv));
+
+}
+
+function t6(){
+	var cont = document.getElementById('cont');
+	var cv = cont.value;
+
+	var reg = /\Bhi\B/;//匹配单词中间的hi部分
+	alert(reg.exec(cv));
+
+}
+
+
+function t7(){
+	var cont = document.getElementById('cont');
+	var cv = cont.value;
+
+	var reg = /^lisi$/;//匹配输入的名字是不是lisi
+	alert(reg.exec(cv));
+
+}
+	</script>
+	<style type="text/css">
+		textarea{
+			width: 400px;
+			height: 200px;
+			
+		}
+	</style>
+</head>
+<body>
+	<textarea id='cont'></textarea>
+	<p><input type="button" value="匹配hi" onclick="t1();"></p>
+	<p><input type="button" value="匹配hi开头及hi开头的单词" onclick="t2();"></p>
+	<p><input type="button" value="匹配hi开头的单词但不是hi" onclick="t3();"></p>
+	<p><input type="button" value="匹配进行时的单词" onclick="t4();"></p>
+	<p><input type="button" value="匹配un前缀的反义词" onclick="t5();"></p>
+	<p><input type="button" value="匹配单词中间的hi部分" onclick="t6();"></p>
+	<p><input type="button" value="匹配输入的名字是不是lisi" onclick="t7();"></p>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>键盘事件</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-13 19:53:16
+ */
+
+
+/**
+ * 键盘事件：
+ *
+ *
+ * 1、keydown()键盘按下事件
+ *
+ * 2、keyup()键盘弱起事件
+ *
+ * 3、keypress()类似与keydown()但有区别
+ * 
+ */
+$(function(){
+
+/*	$('input').keydown(function(){
+		alert($(this).val());
+	});*/
+
+
+/*	$('input').keyup(function(){
+		alert($(this).val());
+	});*/
+
+	$('input').keypress(function(){
+		alert($(this).val());
+	});
+});
+
+
+	</script>
+</head>
+<body>
+	<input type="text" name="" value="text" id="">
+</body>
+</html>

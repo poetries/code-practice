@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>自定义滚动条</title>
+  <style>
+	/*common style start*/
+	html,body{
+		width:100%;
+		height:100%;
+		font-family:'Arial';
+		font-size:14px;
+	}
+	ul{
+		list-style:none;
+	}
+	a{
+		text-decoration:none;
+	}
+
+	ul,
+	p,
+	html,
+	body{
+		margin:0px;
+		padding:0px;
+	}
+	/*common style end*/
+
+	/*scroll style start*/
+	div.scroll{
+		width:100%;
+		height:100%;
+		position:relative;
+	}
+	div.scroll em.bar{
+		width:8px;
+		height:100%;
+		background-color:#bbb;
+		border-radius:4px;
+		position:absolute;
+		top:0px;
+		right:0px;
+		opacity:.7;
+		cursor:pointer;
+	}
+	div.scroll em.bar:hover{
+		opacity:1;
+	}
+	div.scroll div.content{
+		width:100%;
+		height:100%;
+		overflow:hidden;
+	}
+	/*scroll style end*/
+
+	/*custom style start*/
+	#myPanel{
+		width:200px;
+		height:300px;
+		border:1px solid red;
+	}
+	#myPanel ul{
+		
+	}
+	#myPanel ul li{
+		width:100%;
+		height:20px;
+		line-height:20px;
+		padding:5px 0px;
+		text-indent:15px;
+		white-space:nowrap;/*不换行*/
+		overflow:hidden;/*内容溢出的话就隐藏*/
+		text-overflow:ellipsis;/*隐藏之后省略号表示*/
+		border-bottom:1px solid #bbb;
+		font-size:12px;
+	}
+	#myPanel1{
+		width:250px;
+		height:350px;
+		border:1px solid green;
+	}
+	/*custom style end*/
+  </style>
+ </head>
+ <body>
+	<br />
+	<br />
+	<br />
+	<br />
+	<div id="myPanel" class="scroll">
+		<div class="content">
+			<ul>
+				<li>
+					<span>李大明&nbsp;&nbsp;6217 2540 00** ***9 906&nbsp;&nbsp;工资卡</span>
+				</li>
+				<li>
+					<span>王二小&nbsp;&nbsp;6222 2540 00** ***9 900&nbsp;&nbsp;工资卡</span>
+				</li>
+				<li>
+					<span>王二强&nbsp;&nbsp;6219 2540 00** ***8 817&nbsp;&nbsp;工资卡</span>
+				</li>
+				<li>
+					<span>黄志忠&nbsp;&nbsp;135 **** 3285&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;工资卡</span>
+				</li>
+				<li>
+					<span>张杰超&nbsp;&nbsp;6217 2540 00** ***1 123&nbsp;&nbsp;工资卡</span>
+				</li>
+				<li>
+					<span>王二广&nbsp;&nbsp;6217 2540 00** ***1 232&nbsp;&nbsp;工资卡</span>
+				</li>
+				<li>
+					<span>曾大宇&nbsp;&nbsp;6217 2540 00** ***3 912&nbsp;&nbsp;工资卡</span>
+				</li>
+				<li>
+					<span>张余强&nbsp;&nbsp;6217 2540 00** ***7 906&nbsp;&nbsp;工资卡</span>
+				</li>
+				<li>
+					<span>李大明&nbsp;&nbsp;6217 2540 00** ***9 906&nbsp;&nbsp;工资卡</span>
+				</li>
+				<li>
+					<span>王二小&nbsp;&nbsp;6222 2540 00** ***9 900&nbsp;&nbsp;工资卡</span>
+				</li>
+				<li>
+					<span>王二强&nbsp;&nbsp;6219 2540 00** ***8 817&nbsp;&nbsp;工资卡</span>
+				</li>
+				<li>
+					<span>黄志忠&nbsp;&nbsp;135 **** 3285&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;工资卡</span>
+				</li>
+				<li>
+					<span>张杰超&nbsp;&nbsp;6217 2540 00** ***1 123&nbsp;&nbsp;工资卡</span>
+				</li>
+				<li>
+					<span>王二广&nbsp;&nbsp;6217 2540 00** ***1 232&nbsp;&nbsp;工资卡</span>
+				</li>
+				<li>
+					<span>曾大宇&nbsp;&nbsp;6217 2540 00** ***3 912&nbsp;&nbsp;工资卡</span>
+				</li>
+				<li>
+					<span>张余强&nbsp;&nbsp;6217 2540 00** ***7 906&nbsp;&nbsp;工资卡</span>
+				</li>
+			</ul>
+		</div>
+		<em class="bar"></em>
+	</div>
+
+	<div id="myPanel1" class="scroll">
+		<div class="content">
+			<p>
+				111<br/>111<br/>111<br/>111<br/>111<br/>111<br/>111<br/>111<br/>111<br/>111<br/>111<br/>111<br/>111<br/>111<br/>111<br/>111<br/>111<br/>111<br/>111<br/>111<br/>111<br/>111<br/>111<br/>111<br/>111<br/>111<br/>111<br/>111<br/>111<br/>
+			</p>
+		</div>
+		<em class="bar"></em>
+	</div>
+	<script src="js/jquery-1.11.2.min.js"></script>
+	<script>
+		(function($){
+			$.fn.scrollbar = function(){
+				this.each(function(){
+					var $scroll = this;
+					var $content = $('div.content',$scroll);
+					var $panel = $(':first',$content);
+					var $bar = $('em.bar',$scroll);
+					var ch = $content.height(),ph = $panel.height(),sh;
+					//var offsetY;
+					sh = ch/(ph/ch);
+					$bar.height(sh);
+					$bar.mousedown(function(e){
+						var offsetY = e.offsetY;//当我们在bar上按下去的时候，我们按在了bar的什么位置(y);
+						$(document.body).mousemove(function(e){
+							var top = e.clientY+this.scrollTop-$content.offset().top-offsetY;
+							var range = ch-sh;
+							if(top<0){
+								top=0;
+							}else if(top>range){
+								top=range;
+							}
+							$bar.css('top',top);
+							var rate = top/range;
+							$content.scrollTop((ph-ch)*rate);
+							return false;
+						}).mouseup(function(){
+							$(this).unbind('mousemove');
+						});
+						return false;
+					});
+				});
+			}
+		})(jQuery);
+	</script>
+	<script>
+		$(function(){
+			//js代码
+			$('div.scroll').scrollbar();
+		});
+	</script>
+ </body>
+</html>

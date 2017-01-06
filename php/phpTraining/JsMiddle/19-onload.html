@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style></style>
+    <script>
+       // document.getElementsByTagName('p')[0].style.border = '1px solid blue';//此语句无法执行 需要等DOM加载完成才行
+        function t1(){
+            document.getElementsByTagName('p')[0].style.border = '1px solid blue';//当body里面的onload加载完毕 t1()才执行
+        }
+//onload有一个缺点 等所有的资源都加载完成 才执行
+    </script>
+</head>
+<body onload="t1();">
+<p>this is p</p>
+</body>
+</html>

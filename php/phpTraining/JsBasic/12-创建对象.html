@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style></style>
+    <script>
+        function add()
+        {
+
+           // 简洁写法
+            var li = document.createElement('li');//创建一个li节点
+            document.getElementsByTagName('ul')[0].appendChild(li);//把li放到ul里面
+
+            var txt = document.createTextNode('冬');//创建文本节点
+            li.appendChild(txt);//把文本内容塞到li里面
+        }
+    </script>
+</head>
+<body>
+<!--添加一个li-->
+<input type="button" value="添加一个li" onclick="add();">
+<ul>
+    <li>春</li>
+    <li>夏</li>
+    <li>秋</li>
+</ul>
+
+
+<!--
+
+    1、创建对象
+    2、找到对象的parentObj
+    3、parentObj.addChild(对象)
+
+
+-->
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>switch-分支结构</title>
+	<script type="text/javascript">
+	/**
+		 * @Author:     poetries
+		 * @DateTime:	2016-06-03 22:36:10
+		 */
+		
+
+		//if..else if..else
+		
+		/*var today = 1;
+
+		if(today == 1)
+		{
+			document.write('今天是星期一');
+		}else if(today == 2)
+		{
+			document.write('今天是星期二');
+		}else if(today == 2)
+		{
+			document.write('今天是星期三');
+		}else if(today == 2)
+		{
+			document.write('今天是星期四');
+		}else if(today == 2)
+		{
+			document.write('今天是星期五');
+		}else if(today == 2)
+		{
+			document.write('今天是星期六');
+		}else if(today == 2)
+		{
+			document.write('今天是星期日');
+		}else
+		{
+			document.write('没有这个日期');
+		}
+*/
+
+
+		//switch实现简化写法
+		//case 后面只能放一个具体的值
+		//碰到需要比较范围的 用switch做不了 例如 age>20: 这时用if..else
+		//swtich用于比较整型和字符串比较多
+		
+		 var mess = confirm('请输入您要输入的数值:');
+		 var myweek = prompt('今天星期几呀?');//prompt(str1,str2);此方法包含两个属性；
+		 										//str1:用于提示用户输入的信息
+		 										//str2:用于用户输入文本信息
+		 										//该方法返回值：返回用户输入的文本信息  需要转化成数字 用到parseInt()
+		 var message = parseInt(myweek);
+
+		 switch(message) {
+		 	case 1:
+		 		document.write('今天是星期一');
+		 		break;
+		 	case 2:
+		 		document.write('今天是星期二');
+		 		break;
+			case 3:
+		 		document.write('今天是星期三');
+		 		break;
+		 	case 4:
+		 		document.write('今天是星期四');
+		 		break; 
+		 	case 5:
+		 		document.write('今天是星期五');
+		 		break; 
+		 	case 6:
+		 		document.write('今天是星期六');
+		 		break; 
+
+		 	case 7:
+		 		document.write('今天是星期日');
+		 		break;  
+		 	default:
+		 		document.write('没有这个日期');
+		 }
+
+		 document.write('<hr />');
+
+		 var rage = 0.1+0.2;
+		 switch(rage) {
+		 	case 0.1:
+		 		document.write(0.1);
+		 		break;
+		 	case 0.2:
+		 		document.write(0.2);
+		 		break;
+		 	case 0.3:
+		 		document.write(0.3);
+		 		break;
+
+		 	default:
+		 		document.write('真不是0.3');
+		 }
+
+		 /**
+		  * 结果：真不是0.3
+		  * 在计算机中所有的数据都是以二进制存储  0.1 0.2是十进制表示法 在转化成二进制时浮点数会损失精度
+		  */
+		 
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function toggle(){
+            var con = document.getElementById('on');
+           if (con.src.indexOf('img0')>=0){
+               con.src = 'http://img4.imgtn.bdimg.com/it/u=1666626825,2582675263&fm=21&gp=0.jpg';
+           }else{
+               con.src = 'http://img0.imgtn.bdimg.com/it/u=688025611,3499136489&fm=21&gp=0.jpg';
+           }
+        }
+</script>
+</head>
+<body>
+<img id="on" src="http://img0.imgtn.bdimg.com/it/u=688025611,3499136489&fm=21&gp=0.jpg" alt="on" onclick="toggle();">
+
+</body>
+</html>

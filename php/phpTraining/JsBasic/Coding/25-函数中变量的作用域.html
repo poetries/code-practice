@@ -1,0 +1,46 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>函数中变量的作用域</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-04 17:13:48
+ */
+
+/**
+ * js中没有全局变量这个概念 只有作用域
+ *
+ * 在js中必用var 不用var带来的后果：全局变量会被污染
+ *
+ * 
+ */
+
+	var a = 3;
+	var b = 4;
+
+	function t(){
+		var a = 5;
+		var c = 6;
+		var d = 10; //如果不加var 就是一个变量的赋值的过程 就是在函数的额外层自动
+					//建立一个var d = 8l语句 var是明确声明变量
+					// 作用域将不受到限制 在页面内都可以使用
+					
+		alert(a+'--'+b);
+
+		function m(){
+			alert(c);
+		}
+		m();
+	}
+	t();//5--4  6
+	
+
+	alert(d);//undefined 
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

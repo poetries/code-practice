@@ -1,0 +1,72 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>100-构造函数的返回值与普通函数的返回值有何区别</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-09 22:56:54
+ */
+
+
+//对于普通函数的调用 如有return 则返回该return值  没有return或return; 返回值为undefined
+
+function t1(){
+	return 3;
+}
+
+console.log(t1());//3
+
+function t2(){
+	var age = 22;
+	age ++;
+}
+
+function t3(){
+	var age = 22;
+	age ++;
+	return;
+}
+console.log(t2());//undefined
+console.log(t3());//undefined
+
+
+//对于构造函数的调用
+
+function Dog(){
+	this.leg = 4;
+	return false;
+	this.tail = 1;//不执行
+}
+
+//对于构造函数创建对象 遇到return返回依然成立 
+//返回值，是函数体构造出的对象，还是return value中的值  
+//答：如果return 对象/数组/函数  new表达式 返回的是return值 否则返回的是构造函数的函数体形成的新对象
+//如果通过构造器构造出的对象return值不能为 对象/数组/函数   构造函数一般不用加return 会自动返回构造体
+
+var hei = new Dog();//返回对象
+console.log(hei);
+
+function Pig(){
+	this.leg = 4;
+	this.hei = '300KG';
+	this.bark = function(){
+		alert('嘻嘻');
+	}
+	//return false;//如果不是对象则返回该构造函数形参的对象
+	return {leg:4,bark:function(){alert('哈哈哈')}};//如果return是对象 则以return值为准 返回return后的值
+}
+
+var zhu = new Pig();
+zhu.bark();
+
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

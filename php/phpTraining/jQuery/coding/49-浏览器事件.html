@@ -1,0 +1,42 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>浏览器事件</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-15 23:00:26
+ */
+
+/**
+ * 浏览器事件：
+ *
+ * 1、resize()浏览器窗口改变大小事件
+ *
+ * 2、scroll()浏览器滚动条移动时发生的事件
+ *
+ * 3、error() 1.8 中废弃
+ */
+
+
+$(function(){
+
+	// $(window).resize(function(){
+	// 	alert('窗口改变');
+	// });
+
+$(window).scroll(function(){
+	$('body').append('<p>滚动条位置发生变化</p>');
+})
+
+});
+
+
+	</script>
+</head>
+<body style="height: 3000px">
+	
+</body>
+</html>

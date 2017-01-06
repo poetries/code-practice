@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>lesson15</title>
+</head>
+<body>
+ <div class="div1">1111</div>
+
+ <div>2222</div>
+
+ <div>3333</div>
+
+  <script>
+
+//var p = document.createElement('p');
+//p.innerHTML = "this is a p";
+//var child = document.getElementsByTagName('div');
+/**
+//**通过给原型添加方法在元素后面创建标签**
+HTMLDivElement.prototype.createElement = function(tagName){
+	var child = document.createElement(tagName);
+	this.appendChild(child);
+	return child;
+}
+var child = document.getElementsByTagName('div')[2].createElement("p");
+child.innerHTML = 'pppppp';
+
+*/
+
+// setAttribute/getAttribute   getAttribute获取标签的属性
+var className1 = document.getElementsByTagName("div")[0].getAttribute("class");
+var className2 = document.getElementsByTagName("div")[1].setAttribute("class","div2");
+var className3 = document.getElementsByTagName("div")[2].setAttribute("id","div3");
+
+//console.log(className2);
+//console.log(className3); 
+
+var div1 = document.getElementsByTagName("div")[0];
+
+var attrs = '';
+
+for(var prop in div1){
+	if(typeof div1[prop] =="string"){
+		attrs +=prop+"--";
+	}
+	
+
+}
+document.write(attrs+"<br>");
+document.write(div1.calssName);
+//document.getElementsByTagName("a")[0].setAttribute("href","http://www.baidu.com");
+
+var username = document.getElementsByName("username")[0].style.background = "red";
+
+//alert(document.getElementsByTagName("div")[0].nextSibling.nextSibling.innerText);
+
+//============给Object原型加一个方法 消除文本节点对DOM操作的影响 例如：nextSibling` `previousSibling` `firstChild` `lastChild （受到换行 和文本节点影响）
+
+Object.prototype.next = function(){
+	//NodeType == 3 text的代号
+	//NodeType == 1 tag的代号
+if(this.nextSibling){
+	switch(this.nextSibling.nodeType){
+		case 1:
+			return this.nextSibling;
+		case 3:
+			return this.nextSibling.nextSibling;
+	}
+}
+}
+console.log(div1.next().next().innerText);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style></style>
+    <script>
+        //造出地区的数组
+        var area = [
+                ['朝阳','海淀','门头沟'],
+                ['淮南','淮北','合肥']
+        ];
+    function ld(){
+        //alert('a');
+
+        var sel = document.getElementById('prov');
+        //alert(sel.value);
+
+        var opt = '';
+
+        if(sel.value=='-1'){
+            document.getElementById('city').innerHTML = opt;
+            return;
+        }
+        for(var i=0;i<area[sel.value].length;i++){
+            opt = opt + '<option value="'+i+'">'+area[sel.value][i]+'</option>'; //opt此处把前两次的和最后一次 一起放进去
+
+        }
+      //  alert(opt);
+        document.getElementById('city').innerHTML = opt;
+    }
+    </script>
+</head>
+<body>
+<select name="" id="prov" onchange="ld();">
+    <option value="-1">请选择</option>
+    <option value="0">北京</option>
+    <option value="1">安徽</option>
+</select>
+<select name="" id="city" >
+
+</select>
+
+</body>
+</html>

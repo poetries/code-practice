@@ -1,0 +1,43 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>遍历新闻表</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-22 22:14:21
+ */
+
+		$(function(){
+
+
+			$('input[type=button]').click(function(){
+				$.ajax({
+					url:'demo2.php?'+Math.random(),
+					type:'get',
+					success:function(data){
+						// alert(typeof data);
+						// alert(data);
+						var res = eval(data);
+						for (var i = 0; i < res.length; i++) {
+							// alert(res[i].title);
+							$('#info>ul').append('<li>'+res[i].title+'<em>'+res[i].hobby+'</em>'+'</li>');
+						}
+				
+						
+					}
+				});
+			});
+
+		});
+	</script>
+</head>
+<body>
+	<input type="button" value="获取信息">
+	<div id="info">
+		<ul></ul>
+	</div>
+</body>
+</html>

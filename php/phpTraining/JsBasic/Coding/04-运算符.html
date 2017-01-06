@@ -1,0 +1,81 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>JS运算符</title>
+	<script type="text/javascript">
+/**
+ * @Author:     poetries
+ * @DateTime:	2016-06-03 16:47:18
+ */
+
+	//算术运算符 + - * / %（取余）
+
+	var n1 = 10;
+	var n2 = 20;
+	var cnt = n1*n2;
+	document.write(cnt+'<br>');
+
+	//alert(cnt%7);//4
+	//在js里可以对浮点数求余 和php不一样 求余的结果是整型
+
+	// alert(cnt%7.8);
+	// alert(-cnt%7.5);//-5 符号正负取决于%前面的符号
+
+	document.write(n1+n2+'<br />');
+
+	document.write('整型相除可能得到整型'+cnt/7+'<br>');
+
+	//不只是js中要求除数不能为零 除以0
+	document.write('除以0得到'+cnt/0+'<br>');//Infinity
+
+
+	document.write('<hr />');
+
+	//条件运算符 > < == !=  <= === !==   条件运算符返回布尔值 true 或者 false
+
+	if(3>5){
+		document.write('3大于5'+'<br>');
+	}else{
+		document.write('3不可能大于5');
+	}
+
+	// === 全等于和 ==
+	
+	var real = true;
+	var res = 1;
+	if(real){
+		alert('嘿嘿');
+	}
+
+
+	if(res == real){
+		alert('1和true相等');
+	}else{
+		alert('1和true不相等');
+	}
+
+//1是整型 数值型real是布尔类型
+	if(real===res){
+		alert('1和true值相等，类型也相等');
+	}else{
+		alert('1和true值相等');//1和true值相等
+	}
+
+
+//注意：+号运算时 如果有一个操作数是字符串 那么最终得到的结果是字符
+
+alert('1加到5的值是：'+1+2+3+4+5);//12345
+alert(1+2+3+4+5+'1加到5的值');//151加到5的值
+
+//赋值运算符 等号右侧表达式的值赋给左侧
+
+
+
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

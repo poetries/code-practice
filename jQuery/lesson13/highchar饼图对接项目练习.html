@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>Document</title>
+		
+		<style>
+		/*common start*/
+		html,
+		body{
+			width:100%;
+			height:100%;
+			font-family:'Microsoft Yahei','Arial';
+		}
+		body,
+		p,
+		ul,
+		dl{
+			margin:0px;
+			padding:0px;
+		}
+		a{
+			text-decoration:none;
+		}
+		ul{
+			list-style:none;
+		}
+		/*component tabs start*/
+		ul.tabs{
+			height:31px;
+			width:100%;
+			border-bottom:1px #ddd solid;
+		}
+		ul.tabs li{
+			float:left;
+			height:30px;
+			font-size:14px;
+			line-height:30px;
+			text-align:center;
+		}
+		ul.tabs li a{
+			color:#000;
+		}
+		ul.tabs li.on{
+			font-weight:bold;
+			border-bottom:2px solid #0066b3;
+		}
+		ul.tabs li.on a{
+			color:#0066b3;
+		}
+		div.pages{
+			width:100%;
+			position:relative;
+		}
+		div.pages div.page{
+			position:absolute;
+			width:100%;
+			left:0px;
+			top:0px;
+			display:none;
+		}
+		div.pages div.on{
+			display:block;
+		}
+		/*component tabs end*/
+
+		#charts_area{
+			width:728px;
+			height:238px;
+			position:relative;
+		}
+		#charts_area ul.tabs{
+			position:absolute;
+			z-index:1;
+			width:auto;
+			border:none;
+		}
+		#charts_area ul.tabs li{
+			width:42px;
+			height:26px;
+			cursor:pointer;
+			
+		}
+		#charts_area div.pages{
+			width:100%;
+			height:100%;
+			border:1px solid #ccc;
+		}
+		#charts_area div.pages div.page{
+			width:100%;
+			height:100%;
+			overflow:hidden;
+		}
+		</style>
+	</head>
+	<body>
+		<div id="charts_area">
+			<ul class="tabs">
+				<li class="on pie"><a href="#" for="#pie">第一页</a></li>
+				<li class="line"><a href="#" for="#line">第二页</a></li>
+			</ul>
+			<div class="pages">
+				<div id="pie" class="page on">
+					<div id="pie"></div>
+				</div>
+				<div id="line" class="page">
+					<div id="line"></div>	
+				</div>
+			</div>
+		
+		</div>
+	</body>
+	<script src="../js/jquery-2.1.4.js"></script>
+	<script type="text/javascript" src="js/tabs.js"></script>
+	<script src	="js/highcharts.js"></script>
+	<script src="js/index_char.js"></script>
+	<script>
+		$("#charts_area").tabs();
+	</script>
+</html>

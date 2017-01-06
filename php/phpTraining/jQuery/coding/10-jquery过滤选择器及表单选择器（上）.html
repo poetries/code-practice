@@ -1,0 +1,87 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jquery过滤选择器及表单选择器（上）</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-11 09:46:15
+ */
+
+
+/**
+ * 	1、基本过滤选择器
+ * 	2、内容过滤选择器
+ * 	3、可见性选择器
+ * 	4、属性选择器
+ * 	5、子元素过滤选择器
+ * 	6、表单选择器
+ * 	
+ */
+
+/**
+ * 1、基本过滤选择器
+ *
+ * :first 选取第一个元素
+ * :last 选择最后一个元素
+ * :not()选取除指定外的元素
+ * :odd 奇数选择器
+ * :even 偶数选择器
+ * :eq() 选取指定索引的元素
+ * :gt() 选取大于指定索引的元素
+ * :lt()  选取小于指定索引的元素
+ * :header 选取h1,h2,h3,h4,h5,h6 标签
+ * :animated 选取正在执行动画的元素
+ * :lang()语言代码选择器 1.9版本新添加  没什么用 实际开发用不到
+ * :root 根元素选择器 1.9版本新添加  没什么用 实际开发用不到
+ * :target选择由文档URL格式化标识码表示的目标元素  没什么用 实际开发用不到
+ *
+ * 
+ */
+$(function(){
+	//基本过滤选择器
+	//$('p:first').css('background','blue');
+	//$('p :first').css('background','blue');//这一句和上面不同 p :first这里的空格影响到p的子孙元素
+	// $('p:last').css('background','blue');
+	
+	// $("p:not('.a')").css('background','blue');
+	// $("p:odd").css('background','blue');
+	// $("p:even").css('background','blue');
+	//$("p:eq(1)").css('background','blue');//选取指定索引的元素
+	// $("p:gt(2)").css('background','blue');//下标大于2
+	// $("p:lt(2)").css('background','blue');
+	
+
+	// $(":header").css('background','blue');
+	$('#go').animate({'left':'100'}, 10000);
+
+	$(':animated').css('background','blue');
+	
+});
+
+	</script>
+	<style type="text/css">
+		#go{
+			width: 100px;
+			height: 100px;
+			background: red;
+		}
+	</style>
+</head>
+<body>
+	<div id="go"></div>
+	<h1>我是h1标签</h1>
+	<h2>我是h2标签</h2>
+	<h3>我是h3标签</h3>
+	<h4>我是h4标签</h4>
+	<h5>我是h5标签</h5>
+	<h6>我是h6标签</h6>
+
+	<p>我是<span>1个</span>标签</p>
+	<p>我是2个标签</p>
+	<p class="a">我是3个标签</p>
+	<p>我是4个标签</p>	
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+        }
+        #test{
+            background: green;
+        }
+        #test2{
+            background: red;
+        }
+    </style>
+    <script>
+        function ch(){
+            var div = document.getElementById('test');
+            //div.id = 'test2';
+            div.style.backgroundColor = 'red'; //推荐这种写法
+        }
+    </script>
+</head>
+<body>
+    <h1>第一个特效</h1>
+    <div id="test" onclick="ch();"></div>
+</body>
+</html>

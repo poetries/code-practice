@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>第二课——多张图的无缝滚动</title>
+	<script type="text/javascript" src="../src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-23 18:00:02
+ */
+
+/**
+ * 如果想要是一个元素运动起来 一般情况下  这个元素需要具有position属于（absolute relative） 可以没有 但是比较麻烦
+ */
+
+$(function(){
+
+	var oul = $('.wrap ul');
+	var oulHtml = oul.html();
+	var timeId = null;
+
+
+
+	var speed = 2;
+	oul.html(oulHtml+oulHtml);
+
+	// alert(oul.html());
+	// oul.append(outhtml);不推荐 因为是经过一个方法来执行的 肯定不够拼接字符的效率好
+
+	//动态获取ul的宽度
+
+	var ali = $('.wrap ul li');
+	var aliWidth = ali.eq(0).width();//eq(0)第一个li 每个li的宽度都一样 所以取第一个
+	//var aliSize = ali.size();//获取li的数量 .size()方法从jQuery 1.8开始被废弃。使用.length属性代替
+	var alilength = ali.length;
+	var ulWidth = aliWidth*alilength;//ul宽度
+	// alert(ulWidth);//1600px
+	oul.width(ulWidth);
+
+	//setInterval 每个一段时间执行该函数的代码
+	function slider(){
+
+
+			if(speed<0){//向左滚动
+					if(oul.css('left')== -ulWidth/2+'px'){
+						oul.css('left',0);
+					}
+					oul.css('left','+=-2px');//用到累加的概念
+				}else{
+					//向右滚动
+					if(oul.css('left')=='0px'){
+								oul.css('left',-ulWidth/2+'px');
+							}
+
+					oul.css('left','+='+speed+'px');
+				}
+
+
+			//鼠标移动上去停止
+			$('.wrap').mouseover(function(event) {
+				clearInterval(timeId);
+			});
+
+		}
+	timeId = setInterval(slider,30);
+
+
+	//鼠标离开
+	$('.wrap').mouseout(function(){
+			timeId = setInterval(slider,30);
+	});
+
+	$('.goLeft').click(function(){
+		speed = -2;
+	});
+
+	$('.goRight').click(function(){
+		speed = 2;
+	});
+
+});
+	</script>
+	<style type="text/css">
+		*{padding: 0;margin: 0}
+		li{list-style: none;}
+		body{margin: 50px;}
+		.wrap ul{
+			overflow: hidden;
+			_height:1px;
+			width: 1600px;
+			position: absolute;
+			left: 0px;
+			top: 0;
+		}
+		.wrap ul li {
+			float: left;
+		}
+		.wrap{border: 3px solid red;width: 800px;height: 200px;position: relative;overflow: hidden;} /*每张图片都是200*200*/
+
+	</style>
+</head>
+<body>
+<a href="javascript:;" class="goLeft">向左走</a>
+<a href="javascript:;" class="goRight">向右走</a>
+	<div class="wrap">
+		<ul>
+			<li><img src="../src/img/1.jpg" alt=""></li>
+			<li><img src="../src/img/2.jpg" alt=""></li>
+			<li><img src="../src/img/3.jpg" alt=""></li>
+			<li><img src="../src/img/4.jpg" alt=""></li>
+			<li><img src="../src/img/5.jpg" alt=""></li>
+			<li><img src="../src/img/6.jpg" alt=""></li>
+		</ul>
+	</div>
+</body>
+</html>

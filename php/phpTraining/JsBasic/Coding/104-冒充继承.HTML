@@ -1,0 +1,68 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>冒充继承</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-10 08:20:50
+ */
+
+/**
+ * 冒充继承:
+ *
+ * 
+ */
+
+
+
+function Cat(color){
+	this.color = color;
+	this.climb = function (){
+		alert('在树上');
+	}
+
+}
+/*
+ apply的效果与call一样，只是传参数时把所有参数包装在数组里传过去
+  *
+  * 例如：
+  * fn.call(obj,'a','b') ===等价 fn.apply(obj,['a','b'])*/
+ function Tiger(){
+ 	this.extend = Cat;
+ 	this.extend.apply(this,arguments)//apply是修改this指向的  此时this指代Tiger
+ 	this.bark = function(){
+ 		alert('呵呵');
+ 	}
+
+ 	delete this.extend;
+ }
+
+// Tiger.prototype = new Cat;//原型链方式
+
+var heihu = new Tiger('white');//最终把white传到cat里面
+
+alert(heihu.color);
+alert(heihu.extend);//undefined  用完了就扔
+heihu.climb();
+
+//hasOwnProperty 此方法用来判断某个属性是否是自己的额属性 还是原型链上的属性
+
+//冒充继承 继承过来的属性就是对象自身了 不用去原型链上查找了
+for(var k in heihu)
+{
+	if(heihu.hasOwnProperty(k)){
+		alert(k+'是自身的属性');
+	}else{
+		alert(k+'是原型上的的属性');
+	}
+}
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

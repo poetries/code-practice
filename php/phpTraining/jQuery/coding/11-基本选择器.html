@@ -1,0 +1,52 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>基本选择器</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-11 08:56:20
+ */
+//基本选择器 在css中怎么写 在jQuery中就怎么写
+
+ $(function(){
+
+ 	//id选择器 class选择器 元素选择器  *号选择器
+ 	$('#p1').css('color','red');
+ 	$('.p2').css('color','blue');
+ 	//$('*').css('border','2px solid yellow');//*选择器 选择所有的元素 不推荐
+
+ 	//多重选择器
+
+ 	 $('#p3,#p4').css('color','blue');
+
+
+ 	 //层次选择器
+ 	 //1、E F 选择E元素所有的后代元素
+ 	 //2、E>F 选择E元素的子元素 子选择器
+ 	 //3、E+next 选择E元素后的紧邻的兄弟元素  相当于jquery中方法 .next()
+ 	 //4、E~siblings 选择E元素后的所有兄弟元素 相当于jquery中方法.nextAll()
+ 	 
+ 	 $('#test span').css('color','red');
+ 	 $('#test1+p').css('background','green');//div+p 选择 <div> 元素之后紧跟的每个 <p> 元素
+ });
+
+
+
+	</script>
+</head>
+<body>
+	<div id="test1">
+		<p id="p1">这是第一段</p>
+		<p class="p2">这是第一段</p>
+	</div>
+	<p>这是第一段</p>
+	<div id="test">
+		<p><span>静观流叶</span></p>
+	</div>
+	<p id="p3">这是p3</p>
+	<p id="p4">这是p4</p>
+</body>
+</html>

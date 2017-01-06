@@ -1,0 +1,32 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>68-window.setIntval每隔指定时间执行一次事件</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-06 13:21:54
+ */
+
+//碰到每隔几秒执行一次事件的 推荐用setInterval
+//clearInterval(定时器)---清除定时器
+//
+
+
+
+	function t(){
+		alert('2秒到');
+	}
+
+	var clock = window.setInterval('t()',2000);//clock命名为了后面消除定时器用到 这个变量是指向定时器
+
+	function t1(){
+		clearInterval(clock);
+	}
+	</script>
+</head>
+<body>
+	<input type="button" value="停止" onclick="t1();">
+</body>
+</html>

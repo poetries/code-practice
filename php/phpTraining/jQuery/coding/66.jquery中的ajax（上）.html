@@ -1,0 +1,66 @@
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title><html>
+<head>
+	<meta charset="UTF-8">
+	<title>jquery中的ajax（上）</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript" src="./src/js/jquery.easing.1.3.js"></script>
+		<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-21 18:48:14
+ */
+/**
+ * jquery中的ajax（上）
+ *
+ * 1、jQueryDOM.load()
+ *
+ * 2、$.get()
+ *
+ * 3、$.post()
+ *
+ * 4、$_ajax()
+ */
+	
+	$(function(){
+
+		$('input[type=button]').click(function(){
+			//$('.load').load('ajaxtest.txt');//加一个参数能解决IE下面的缓存问题 ajaxtest.txt？date='+Math.random()'
+			
+
+			//test1 test2 div里面的内容都加载过来  
+			// $('.load').load("testajax.html?date='+Math.random()'");
+			
+			//test1 只加载test1写法
+			$('.load').load("testajax.html?date='+Math.random()+' .test1");
+		});
+
+
+	});
+
+		</script>
+		<style type="text/css">
+			.load{
+				width: 300px;
+				height: 300px;
+				border: 1px  solid  red;
+			}
+		</style>
+
+</head>
+<body>
+	
+</body>
+</html></title>
+</head>
+<body>
+
+<input type="button" value="加载">
+<div class="load"></div>
+
+</body>
+</html>

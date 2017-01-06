@@ -1,0 +1,68 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>58-表格隔行换色</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-06 10:17:23
+ */
+
+ 	function chcolor(){
+ 		var trs = document.getElementsByTagName('tr');
+ 		for (var i = 0,len = trs.length; i < len; i++) {
+ 			if(i%2 == 0){
+ 				trs[i].style.background = 'green';
+ 			}else{
+ 				trs[i].style.background = 'blue';
+ 			}
+ 		}
+ 	}
+	</script>
+</head>
+<body onload="chcolor();"> <!-- 页面加载完 -->
+	<table border="1px">
+		<tr>
+			<td>学号</td>
+			<td>姓名</td>
+			<td>年龄</td>
+		</tr>
+		<tr>
+			<td>学号</td>
+			<td>姓名</td>
+			<td>年龄</td>
+		</tr>
+		<tr>
+			<td>学号</td>
+			<td>姓名</td>
+			<td>年龄</td>
+		</tr>
+		<tr>
+			<td>学号</td>
+			<td>姓名</td>
+			<td>年龄</td>
+		</tr>
+			<tr>
+			<td>学号</td>
+			<td>姓名</td>
+			<td>年龄</td>
+		</tr>
+		<tr>
+			<td>学号</td>
+			<td>姓名</td>
+			<td>年龄</td>
+		</tr>
+		<tr>
+			<td>学号</td>
+			<td>姓名</td>
+			<td>年龄</td>
+		</tr>
+		<tr>
+			<td>学号</td>
+			<td>姓名</td>
+			<td>年龄</td>
+		</tr>
+	</table>
+</body>
+</html>

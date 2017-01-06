@@ -1,0 +1,48 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>函数的执行权与执行权的交回</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-04 16:31:55
+ */
+
+/**
+ * js代码有js引擎来执行，有几个js引擎同时工作？只有一个，js单线程运行
+ *
+ *所以指令只能一条条运行，俗称单线程
+ *
+ * 当函数被调用时 js解析引擎进入到函数内部去工作，即执行权交给了函数：
+ *
+ * 函数在两种情况下交回执行权：
+ * 	1、碰到return执行权交回
+ * 	2、如果函数没有return 函数的语句运行完毕后 执行权交回
+ *
+ * return只能执行一次或者0次
+ *
+ *
+ * js中函数的特殊性和php比较：
+ * 							在php中函数是语法上的一个结构体 不是一个变量不能被赋值  在js中函数是一个变量 可以被赋值
+ */
+
+//验证js语句一行行执行
+
+function t(){
+	alert('哈哈哈');
+
+	retrun;//碰到return执行权交回
+	document.write('去你的');
+}
+
+	t();
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

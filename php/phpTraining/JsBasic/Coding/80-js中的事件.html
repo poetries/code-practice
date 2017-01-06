@@ -1,0 +1,107 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>80-三种绑定事件的方式</title>
+	<script type="text/javascript">
+/**
+		 * @CreateBy:   SublimeText3
+		 * @Author:     poetries
+		 * @DateTime:	2016-06-08 09:50:00
+		 */
+
+/**
+ *三种绑定事件的方式:
+ *
+ * 行为  结构 样式分离的页面
+ * 
+ *
+ * 绑定事件的三种方式：
+ * 1、直接写在html标签内声明 <div id="school" onclick='t();'></div> 
+ *
+ * 这个效果等同于在点击div的时候 执行t()这一句，在全局范围内执行
+ *
+ *
+ * 2、第二种绑定方式
+ * DOM对象onclick = function(){}这种绑定是把一个DOM对象onclick属性赋值为一个函数，因此函数内部的this直接指向该DOM对象
+ *
+ * 第二种绑定事件的缺陷：
+ *
+ * 第二种绑定方式中 只能给一个时间绑定一个处理函数 即.onclick = fn1;.onclick = fn2  最终的效果是onclick = fn2;
+ *
+ *
+ * 如果用函数来调用其它函数的形式
+ * 例如：onclick = function (){fn1(),fn2()}那么此时 fn1,fn2中的this又指向window
+ *
+ * 第三种绑定方式：
+ *
+ * 如何绑定多个函数 并让this指向DOM对象[重点]
+ *
+ * DOM lev3的事件绑定 标准 添加和去除监听事件 addEventListener('事件',函数) 第一个参数：事件参数,没有前缀on,addEventListener是w3c的标准 IE不支持
+ *
+ * 注意点1：如果添加了多个事件处理函数 按添加时的执行顺序执行
+ *
+ * 注意点2：事件处理函数中的this指代DOM节点自身（w3c标准）
+ *
+ * 注意点3：第一个事件参数，一律把事件名称的on去掉（w3c标准）
+ *
+ * 
+ * 去除绑定：
+ * removeEventListener('事件',函数)
+ * 
+ *
+ *
+ * IE下绑定事件与解除事件的方法：
+ *
+ * attachEvent（'事件'，函数） //注意 事件要加on
+ * deltachEvent（'事件','函数'）
+ * 
+ *
+ * 总结：
+ *
+ * w3c的addEventListener与IE的attachEvent()的不同：
+ * 1、函数名不同
+ * 2、事件名不同 IE要加on  w3c不加on
+ * 3、加事件后的执行顺序不同 ，w3c按绑定事件的方式的顺序来执行，而IE6,7是后绑定的事件先发生
+ * 4、this的指向，w3c中 绑定函数中的this指向DOM对象 而IE 6 7 中指向window对象 这一点比较麻烦
+ *
+ *捕捉模型与冒泡模型：
+ *
+ *在w3c模型中 addEventListener支持第3个参数来声明事件的模型为冒泡还是捕捉，如果声明为false，则为冒泡方式
+ *
+ * 注意：IE的attachEvent没有第三个参数 不支持捕捉模型
+ *
+ * 事件对象的概念：（就是一个信息包）
+ * 当事件对应的函数被触发时 函数会接收到一个事件对象参数
+ * 例如 ：xx.onclick = function(ev){alert(ev)} 点击后 ev参数就代表那一瞬的各个参数 以一个对象的方式传过去
+ *
+ *对于IE 当事件发生的瞬间 事件对象赋值给window.event属性
+ * 事件的中断：
+ * 
+ */
+
+
+var str = 'xixi';
+	window.onload = function(){
+		document.getElementById('school').onclick = 	function  t(){
+		alert('哈哈哈');
+	}
+
+	}
+
+	</script>
+	<style type="text/css">
+		#school{
+			width: 300px;
+			height: 200px;
+			background: gray;
+		}
+	</style>
+
+</head>
+<body>
+<!-- 原始的绑定方式 <div id="school" onclick='t();'></div> -->
+	<div id="school">
+		
+	</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>onload</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-06 00:45:00
+ */
+ 	function t1(){
+ 		var con = document.getElementsByName('email')[0].value='请填写您的email';
+
+ 	}
+
+	function t2(){
+		alert("您真的要关闭吗");
+	}
+
+	</script>
+</head>
+<body onload="t1();" onunload="t2();"><!--  onload写在页面的开始位置 -->
+	
+</body>
+<form action="">
+	<p>Email:<input type="text" name="email" value="" ></p>
+	<p>姓名:<input type="text" name="username"></p>
+</form>
+</html>

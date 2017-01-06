@@ -1,0 +1,58 @@
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>85-在IE下第三种绑定事件的方法 </title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-08 12:14:51
+ */
+
+
+var fn1 = function () {alert('blue');this.style.background ='blue'};
+var fn2 = function () {alert('red');this.style.background ='red'};
+
+		
+function adde(){
+			var d = document.getElementById('school');
+
+			// IE6,7是后绑定的事件先发生
+			d.attachEvent('onclick',fn1);
+			d.attachEvent('onclick',fn2); //fn2先发生
+
+		}
+
+function reme(){
+	var d = document.getElementById('school');
+
+	//d.deltachEvent('click',fn1);//只剩fn1
+	d.deltachEvent('click',fn2);
+}
+
+
+
+
+
+
+
+	</script>
+	<style type="text/css">
+		#school{
+			width: 300px;
+			height: 200px;
+			background: gray;
+		}
+	</style>
+
+</head>
+<body>
+
+	<div id="school">
+		
+	</div>
+	<input type="button" value="加事件" onclick="adde();">
+	<input type="button" value="减事件" onclick="reme();">
+</body>
+</html>

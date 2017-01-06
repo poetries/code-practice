@@ -1,0 +1,41 @@
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>20-eacheach()遍历一个jQuery对象</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-11 16:59:39
+ */
+
+
+$(function(){
+
+//each遍历分别弹出value
+
+// alert($('input').val());//alert弹出一个value而已
+
+$('input').each(function(){//这是在jQuery对象上用的each 用的不多 后面学习ajax  在$上用each  $.each  在$命名空间上用
+	alert($(this).val());
+})
+
+
+
+
+});
+
+	</script>
+
+</head>
+<body>
+	<form action="">
+		<input type="text" name="" id="" value="1">
+		<input type="text" name="" id="" value="2">
+		<input type="text" name="" id="" value="3">
+	</form>
+	<p></p>
+</body>
+</html>

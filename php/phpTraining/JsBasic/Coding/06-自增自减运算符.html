@@ -1,0 +1,42 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>自增自减运算符</title>
+    <script type="text/javascript">
+        /**
+         * @Author:     poetries
+         * @DateTime:   2016-06-03 20:14:58
+         */
+
+         //++a/--a 先把变量a的值加减1在返回使用
+         //a++/a-- 把变量a的值使用 在加减1返回使用
+
+          //++a  与 a++ 区别
+         function add1(){
+            var age = document.getElementById('ag').value;
+            age = parseInt(age);//把age字符串分析成整型处理
+            //age +=1; //在js中+号有两个作用 用于运算  用于连接字符（+号碰到字符串当做连接用）要当成数字用  要转成数字
+            document.getElementById('ag').value = ++age;
+
+
+         }
+
+           function add2(){
+            var age = document.getElementById('ag').value;
+            age = parseInt(age);
+            alert('你现在'+(age++)+'岁'+'等过完生日你大一岁了');
+            document.getElementById('ag').value = age;
+
+
+         }
+
+    </script>
+</head>
+<body>
+
+<input type="text" name="age" id="ag" value="0">
+<input type="button" value="长大1" onclick="add1();" />
+<input type="button" value="长大2" onclick="add2();" />
+
+</body>
+</html>

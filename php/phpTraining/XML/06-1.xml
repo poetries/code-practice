@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding="utf-8" ?>
+<appstore>
+    <goods goods_id="j001">
+        <name>天龙八部</name>
+        <intro><![CDATA[这是一部好书]]></intro>
+    </goods>
+        <goods goods_id="j002">
+        <name>神雕侠侣</name>
+        <intro><![CDATA[这是一部好看的电视剧]]></intro>
+    </goods>
+	</appstore>

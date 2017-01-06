@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //作用域
+        //var的本质
+        var a = 3; //声明a变量并赋值
+        b = 3;//只是一个赋值
+
+        //js作用域的特点
+        //首先在函数内部查找变量 找不到则到外层函数查找 直到最外层
+        //即window对象 并操作window对象的属性
+
+        console.log(window.a,window.b);
+        function t(){
+            var a = 'local';
+            b = 'global';
+        }
+        console.log(window.a,window.b);
+
+        window.str = 'union';//屏幕china哪一行后 str将来这里找 这一行优先级3
+        function t1(){
+           // var str = 'china'; //这一行优先级2
+
+            function t2(){
+               // var str = 'japan'; //这一行优先级1 屏蔽了该语句 js并不报错 而是往上一层找str
+                str = 'Austratia';//这里不加var 是赋值 全局都可以用 会污染全局变量
+                alert(str);//Austratia
+            }
+            t2();
+        }
+
+        t1();
+        alert(window.str);//Austratia 这里是由于不加var引起 加var限定了局部变量
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

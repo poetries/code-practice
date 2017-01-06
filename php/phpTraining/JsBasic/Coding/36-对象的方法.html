@@ -1,0 +1,79 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>对象的方法</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-04 23:35:34
+ */
+/**
+ * 对象的方法:
+ *
+ * 在js中 函数本身就是变量 而在数组和对象中存储的就是‘变量’
+ * 对象的某个属性的值--没有可能是一个哈函数？也是可以的
+ *
+ * 对象的某个属性对象的值可以是函数，如果是函数时，这个属性叫做方法
+ *
+ *
+ * 如果对象的某个方法（属性），需要调用自身的某个属性值，可以在函数中用一个关键词this来代替自己这个对象
+ *
+ * this-->指向当前正在调用这个方法的对象（对象自身）
+ * 
+ */
+//写法1
+/* 	
+
+var stu = {name:'张三',age:20,talk:function (){alert('哈哈哈');}};
+
+ 	// alert(stu.talk);
+ 	
+ 	stu.talk();//调用这个函数
+
+
+ 	*/
+ 
+ //写法2
+ 
+/*
+var zhang = {name:'张三',age:20,talk:null};
+var lisi = {name:'李四',age:22,talk:null};
+
+
+function t(pname){
+	alert('你好'+pname);
+}
+
+zhang.talk = t;
+zhang.talk(zhang.name);
+
+lisi.talk = t;
+lisi.talk(lisi.name);
+
+*/
+
+//写法3  推荐
+
+var zhang = {name:'张三',age:20,talk:null};
+var lisi = {name:'李四',age:22,talk:null};
+
+
+function t(){
+	alert('你好'+this.name);//this指向当前正在调用这个方法的对象
+}
+
+zhang.talk = t;
+zhang.talk();
+
+lisi.talk = t;
+lisi.talk();
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

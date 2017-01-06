@@ -1,0 +1,77 @@
+/*common start*/
+html,
+body{
+	width:100%;
+	height:100%;
+	font-family:'Microsoft Yahei','Arial';
+}
+body,
+p,
+ul,
+dl{
+	margin:0px;
+	padding:0px;
+}
+a{
+	text-decoration:none;
+}
+ul{
+	list-style:none;
+}
+
+
+#charts_area{
+	width:728px;
+	height:238px;
+	position:relative;
+}
+#charts_area ul.tabs{
+	position:absolute;
+	z-index:1;
+	width:auto;
+	border:none;
+}
+#charts_area ul.tabs li{
+	width:42px;
+	height:26px;
+	cursor:pointer;
+	background-image:url("../images/btn_icharts.png");
+}
+#charts_area ul.tabs li.pie{
+	background-position:0px -26px;
+}
+#charts_area ul.tabs li.line{
+	background-position:-41px 0px;
+}
+#charts_area ul.tabs li.on{
+	border:none;
+}
+#charts_area div.pages{
+	width:100%;
+	height:100%;
+	border:1px solid #ccc;
+}
+#charts_area div.pages div.page{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+#charts_area div.pages div.page div.item{
+	height:100%;
+	width:100%;
+	position:absolute;
+}
+#charts_area div.pages div.page div.item *{
+	float:left;
+	margin-right:20px;
+}
+#charts_area div.pages div.page div.fz{
+	height:100%;
+	width:200%;
+	background-repeat:no-repeat;
+	background-image:url("../images/bg_arrow_zcgl.png");
+	position:absolute;
+	left:500px;
+}
+/*user detail block end*/
+

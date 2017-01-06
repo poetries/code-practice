@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>实现两端对齐的便捷方法</title>
+		<script src="../js/jquery-2.1.4.js"></script>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			html,body{
+				width:100%;
+				height:100%;
+			}
+			div.menu_func{
+				width:100%;
+				height:200px;
+				background:#abcdef;
+			}
+			div.menu_func ul.menu_list{
+				width:100%;
+				display:block;
+				text-align:center;
+				
+			}
+			div.menu_func ul.menu_list:after{/*设置第一处：:after*/
+				content:'';
+				display:inline-block;
+				width:100%;
+			}
+			div.menu_func ul.menu_list li{
+				margin-top:50px;
+				width:65px;
+				height:100%;
+				display:inline-block;/*设置第二处：display:inline-block;*/
+				margin-right:50px;
+				*float:left;/*兼容IE7*/
+				*width:16.6%;
+			}
+			div.menu_func ul.menu_list li i{
+
+				background-image:url("img/icon_65_aask.png");
+				width:65px;
+				height:65px;
+				display:block;
+				background-position:0 -65px;
+				
+			}
+			div.menu_func ul.menu_list li p{
+				margin-top:10px;
+				font-size:14px;
+				color:#fff;
+			}
+			div.menu_func ul.menu_list li a{
+				text-decoration:none;
+			}
+
+
+		</style>
+	</head>
+	<body>
+	<!-- 不兼容IE8以下的浏览器 -->
+		<div class="menu_func">
+			<ul class="menu_list">
+				<li><a href="#">
+						<i></i>
+						<p>转账</p>
+					</a></li>
+				<li><a href="#">
+						<i></i>
+						<p>转账</p>
+					</a></li>
+				<li><a href="#">
+						<i></i>
+						<p>转账</p>
+					</a></li>
+				<li><a href="#">
+						<i></i>
+						<p>转账</p>
+					</a></li>
+				<li><a href="#">
+						<i></i>
+						<p>转账</p>
+					</a></li>
+				<li><a href="#">
+						<i></i>
+						<p>转账</p>
+					</a></li>
+			</ul>
+		</div>	
+	</body>
+	<script>
+		
+	</script>
+</html>

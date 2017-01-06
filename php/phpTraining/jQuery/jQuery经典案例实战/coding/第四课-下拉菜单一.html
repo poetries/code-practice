@@ -1,0 +1,72 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>下拉菜单-案例一</title>
+	<script type="text/javascript" src="../src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-24 07:38:57
+ */
+
+
+$(function(){
+var btn = $('span');
+var Con = $('ul');
+
+btn.click(function(event) {
+
+/*	if(Con.is(':visible')){
+		Con.slideUp(500);
+	}else{
+		Con.slideDown(500);
+	}*/
+
+	Con.slideToggle();
+});
+
+
+});
+
+
+	</script>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		li{
+			list-style: none;
+		}
+		body{
+			margin: 50px;
+		}
+		a{
+			text-decoration: none;
+			color: red;
+		}
+		ul{
+			border: 2px solid #abcdef;
+			width: 200px;
+			display: none;
+		}
+		span{
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<span>更多</span>
+	<ul>
+		<li><a href="">cloude disk</a></li>
+		<li><a href="">calendar</a></li>
+		<li><a href="">translation</a></li>
+		<li><a href="">blogger</a></li>
+		<li><a href="">economy</a></li>
+		<li><a href="">album</a></li>
+		<li><a href="">video</a></li>
+	
+	</ul>
+</body>
+</html>	

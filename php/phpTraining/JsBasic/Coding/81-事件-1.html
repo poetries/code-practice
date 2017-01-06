@@ -1,0 +1,46 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>修改背景颜色</title>
+	<script type="text/javascript">
+/**
+		 * @CreateBy:   SublimeText3
+		 * @Author:     poetries
+		 * @DateTime:	2016-06-08 09:50:00
+		 */
+
+
+/**
+ * 点击div 就是要修改div 但是在函数中 却重新通过document.get来获取这个对象 转了一圈 走了弯路
+ *
+	function t(){
+		 document.getElementById('school').style.background = 'red';
+
+	}*/
+
+//window.onload = function()匿名加载函数 避免script写在结尾
+window.onload = function(){
+		 document.getElementById('school').onclick = function (){
+	 	this.style.background = 'red';
+	 }
+	 //this.style.background = 'red'; 不能只写这一句  因为此时this 指向window
+
+}
+
+	</script>
+	<style type="text/css">
+		#school{
+			width: 300px;
+			height: 200px;
+			background: gray;
+		}
+	</style>
+
+</head>
+<body>
+
+	<div id="school" onclick="t();">
+		
+	</div>
+</body>
+</html>

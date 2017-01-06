@@ -1,0 +1,43 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>函数是一种变量</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-04 17:01:32
+ */
+
+		function t(){
+			alert('哈哈');
+		}
+
+		var m = t;//这里不用加括号 加括号就是调用  函数就是一个变量 变量名就是函数名 变量允许赋值
+		m();
+
+
+		// 可以这样写
+		
+		var s = function t(){
+			alert('嘻嘻');
+		}
+
+		alert(s);
+		/**
+		 * 结果：
+		 * 		function t(){
+				alert('嘻嘻');
+				}
+		 */
+		
+		
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

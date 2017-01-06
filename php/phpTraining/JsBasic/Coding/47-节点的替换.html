@@ -1,0 +1,42 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>节点的替换</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-05 22:03:02
+ */
+/**
+ * 思路：
+ *
+ * 1、先创建一个新的节点
+ * 2、找到要被替换掉的酒节点
+ * 3、到旧节点的父节点角度去替换 replaceChild(新,旧)
+ */
+
+ 	function t1(){
+ 		var nodeli = document.createElement('li');
+/* 		var liText = document.createTextNode('连英');
+ 		nodeli.appendChild(liText);*/
+ 		nodeli.innerHTML = '连英';//避免了创建文本节点 innerHTML
+
+ 		var oldli = document.getElementsByTagName('ul')[0];
+ 		oldli.replaceChild(nodeli,oldli.children[3]);// replaceChild(新,旧)
+ 	}
+	</script>
+</head>
+<body>
+	<ul>
+		<li>东</li>
+		<li>南</li>
+		<li>西</li>
+		<li>北</li>
+	</ul>
+	<div id="cart">
+	</div>
+
+	<input type="button" value="把北替换成连英" onclick="t1();">
+</body>
+</html>

@@ -1,0 +1,84 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jQ实现tab标签页</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-11 19:44:43
+ */
+
+$(function(){
+
+$('#ul li').click(function(event) {
+	//1、点击li时切换样式
+	//$(this).addClass('current').siblings().removeClass('current');
+
+	//2、根据li的索引值来确定 来确定哪个div显示 哪个div隐藏 eq(索引值) 确定第几个元素
+	//$('#content>div').siblings($(this).eq(index()).show().siblings().hide();//$(this).eq(index()当前li的索引  show()就是display :block hide()就是display:none
+
+	//children()选取子元素 parent()选取父元素  next() 选择后面紧跟的兄弟元素
+	//整合成一行 .parent()获得了ul next()获得同一级的兄弟元素 div
+	$(this).addClass('current').siblings().removeClass('current').parent().next().siblings($(this).eq(index()).show().siblings().hide();
+
+});
+
+
+
+});
+
+	</script>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		body{
+			margin: 50px;
+		}
+
+		#ul li{
+			height: 30px;
+			line-height: 30px;
+			padding: 0 15px;
+			border:1px solid blue;
+			float: left;
+			margin-right: 3px; 
+			cursor: pointer;
+		}
+		#ul li.current{
+			background: #abcdef;
+		}
+		#ul{
+			height: 30px;
+			margin-bottom: 10px;
+			list-style: none;
+		}
+		#content div{
+			width: 300px;
+			height: 200px;
+			border:1px solid red;
+			display: none;
+		}
+		#content .show{
+			display: block;
+
+		}
+
+	</style>
+</head>
+<body>
+	<ul id="ul">
+		<li class="current">php</li>
+		<li>ruby</li>
+		<li>java</li>
+	</ul>
+	<div id="content">
+		<div class="show">php...介绍</div>
+		<div>ruby...介绍</div>
+		<div>java...介绍</div>
+	</djava
+</bjava
+</html>

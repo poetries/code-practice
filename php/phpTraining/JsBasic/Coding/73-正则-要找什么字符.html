@@ -1,0 +1,69 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>要找什么字符</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-07 00:03:50
+ */
+
+function t1(){
+	var cont = document.getElementById('cont');
+	var cv = cont.value;
+
+	var reg = /[347]/;// 匹配347任意一个字符的集合[abcd] 匹配abdc任意一个
+	alert(reg.test(cv));
+
+}
+
+
+function t2(){
+	var cont = document.getElementById('cont');
+	var cv = cont.value;
+
+	//var reg = /[0123456789]/;
+	//var reg = /[0-9]/;// 匹配有没有数字
+	var reg = /\d/;// \d 表示[0-9]
+	alert(reg.test(cv));
+
+}
+
+function t3(){
+	var cont = document.getElementById('cont');
+	var cv = cont.value;
+
+	var reg = /[A-Z]/;// 匹配有没有数字
+	alert(reg.test(cv));
+
+}
+
+function t4(){
+	var cont = document.getElementById('cont');
+	var cv = cont.value;
+
+	var reg = /[^0-9]/;// 匹配非数字 0-9之外的字符  对于网上发布手机号之类的很有用 比如1300 把00换成OO 就没法认出
+	if(reg.test(cv)){
+		alert('有非数字存在');
+	}else{
+		alert('全是数字');
+	}
+
+}
+	</script>
+<style type="text/css">
+	textarea{
+	width: 400px;
+	height: 200px; 
+	}
+</style>
+</head>
+<body>
+	<textarea id='cont'></textarea>
+	<p><input type="button" value="找不好的数字" onclick="t1();"></p>
+	<p><input type="button" value="有没有数字" onclick="t2();"></p>
+	<p><input type="button" value="有没有大写字母" onclick="t3();"></p>
+	<p><input type="button" value="是否全为数字" onclick="t4();"></p>
+</body>
+</html>

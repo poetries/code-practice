@@ -1,0 +1,46 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>替换节点</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-11 22:02:48
+ */
+
+/**	替换节点：(用的不多)
+ * 
+ *1、replaceWith()将所有匹配的元素替换成指定的HTML或DOM元素
+ *
+ *2、replaceAll() 用指定的元素替换掉所有选择到匹配到的元素
+ * 
+ */
+
+
+$(function(){
+
+// $('p').replaceWith('<strong>我是strong标签</strong>')
+
+//(要替换掉的元素)replaceAll (替换掉的目标)
+
+$('<strong>strong标签</strong>').replaceAll($('p'));
+
+
+
+});
+
+
+
+
+
+	</script>
+</head>
+<body>
+	
+
+	<p>p标签</p>
+</body>
+</html>

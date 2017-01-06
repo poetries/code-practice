@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>lesson08</title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+
+ //普通函数
+
+ function eat(){//关注的是返回的结果
+
+ }
+
+//构造器函数
+function Person(name){//关注的是通过构造函数在堆中创建的这块内存空间
+
+	this.name = name;
+	var money = 1000000;//私有的变量 只在函数能使用
+
+	//一般情况下 不要把函数定义在构造函数里面 一定定义在prototype里面
+
+	this.getMoney = function(){//这个方法在函数的内部 能访问到money这个变量
+		money -=10;
+		alert(money);
+		return 10;//每次拿10块
+
+	}
+
+	//this.run = function(){//这里注意：一般功能函数不在这里定义 在prototype中定义 
+						//原因：在这里定义每次都需要动态创建函数的堆栈空间 
+						//有100次调用 就创建100次 为了避免浪费 凡是功能的函数 在prototype中定义 所有的对象都共享原型 无论有多少个对象 调用的时候 都只是prototype内存中的一个
+		//alert(this.name+"在跑步");
+	//}
+}
+//只要是构造器函数 都有一个prototype对象
+
+Person.prototype = {//一般在原型里面定义行为不是定义属性 不然没意义
+
+	speak:function(){
+		alert(this.name+'在说话');
+	},
+	run:function(){
+		alert(this.name+"在跑步");
+	},
+	getMoney:function(){//提供接口
+		return 10;//这里不能访问到money
+	}
+};
+
+//也可以这样写
+
+Person.prototype.work = function(){//prototype本身是一个对象 给对象的属性加一个方法 work
+
+	alert(this.name+"在工作");
+}
+
+/*
+function Dog(name){
+
+	this.name = name;
+}
+
+
+Dog.prototype = {
+
+	name:'流浪狗',
+	bark:function(){
+
+		alert(this.name+'在旺旺');
+	}
+
+};
+var dog = new Dog("小黄");
+
+*/
+
+var person1 = new  Person('小明');//在执行完这一句new  Person('小明')就会立即去调用Person构造函数
+var person2 = new  Person('小轩');
+
+//person1.run();
+//person2.run();
+
+//person1.work();
+//person2.work();
+
+
+//alert(person1.run == person2.run);//false 原因是：当在构造函数中定义的方法：person1 和person2 他们的地址不一样 是不同的空间
+
+//alert(person1.name);
+//alert(person2.name);
+//person1.speak();
+//person2.speak();
+//alert(person1.speak==person2.speak);//true 说明了 他们本质上是引用同一块prototype的内存空间
+
+
+ var obj1 = new Object();
+  var obj2 = new Object();
+
+ //alert(typeof Person);//function 构造器本身也是函数
+
+ //alert(typeof Object);//function Object也是函数
+
+ //Object这个构造器是浏览器自带的
+
+//给所有的对象都给一个功能 用Object这个最大的对象 修改原型prototype
+
+Object.prototype.logger = function(info){//Object的原型 不能给他重新赋值 但是可以给他添 Object本身是一个对象 给Object的原型加一个方法
+	alert(info);
+
+}
+
+//obj1.logger('这是obj1');
+//obj2.logger('这是obj2');
+
+
+//person1.logger('这是person1');
+//"".logger("这是string");//string
+
+//var obj = {};
+//obj.logger();//对象也有这个logger方法
+//null.logger();//null是特殊的空对象 没有
+
+//结论：Object是所有构造器的老祖宗 一切皆是对象 在对象原型上推荐功能 所有的对象都会有这个功能 只要这个构造器里面的有的功能 所有的构造器的原型里面都会有这个功能
+
+//所有的构造器都是继承于`Object`构造器的，因此只要`Object`的原型里有的功能，所有的对象都有
+
+String.prototype.aaa = function(){//给string的原型 都加一个aaa方法
+	alert(this);//弹出当前对象
+}
+
+var str = '123';//等价于 str = new String('123')
+//str.aaa();//123
+
+//常见的简写
+//str = '' 等价 str= new String()
+// arr= []  等价 arr = new Array()
+// obj = {}  等价 obj = new Object
+
+
+//--------------封装-----------
+//把一些不想让别人知道的东西打包成对象 只提供一些接口
+
+var p = new Person();
+alert(p.getMoney());//只能通过getMoney()拿到钱
+
+</script>
+</body>
+</html>

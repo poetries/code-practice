@@ -1,0 +1,53 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		/**
+		 * @Author:     poetries
+		 * @DateTime:	2016-06-03 20:48:45
+		 */
+		
+
+		var age = 1;
+		alert(age);//1
+
+		if(age--){//此处的age 先使用age的值  age在减
+			alert(age++);//0
+		}
+
+
+		if(age){//age此时为零 不执行
+			alert(++age);//2
+		}
+
+
+		if(--age){//--age后 此时age为1
+			document.write(++age);//2  先加1在使用
+		}else{
+			document.write(age);
+		}
+
+		document.write('<hr>');
+
+		var a = 10;
+		var b = a++;//执行完这句 a变成了11
+		document.write(a+'<br>');//11
+		document.write(b+'<br>');//10
+		document.write(a+'<br>');//11
+
+		document.write('<hr>');
+
+		a = 10;
+		b = ++a;
+
+		document.write(a+'<br>');//11
+		document.write(b+'<br>');//11
+		document.write(a+'<br>');//11
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

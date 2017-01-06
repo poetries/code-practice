@@ -1,0 +1,56 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>子元素过滤选择器</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-11 13:11:27
+ */
+
+/**
+ * 子元素过滤选择器：
+ *
+ *:first-child 选择父元素的第一个子元素
+ *:last-child 选择元素的最后一个子元素
+ *:only-child 选择元素中只包含一个子元素的元素
+ *:nth-child(表达式) 选取父元素中第n个元素 n由表达式决定
+ *:first-of-type 选取所有相同元素的第一个兄弟元素
+ *:last-of-type 选取所有相同元素的最后一个兄弟元素
+ *:nth-last-child(表达式)选择所有他们父元素的第n个子元素 计数从最后一个元素开始到第一个
+ *:only-of-type  :nth-of-type(表达式) :nth-last-of-tye(表达式)
+ *
+ * 
+ */
+
+
+$(function(){
+	// $('div p:first-child').css('background','red');
+	// $('div p:only-child').css('background','blue');
+	//$('div p:nth-child(2n)').css('background','blue');// n从1开始 nth-child(n)n是严格按照css的规定 下表从1开始计算   对于其他的选择器 jQuery遵循JavaScript的下标从0开始计算 例如：eq(n)  n从0开始计算
+	//$('div p:nth-child(odd)').css('background','blue');//odd 奇数 even 偶数
+	$('div p:eq(2)').css('background','blue');//选择第三个元素
+	
+});
+
+	</script>
+	<style type="text/css">
+
+	</style>
+</head>
+<body>
+<div id='a'>
+	<p>我是第1个子元素</p>
+	<p>我是第2个子元素</p>
+	<p>我是第3个子元素</p>
+	<p>我是第4个子元素</p>
+	<p>我是第5个子元素</p>
+</div>
+
+<div>
+	<p>我是唯一的一个</p>
+</div>
+</body>
+</html>

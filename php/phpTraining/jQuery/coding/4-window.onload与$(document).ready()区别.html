@@ -1,0 +1,33 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-10 22:03:29
+ */
+
+//证明：window.onload执行最后一个 写再多也用
+
+window.onload = function(){
+	alert(1);
+}
+
+window.onload = function(){
+	alert(2);
+}
+window.onload = function(){
+	alert(3);//执行这个
+}
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

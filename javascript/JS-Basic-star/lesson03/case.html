@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>计数器</title>
+	<style>
+
+*{
+	padding:0;
+	margin:0;
+}
+html,
+body{
+	width:100px;
+	height:100px;
+}
+div.counter a{
+	float:left;
+	width:18px;
+	height:18px;
+	border:1px solid blue;
+	font-style:normal;
+	text-align:center;
+	text-decoration:none;
+	color:#abcdef;
+}
+.counter input{
+	float:left;
+	width:30px;
+	text-align:center;
+	border:none;
+	line-height:20px;
+
+}
+
+
+	</style>
+
+</head>
+<body>
+	<div class="counter">
+		<a href="javascript:add();">+</a>
+		<input readonly="readonly" id="num" type="" value="0">
+		<a href="javascript:jian();">-</a>
+	</div>
+</body>
+<script type="text/javascript">
+
+var num = document.getElementById('num');
+
+function add(){
+
+	//方法一：推荐
+/*	// alert(typeof num.value);
+	var val = parseInt(num.value);//value是字符串string类型 需要转成整形 parseInt
+
+	// alert(val);
+
+	num.value = ++val;*/
+
+//方法二：
+
+	// num.value == 10?10:num.value++;
+	num.value == 10 || num.value++;
+	// num.value++;//这里相当做了一个隐式的转换 num.value = num.value+1  num.value是字符串类型和数字相加
+}
+function jian(){
+	// num.value == 0?0:num.value--;
+
+	//或者这样写 通过逻辑运算来做： 真返回||前面的 否则取后面的值
+	num.value == 0 || num.value--;
+}
+
+</script>
+</html>

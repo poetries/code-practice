@@ -1,0 +1,116 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>常用正则解答</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-07 23:46:30
+ */
+
+function t1(){
+	var cont = document.getElementById('cont');
+	var cv = cont.value;
+
+	var reg = /(\w)\1+/g; //查找连续多个字符  把aaabbccdd换成abcd这个格式
+						/**\1 后向引用，表示表达式中，从左往右数，第一个左括号对应的括号内的内容。
+以此类推，\2表示第二个，\0表示整个表达式**/
+
+
+	alert(cv.replace(reg,'$1'));
+
+}
+
+
+
+function t2(){
+	var cont = document.getElementById('cont');
+	var cv = cont.value;
+
+	//手机号正则：
+	//1开头
+	//358第二位
+	//后九位
+
+	var reg = /1[358]\d{9}/g; // 这种情况适合在一段文本中分析出手机号
+
+	alert(cv.match(reg));//分析手机号
+
+}
+function t3(){
+	var cont = document.getElementById('cont');
+	var cv = cont.value;
+
+	var reg = /^1[358]\d{9}$/g;
+
+	alert(reg.test(cv));// test 验证手机号
+
+}
+
+function t4(){
+	var cont = document.getElementById('cont');
+	var cv = cont.value;
+
+	var reg = /^\s+|\s+$/g; // | 并列 或者 去除两端空格
+
+	alert('--'+cv.replace(reg,'')+'--');
+
+}
+//借助正则限制在一个有限范围内 防止sql注入
+function t5(){
+	var cont = document.getElementById('cont');
+	var cv = cont.value;
+
+	var reg = /^[\w\u4E00-\u9FA0]{4,16}$/; // \u4E00-\u9FA0 中文对应的Unicode编码 验证由字母数字下划线中文组合的4-16位用户名 
+
+	alert(reg.test(cv));
+
+}
+
+function t6(){
+	var cont = document.getElementById('cont');
+	var cv = cont.value;
+
+	var reg = /^[0-9a-zA-Z]\w*(\.[\w]+)*@[0-9a-zA-Z\-]+(\.[\w]+)+$/;
+
+	alert(reg.test(cv));
+
+}
+function t7(){
+	var cont = document.getElementById('cont');
+	var cv = cont.value;
+
+	var reg = //;
+
+	alert(cv.replace(reg,''));
+
+}
+
+
+
+
+
+
+
+	</script>
+	<style type="text/css">
+		textarea{
+			width: 400px;
+			height: 200px; 
+		}
+	</style>
+
+</head>
+<body>
+	<textarea id='cont'></textarea>
+	<p><input type="button" value="1-替换相同字符串" onclick="t1();"></p>
+	<p><input type="button" value="2-分析出手机号" onclick="t2();"></p>
+	<p><input type="button" value="3-验证手机号" onclick="t3();"></p>
+	<p><input type="button" value="4-去除两端空格" onclick="t4();"></p>
+	<p><input type="button" value="5-验证由字母数字下划线中文组合的4-16位用户名" onclick="t5();"></p>
+	<p><input type="button" value="6-验证邮箱" onclick="t6();"></p>
+	<p><input type="button" value="7-清空script代码" onclick="t7();"></p>
+
+</body>
+</html>

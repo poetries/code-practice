@@ -1,0 +1,61 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>修改节点的属性</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-05 22:59:28
+ */
+
+/**
+ *修改节点的属性:
+ *
+ * 1、在节点中，一种是直接写在标签内部的额属性 如下面的：
+ * 	<img src="xx.png">
+	<input type="button" value="">
+
+	注意：有一个例外：控制元素的类名称时，不用obj.class 而是用obj.className
+
+	2、还有一种是直接体现在css的属性里面
+		sytle.各种css属性 比如：width  height border background
+
+
+	在css中的属性与js中控制相应的属性 名称 有一个对应的关系
+	比如：font-size  到js中是变成 fontSize 
+
+	中间有横线的的css属性 js控制时 把css属性中的横线去掉 并把横线厚度额首字母大写
+ * 
+ * 
+ */
+ 	function t1(){
+ 		var email = document.getElementsByName('email')[0].value;
+ 		alert(email);
+ 	}
+
+ 	 function t2(){
+ 		var email = document.getElementsByName('email')[0].value;
+ 		if(email == ''){
+ 			// document.getElementsByName('email')[0].value = '请输入邮件地址';
+ 			alert('请输入一个邮件地址')
+ 			document.getElementsByName('email')[0].value = prompt('请输入邮件地址：');
+ 		}
+
+ 	}
+
+ 	function t3(){
+ 		var email = document.getElementsByName('email')[0];
+ 		email.type = 'radio';
+ 	}
+	</script>
+</head>
+<body>
+<p>
+	<input type="text" name="email" value="">	
+</p>
+<p><input type="button" value="邮件地址" onclick="t1();"></p>
+<p><input type="button" value="检查邮件地址" onclick="t2();"></p>
+<p><input type="button" value="变成radio" onclick="t3();"></p>
+</body>
+</html>

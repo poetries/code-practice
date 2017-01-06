@@ -1,0 +1,56 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>函数声明-封装-调用</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-04 13:52:02
+ */
+
+/**
+ * 函数：是一段封装的代码段，能够完成特定功能
+ *
+ * 重用代码简化开发目的
+ *
+ * 函数的声明语法：function 函数名（[参数1],[参数2]..）
+ *
+ * 函数的返回值：0个或者1个返回值  不可能返回多
+ *
+ * 返回值给谁？答：谁调用 就给谁
+ * 
+ * 
+ */
+
+//从数学角度 函数就是变量的运算关系
+
+//求矩形面积的函数
+	//a b形参
+	function zone(a,b){
+		return a * b;
+	}
+
+	//下面是矩形 4*4 33*32
+	
+	document.write(zone(4,4)+'<br>');
+	document.write(zone(33,32));//1056
+
+	document.write('<br>');
+
+	// var x = 200,y = 100;
+	var x = prompt('请输入你要输入的数字：');
+	var y = prompt('请输入你要输入的数字：');
+	document.write(zone(x,y));
+
+	
+	
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

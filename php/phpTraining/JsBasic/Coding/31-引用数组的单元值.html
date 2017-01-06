@@ -1,0 +1,58 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>引用数组的单元值</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-04 21:03:39
+ */
+
+/**
+ *
+ * 数组每个单元都有一个唯一的索引  从0编号编到length-1  
+ *
+ * 数组单元值的读取：可以凭借数组的索引来确定 通过arr[index]读取
+ *
+ *
+ * 数组的遍历：
+ * for循环配合数组的长度加上索引
+ * 
+ *  
+ */
+
+	var arr = ['a','b','c','d','e','f','g'];
+	//alert(arr[3]);
+	// arr[3] = 'F';
+
+	// alert(arr[3]);
+
+	//数组的遍历 把arr每个单元打印在页面上
+	
+/*	
+	for(var i = 0,len = arr.length;i<len;++i){
+		document.write(arr[i]+'<br>');
+	}
+
+*/
+	//打印数组的正序和逆序
+	for(var i = arr.length-1,j = 0;i>=0;--i,++j){
+		document.write(arr[j]+'--'+arr[i]+'<br>');
+	}
+
+
+/*	for (var i = 9; i >=0; i--) {
+		document.write(i+'<br>');
+	}
+
+	//逆序
+*/
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

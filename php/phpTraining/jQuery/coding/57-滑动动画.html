@@ -1,0 +1,64 @@
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title> 滑动动画</title>
+	<script type="text/javascript" src="./src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-17 17:27:49
+ */
+
+/**
+ * jquery中的动画:
+ *
+	滑动动画
+
+	1、slideDown()
+
+	2、slideUp()
+
+	3、slideToggle()
+
+ * 
+ */
+
+$(function(){
+
+/*	$('a').click(function(){
+		$('p').slideDown(1000);
+	});*/
+
+
+/*	$('a').click(function(){
+			$('p').slideUp(1000);
+		});*/
+
+
+		$('a').click(function(){
+				$('p').slideToggle(1000);
+			});
+});
+
+
+
+
+	</script>
+	<style type="text/css">
+		p{
+			width: 300px;
+			padding: 10px;
+			border: 1px solid red;
+			/*display: none*/
+			
+		}
+	</style>
+</head>
+<body >
+	<a href="#">点击</a>
+	<p>af发发放大看涸鲋得水</p>
+</body>
+</html>
