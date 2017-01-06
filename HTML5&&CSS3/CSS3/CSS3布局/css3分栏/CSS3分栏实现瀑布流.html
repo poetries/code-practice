@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS3分栏实现瀑布流</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#wrap {
+				width: 1000px;
+				margin: auto;
+				/**-webkit-column-width: 200px; /*最小宽度*/
+				-webkit-column-count: 4;
+			}
+			#wrap img{
+				width: 100%;
+				display: block;
+				
+			}
+			#count {
+				width: 300px;
+				margin: 20px auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="count">
+			<input type="text" name="" id="num" placeholder="请输入栏目数量" />
+			<button id="btn">css3瀑布流</button>
+		</div>
+		<div id="wrap">
+			<img src="images/1.jpg" alt="" />
+			<img src="images/2.jpg" alt="" />
+			<img src="images/3.jpg" alt="" />
+			<img src="images/4.jpg" alt="" />
+			<img src="images/5.jpg" alt="" />
+			<img src="images/6.jpg" alt="" />
+			<img src="images/7.jpg" alt="" />
+			<img src="images/8.jpg" alt="" />
+			<img src="images/9.jpg" alt="" />
+			<img src="images/1.jpg" alt="" />
+			<img src="images/2.jpg" alt="" />
+			<img src="images/3.jpg" alt="" />
+			<img src="images/4.jpg" alt="" />
+			<img src="images/5.jpg" alt="" />
+			<img src="images/6.jpg" alt="" />
+			<img src="images/7.jpg" alt="" />
+			<img src="images/8.jpg" alt="" />
+			<img src="images/9.jpg" alt="" />
+			<img src="images/2.jpg" alt="" />
+			<img src="images/3.jpg" alt="" />
+			<img src="images/4.jpg" alt="" />
+			<img src="images/5.jpg" alt="" />
+		</div>
+		<script type="text/javascript">
+			var num = document.getElementById("num");
+			var btn = document.getElementById("btn");
+			var wrap = document.getElementById("wrap");
+			btn.onclick = function(){
+				wrap.style.webkitColumnCount = num.value;
+			}
+		</script>
+	</body>
+</html>
