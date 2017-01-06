@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<svg width="100%" heigt="100%">
+			<circle cx="100" cy="100" r="40" stroke="black" stroke-width="3" fill="red" id="box"></circle>
+		</svg>
+	</body>
+	<script type="text/javascript">
+		var oCir = document.getElementById("box");
+		oCir.onmousedown = function (e){
+			var ev = e || event;
+			var disX = ev.clientX - Number(this.getAttribute("cx"));
+			var disY = ev.clientX - Number(this.getAttribute("cy"));
+			var largeX = 0;
+			var largeY = 0;
+			document.onmousemove = function(e){
+				var ev = e || event;
+				var X = ev.clientX - disX;
+				var Y = ev.clientY -disY;
+				//document.title = "x:"+X+"y:"+Y;
+				oCi.iSpeedX = X - largeX;
+				oCi.iSpeedY = Y - largeY;
+				largeX = X;
+				largeY = Y;
+				oCir.setAttribute("cx",X);
+				oCir.setAttribute("cy",Y);
+			}
+			document.onmouseup = function(){
+				document.onmousemove = null;
+				document.onmouseup = null;
+				move(oCir);
+			}
+		}
+		function move(obj){
+			setInterval(function(){
+				//每次改变盒子的位置
+				var X = Number(obj.getAttribute("cx"))+obj.iSpeedX;
+		var Y = Number(obj.getAttribute("cy"))+obj.iSpeedY;
+				
+				obj.setAttribute("cx",X);
+				obj.setAttribute("cy",Y);
+			},300);
+		}
+	</script>
+</html>

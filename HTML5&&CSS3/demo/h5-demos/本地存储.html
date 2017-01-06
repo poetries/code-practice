@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>本地存储</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			localStorage.name = "小明";
+			localStorage.age = 22;
+			document.write("姓名"+localStorage.name+"年龄"+localStorage.age+"<br>" )
+			
+			if(localStorage.pageCount){
+				localStorage.pageCount = Number(localStorage.pageCount)+1;
+			}else{
+				localStorage.pageCount = 1;
+			}
+			document.write(localStorage.pageCount);
+		</script>
+	</body>
+</html>

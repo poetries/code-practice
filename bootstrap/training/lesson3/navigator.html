@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="../src/css/bootstrap.min.css">
+</head>
+<body>
+		<!--
+        	作者：1719662073@qq.com
+        	时间：2016-08-25
+        	描述：下拉菜单三要素：按钮 下拉的内容 下拉的动作
+        -->
+		<div class="container">
+				<!--tab标签页导航 水平方向展示 出现边框-->
+				<ul class="nav nav-tabs nav-justified">
+						<li class="active"><a href="javasctipt:;">新闻</a></li>
+						<li><a href="javascript:;">音乐</a></li>
+						<li><a href="javascript:;">电影</a></li>
+						<li><a href="javascript:;">视频</a></li>
+						<li><a href="javascript:;">体育</a></li>
+				</ul>
+				
+				<!--胶囊样式导航 水平分片显示 选中高亮 无边框-->
+				<ul class="nav nav-pills nav-justified">
+						<li><a href="javasctipt:;">新闻</a></li>
+						<li><a href="javascript:;">音乐</a></li>
+						<li class="active"><a href="javascript:;">电影</a></li>
+						<li><a href="javascript:;">视频</a></li>
+						<li><a href="javascript:;">体育</a></li>
+				</ul>
+				
+				<!--垂直分布导航-->
+				<ul class="nav nav-pills nav-stacked">
+						<li><a href="javasctipt:;">新闻</a></li>
+						<li><a href="javascript:;">音乐</a></li>
+						<li class="active"><a href="javascript:;">电影</a></li>
+						<li><a href="javascript:;">视频</a></li>
+						<li><a href="javascript:;">体育</a></li>
+				</ul>
+				
+				<!--面包屑导航 在加载下一个li之前加斜杠-->
+				<ul class="breadcrumb">
+						<li><i class="glyphicon glyphicon-home"></i><a href="javasctipt:;">新闻</a></li>
+						<li><a href="javascript:;">音乐</a></li>
+						<li class="active"><a href="javascript:;">电影</a></li>
+						<li><a href="javascript:;">视频</a></li>
+						<li><a href="javascript:;">体育</a></li>
+				</ul>
+				
+				<!--带下拉菜单的胶囊导航且等分导航  -->
+				
+				<ul class="nav nav-pills nav-justified">
+						<li class="dropdown">
+							<a href="javascript:;" data-toggle="dropdown">新闻
+							<span class="caret"></span></a>
+							<ul class="dropdown-menu pull-right">
+									<li><a href="javascript:;">国内新闻</a></li>
+									<li><a href="javascript:;">国际新闻</a></li>
+							</ul>
+						</li>
+						<li><a href="javascript:;">音乐</a></li>
+						<li><a href="javascript:;">电影</a></li>
+						<li><a href="javascript:;">视频</a></li>
+						<li><a href="javascript:;">体育</a></li>
+				</ul>
+				
+				<!--分页导航-->
+				
+				<ul class="pagination">
+						<li><a href="javascript:;">首页</a> </li>
+						<li><a href="javascript:;">上一页</a> </li>
+						<li><a href="javascript:;">...</a> </li>
+						<li><a href="javascript:;">3</a> </li>
+						<li><a href="javascript:;">4</a> </li>
+						<li><a href="javascript:;">5</a> </li>
+						<li class="active"><a href="javascript:;">6</a> </li>
+						<li class="disabled"><a href="javascript:;">下一页</a> </li>
+						<li class="disabled"><a href="javascript:;">尾页</a> </li>
+				</ul>
+		</div>
+</body>
+<script type="text/javascript" src="../src/js/jquery-1.11.0.js" ></script>
+<script type="text/javascript" src="../src/js/bootstrap.min.js" ></script>
+</html>

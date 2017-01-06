@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>时钟</title>
+	</head>
+	<body>
+		<p id="time"></p>
+		<button id="btn">当前时间</button>
+	</body>
+	<script type="text/javascript">
+		var timer = document.getElementById("time");
+		var btn = document.getElementById("btn");
+		var count = 0;
+		function time(){
+			var time = new Date();
+			var currTime = "现在的时间是："+time.getFullYear()+"年"+(time.getMonth()+1)+"月"+time.getDate()+"日"+"星期"+time.getDay()+"&nbsp;"+time.getHours()+"时"+time.getMinutes()+"分"+time.getSeconds()+"秒"+time.getMilliseconds()+"毫秒"+"<br>";
+			timer.innerHTML += currTime;
+			//timer.innerHTML = currTime;
+			count++;
+			if(count==100000){
+				document.write('<p style="color:red;">'+currTime+'</p>');
+			}
+			
+		}
+		
+		
+/*		btn.onclick = function(){
+			for(var i=0;i<=10;i++){
+				time();
+				
+			}
+		};*/
+		
+		btn.onclick = function(){
+			var Timer = setInterval(time,1000);
+			
+		};
+	</script>
+</html>

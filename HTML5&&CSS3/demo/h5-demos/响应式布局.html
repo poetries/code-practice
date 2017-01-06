@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>响应式布局</title>
+		<style type="text/css">
+		/*公共样式*/
+		*{ margin:0; padding:0;}
+		body{ color:#FFF;}
+		.header{ background:#333; height:100px;}
+		.sidebarLeft,.sidebarRight,.main{background:#333;}/*中间部分*/
+		.footer{background:#333; height:100px;}
+		/*上中下的外边距,居中*/
+		.header,.footer,.container{ margin:10px auto 0 auto; text-align:center;}
+		/*公共样式 End*/
+		/*PC样式*/
+		@media screen and (min-width:960px){
+		.header,.container,.footer{ width:960px;}
+		.sidebarLeft,.main,.sidebarRight{ float:left; height:400px;}
+		.sidebarLeft,.sidebarRight{ width:200px;}
+		.main{ margin-left:10px; margin-right:10px; width:540px;}
+		.container{ height:400px;}
+		}
+		/*PC样式 end*/
+		/*平板样式*/
+		@media screen and (min-width:600px) and (max-width:960px){
+		.header,.container,.footer{ width:600px;}
+		.sidebarLeft,.main{ float:left; height:400px;}
+		.sidebarRight{ display:none;}
+		.sidebarLeft{ width:160px;}
+		.main{ margin-left:10px; width:430px;}
+		.container{ height:400px;}
+		}
+		/*平板样式 end*/
+		/*手机手机样式*/
+		@media screen and (max-width:600px){
+		.header,.container,.footer{ width:400px;}
+		.sidebarLeft,.sidebarRight{width:400px; height:100px;}
+		.main{ width:400px; height:200px; margin-top:10px;}
+		.sidebarRight{ margin-top:10px;}
+		.container{ height:420px;}
+		/*手机手机样式end*/
+		}
+			
+		</style>
+	</head>
+	<body>
+		<div class="header">header</div>
+		<div class="container">
+			<div class="sidebarLeft">left-side</div>
+			<div class="main">center</div>
+			<div class="sidebarRight">right-side</div>
+		</div>
+		<div class="footer"class="clear">footer</div>
+	</body>
+</html>

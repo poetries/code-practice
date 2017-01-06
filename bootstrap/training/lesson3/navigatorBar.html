@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="../src/css/bootstrap.min.css">
+</head>
+<body>
+<!--
+	作者：1719662073@qq.com
+	时间：2016-08-25
+	描述：导航条=导航+搜素框+brand+...
+			导航条的用法：在导航的基础上ul class="nav"添加class="navbar-nav"
+								在导航的外层添加一层div容器 并加上class <div class="navbar navbar-default" navbar的作用是控制导航条的大小 边距 行距
+									
+-->
+
+	<div class="container">
+		<!--导航条里面只包含导航-->
+			<div class="navbar navbar-default">
+					<ul class="nav navbar-nav">
+						<li><a href="javasctipt:;">新闻</a></li>
+						<li><a href="javascript:;">音乐</a></li>
+						<li class="active"><a href="javascript:;">电影</a></li>
+						<li><a href="javascript:;">视频</a></li>
+						<li><a href="javascript:;">体育</a></li>
+				</ul>
+			</div>
+			
+			<!--导航条里面包含导航+导航头-->
+			<div class="navbar navbar-default">
+					<!--navbar-header float:left-->
+					<div class="navbar-header">
+							<button class="btn btn-default" style="margin: 8px;8px;5px;5px;">
+									<span class="glyphicon glyphicon-home"></span>
+							</button>
+					</div>
+					<ul class="nav navbar-nav">
+						<li><a href="javasctipt:;">新闻</a></li>
+						<li><a href="javascript:;">音乐</a></li>
+						<li class="active"><a href="javascript:;">电影</a></li>
+						<li><a href="javascript:;">视频</a></li>
+						<li><a href="javascript:;">体育</a></li>
+				</ul>
+			</div>
+			
+			<!--导航条里面包含导航+导航头+搜素框-->
+			<div class="navbar navbar-default">
+					<!--navbar-header float:left-->
+					<div class="navbar-header">
+						<!--navbar-brand 控制字体大小 控制显示宽度-->
+							<button class="btn btn-default navbar-brand" style="margin: 0px;5px;0px;5px;">
+									<span class="glyphicon glyphicon-home"></span>
+							</button>
+					</div>
+					<ul class="nav navbar-nav">
+						<li><a href="javasctipt:;">新闻</a></li>
+						<li><a href="javascript:;">音乐</a></li>
+						<li class="active"><a href="javascript:;">电影</a></li>
+						<li><a href="javascript:;">视频</a></li>
+						<li><a href="javascript:;">体育</a></li>
+				</ul>
+				<div class="navbar-form">
+						<div class="input-group">
+								<input type="text" class="form-control" placeholder="请输入关键字" />
+								<span class="input-group-btn">
+										<button class="btn btn-primary">搜索 </button>
+								</span>
+						</div>
+				</div>
+			</div>
+			
+			<!--导航条里面包含导航+导航头+搜素框（搜索图片）-->
+			<div class="navbar navbar-default">
+					<!--navbar-header float:left-->
+					<div class="navbar-header">
+						<!--navbar-brand 控制字体大小 控制显示宽度-->
+							<button class="btn btn-default" style="margin: 8px;8px;5px;5px;">
+									<span class="glyphicon glyphicon-home"></span>
+							</button>
+					</div>
+					<ul class="nav navbar-nav">
+						<li><a href="javasctipt:;">新闻</a></li>
+						<li><a href="javascript:;">音乐</a></li>
+						<li class="active"><a href="javascript:;">电影</a></li>
+						<li><a href="javascript:;">视频</a></li>
+						<li><a href="javascript:;">体育</a></li>
+				</ul>
+				<!--navbar-right 居右 但是没有margin-->
+				<div class="navbar-form navbar-right">
+						<div class="input-group">
+								<input type="text" class="form-control" placeholder="请输入关键字" />
+								<span class="input-group-addon">
+										<span class="glyphicon glyphicon-search">搜索 </span>
+								</span>
+						</div>
+				</div>
+			</div>
+			
+			<!--导航条里面包含导航+导航头+搜素框（响应式导航）-->
+			<div class="navbar navbar-default">
+					<div class="navbar-header">
+							<!--navbar-toggle 在宽屏时不显示内容 即icon-bar-->
+							<button class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse-responsive">
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<button class="btn btn-default navbar-brand" style="margin: 0px 5px 0px 5px;">
+								<span class="glyphicon glyphicon-home"></span>
+									
+							</button>
+					</div>
+					<!--collapse navbar-collapse 在窄屏幕时不显示所包含内容-->
+					<div class="navbar navbar-collapse nav-collapse-responsive">
+							<ul class="nav navbar-nav">
+									<li><a href="javasctipt:;">新闻</a></li>
+									<li><a href="javascript:;">音乐
+										<span class="label label-default">new</span>	
+									</a></li>
+									<li class="active"><a href="javascript:;">电影</a></li>
+									<li><a href="javascript:;">视频
+										<span class="badge pull-right">5</span>
+									</a></li>
+									<li><a href="javascript:;">体育</a></li>
+							</ul>
+					</div>
+			</div>
+			
+	</div>
+</body>
+<script type="text/javascript" src="../src/js/jquery-1.11.0.js" ></script>
+<script type="text/javascript" src="../src/js/bootstrap.min.js" ></script>
+</html>

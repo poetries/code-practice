@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>canvas</title>
+	</head>
+	<body>
+		<canvas id="can" width="600px" height="600px" style="background: yellow;"></canvas>
+	</body>
+	<script type="text/javascript">
+		var canvas = document.getElementById("can");
+		var d = canvas.getContext("2d");
+		var jianbian = d.createLinearGradient(0,0,150,150);
+		
+		//画一条直线
+		
+		d.beginPath();//下笔
+		d.strokeStyle="red";//笔触样式
+		d.lineWidth = 5;//笔触大小
+		d.moveTo(18,60);//起始点
+		d.lineTo(160,250);//结束点
+		d.stroke();//绘制
+		d.closePath();//提笔
+		
+		d.beginPath();
+		d.moveTo(18,60);
+		d.lineTo(15,250);
+		d.stroke();
+		d.closePath();
+		
+		//画一个圆形
+		
+		d.beginPath();//下笔
+		d.strokeStyle = "green";
+		d.lineWidth = 5;
+		d.arc(70,220,50,0,7,true);//true设置为缺角
+		d.stroke();//绘制
+		d.closePath();//提笔
+		
+		//画一个 实心圆+矩形组合
+		
+		d.beginPath();//下笔
+		d.fillStyle="red";//设置填充颜色
+		d.strokeStyle = "pink";
+		d.lineWidth = 4;
+		d.arc(350,75,50,0,7,false);//画圆
+		d.fill();
+		d.stroke();//绘制
+		d.closePath();//提笔
+		
+		//矩形
+		
+		d.beginPath();//下笔
+		d.strokeStyle = "blue";
+		d.lineWidth = 3;
+		d.rect(300,20,100,110);
+		d.stroke();//绘制
+		d.closePath();//提笔
+		
+
+		//画奥运五环
+		
+		d.beginPath();//下笔
+		d.strokeStyle = "green";
+		d.lineWidth = 5;
+		d.arc(80,360,50,0,7,false);//true设置为缺角
+		d.stroke();//绘制
+		d.closePath();//提笔
+		
+		d.beginPath();//下笔
+		d.strokeStyle = "black";
+		d.lineWidth = 5;
+		d.arc(160,340,50,0,7,false);//true设置为缺角
+		d.stroke();//绘制
+		d.closePath();//提笔
+		
+		d.beginPath();//下笔
+		d.strokeStyle = "brown";
+		d.lineWidth = 5;
+		d.arc(230,360,50,0,7,false);//true设置为缺角
+		d.stroke();//绘制
+		d.closePath();//提笔
+		
+		d.beginPath();//下笔
+		d.strokeStyle = "blue";
+		d.lineWidth = 5;
+		d.arc(300,340,50,0,7,false);//true设置为缺角
+		d.stroke();//绘制
+		d.closePath();//提笔
+		
+		d.beginPath();//下笔
+		d.strokeStyle = "green";
+		d.lineWidth = 5;
+		d.arc(370,360,50,0,7,false);//true设置为缺角
+		d.stroke();//绘制
+		d.closePath();//提笔
+		
+		
+		//渐变文字
+		
+		jianbian.addColorStop(0,'red');
+		jianbian.addColorStop(1,'green');
+		d.fillStyle=jianbian;
+		d.font="40px 微软雅黑";
+		d.fillText("@poetries",0,50);
+		
+		d.beginPath();
+		d.lineWidth = 2;
+		d.strokeStyle="cadetblue";
+		d.strokeText("奥运五环",150,470);
+		d.closePath();
+		
+		
+		
+	</script>
+</html>

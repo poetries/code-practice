@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<canvas id="mycanvas" width="700px" height="700px" style="background: yellow;"></canvas>
+	</body>
+	<script type="text/javascript">
+	
+	var canvas=document.getElementById('mycanvas');
+	var d=canvas.getContext('2d'); 
+	var jianbian=d.createLinearGradient(19,75,150,150);
+	
+//	渐变文字
+//	jianbian.addColorStop(0,'red');
+//	jianbian.addColorStop(1,'green');
+//	d.fillStyle=jianbian;
+//	d.font="40px 微软雅黑";
+//	d.fillText("奥运五环",0,50);
+
+	//渐变矩形
+	jianbian.addColorStop(0,'green');
+	jianbian.addColorStop(1,'pink');
+	d.fillStyle=jianbian;
+	d.font="40px 微软雅黑";
+	d.fillRect(0,0,330,330);
+
+	//镂空文字
+	d.beginPath();
+	d.lineWidth = 1;
+	d.strokeStyle="red";
+	d.strokeText("@poetries",75,180);
+	
+	</script>
+</html>

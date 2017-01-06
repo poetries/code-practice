@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>css3背景</title>
+		<style type="text/css">
+			div{
+				width: 200px;
+				height: 200px;
+				background-image: url(../src/images/bg_flower.gif),url(../src/images/caihong.png),url(../src/images/3.png);
+				background-repeat: no-repeat;
+				border: 30px solid red;
+				background-position: center top; 
+				background-origin: content-box;
+				padding: 50px;
+				background-color: #008000;
+				background-clip: content-box;
+				/*background-clip 指定颜色的显示范围*/
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			
+			background-size(尽量不用 对浏览器打开速度慢) 属性规定背景图像的尺寸
+			语法：background-size:xxpx
+
+			background-origin [padding-box是默认值]
+			属性规定 background-position 属性相对于什么位置来定位	
+			 background-position 相对于盒子来定位
+			 
+			值:
+			padding-box 背景图像相对于内边距框来定位
+			border-box 背景图像相对于边框盒来定位
+			content-box 背景图像相对于内容框来定位
+			
+			background-clip 指定颜色的显示范围
+		-->
+		<div></div>
+		
+	</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>for循环</title>
+	</head>
+	<body>
+		<p id="test"></p>
+		<button>点击一下</button>
+	</body>
+	<script type="text/javascript">
+		var test = document.getElementById("test");
+		var btn = document.getElementsByTagName("button")[0];
+		function fun(){
+			var v = "";
+			for (var i=0;i<=5;i++) {
+				v += "我是第"+i+"个"+"<br>";
+			}
+			test.innerHTML += v+"<br>";
+		}
+		btn.onclick = fun;
+	</script>
+</html>

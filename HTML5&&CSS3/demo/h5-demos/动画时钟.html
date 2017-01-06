@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>动画时钟</title>
+	</head>
+	<body>
+		<canvas id="time" width="500" height="500" style="background:#ddd;margin:70px 380px;">您的浏览器不支持此效果展示，请升级最新版本</canvas>
+		<p id="currtime" style="color: red;margin:0 470px;font-family: '微软雅黑';"></p>
+	</body>
+	<script type="text/javascript">
+	
+	var oTime = document.getElementById("time");
+	var d = oTime.getContext("2d");//获取2D平面
+	var currtime = document.getElementById("currtime");	
+	function oTimer(){
+		
+		d.clearRect(0,0,500,500);//一进来就重置之前的画面
+		
+		var currTime = new Date();
+		var h = currTime.getHours();
+		var m = currTime.getMinutes();
+		var s = currTime.getSeconds();
+		
+		var oBottomTime = "当前时间："+"&nbsp;"+currTime.getFullYear()+"-"+(currTime.getMonth()+1)+"-"+currTime.getDate()+"&nbsp;"+"&nbsp;"+"星期"+currTime.getDay()+"&nbsp;"+"&nbsp;"+h+":"+m+":"+s;
+		currtime.innerHTML = oBottomTime;
+		
+		//自定义颜色
+		var yuan = d.createLinearGradient(0,0,500,500);//创建线性渐变
+		yuan.addColorStop("0","#fff")//线性渐变 添加颜色
+		yuan.addColorStop("0.5","#ccc");//添加颜色 0.5
+		yuan.addColorStop("1","#fff");
+
+		//绘制表盘
+		d.beginPath();//下笔
+		d.lineWidth = 50;//笔触的粗细
+		d.arc(250,250,210,0,360*Math.PI);//弧度=角度*PI/180
+		d.strokeStyle = yuan;//把自定义颜色赋给笔触
+		d.stroke();
+		d.closePath();
+		
+		//绘制时刻度
+		d.lineWidth = 7;//换笔
+		d.strokeStyle = "#000";//换颜色
+		for(var i=0;i<12;i++){//遍历旋转画布 12个刻度
+			d.save();//要保存之前画过的环境
+			d.beginPath();
+			d.translate(250,250);//重置画布上(0,0)位置
+			d.rotate(i*30*Math.PI/180);//旋转30度
+			d.moveTo(0,-165);
+			d.lineTo(0,-185);
+			d.stroke();
+			d.closePath();
+			d.restore();//返回之前保存的路径
+		}
+		
+		//分刻度
+		d.lineWidth = 3;//换笔
+		for(var i=0;i<60;i++){//60刻度
+			d.save();//要保存之前画过的环境
+			d.beginPath();
+			d.translate(250,250);//重置画布上(0,0)位置
+			d.rotate(i*6*Math.PI/180);//旋转30度
+			d.moveTo(0,-175);
+			d.lineTo(0,-185);
+			d.stroke();
+			d.closePath();
+			d.restore();//返回之前保存的路径
+		}
+		
+		//时针
+		d.save();//保存当前环境
+		d.lineWidth = 7;
+		d.translate(250,250);//中心点
+		d.rotate(h*6*Math.PI/180);//翻转
+		d.beginPath();
+		d.moveTo(0,-120);
+		d.lineTo(0,10);
+		d.stroke();
+		d.closePath();		
+		d.restore();
+		
+		//分针
+		d.save();//保存当前环境
+		d.lineWidth = 5;
+		d.translate(250,250);//中心点
+		d.rotate(m*6*Math.PI/180);//翻转
+		d.beginPath();
+		d.moveTo(0,-150);
+		d.lineTo(0,15);
+		d.stroke();
+		d.closePath();	
+		d.restore();
+		
+		//秒针
+		d.save();//保存当前环境
+		d.lineWidth = 3;
+		d.strokeStyle = "red";//换颜色
+		d.translate(250,250);//中心点
+		d.rotate(s*6*Math.PI/180);//翻转
+		d.beginPath();
+		d.moveTo(0,-150);
+		d.lineTo(0,15);
+		d.stroke();
+		d.closePath();	
+		d.restore();
+		
+	}
+	setInterval(oTimer,1000);
+	</script>
+</html>
