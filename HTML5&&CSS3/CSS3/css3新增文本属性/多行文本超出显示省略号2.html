@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>多行文本超出显示省略号1</title>
+		<style type="text/css" id="css">
+			p{
+				position: relative;
+				width: 300px;
+				border: 1px solid red;
+				line-height: 20px;
+				max-height: 100px;
+				overflow: hidden;
+			}
+			p:after {
+				content: "...";
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				padding-left:20px ;
+				background: linear-gradient(to right,transparent,#fff 41%);
+			}
+		</style>
+	</head>
+	<body>
+		<p id="p1">
+			反向代理隐藏了真实的服务端
+		</p>
+		<script type="text/javascript">
+			var p1 = document.getElementById("p1");
+			var css = document.getElementById("css");
+			var h = p1.scrollHeight;
+			if(h<=100){
+				css.innerHTML +="#p1:after{content:'';}";
+			}
+			
+		</script>
+	</body>
+</html>

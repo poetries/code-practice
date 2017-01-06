@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>多行文本超出显示省略号1</title>
+		<style type="text/css">
+			p{
+				width: 200px;
+				border: 1px solid red;
+				display: -webkit-box;
+				-webkit-box-orient: vertical;
+				-webkit-line-clamp: 5; /*设置文本显示的行数 只有chrome支持*/
+				overflow: hidden;
+			}
+		</style>
+	</head>
+	<body>
+		<p>
+			反向代理隐藏了真实的服务端，当我们请求 www.baidu.com 的时候，就像拨打10086一样，背后可能有成千上万台服务器为我们服务，但具体是哪一台，你不知道，也不需要知道，你只需要知道反向代理服务器是谁就好了，www.baidu.com 就是我们的反向代理服务器，反向代理服务器会帮我们把请求转发到真实的服务器那里去。Nginx就是性能非常好的反向代理服务器，用来做负载均衡。
+		</p>
+	</body>
+</html>
