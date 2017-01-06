@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box {
+				width: 400px;
+				height: 400px;
+				border: 2px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="btn">请求位置信息</button>
+		<div id="box"></div>
+	</body>
+	<script type="text/javascript">
+		var btn = document.getElementById("btn");
+		var box = document.getElementById("box");
+		
+		btn.onclick = function(){
+			navigator.geolocation.watchPosition(function(position){
+				box.innerHTML +="经度："+position.coords.longitude + "<br>";
+				box.innerHTML +="纬度："+position.coords.latitude + "<br>";
+				box.innerHTML +="海拔："+position.coords.accuracy + "<br>";
+				box.innerHTML +="海拔的准确度："+position.coords.altitudeAccuracy + "<br>";
+				box.innerHTML +="地面速度"+position.coords.speed + "<br>";
+				box.innerHTML +="行进方向"+position.coords.heading + "<br>";
+				box.innerHTML +="请求时间"+new Date(position.timestamp) + "<br>";
+			},function(err){
+				alert(err.code);
+			},{
+				enableHighAccuracy:false,//精确请求
+				timeout:5000,//设置超时
+				maximumAge:1000//缓存时间
+			});
+		}
+	</script>
+</html>
