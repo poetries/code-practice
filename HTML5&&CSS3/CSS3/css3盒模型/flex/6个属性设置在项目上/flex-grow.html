@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+/**
+以下6个属性设置在项目上。
+order
+flex-grow
+flex-shrink
+flex-basis
+flex
+align-self
+
+order属性定义项目的排列顺序。数值越小，排列越靠前，默认为0。
+
+flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。
+
+flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。
+
+flex-basis属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。
+
+flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。
+
+align-self属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch。
+align-self: auto | flex-start | flex-end | center | baseline | stretch;
+ */
+			.wrap {
+				width: 300px;
+				height: 300px;
+				margin: 50px auto;
+				border: 2px solid red;
+				display: flex;
+				flex-wrap: wrap;
+				
+			}
+			.wrap div {
+				width: 30px;
+				height: 30px;
+				line-height: 30px;
+				margin: 10px;
+				border-radius: 50%;
+				background: blue;
+				color: #fff;
+				text-align: center;
+				font-size: 20px;
+				font-weight: bold;
+			}
+			.wrap div:nth-child(1){
+				flex-grow: 1;
+			}
+			.wrap div:nth-child(2){
+				flex-grow: 2;
+			}
+			.wrap div:nth-child(3){
+				flex-grow: 3;
+			}
+			.wrap div:nth-child(4){
+				flex-grow: 4;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+			
+		</div>
+	</body>
+</html>
