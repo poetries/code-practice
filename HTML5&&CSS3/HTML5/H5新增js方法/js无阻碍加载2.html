@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>js无阻碍加载</title>
+		<!--只需请求一次 加载多个JavaScript文件-->
+		<script src="js/loadScript.js" async></script>
+	</head>
+	<body> <!--无阻碍加载 JavaScript文件没阻止图片加载-->
+		<img src="images/1.jpg" alt="" />
+		<img src="images/2.jpg" alt="" />
+		<img src="images/3.jpg" alt="" />
+		<img src="images/4.jpg" alt="" />
+		<img src="images/5.jpg" alt="" />
+	</body>
+</html>

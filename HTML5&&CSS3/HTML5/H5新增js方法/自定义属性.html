@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>自定义属性</title>
+		<style type="text/css">
+			
+		</style>
+	</head>
+	<body>
+		<div id="box" data-src="examp.jpg" data-src-name="图片路径"></div>
+		
+		<script type="text/javascript">
+			var box = document.querySelector("#box");
+			console.log(box.dataset.src);
+			console.log(box.dataset.srcName);
+		</script>
+	</body>
+</html>

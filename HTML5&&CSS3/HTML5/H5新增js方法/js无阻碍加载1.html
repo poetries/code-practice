@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>js无阻碍加载</title><!--
+		<script src="js/async.js" async></script>
+		<script src="js/defer.js" defer></script>-->
+		
+	</head>
+	<body>
+		
+		
+		<script type="text/javascript">
+		/**
+		 * 加载完成后 添加script文件 （推荐方法） 只需请求一次 加载多个JavaScript文件
+		 */
+			function loadScript(url,callback){
+				var script = document.createElement("script");
+				script.type = "text/javascript";
+				if(script.readyState){//IE
+					script.onreadystatechange = function(){
+						if(script.readyState == "loaded" || script.readyState == "complete"){
+							onreadystatechange = null;
+							callback();
+						}
+					}
+					
+				}else {
+					script.onload = function(){
+						callback();
+					}
+				}
+				script.src = url;
+				document.getElementsByTagName("head")[0].appendChild(script);
+			}
+			loadScript("js/defer.js",function(){
+				console.log("加载成功");
+			});
+		</script>
+	</body>
+</html>

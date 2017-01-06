@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>js无阻碍加载</title>
+		<script src="js/async.js" async></script>
+		<script src="js/defer.js" defer></script>
+		
+	</head>
+	<body>
+		
+		
+		<script type="text/javascript">
+		/**
+		 * FF IE中加载顺序：  async defer（只支持小部分浏览器） onload
+		 * 
+		 * 在chrome中会使这样的结果： defer async onload
+		 * 
+		 * async 脚本在script文件下载完成后会立即执行,并且其执行时间一定在 window的load事件触发之前。这意味着多个async脚本很可能不会按其在页面中的出现次序顺序执行
+		 * 
+		 */
+			window.onload = function(){
+				alert("onload");
+			}
+		</script>
+	</body>
+</html>
