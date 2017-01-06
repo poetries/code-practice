@@ -4,7 +4,71 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<style type="text/css">
-			
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			html,body {
+				width: 100%;
+				height: 100%;
+			}
+			.wrap {
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+			}
+			.swiper-wrapper {
+				display: flex;
+				width: 100%;
+				height: 100%;
+				transform: translate(0px);
+				transition: 1s;
+				/*animation: mov 15s linear infinite;*/
+			}
+			/*@keyframes mov{
+				0%{
+					transform: translate(0px);
+				}
+				15%{
+					transform: translate(-909px);
+				}
+				20%{
+					transform: translate(-909px);
+				}
+				35%{
+					transform: translate(-1818px);
+				}
+				40%{
+					transform: translate(-1818px);
+				}
+				55%{
+					transform: translate(-2727px);
+				}
+				60%{
+					transform: translate(-2727px);
+				}
+				75%{
+					transform: translate(-3636px);
+				}
+				80%{
+					transform: translate(-3636px);
+				}
+				95%{
+					transform: translate(0px);
+				}
+				100%{
+					transform: translate(0px);
+				}
+			}*/
+			.swiper-slide {
+				width: 100%;
+				height: 100%;
+				flex-shrink: 0;
+			}
+			.slide-bg {
+				width: 100%;
+				height: 100%;
+			}
 		</style>
 	</head>
 	<body>
@@ -31,7 +95,19 @@
 			</div>
 		</div>
 		<script type="text/javascript">
-			
+			var oDiv = document.getElementsByClassName("swiper-wrapper")[0];
+			var _width = oDiv.offsetWidth;
+			var n = 0;
+			window.onresize = function(){//浏览器窗口改变的时候触发
+				_width = oDiv.offsetWidth;
+			}
+			setInterval(function(){
+				n++;
+				if(n > 5){
+					n = 0;
+				}
+				oDiv.style.transform = "translate("+(-n*_width)+"px)";
+			},2000)
 		</script>
 	</body>
 </html>
