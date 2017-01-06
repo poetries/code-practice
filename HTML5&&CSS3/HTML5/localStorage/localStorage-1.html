@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+	</head>
+	<body>
+		<button id="addData">添加数据</button>
+		<button id="getData">获取数据</button>
+		<button id="removeData">删除数据</button>
+		<button id="removeAll">删除所有的数据</button>
+		<input type="text" id="txt">
+		<script type="text/javascript">
+			var addData = document.getElementById("addData");
+			var getData = document.getElementById("getData");
+			var removeData = document.getElementById("removeData");
+			var removeAll = document.getElementById("removeAll");
+			var txt = document.getElementById("txt");
+			
+			//添加数据
+			addData.onclick = function(){
+				localStorage.setItem("key",txt.value);
+			}
+			
+			//获取数据
+			getData.onclick = function(){
+				var val = localStorage.getItem("key");
+				alert(val);
+			}
+			
+			//删除数据
+			removeData.onclick = function(){
+				localStorage.removeItem("key");
+			}
+			//删除所有数据
+			removeAll.onclick = function(){
+				localStorage.clear();
+			}
+			window.addEventListener("storage",function(ev){
+			console.log(ev.key);
+			console.log(ev.newValue);
+			console.log(ev.oldValue);
+			console.log(ev.storageArea);
+			console.log(ev.url);
+		});
+		</script>
+	</body>
+</html>

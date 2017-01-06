@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+	</head>
+	<body>
+		<button id="addData">添加数据</button>
+		<button id="getData">获取数据</button>
+		<button id="removeData">删除数据</button>
+		<input type="text" id="txt">
+		<script type="text/javascript">
+			var addData = document.getElementById("addData");
+			var getData = document.getElementById("getData");
+			var removeData = document.getElementById("removeData");
+			var txt = document.getElementById("txt");
+			
+			//添加数据
+			addData.onclick = function(){
+				sessionStorage.setItem("key",txt.value);
+			}
+			
+			//获取数据
+			getData.onclick = function(){
+				var val = sessionStorage.getItem("key");
+				alert(val);
+			}
+			
+			//删除数据
+			removeData.onclick = function(){
+				sessionStorage.removeItem("key");
+			}
+		</script>
+	</body>
+</html>
