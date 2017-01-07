@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>Document</title>
+		<style>
+			*{
+				margin:0px;
+				padding:0px;
+			}
+			#box{
+				position:relative;
+				width:80%;
+				height:500px;
+				box-shadow:0 0 10px #000;
+				margin:50px auto;
+			}
+			#upload{
+				position:absolute;
+				left:0;
+				top:0;
+				right:0;
+				bottom:0;
+				margin:auto;
+				height:100px;
+				width:200px;
+			}
+			#upload a{
+				position:relative;
+				display:block;
+				height:50px;
+				width:200px;
+				background:#3cf url("images/img.png") no-repeat;
+				border-radius:10px;
+				background-position:20px 13px;
+			}
+			#myfile{
+				position:absolute;
+				left:0;
+				top:0;
+				height:100%;
+				width:100%;
+				opacity:0;
+				cursor:pointer;
+			}
+			#upload a span{
+				position:absolute;
+				left:50px;
+				top:10px;
+				font-size:30px;
+				color:#fff;
+			}
+			#upload p{
+				line-height:50px;
+				text-align:center;
+			}
+			.imgBox{
+				width:150px;
+				height:150px;
+				border:1px solid #ccc;
+				margin:10px;
+				float:left;
+			}
+			.bg{
+				width:150px;
+				height:130px;
+			}
+			.name{
+				line-height:20px;
+				text-align:center;
+			}
+			.newUpload{
+				position:relative;
+				width:150px;
+				height:150px;
+				margin:10px;
+				float:left;
+				background:#ccc url("images/img.png") no-repeat;
+				background-position:60px 63px;
+				line-height:200px;
+				text-align:center;
+				
+			}
+			.imgs{
+				width:100%;
+				height:500px;
+				overflow-y:auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div id="upload">
+				<a href="jacascript:;">
+					<span>选择照片</span>
+					<input type="file" id="myfile" multiple="true" onchange="upload(this)">
+				</a>
+				<p>按住ctrl可多选</p>
+			</div>
+			<div class="imgs"></div>
+		</div>
+		
+		
+	</body>
+	<script src="js/jquery.js"></script>
+	<script>
+		function upload(obj){
+			//alert(obj.files.length);
+			var n = obj.files.length;
+			var html = '';
+			for (var i = 0;i<n ;i++ )
+			{
+				var url = window.URL.createObjectURL(obj.files[i]);
+				//console.log(i+":"+url);
+				var name = obj.files[i].name;
+				html +="<div class='imgBox'><div class='bg' style='background:url("+url+") no-repeat center;background-size:contain'></div><p class='name'>"+name+"</p></div>";
+			}
+			$("#upload").remove();//删除原来的上传图片按钮
+			$(".newUpload").remove();//删除新的上传图片按钮
+			$(".imgs").append(html+"<div class='newUpload'>继续添加图片<input type='file' id='myfile' multiple='true' onchange='upload(this)'></div>");
+		}
+	</script>
+</html>

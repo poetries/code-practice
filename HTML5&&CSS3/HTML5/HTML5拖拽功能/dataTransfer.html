@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>火狐下的dataTransfer拖拽</title>
+		<style type="text/css">
+		#drap {
+			width: 100px;
+			height: 100px;
+			background: red;
+		}
+		#box {
+			width: 500px;
+			height: 500px;
+			border: 2px solid blue;
+			margin: 50px auto;
+		}
+		</style>
+	</head>
+	<body>
+	
+		<div id="drap" draggable="true"></div>
+		<div id="box"></div>
+		<script type="text/javascript">
+		var drap = document.getElementById("drap");
+		var box = document.getElementById("box");
+		
+		//被拖拽元素事件
+		drap.ondragstart = function(ev){ // 拖拽前
+			var ev = ev || window.event;
+			//火狐浏览器下需设置dataTransfer对象才可以拖拽除图片外的其他标签
+			ev.dataTransfer.setData("key","poetries");
+			//effectAllowed : 设置光标样式(none, copy, copyLink, copyMove, link, linkMove,move, all 和uninitialized)
+			ev.dataTransfer.effectAllowed = "copy";
+			this.style.background = "green";
+		}
+		
+		drap.ondrag = function(){ // 拖拽过程中
+			this.innerText = "被拖拽中...";
+		}
+		
+		drap.ondragend = function(){ // 拖拽结束
+			this.style.background = "red";
+			this.innerHTML = "";
+		}
+		
+		//目标元素事件
+		box.ondragenter = function(){ //进入目标元素触发
+			this.innerHTML = "可将文件拖放到这里!";
+		}
+		box.ondragover = function(ev){ //进入目标、离开目标之间，连续触发
+			var ev = ev || window.event;
+			ev.preventDefault(); 
+			this.style.background = "pink";
+		}
+		box.ondragleave = function(){ //离开目标元素触发
+			this.innerHTML = "";
+			this.style.background = "none";
+		}
+		box.ondrop = function(ev){//在目标元素上释放鼠标触发
+			//alert("拖放结束")
+			this.innerHTML = ev.dataTransfer.getData("key");
+		}
+		</script>
+	</body>
+</html>

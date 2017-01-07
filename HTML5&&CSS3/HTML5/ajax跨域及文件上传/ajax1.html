@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">点击获取数据</button>
+		<script type="text/javascript">
+			var btn = document.getElementById("btn");
+			btn.onclick = function(){
+				var xhr = new XMLHttpRequest();
+				xhr.open("POST","ajax.php",true);
+				xhr.send();
+				xhr.onreadystatechange = function(){
+					if(xhr.readyState == 4 && xhr.status == 200){
+						alert(xhr.responseText);
+					}
+				}
+			}
+			
+		</script>
+	</body>
+</html>

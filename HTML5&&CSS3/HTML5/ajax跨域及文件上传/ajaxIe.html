@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>Document</title>
+		<style>
+			*{
+				margin:0px;
+				padding:0px;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="btn">点击获取数据</button>
+	</body>
+	<script>
+		var btn = document.getElementById("btn");
+		btn.onclick = function(){
+			/*var xhr = new XMLHttpRequest();
+			xhr.open("post","http://www.d.com/ajax.php",true);
+			xhr.send();
+			xhr.onreadystatechange = function(){
+				if(xhr.readyState ==4 ){
+					if(xhr.status == 200){
+						alert(xhr.responseText);
+					}
+				}
+			}*/
+			var xdr = new XDomainRequest();
+			xdr.onload = function(){
+				alert(xdr.responseText);
+			}
+			xdr.open("post","http://www.d.com/ajax.php",true);
+			xdr.send();
+		}
+	</script>
+</html>

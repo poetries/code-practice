@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>Document</title>
+		<style>
+			*{
+				margin:0px;
+				padding:0px;
+			}
+			#progress{
+				position:relative;
+				width:280px;
+				height:50px;
+				border:1px solid blue;
+			}
+			#bg{
+				position:absolute;
+				left:0;
+				top:0;
+				height:50px;
+				width:0px;
+				background:#aaa;
+			}
+			#txt{
+				position:absolute;
+				left:0;
+				top:0;
+				height:50px;
+				width:280px;
+				line-height:50px;
+				text-align:center;
+				font-size:30px;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="file" id="myfile">
+		<button id="btn">上传</button>
+		<div id="progress">
+			<div id="bg"></div>
+			<div id="txt">0%</div>
+		</div>
+	</body>
+	<script>
+		var btn = document.getElementById("btn");
+		var bg = document.getElementById("bg");
+		var txt = document.getElementById("txt");
+		var myfile = document.getElementById("myfile");
+		btn.onclick = function(){
+			var xhr = new XMLHttpRequest();
+			xhr.onload = function(){
+				var data = JSON.parse(this.responseText);
+				alert(data.msg);
+			}
+			
+			//xhr.send();
+			
+			//alert(myfile.files);
+			/*for(var attr in myfile.files[0]){
+				console.log(attr + ":" +myfile.files[0][attr]);
+			}*/
+
+			//上传进度
+			var upLoad = xhr.upload;
+			upLoad.onprogress = function(ev){
+				console.log(ev.total+":"+ev.loaded);
+				var n = ev.loaded/ev.total;
+				bg.style.width = 280 * n +"px";
+				var con = n*100
+				txt.innerHTML = con.toFixed(2) + "%";
+			}
+
+			xhr.open('post','upload.php',true);
+			var formData = new FormData();
+			formData.append('file',myfile.files[0]);
+			xhr.send(formData);
+		}
+	</script>
+</html>
