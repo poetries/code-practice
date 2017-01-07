@@ -1,0 +1,75 @@
+<!doctype html><!--声明当前文档为html文档-->
+<html lang="en"><!--语言为英语-->
+	<head><!--头部-->
+		<meta charset="UTF-8"><!--字符编码：utf-8国际编码  gb2312中文编码-->
+		<meta name="Keywords" content="关键词">
+		<meta name="Description" content="描述">
+		<title>Document</title>
+		<style>/*css样式表的衣柜*/
+		*{
+			margin:0px;
+			padding:0px;
+		}
+		body{
+			background:#000;
+		}
+		canvas{
+			display:block;
+			margin:50px auto;
+			background:#fff;
+		}
+		</style>
+	</head>
+	<body><!--身体-->
+		<canvas id="canvas"></canvas>
+	</body>
+	<script>
+		var can = document.getElementById("canvas");
+		var cxt = can.getContext("2d");
+		var img = new Image();
+		img.src = "images/9.jpg";
+		img.onload = function(){
+			draw(this);
+		};
+		function draw(obj){
+			console.time(1);
+			can.width = obj.width;
+			can.height = obj.height*2;
+			cxt.drawImage(obj,0,0);
+
+			var oImg = cxt.getImageData(0,0,obj.width,obj.height);
+			//获取oImg对象的宽高最终显示所有像素点的十分之一
+			var w = oImg.width;
+			var h = oImg.height;
+			var n = 10;
+			var W = w/n;
+			var H = h/n;
+			var newImg = cxt.createImageData(obj.width,obj.height);
+			var datas = {"data1":H,"data2":W,"data3":oImg,"data4":newImg};
+			var w = new Worker("newimg.js");
+			w.postMessage(datas);
+			w.onmessage = function(ev){
+				cxt.putImageData(ev.data,0,obj.height);
+				//w.close();
+			}
+			/*for (var i=0;i<H ;i++ )
+			{
+				for (var j=0;j<W ;j++ )
+				{
+					var color = getData(oImg,j*n+Math.floor(Math.random()*n),i*n+Math.floor(Math.random()*n));
+
+					for (var k=0;k < n ;k++ )
+					{
+						for (var l=0;l<n ;l++ )
+						{
+							setData(newImg,j*n+l,i*n+k,color);
+						}
+					}
+				}
+			}*/
+			console.timeEnd(1);
+		}
+
+		
+	</script>
+</html>
