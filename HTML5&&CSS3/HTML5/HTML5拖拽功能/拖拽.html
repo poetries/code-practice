@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#wrap {
+				width: 500px;
+				height: 500px;
+				margin: 30px auto;
+				border: 1px solid blue;
+			}
+			#box {
+				width:100px;
+				height: 100px;
+				background: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box" draggable="true">我可以被拖拽!!</div>
+		<div id="wrap"></div>
+		
+		<script type="text/javascript">
+			var box = document.getElementById("box");
+			var wrap = document.getElementById("wrap");
+			
+			box.ondragstart = function(e){
+				var e = e || window.event;
+				e.dataTransfer.setData("data",e.target.innerHTML);
+				this.style.background = "yellow";
+			}
+			box.ondragover = function(){
+				this.innerHTML = "拖拽中...";
+			}
+			box.ondragend = function(){
+				this.innerHTML = "";
+			}
+			wrap.ondragenter = function(){
+				this.innerHTML = "请放到这里!!";
+			}
+			wrap.ondragover = function(ev) {
+				var ev = ev || window.event;
+				ev.preventDefault();
+			}
+			wrap.ondragleave = function(){
+				this.innerHTML = "";
+			}
+			wrap.ondrop = function(){
+				this.innerHTML = "";
+				box.style.background = "red";
+				this.appendChild(box);
+			}
+			
+		</script>
+	</body>
+</html>

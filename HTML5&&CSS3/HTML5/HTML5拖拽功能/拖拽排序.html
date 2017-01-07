@@ -27,8 +27,8 @@
 		</style>
 	</head>
 	<body>
-		<div class="wrap">
-			<ul>
+		<div class="wrap" id="wrap">
+			<ul id="box">
 				<li style="background:#f3f" draggable="true">1</li>
 				<li style="background:#ff6" draggable="true">2</li>
 				<li style="background:#c60" draggable="true">3</li>
@@ -40,7 +40,50 @@
 			</ul>
 		</div>
 		<script type="text/javascript">
+			var oUl = document.getElementById("box");
+			var oLi = oUl.getElementsByTagName("li");
+			var curr = 0;
+			function sort(){
+				for (var i = 0;i < oLi.length;i++) {
+					oLi[i].index = i;
+					oLi[i].ondragstart = function(ev){
+						var ev = ev || window.event;
+						ev.dataTransfer.setData("data",this.innerHTML);
+						//this.innerHTML = "被拖拽中...";
+						curr = this.index;
+					}
+					
+					oLi[i].ondragenter = function(){
+						for(var i = 0;i < oLi.length;i++){
+							oLi[i].style.border = "none";
+						}
+						if(curr != this.index){
+							this.style.border = "2px solid #000";
+						}
+					}
+					oLi[i].ondragover = function(e){
+						var e = e || window.event;
+						e.preventDefault();
+					}
+					oLi[i].ondrop = function(ev){ //鼠标释放的时候
+						//oUl.insertBefore(oLi[curr],this);//insertBefore(新节点，目标节点)
+						inserAfter(oLi[curr],this);
+						this.style.border = "none";
+						//oLi[curr].innerHTML = ev.DataTransfer.getData("data");
+						sort();
+					}
+				}
+			}
+			sort();
 			
+			function inserAfter(newItem,targerItem){
+				var parentItem = targerItem.parentNode;
+				if(parentItem.lastChild == targerItem){
+					parentItem.appendChild(newItem);
+				}else {
+					parentItem.insertBefore(newItem,targerItem.nextSibling);
+				}
+			}
 		</script>
 	</body>
 </html>
