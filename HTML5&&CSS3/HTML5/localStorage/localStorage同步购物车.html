@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>Document</title>
+		<style>
+			*{
+				margin:0px;
+				padding:0px;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="checkbox" value="糖糖">糖糖</br>
+		<input type="checkbox" value="胡汉三">胡汉三</br>
+		<input type="checkbox" value="小老鼠">小老鼠</br>
+		<input type="checkbox" value="越尘">越尘</br>
+	</body>
+	<script>
+		var oInput = document.getElementsByTagName("input");
+		for (var i = 0;i<oInput.length ;i++ )
+		{
+			oInput[i].onclick = function(){
+				if (this.checked)
+				{
+					window.localStorage.setItem("check",this.value);
+				}else{
+					window.localStorage.setItem("oncheck",this.value);
+				}
+			}
+		}
+		window.addEventListener("storage",function(ev){
+			if (ev.key == "check")
+			{
+				for (var i=0;i<oInput.length ;i++)
+				{
+					if (ev.newValue == oInput[i].value)
+					{
+						oInput[i].checked = true;
+					}
+				}
+			}else if(ev.key == "oncheck"){
+				if (ev.newValue == oInput[i].value)
+					{
+						oInput[i].checked = false;
+					}
+			}
+		});
+	</script>
+</html>
