@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>readAsDataURL--拖拽上传多张图片</title>
+		<style type="text/css">
+		#drap {
+			width: 100px;
+			height: 100px;
+			background: red;
+		}
+		#box {
+			width: 500px;
+			height: 500px;
+			border: 2px solid blue;
+			margin: 50px auto;
+		}
+		#box  img {
+			width: 100px;
+			height: 100px;
+		}
+		</style>
+	</head>
+	<body>
+	
+
+		<div id="box"></div>
+
+		<script type="text/javascript">
+			var box = document.getElementById("box");
+		
+			//目标元素事件
+			box.ondragenter = function(){//进入目标元素触发
+				this.innerHTML = "可以将文件拖放到这里！！";
+			}
+			box.ondragover = function(ev){//在目标元素上连续触发
+				var ev = ev||window.event;
+				ev.preventDefault();//阻止默认事件
+				this.style.background = "red";
+			}
+			box.ondragleave = function(){//离开目标元素
+				this.innerHTML = "";
+				this.style.background = "none";
+			}
+			box.ondrop = function(ev){//在目标元素上面释放鼠标触发
+				//alert("拖拽结束！！");
+				var ev = ev||window.event;
+				ev.preventDefault();//阻止默认事件
+				this.innerHTML = "";
+				
+				var file = ev.dataTransfer.files;
+				//alert(file[0].type);
+				
+				for(var i = 0; i< file.length;i++){
+					if(file[i].type.indexOf("image")!=-1){
+						var read = new FileReader(file[0]);//新建一个读取文件对象
+						read.readAsDataURL(file[i]);
+						read.onload = function(){//读取成功回调
+							var img = document.createElement("img");
+							//alert(this.result);
+							img.src = this.result;
+							box.appendChild(img)
+						}
+					}else {
+						alert("请上传图片");
+					}
+				}
+			}
+		</script>
+	</body>
+</html>
+
+	</body>
+</html>

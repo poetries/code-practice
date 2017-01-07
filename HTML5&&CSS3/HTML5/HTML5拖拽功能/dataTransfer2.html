@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>火狐下的dataTransfer拖拽</title>
+		<style type="text/css">
+		#drap {
+			width: 100px;
+			height: 100px;
+			background: red;
+		}
+		#box {
+			width: 500px;
+			height: 500px;
+			border: 2px solid blue;
+			margin: 50px auto;
+		}
+		
+		</style>
+	</head>
+	<body>
+	
+
+		<div id="box"></div>
+
+		<script type="text/javascript">
+			var box = document.getElementById("box");
+		
+			//目标元素事件
+			box.ondragenter = function(){//进入目标元素触发
+				this.innerHTML = "可以将文件拖放到这里！！";
+			}
+			box.ondragover = function(ev){//在目标元素上连续触发
+				var ev = ev||window.event;
+				ev.preventDefault();//阻止默认事件
+				this.style.background = "red";
+			}
+			box.ondragleave = function(){//离开目标元素
+				this.innerHTML = "";
+				this.style.background = "none";
+			}
+			box.ondrop = function(ev){//在目标元素上面释放鼠标触发
+				//alert("拖拽结束！！");
+				var ev = ev||window.event;
+				ev.preventDefault();//阻止默认事件
+				var file = ev.dataTransfer.files;
+				alert(file[0].type);
+			}
+		</script>
+	</body>
+</html>
