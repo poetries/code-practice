@@ -54,7 +54,7 @@
 	
 
 		<div id="box"><span>可以将文件拖放到这里！！</span></div>
-		<div id="dustbin"></div>
+		<div id="dustbin">图片回收站</div>
 		<script type="text/javascript">
 			var box = document.getElementById("box");
 			var dusTbin = document.getElementById("dustbin");
@@ -83,6 +83,7 @@
 				//alert(file[0].type);
 				
 				for(var i = 0; i< file.length;i++){
+					//file[i].type 返回图片的路径中包含了image
 					if(file[i].type.indexOf("image")!=-1){
 						var read = new FileReader(file[0]);//新建一个读取文件对象
 						read.readAsDataURL(file[i]);
@@ -94,7 +95,31 @@
 							
 							//获取img节点 实现删除功能
 							var oImg = document.getElementsByTagName("img");
-						
+							if(oImg){
+								for(var j =0;j<oImg.length;j++){
+									oImg[j].ondragstart = function(ev){ 
+										ev.dataTransfer.setData("data",ev.target.innerHTML);
+										img = ev.target;//保存被拖动的元素
+									}
+									oImg[j].ondragend = function(ev){
+										ev.dataTransfer.clearData("data");//清除数据
+										img = null;
+									}
+								}
+							}
+							
+							
+							//实现删除功能(移除img节点)
+							dusTbin.ondragover = function(ev){
+								ev.preventDefault();
+							}
+							dusTbin.ondrop = function(){
+								if(img){
+									img.parentNode.removeChild(img);
+								}
+							}
+							
+							
 						}
 					}else {
 						alert("请上传图片");
