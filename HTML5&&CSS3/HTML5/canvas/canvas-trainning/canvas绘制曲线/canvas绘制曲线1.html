@@ -24,13 +24,12 @@
 			var h = canvas.height;
 
 			ctx.beginPath();
-			ctx.moveTo(100,100);//将绘制起点移动到 x y
-			ctx.lineTo(200,200);
-			ctx.lineTo(270,100);
+			//arc(x,y,r,0,360,true) x y圆心坐标 r半径 0 360度(用弧度 否则出错) false/true 顺时针/逆时针  角度和弧度转换方法：弧度 = 角度值 * Math.PI/180 (PI就是180度)
+			ctx.arc(250,250,100,0,360*Math.PI/180,false);
 			ctx.closePath();
-			ctx.lineWidth = "10";
-			ctx.strokeStyle = "red";
+			ctx.lineWidth = 10;
 			ctx.stroke();
+			
 			
 		</script>
 	</body>

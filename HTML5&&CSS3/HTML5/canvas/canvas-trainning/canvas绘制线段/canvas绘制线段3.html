@@ -28,8 +28,9 @@
 			ctx.lineTo(200,200);
 			ctx.lineTo(270,100);
 			ctx.closePath();
-			ctx.lineWidth = "10";
 			ctx.strokeStyle = "red";
+			ctx.lineWidth = "10";
+			ctx.lineJoin = "round";//边界链接点样式 bevel round miter默认
 			ctx.stroke();
 			
 		</script>
