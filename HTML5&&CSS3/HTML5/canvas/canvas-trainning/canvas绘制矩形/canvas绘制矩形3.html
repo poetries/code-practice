@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body {
+				background: #000;
+			}
+			#canvas {
+				display: block;
+				margin: auto;
+				background: #fff;
+			}
+		</style>
+	</head>
+	<body>
+		<!--注意：canvas宽高需要设置在标签中 否则绘制的东西可能出错-->
+		<canvas id="canvas" width="500" height="500"></canvas>
+		<script type="text/javascript">
+			var canvas = document.getElementById("canvas");
+			var ctx = canvas.getContext("2d"); //绘图环境
+			var w = canvas.width;
+			var h = canvas.height;
+
+			ctx.strokeStyle = "green";
+			ctx.lineWidth = "10";
+			ctx.strokeRect(200,200,100,100);
+			ctx.fillRect(200,200,100,100);
+			
+			//清除画布
+			//ctx.clearRect(0,0,w,h);
+			
+		</script>
+	</body>
+</html>
