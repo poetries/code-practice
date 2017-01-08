@@ -1,0 +1,37 @@
+<!doctype html><!--声明当前文档为html文档-->
+<html lang="en"><!--语言为英语-->
+	<head><!--头部-->
+		<meta charset="UTF-8"><!--字符编码：utf-8国际编码  gb2312中文编码-->
+		<meta name="Keywords" content="关键词">
+		<meta name="Description" content="描述">
+		<title>Document</title>
+		<style>/*css样式表的衣柜*/
+		*{
+			margin:0px;
+			padding:0px;
+		}
+		body{
+			background:#000;
+		}
+		canvas{
+			display:block;
+			margin:100px auto;
+			background:#fff;
+		}
+		</style>
+	</head>
+	<body><!--身体-->
+		<canvas id="canvas" width="500" height="500"></canvas>
+	</body>
+	<script>
+		var can = document.getElementById("canvas");
+		var cxt = can.getContext("2d");
+		cxt.beginPath();
+		cxt.rotate(-20*Math.PI/180);
+		cxt.moveTo(100,100);
+		cxt.lineTo(200,200);
+		cxt.lineWidth = 10;
+		cxt.strokeStyle = "red";
+		cxt.stroke();//调用触笔方法 
+	</script>
+</html>
