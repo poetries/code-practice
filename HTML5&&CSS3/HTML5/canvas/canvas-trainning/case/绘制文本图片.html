@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Keywords" content="关键词">
+		<meta name="Description" content="描述">
+		<title>Document</title>
+		<style>
+		*{
+			margin:0px;
+			padding:0px;
+		}
+		body{
+			background:#fff;
+		}
+		canvas{
+			display:block;
+			margin:auto;
+			background:#fff;
+		}
+		label {
+			margin-left: 200px;
+		}
+		</style>
+	</head>
+	<body><!--身体-->
+		<canvas id="canvas" width="500" height="500"></canvas>
+		<label for="">请输入内容</label>
+		<input type="text" name="" id="txt" value="@poetries" />
+		<label for="">请选择背景</label>
+		<select name="" id="bg">
+			<option value="img/1.jpg">1.jpg</option>
+			<option value="img/2.jpg">2.jpg</option>
+			<option value="img/3.jpg">3.jpg</option>
+			<option value="img/4.jpg">4.jpg</option>
+			<option value="img/5.png">5.jpg</option>
+		</select>
+	</body>
+	<script>
+		var canvas = document.getElementById("canvas");
+		var txt = document.getElementById("txt");
+		var bg = document.getElementById("bg");
+		var ctx = canvas.getContext("2d");
+		var w = canvas.width;
+		var h = canvas.height;
+		
+		var img = new Image();
+		var oBg = new Image();
+		img.src = "img/2.jpg";
+		oBg.src = "img/4.jpg";
+		oBg.onload = draw; //预加载图片 加载完成在调用draw
+		
+		function draw(){
+			ctx.drawImage(img,0,0,w,h);	
+			oBg.src = bg.value;
+			//console.log(bg.value);
+			var color = ctx.createPattern(oBg,"repeat");//设置背景
+			ctx.fillStyle = color;
+			var pdd = 20;
+			var fz = Math.ceil((w-pdd*2)/(txt.value.length));
+			ctx.font = fz+"px 微软雅黑";
+			ctx.textBaseline = "top";
+			var textW = ctx.measureText(txt.value).width;//获取文字真实宽度
+			var y = (h-fz)*0.5;//设置文本显示y坐标
+			var x = (w-textW)/2;
+			ctx.shadowOffsetX = 20;
+			ctx.shadowOffsetY = 20;
+			ctx.shadowBlur = 5;
+			ctx.shadowColor = "#008000";
+			ctx.fillText(txt.value,x,y);
+			
+		}
+	
+		
+	</script>
+</html>
