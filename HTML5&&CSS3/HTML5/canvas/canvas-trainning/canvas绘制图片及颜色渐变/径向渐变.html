@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body {
+				background: #000;
+			}
+			#canvas {
+				display: block;
+				margin: auto;
+				background: #fff;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<!--注意：canvas宽高需要设置在标签中 否则绘制的东西可能出错-->
+		<canvas id="canvas" width="500" height="500"></canvas>
+		<script type="text/javascript">
+			var canvas = document.getElementById("canvas");
+			var ctx = canvas.getContext("2d"); //绘图环境
+			var w = canvas.width;
+			var h = canvas.height;
+			
+			var color = ctx.createRadialGradient(); 			//createRadialGradient(x1,y1,r1,x2,y2,r2)
+			//x1,y1,r1内圆坐标及半径
+			//x2,y2,r2外圆坐标及半径
+			
+			color.addColorStop(0,"#0f0"); //addColorStop(位置,颜色)位置0-1可多个
+			color.addColorStop(0.5,"#f00");
+			color.addColorStop(1,"#00f");
+			ctx.fillStyle = color;
+			ctx.fillRect(0,0,w,h);
+			
+		</script>
+	</body>
+</html>
