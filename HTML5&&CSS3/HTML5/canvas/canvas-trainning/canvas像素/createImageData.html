@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Keywords" content="关键词">
+		<meta name="Description" content="描述">
+		<title>Document</title>
+		<style>
+		*{
+			margin:0px;
+			padding:0px;
+		}
+		body{
+			background:#000;
+		}
+		canvas{
+			display:block;
+			margin:auto;
+			background:#fff;
+		}
+		
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas" width="500" height="500"></canvas>
+		
+	</body>
+	<script>
+		var canvas = document.getElementById("canvas");
+		var ctx = canvas.getContext("2d");
+		ctx.fillStyle = "#f00";
+		ctx.beginPath();
+		ctx.fillRect(100,100,100,100);
+		ctx.closePath();
+		 
+		 //返回ImageData对象，该对象为画布上指定的矩形复制像素数
+		//var img = ctx.getImageData(100,100,100,100);
+		
+		//创建新的、空白的 ImageData 对象
+		var img = ctx.createImageData(100,100);
+		//改变像素点的rgba值
+		for(var i=0;i<img.width*img.height;i++){
+			img.data[4*i] = 0;//每一个像素点的第一个值r
+			img.data[4*i+1] = 255;//每一个像素点的第二个值g
+			img.data[4*i+2] = 0;//每一个像素点的第三个值b
+			img.data[4*i+3] = 255;//每一个像素点的第四个值a(0-255)
+		}
+		
+		//把图像数据（从指定的 ImageData 对象）放回画布上
+		ctx.putImageData(img,200,200);
+		
+	</script>
+</html>

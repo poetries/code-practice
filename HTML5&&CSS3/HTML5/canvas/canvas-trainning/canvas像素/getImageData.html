@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Keywords" content="关键词">
+		<meta name="Description" content="描述">
+		<title>Document</title>
+		<style>
+		*{
+			margin:0px;
+			padding:0px;
+		}
+		body{
+			background:#000;
+		}
+		canvas{
+			display:block;
+			margin:auto;
+			background:#fff;
+		}
+		
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas" width="500" height="500"></canvas>
+		
+	</body>
+	<script>
+		var canvas = document.getElementById("canvas");
+		var ctx = canvas.getContext("2d");
+		ctx.fillStyle = "#f00";
+		ctx.beginPath();
+		ctx.fillRect(100,100,100,100);
+		ctx.closePath();
+		 
+		 //返回ImageData对象，该对象为画布上指定的矩形复制像素数
+		var img = ctx.getImageData(100,100,100,100);
+		
+		//把图像数据（从指定的 ImageData 对象）放回画布上
+		ctx.putImageData(img,200,200);
+		
+	</script>
+</html>
