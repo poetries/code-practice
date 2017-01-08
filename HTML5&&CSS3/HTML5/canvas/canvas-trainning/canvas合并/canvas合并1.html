@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body {
+				background: #000;
+			}
+			#canvas {
+				display: block;
+				margin: auto;
+				background: #fff;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas" width="500" height="500"></canvas>
+		<script type="text/javascript">
+			var canvas = document.getElementById("canvas");
+			var ctx = canvas.getContext("2d"); //绘图环境
+			var w = canvas.width;
+			var h = canvas.height;
+			
+			ctx.fillStyle = "#f00";
+			ctx.beginPath();
+			ctx.fillRect(100,100,100,100);
+			ctx.closePath();
+			
+			ctx.globalAlpha = .5; //设置透明度值
+			ctx.fillStyle = "#0000FF";
+			ctx.beginPath();
+			ctx.fillRect(150,150,100,100);
+			ctx.closePath();
+			
+		</script>
+	</body>
+</html>
