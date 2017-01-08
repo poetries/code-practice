@@ -45,13 +45,14 @@
 				//合成覆盖显示透明色
 				ctx.globalCompositeOperation = "destination-out";
 				ctx.strokeStyle = "#eee";
-				ctx.lineJoin = "round";
+				ctx.lineCap = "round";
 				ctx.lineWidth = 30;
 				
 				can.onmousedown = function(ev){
 					var ev = ev || window.event;
 					var x = ev.pageX - this.offsetLeft;
 					var y = ev.pageY - this.offsetTop;
+					var that = this;
 					
 					ctx.beginPath();
 					ctx.arc(x,y,15,0,360,false);
@@ -60,14 +61,22 @@
 					
 					can.onmousemove = function(ev){
 						var ev = ev || window.event;
-						var x = ev.pageX - this.offsetLeft;
-						var y = ev.pageY - this.offsetTop;
-						
+
 						ctx.beginPath();
 						ctx.moveTo(x,y);
-						ctx.closePath();
+						ctx.lineTo(ev.pageX - can.offsetLeft,ev.pageY - can.offsetTop);
+						var x = ev.pageX - can.offsetLeft;
+						var y = ev.pageY - can.offsetTop;
+						//ctx.closePath();
+						ctx.stroke();
+						
+					}
+					this.onmouseup = function(){
+						that.onmousemove = null;
+						that.onmouseup = null;
 					}
 				}
+				
 			}
 			
 			
