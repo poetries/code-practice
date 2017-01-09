@@ -23,12 +23,7 @@
 			jc.start("canvas",true);//开始绘制 id名 true重绘
 			
 			//绘制圆形
-			jc.circle(50,50,50,"green",1).click(function(){
-				this.animate({
-					x:400,
-					y:400
-				},2000);
-			});
+			jc.circle(50,50,50,"green",1).draggable("clone	");
 			
 			
 			

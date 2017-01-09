@@ -16,21 +16,23 @@
 	</head>
 	<body>
 		<canvas id="canvas" width="600" height="600"></canvas>
+		<button id="btn">点击我</button>
 		<script src="js/jCanvaScript.1.5.18.min.js" ></script>
 		<script type="text/javascript">
+			var btn = document.getElementById("btn");
 			
 			//绘制矩形
 			jc.start("canvas",true);//开始绘制 id名 true重绘
 			
 			//绘制圆形
-			jc.circle(50,50,50,"green",1).click(function(){
-				this.animate({
+			jc.circle(50,50,50,"green",1).id("circle");
+			
+			btn.onclick = function(){
+				jc("#circle").animate({
 					x:400,
 					y:400
 				},2000);
-			});
-			
-			
+			}
 			
 			jc.start("canvas");
 			
