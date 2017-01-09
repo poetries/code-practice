@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin:0px;
+				padding:0px;
+			}
+			body{
+				background:#000;
+			}
+			#can {
+				position: relative;
+				width: 100%;
+				height: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="can"></canvas>
+		<script type="text/javascript">
+		window.requestAnimFrame = ( function() {
+			return window.requestAnimationFrame ||
+						window.webkitRequestAnimationFrame ||
+						window.mozRequestAnimationFrame ||
+						function( callback ) {
+							window.setTimeout( callback, 1000 / 60 );
+						};
+		})();
+		
+			var can = document.getElementById("can");
+			var ctx = can.getContext("2d");
+			can.width = window.innerWidth;
+			can.height = window.innerHeight;
+			
+			//初始链接线条显示位置
+			var mousePosition = {
+				x:30*can.width/100,
+				y:30*can.height/100
+			};
+			//圆形粒子对象参数
+			var dots = {
+				n:500, //圆形粒子个数
+				distance:50,//圆形粒子之间的距离
+				d_radius:100, //粒子距离鼠标点的距离	
+				array:[] //保存n个圆形粒子对象		
+			};
+			
+			
+			//创建圆形粒子对象
+			function Dot(){
+				//圆形粒子随机圆心坐标点
+				this.x = Math.random()*can.width;
+				this.y = Math.random()*can.height;
+				
+				//x y方向运动速度值
+				this.vx = -0.5 + Math.random();
+				this.vy = -0.5 + Math.random();
+				
+				this.radius = Math.random()*5;
+				this.color = "#f00";
+			}
+			Dot.prototype.draw = function(){
+				ctx.beginPath();
+				ctx.fillStyle = this.color;
+				ctx.arc(this.x,this.y,this.radius,0,Math.PI*2,false);
+				ctx.fill();
+			}
+			//添加圆形粒子
+			function createCircle(){
+				for (var i = 0;i < dots.n;i++) {
+					dots.array.push(new Dot())
+				}
+			}
+			//绘制出圆形粒子
+			function drawDots(){
+				for (var i = 0;i < dots.n;i++) {
+					var dot = dots.array[i];
+					dot.draw();	
+				}
+			}
+			createCircle();
+			
+			
+			//移动
+			function moveDots(){
+				for (var i = 0;i < dots.n;i++) {
+					var dot = dots.array[i];
+					//当圆形粒子碰壁就反弹
+					if (dot.y < 0 || dot.y > can.height) {
+						dot.vx = dot.vx;
+						dot.vy = -dot.vy;
+					}else if(dot.x < 0 || dot.x>can.width){
+						dot.vx = -dot.vx;
+						dot.vy = dot.vy;
+					}
+					dot.x += dot.vx;
+					dot.y += dot.vy;
+				}
+			}
+		
+			//让圆形粒子不断的移动
+			function animateDots(){
+				ctx.clearRect(0,0,can.width,can.height);
+				 moveDots();
+				 drawDots();
+			}
+			animateDots();
+			//链接粒子对象
+			
+			
+			
+		</script>
+	</body>
+</html>
