@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body {
+				background: #fff;
+			}
+			#canvas {
+				display: block;
+				margin: auto;
+				background: #fff;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas" width="500" height="500"></canvas>
+		<img src="" id="pic"/>
+		<script type="text/javascript">
+			var canvas = document.getElementById("canvas");
+			var img = document.getElementById("pic");
+			var ctx = canvas.getContext("2d"); //绘图环境
+			var w = canvas.width;
+			var h = canvas.height;
+			
+			ctx.beginPath();
+			ctx.fillRect(100,100,100,100);
+			ctx.closePath();
+			ctx.globalCompositeOperation = "destination-out";
+			ctx.fillStyle = "#f00";
+			ctx.beginPath();
+			ctx.fillRect(150,150,100,100);
+			ctx.closePath();
+			
+			img.src = canvas.toDataURL();	//将画布导出为图片
+			
+		</script>
+	</body>
+</html>

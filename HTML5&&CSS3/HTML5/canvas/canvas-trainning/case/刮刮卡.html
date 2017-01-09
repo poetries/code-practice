@@ -8,13 +8,19 @@
 				margin: 0;
 				padding: 0;
 			}
+			input{
+				width: 200px;
+				height: 20px;
+			}
 		</style>
 	</head>
 	<body>
 		
-		<img src="img/2.jpg" id="pic"/>
+		<img src="img/2.jpg" id="pic"/><br />
+		<input type="text" name="txt" id="txt" value="" />
 		<script type="text/javascript">
 			var img = document.getElementById("pic");
+			var txt = document.getElementById("txt");
 			//complete判断是否加载完成 完成返回true
 			//onerror 图片加载失败 调用
 			//onload 加载完成
@@ -74,9 +80,28 @@
 					this.onmouseup = function(){
 						that.onmousemove = null;
 						that.onmouseup = null;
+						 check();
 					}
 				}
 				
+				function check(){
+					var data = ctx.getImageData(0,0,can.width,can.height).data;
+					var n = 0; //判断被刮开的像素点个数
+					for (var i=0;i<data.length-3;i+=4) {
+						//判断被刮开的像素点
+						if(data[i]==0 && data[i+1]==0&&data[i+2]==0&&data[i+3]==0){
+							n++;
+						}
+					}
+					var f = n*100/(can.width*can.height);
+					txt.value = "刮开面积 : "+f.toFixed(2)+"%";
+					
+					if (f>60) {
+						ctx.beginPath();
+						ctx.fillRect(0,0,can.width,can.height);
+						txt.value = "刮开面积大于60%全部显示 ";
+					}
+				}
 			}
 			
 			

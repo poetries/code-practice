@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body {
+				background: #fff;
+			}
+			#canvas {
+				display: block;
+				margin: auto;
+				background: #fff;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas" width="500" height="500"></canvas>
+		<script type="text/javascript">
+			var canvas = document.getElementById("canvas");
+			var ctx = canvas.getContext("2d"); //绘图环境
+			var w = canvas.width;
+			var h = canvas.height;
+
+			
+			canvas.onmousedown = function(ev){
+				var ev = ev || window.event;
+				var point = {
+					"x":ev.clientX - canvas.offsetLeft,
+					"y":ev.clientY - canvas.offsetTop
+				};
+				
+				circle1.draw(point);
+				circle2.draw(point);
+			}
+			function Circle(x,y){
+				this.x = x;
+				this.y = y;
+				ctx.fillStyle = "#f00";
+				ctx.beginPath();
+				ctx.arc(this.x,this.y,50,0,360,false);
+				ctx.closePath();
+				ctx.fill();
+			}
+			Circle.prototype.draw = function(point){
+				ctx.beginPath();
+				ctx.arc(this.x,this.y,50,0,360,false);
+				ctx.closePath();
+				ctx.fill();
+				if(ctx.isPointInPath(point.x,point.y)){
+					this.poetries();
+				}
+			}
+			
+			var circle1 = new Circle(200,200);
+			var circle2 = new Circle(300,300);
+			
+			circle1.poetries = function(){
+				alert(1);
+			}
+			circle2.poetries = function(){
+				alert(2);
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body {
+				background: #fff;
+			}
+			#canvas {
+				display: block;
+				margin: auto;
+				background: #fff;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas" width="500" height="500"></canvas>
+		<script type="text/javascript">
+			var canvas = document.getElementById("canvas");
+			var ctx = canvas.getContext("2d"); //绘图环境
+			var w = canvas.width;
+			var h = canvas.height;
+			
+			ctx.fillStyle = "#f00";
+			ctx.beginPath();
+			ctx.arc(250,250,100,0,360,false);
+			ctx.closePath();
+			ctx.fill();
+			
+			canvas.onmousedown = function(ev){
+				var ev = ev || window.event;
+				var x = ev.clientX - canvas.offsetLeft;
+				var y = ev.clientY - canvas.offsetTop;
+				
+				//isPointInPath 如果指定的点位于当前路径中 返回布尔值
+				//只能判断最后绘制出来的图片
+				if(ctx.isPointInPath(x,y)){
+					alert(11);
+				}
+			}
+			
+		</script>
+	</body>
+</html>

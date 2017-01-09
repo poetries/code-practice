@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Keywords" content="关键词">
+		<meta name="Description" content="描述">
+		<title>Document</title>
+		<style>
+		*{
+			margin:0px;
+			padding:0px;
+		}
+		body{
+			background:#000;
+		}
+		canvas{
+			display:block;
+			margin:auto;
+			background:#fff;
+		}
+		
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas"></canvas>
+		
+	</body>
+	<script>
+		var canvas = document.getElementById("canvas");
+		var ctx = canvas.getContext("2d");
+		var img = new Image();
+		img.src = "img/2.jpg";
+		img.onload = function(){
+			draw(this);
+		}
+		function draw(obj){
+			canvas.width = obj.width;
+			canvas.height = obj.height*2;
+			ctx.drawImage(img,0,0);
+			
+			//获取像素点
+			var oImg = ctx.getImageData(0,0,obj.width,obj.height);
+			
+			//获取img对象的宽高 最终显示所有像素点的十分之一
+			var w = oImg.width;
+			var h = oImg.height;
+			var n = 10;
+			var W = w / 10;
+			var H = h / 10;
+			for(var i=0;i<H;i++){
+				for(var j=0;j<W;j++){
+					var color = getData(oImg,j*n+Math.floor(Math.random()*n,i*Math.random()*n));
+				}
+				for(var k=0;k<n;k++){
+					for(var l=0;l<n;l++){
+						setData(oImg,j*n+l,i*n+k,color);
+					}
+				}
+			}
+			ctx.putImageData(oImg,0,obj.height);
+		}
+		
+		function getData(obj,x,y){//一行一列来获取具体某个坐标点的像素值
+			var w = obj.width;
+			var d = obj.data;
+			var color = [];
+			color[0] = d[4*(w*y+x)];
+			color[1] = d[4*(w*y+x)+1];
+			color[2] = d[4*(w*y+x)+2];
+			color[3] = d[4*(w*y+x)+3];
+			
+			return color;
+		}
+		function setData(obj,x,y,color){
+			var w = obj.width;
+			var d = obj.data;
+			d[4*(w*y+x)] = color[0];
+			d[4*(w*y+x)+1] = color[1];
+			d[4*(w*y+x)+2] = color[2];
+			d[4*(w*y+x)+3] = color[3];
+		}
+	</script>
+</html>
