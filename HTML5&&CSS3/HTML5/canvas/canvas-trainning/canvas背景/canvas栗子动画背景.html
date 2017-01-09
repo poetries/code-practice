@@ -48,6 +48,35 @@
 				array:[] //保存n个圆形粒子对象		
 			};
 			
+			//创建随即颜色值
+		function colorValue(min){
+			return Math.floor(Math.random()*255 + min);
+		}
+		function createColorStyle(r,g,b){
+			return "rgba("+r+","+g+","+b+", 1)";
+		}
+		//混合两个圆形粒子的颜色
+		function mixConnect(c1,r1,c2,r2){//圆的颜色 半径
+			return (c1*r1+c2*r2)/(r1+r2);
+		};
+		//生成线条的颜色
+		function lineColor(dot1,dot2){//获取具体的圆的颜色再计算
+			var color1 = dot1.color,
+				color2 = dot2.color;
+			var r = mixConnect(color1.r,dot1.radius,color2.r,dot2.radius);
+			var g = mixConnect(color1.g,dot1.radius,color2.g,dot2.radius);
+			var b = mixConnect(color1.b,dot1.radius,color2.b,dot2.radius);
+			return createColorStyle(Math.floor(r),Math.floor(g),Math.floor(b));
+		}
+		//生成圆形粒子的颜色对象
+		function Color(min){
+			min = min || 0;
+			this.r = colorValue(min);
+			this.g = colorValue(min);
+			this.b = colorValue(min);
+			this.style = createColorStyle(this.r,this.g,this.b);
+		}
+		
 			
 			//创建圆形粒子对象
 			function Dot(){
@@ -60,11 +89,13 @@
 				this.vy = -0.5 + Math.random();
 				
 				this.radius = Math.random()*5;
-				this.color = "#f00";
+				//this.color = "#f00";
+				this.color = new Color();
 			}
 			Dot.prototype.draw = function(){
 				ctx.beginPath();
-				ctx.fillStyle = this.color;
+				//ctx.fillStyle = this.color;
+				ctx.fillStyle = this.color.style;
 				ctx.arc(this.x,this.y,this.radius,0,Math.PI*2,false);
 				ctx.fill();
 			}
@@ -114,7 +145,8 @@
 							if ((iDot.x - mousePosition.x) < dots.d_radius && (iDot.y - mousePosition.y) < dots.d_radius && (iDot.x - mousePosition.x) > -dots.d_radius && (iDot.y - mousePosition.y) > -dots.d_radius)
 							{
 								ctx.beginPath();
-								ctx.strokeStyle = "#006600";
+								//ctx.strokeStyle = "#006600";
+								ctx.strokeStyle = lineColor(iDot,jDot);
 								ctx.moveTo(iDot.x,iDot.y);
 								ctx.lineTo(jDot.x,jDot.y);
 								ctx.closePath();
@@ -136,8 +168,16 @@
 			}
 			animateDots();
 			
-			
-			
+			can.onmousemove = function(ev){
+				var ev = ev || window.event;
+				mousePosition.x = ev.pageX;
+				mousePosition.y = ev.pageY;
+			}
+			can.onmouseout = function(){
+				mousePosition.x = can.width/2;
+				mousePosition.y = can.height/2;
+			}
+				
 			
 		</script>
 	</body>
