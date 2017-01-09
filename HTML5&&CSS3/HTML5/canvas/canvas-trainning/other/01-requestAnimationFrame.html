@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>please enter your title</title>
+		<meta charset="gbk">
+		<meta name="Author" content="潭州学院-阿飞老师">
+		<style type='text/css'>
+			*{ margin:0; padding:0;font-family:'Microsoft yahei';}
+			a{ text-decoration:none;}
+			a img{ display:block; border:none;}
+			li{ list-style:none;}
+
+		</style>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			
+
+			//alert(window.requestAnimationFrame);
+			if ( !window.requestAnimationFrame )
+			{
+				window.requestAnimationFrame = window.webkitRequestAnimationFrame ||
+						window.mozRequestAnimationFrame ||
+						window.oRequestAnimationFrame ||
+						window.msRequestAnimationFrame ||
+						function(callback){
+							var id = window.setTimeout(callback , 1000/60);
+							return id;
+						};
+				window.cancelAnimationFrame = window.webkitCancelAnimationFrame ||
+						window.mozCancelAnimationFrame ||
+						window.oCancelAnimationFrame ||
+						window.msCancelAnimationFrame ||
+						function(id){
+							window.clearTimeout(id);
+						};
+			};
+
+
+
+
+			//window.requestAnimationFrame
+			/*
+			var s = 0;
+			
+			function fn(){
+				console.log(++s);
+				t = window.requestAnimationFrame(fn);
+				if ( s == 100 )
+				{
+					window.cancelAnimationFrame( t );
+				}
+			};
+			var t = window.requestAnimationFrame(fn);
+			*/
+			
+			/*
+			function fn(){
+				console.log(++s);
+				t = setTimeout(fn,16);
+				if ( s == 100 )clearTimeout( t );
+			};
+			var t = setTimeout(fn,16);*/
+			
+			/*
+			var t = setInterval(function(){
+				console.log(++s);
+				if ( s==100 )
+				{
+					clearInterval(t);
+				}
+			},13);
+			*/
+
+		</script>
+	</body>
+</html>

@@ -34,7 +34,7 @@
 			var ctx = can.getContext("2d");
 			can.width = window.innerWidth;
 			can.height = window.innerHeight;
-			
+			ctx.lineWidth = 0.3;
 			//初始链接线条显示位置
 			var mousePosition = {
 				x:30*can.width/100,
@@ -101,14 +101,41 @@
 				}
 			}
 		
+			//链接粒子对象
+			function connectDots(){
+				for (var i=0;i<dots.n ; i++)
+				{
+					for ( var j=0;j<dots.n ; j++)
+					{
+						iDot = dots.array[i];
+						jDot = dots.array[j];
+						if ((iDot.x - jDot.x) < dots.distance && (iDot.y - jDot.y) < dots.distance && (iDot.x - jDot.x) > -dots.distance && (iDot.y - jDot.y) > -dots.distance)
+						{
+							if ((iDot.x - mousePosition.x) < dots.d_radius && (iDot.y - mousePosition.y) < dots.d_radius && (iDot.x - mousePosition.x) > -dots.d_radius && (iDot.y - mousePosition.y) > -dots.d_radius)
+							{
+								ctx.beginPath();
+								ctx.strokeStyle = "#006600";
+								ctx.moveTo(iDot.x,iDot.y);
+								ctx.lineTo(jDot.x,jDot.y);
+								ctx.closePath();
+								ctx.stroke();
+							}
+							
+						}
+					}
+				}
+			}
+		
 			//让圆形粒子不断的移动
 			function animateDots(){
 				ctx.clearRect(0,0,can.width,can.height);
 				 moveDots();
-				 drawDots();
+				 connectDots();
+				 drawDots();			 
+				 requestAnimationFrame(animateDots);
 			}
 			animateDots();
-			//链接粒子对象
+			
 			
 			
 			
