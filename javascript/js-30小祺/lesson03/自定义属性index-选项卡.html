@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+	        a{text-decoration: none;}
+	        ul,li{list-style: none;}
+	        body{font-size: 14px;font-family: "微软雅黑";}
+	        .box{width: 600px;height: 450px;border: 1px solid red;margin: 50px auto}
+	        #list{background:rgba(0,0,0,.6);height: 50px}
+	        #list li{width:50px;height:50px;float: left;text-align:center;line-height: 50px;cursor:pointer;}
+	        #tab{height: 400px;position: relative;}
+	        #tab div{height: 400px;position: absolute;display: none}
+	        .active{background:#E30DF4;color: #fff}
+
+		</style>
+	</head>
+	<body>
+		<div class="box">
+        <ul id="list">
+            <li class="active">新闻</li>
+            <li>视屏</li>
+            <li>体育</li>
+            <li>娱乐</li>
+        </ul>
+
+        <div id="tab">
+            <div style="display:block">我是内容一 </div>
+            <div>我是内容二</div>
+            <div>我是内容三</div>
+            <div>我是内容四</div>
+        </div>
+    </div>
+	<script type="text/javascript">
+		var liItmes = document.getElementsByTagName("li");
+		var tab = document.getElementById("tab");
+		var tabs = tab.getElementsByTagName("div");
+		
+		for (var i = 0;i < liItmes.length;i++) {
+			liItmes[i].index = i;//自定义属性index
+			
+			liItmes[i].onclick = function(){
+				//alert(this.index);
+				for(var j = 0; j < liItmes.length;j++) {
+					tabs[j].style.display = "none";
+					liItmes[j].className = "";
+				}
+				this.className = "active";
+				tabs[this.index].style.display = "block";
+			}
+		}
+	</script>
+	
+	</body>
+</html>
