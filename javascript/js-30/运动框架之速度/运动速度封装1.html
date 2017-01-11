@@ -10,9 +10,13 @@
 		  }
 
 			#ball {
+				position: relative;
+				left: 0;
+				top: 0;
 				width: 100px;
 				height: 100px;
 				background: blue;
+				opacity: 1;
 			}
 		</style>
 	</head>
@@ -24,21 +28,36 @@
 			//问题一：当需要两个动画的时候，会执行后面一个，解决办法如下，回调函数
 			//问题二：当需要两个以上的时候，需要考虑是否可写一行代码变换多个属性
 			//问题三：变换不一致的时候，定时器被提前清除
+			//问题四：速度speed不要写死
 			ball.onmouseover = function(){
-				move(ball,{"width":400,"height":300},10);
+				move(ball,{"width":300,"height":300,"opacity":0.3});
 			}
-			ball.onmouseout = function(){
-				move(ball,{"width":100,"height":100},-10);
-			}
-			function move(obj,json,speed){
+//			ball.onmouseout = function(){
+//				move(ball,{"width":100,"height":100},-10);
+//			}
+			function move(obj,json){
 				clearInterval(obj.timer);
 				var mark = true;
 				obj.timer = setInterval(function(){
 					for(var attr in json){
-						var curr = parseInt(getStyle(obj,attr));
+						var curr = null;
 						var target = json[attr];
+						var speed = null;
+						if(attr == "opacity"){
+							curr = getStyle(obj,attr)*100;
+							speed = (target*100-curr)*0.15;
+						}else {
+							curr = parseInt(getStyle(obj,attr));
+							speed = (target - curr)*0.15;
+						}
+						speed = speed>0 ? Math.ceil(speed):Math.floor(speed);
 						if(curr != target){
-							obj.style[attr] = curr+speed+"px";
+							if(attr == "opacity"){
+								obj.style[attr] = (curr+speed)/100;
+							}else {
+								obj.style[attr] = curr+speed+"px";
+							}
+							
 							mark = false;
 					  }
 					}
