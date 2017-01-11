@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>01焦点轮播--基本版本</title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			body{
+				font-size: 14px;
+				font-family: "微软雅黑";
+			}
+			ul,li{
+				list-style: none;
+			}
+			#box {
+				position: relative;
+				width: 970px;
+				height: 350px;
+				margin: 30px auto;
+			}
+			#imgBox li{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 970px;
+				height: 350px;
+				opacity: 0;
+				
+			}
+			#imgBox .first {
+				opacity: 1;/*淡入淡出用opacity*/
+			}
+			#imgBox li img {
+				width: 970px;
+				height: 350px;
+			}
+			#btn {
+				width: 120px;
+				position: absolute;
+				right: 10px;
+				bottom: 10px;
+			}
+			#btn li {
+				width: 20px;
+				height: 20px;
+				line-height: 20px;
+				border-radius: 50%;
+				text-align: center;
+				cursor: pointer;
+				background: #fff;
+				margin: 0 2px;
+				float: left;
+			}
+			#btn li.active {
+				background: #F17A5C;
+				color: #fff;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<ul id="imgBox">
+				<li class="first"><img src="images/01.png" alt="" /></li>
+				<li><img src="images/02.png" alt="" /></li>
+				<li><img src="images/03.png" alt="" /></li>
+				<li><img src="images/04.png" alt="" /></li>
+			</ul>
+			<ol id="btn">
+				<li class="active">1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+			</ol>
+		</div>
+		<script src="js/move.js"></script>
+		<script type="text/javascript">
+			var imgLis = document.querySelector("#imgBox").querySelectorAll("li");
+			var btns = document.querySelector("#btn").querySelectorAll("li");
+			var len = btns.length;
+			for (var i=0;i<len;i++) {
+					(function(index){
+						btns[index].onmouseover = function(){
+							for (var j=0;j<len;j++){
+								btns[j].className = "";
+								//imgLis[j].style.display = "none";
+								move(imgLis[j],{"opacity":0},function(){
+									this.style.display = "none"; //回调消除切换引起的残影
+								});
+							}
+							//imgLis[index].style.display = "block";
+							imgLis[index].style.display = "block";
+							move(imgLis[index],{"opacity":100});
+							this.className = "active";
+						}
+					})(i);
+			}
+		</script>
+	</body>
+</html>
