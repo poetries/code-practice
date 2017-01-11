@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>02焦点轮播--淡入淡出</title>
+		<title>03焦点轮播--左右</title>
 		<style type="text/css">
 			*{
 				padding: 0;
@@ -20,18 +20,20 @@
 				width: 970px;
 				height: 350px;
 				margin: 30px auto;
+				overflow: hidden;
+			}
+			#imgBox {
+				width:1000%;/*自动计算百分比*/
+				position: absolute;
+				left: 0;
 			}
 			#imgBox li{
-				position: absolute;
-				top: 0;
-				left: 0;
 				width: 970px;
 				height: 350px;
-				opacity: 0;
-				
+				float: left;
 			}
 			#imgBox .first {
-				opacity: 1;/*淡入淡出用opacity*/
+				
 			}
 			#imgBox li img {
 				width: 970px;
@@ -78,7 +80,7 @@
 		<script src="js/move.js"></script>
 		<script type="text/javascript">
 		    var box = document.querySelector("#box");
-			var imgLis = document.querySelector("#imgBox").querySelectorAll("li");
+			var imgUl = document.querySelector("#imgBox");
 			var btns = document.querySelector("#btn").querySelectorAll("li");
 			var len = btns.length;
 			var index = 0;
@@ -89,12 +91,8 @@
 						btns[index].onmouseover = function(){
 							for (var j=0;j<len;j++){
 								btns[j].className = "";
-								move(imgLis[j],{"opacity":0},function(){
-									this.style.display = "none"; //回调消除切换引起的残影
-								});
-							}
-							imgLis[index].style.display = "block";
-							move(imgLis[index],{"opacity":100});
+						}
+							move(imgUl,{"left":-970*index});
 							this.className = "active";
 						}
 					})(i);
@@ -104,13 +102,8 @@
 				index %=len;//限制长度
 				for (var j=0;j<len;j++){
 					btns[j].className = "";
-					move(imgLis[j],{"opacity":0},function(){
-						this.style.display = "none"; //回调消除切换引起的残影
-					});
 				}
-				//先显示 在把opacity变成1
-				imgLis[index].style.display = "block";
-				move(imgLis[index],{"opacity":100});
+				move(imgUl,{"left":-970*index});
 				btns[index].className = "active";
 			}
 			timer = setInterval(autoPlay,2000);
