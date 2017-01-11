@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>03焦点轮播--左右</title>
+		<title>05焦点轮播--左右-无缝</title>
 		<style type="text/css">
 			*{
 				padding: 0;
@@ -20,7 +20,7 @@
 				width: 970px;
 				height: 350px;
 				margin: 30px auto;
-				/*overflow: hidden;*/
+				overflow: hidden;
 			}
 			#imgBox {
 				width:1000%;/*自动计算百分比*/
@@ -93,6 +93,7 @@
 							for (var j=0;j<len;j++){
 								btns[j].className = "";
 						}
+							cindex = index;//保持索引同步
 							move(imgUl,{"left":-970*index});
 							this.className = "active";
 						}
@@ -110,8 +111,6 @@
 					if(index == lenImg-1){
 						this.style.left = 0;
 						index = 0;
-						console.log(this);
-						
 					}
 				});
 				btns[cindex].className = "active";
