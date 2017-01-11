@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content=" ">
+    <title>Document</title>
+    <style type="text/css">
+        *{margin: 0;padding: 0;}
+        a{text-decoration: none;}
+        ul,li{list-style: none;}
+        body{font-size: 14px;font-family: "微软雅黑";}
+    </style>
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+            数组的增删查改去重
+                有一个对象化去业务逻辑思想
+                index 下标
+                num   截取几位
+                foo   截取之后替换的东西
+                splice(index,num,foo1,foo2,foo3....);
+                模块化思想
+
+
+         */
+
+        var arr = [1,2,3,4,5,1,2,3];
+        // function del(){
+        //     for(var i=0;i<arr.length;i++){
+        //         arr.shift();
+        //         //i = 0;  2,3,4,5,1,2,3  7
+        //         //i = 1;  3,4,5,1,2,3    6
+        //         //i = 3;  5,1,2,3        4
+        //         //数组的长度是动态变化的
+        //     };
+        // }
+        // del();
+
+        // function del1(){
+        //     for(var i=arr.length;i>0;i--){
+        //         arr.shift();
+        //     }
+        // }
+        // del1();
+        // alert(arr);
+
+        function xqArr(arr){
+            var arrCon = {
+                add:function(index,info){
+                    arr.splice(index,0,info);
+                    return this;
+                },
+                del:function(index,num){
+                    arr.splice(index,num);
+                    return this;
+                },
+                change:function(index,num,info){
+                    arr.splice(index,num,info);
+                    return this;
+                },
+                search:function(info){
+                    var infoArr = [];
+                    var index = 0;
+                    for(var i=0;i<arr.length;i++){
+                        if(arr[i] == info){
+                            infoArr.push(arr[i]);
+                            index = i;
+                        };
+                    };
+                    console.log(infoArr);
+                    if(infoArr.length){
+                        alert(info+"在第"+(index+1)+"个位置");
+                    }else{
+                        alert("没找到");
+                    };
+                    return this;
+                },
+                dp:function(){
+                    //从前往后 从后往前 找
+                    for(var i=0;i<arr.length;i++){
+                        for(var j=arr.length;j>0;j--){
+                            if(arr[i]==arr[j] && i != j){
+                                arr.splice(j,1);
+                            };
+                        };
+                    };
+
+                    // var dpArr = [];
+                    // for(var i=0;i<arr.length;i++){
+                    //     if(dpArr.indexOf(arr[i])== -1){
+                    //         dpArr.push(arr[i]);
+                    //     };
+                    // };
+                    // arr = dpArr;
+
+                    // arr = arr.filter(function(foo,index,arr){
+                    //     //return foo % == 0;
+                    //     return arr.indexOf(foo) == index;
+                    // });
+
+                    return this;
+                }
+            };
+            return arrCon;
+        }
+
+
+        xqArr(arr).add(1,"adasd");
+
+
+        //arrCon.add(3,"xq");
+        //arrCon.del(3,1);
+        //arrCon.change(1,3,"xq");
+        //arrCon.search(1);
+        //arrCon.dp();
+        //arrCon.add(3,"xq").change(4,1,"xq").search("3").dp();
+        alert(arr);
+
+
+        /*
+        //banner 初始模型  banner规范化
+        var banner = {
+            init:function(){
+
+            },
+            prev:function(){
+
+            },
+            next:function(){
+
+            },
+            auto:function(){
+
+            },
+            wufeng:function(){
+
+            },
+            active:function(){
+
+            }
+        };
+
+        banner.init();
+        */
+    </script>
+</body>
+</html>

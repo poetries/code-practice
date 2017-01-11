@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		  *{
+		  	padding: 0;
+		  	margin: 0;
+		  }
+			#box1{
+				position: relative;
+				top: 200px;
+				left: -100px;
+				width: 100px;
+				height: 300px;
+				background: red;
+			}
+			#box2 {
+				position: absolute;
+				top: 130px;
+				left: 100px;
+				width: 20px;
+				height: 60px;
+				background: bisque;
+				color:#f00;
+				font-weight: bold;
+				text-align: center;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box1">
+			<div id="box2">分享到</div>
+		</div>
+		<script type="text/javascript">
+			var box1 = document.getElementById("box1");
+			
+			box1.onmouseover = function(){
+				//this.style.left = 0;
+				cstart();
+			}
+			box1.onmouseout = function(){
+				//this.style.left = "-100px";
+				stop();
+			}
+			
+			
+			 var timer = null;
+			function cstart(){
+			  clearInterval(timer);
+			  var speed = 10; //步长
+			  var target = 0; //目的地
+			  timer = setInterval(function(){
+				var curr = parseInt(getStyle(box1,"left"));
+				if(curr == target){
+					clearInterval(timer);
+					speed = 0;
+					
+			  	 }else {
+			  	 	//speed +=10;
+			  	 	box1.style.left = curr+speed+"px";
+			  	 }
+				},1000/30);
+			}
+			function stop(){
+				clearInterval(timer);
+				var speed = -10; //步长
+				var target = -100; //目的地
+			  timer = setInterval(function(){
+				var curr = parseInt(getStyle(box1,"left"));
+				if(curr == target){
+					clearInterval(timer);
+			  	}else {
+			  	 	box1.style.left = curr+speed+"px";
+			  	 }
+				},1000/30);
+			}
+			
+			
+			function getStyle(obj,attr){
+				return getComputedStyle(obj)[attr]?getComputedStyle(obj)[attr]:obj.currentStyle[attr];
+			}
+		</script>
+	</body>
+</html>

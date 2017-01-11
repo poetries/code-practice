@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content=" ">
+    <title>Document</title>
+    <style type="text/css">
+        *{margin: 0;padding: 0;}
+        a{text-decoration: none;}
+        ul,li{list-style: none;}
+        body{font-size: 14px;font-family: "微软雅黑";}
+    </style>
+</head>
+<body>
+    <a href="#" id="aa">点我</a>
+    <script type="text/javascript">
+        /*
+            this
+         */
+
+        var aa = document.getElementById("aa");
+        // var json = {
+        //     num:77,
+        //     clickMe:function(){
+        //         //保存this
+        //         var $this = this;
+        //         aa.onclick = function(){
+        //             alert($this.num);
+        //         }
+        //     }
+        // };
+
+        var json = {
+            num:77,
+            clickMe:function(){
+                //保存this
+                aa.onclick = function(){
+                    alert(this.num);
+                }.bind(this);
+            }
+        };
+
+        json.clickMe();
+
+
+        // var a = 1;
+        // document.onclick = function(){
+        //     alert(this.a);
+        // }.bind(window);
+    </script>
+</body>
+</html>

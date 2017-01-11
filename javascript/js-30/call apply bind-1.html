@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content=" ">
+    <title>Document</title>
+    <style type="text/css">
+        *{margin: 0;padding: 0;}
+        a{text-decoration: none;}
+        ul,li{list-style: none;}
+        body{font-size: 14px;font-family: "微软雅黑";}
+    </style>
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+            这三个方法都是改变this的指向
+                call
+                apply
+                bind
+
+            call apply  没参数一样
+                        有参数call一次传入             call(elemet,foo1,foo2,foo3)
+                        有参数apply传入一个数组参数    apply(element,[foo1,foo2,foo3]);
+            call bind   有参数传入一样
+                        但是bind后边要加()执行
+                        ## 使用bind其实创建了一个函数 调用就需要在加()执行
+         */
+
+        var cherish = {
+            name:"cherish",
+            age:18
+        };
+
+        var ramwire = {
+            name:"ramwire",
+            age:16,
+            say:function(address,tel){
+                alert(this.name +"---"+this.age+"---"+address+"--"+tel);
+            }
+        };
+        //ramwire.say();
+        //ramwire.say();
+        //没参数的时候
+        //ramwire.say.call(cherish);
+        //ramwire.say.apply(cherish);
+
+        //有参数
+        ramwire.say.call(cherish,"北京",110);
+        ramwire.say.apply(cherish,["北京",110]);
+        ramwire.say.bind(cherish,"北京",110)();
+    </script>
+</body>
+</html>

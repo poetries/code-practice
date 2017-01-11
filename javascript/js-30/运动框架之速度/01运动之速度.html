@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box {
+				width: 100px;
+				height: 100px;
+				background: red;
+				 position: relative;
+				left: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<!--
+			        
+            运动
+                位移  top,left
+                折叠  width,height
+                淡入淡出 opacity
+            时间有关系
+                setInterval
+                setTimeout
+            一般来说定时器都要记得清除  每次的动画都是一个全新的动画
+         
+		-->
+		
+		
+		<script type="text/javascript">
+			var box = document.getElementById("box");
+			var speed = 0; //步长
+			var target = 600;
+			var timer = null;
+			timer = setInterval(function(){
+				var curr = parseInt(getStyle(box,"left")); //去除getStyle(box,"left")的单位
+				if(curr == target){
+					clearInterval(timer);
+					speed = 0;
+					alert("运动结束");
+				}else{
+					speed +=10;
+					box.style.left = speed + "px";
+				}
+				
+
+			},1000/30);
+			
+			//监控left的值的变化 怎么样拿到left的值
+			//alert(getComputedStyle(box)["width"]);
+			//alert(box.currentStyle["left"]);
+			// currentStyle --IE 
+			// getComputedStyle -- 非IE
+			
+			function getStyle(obj,attr){
+				return getComputedStyle(obj)[attr]?getComputedStyle(obj)[attr]:obj.currentStyle[attr];
+			}
+			
+			
+			
+		</script>
+	</body>
+</html>

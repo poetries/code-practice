@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		  *{
+		  	padding: 0;
+		  	margin: 0;
+		  }
+			#box1{
+				position: relative;
+				top: 200px;
+				left: -100px;
+				width: 100px;
+				height: 300px;
+				background: red;
+			}
+			#box2 {
+				position: absolute;
+				top: 130px;
+				left: 100px;
+				width: 20px;
+				height: 60px;
+				background: bisque;
+				color:#f00;
+				font-weight: bold;
+				text-align: center;
+				cursor: pointer;
+			}
+			#ball {
+				width: 100px;
+				height: 100px;
+				background: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="ball"></div>
+		<div id="box1">
+			<div id="box2">分享到</div>
+		</div>
+		<script type="text/javascript">
+			var box1 = document.getElementById("box1");
+			var ball = document.getElementById("ball");
+			
+			box1.onmouseover = function(){
+				move(this,"left",0,10);
+			}
+			box1.onmouseout = function(){
+				move(this,"left",-100,-10);
+			}
+			//问题一：当需要两个动画的时候，会执行后面一个，解决办法如下，回调函数
+			ball.onmouseover = function(){
+				//同时变换 用的最多
+				//move(this,"width",500,10);
+				//move(this,"height",500,10);
+				//列队在执行
+				move(ball,"width",500,10,function(){
+					move(ball,"height",500,10);
+				});
+			}
+			ball.onmouseout = function(){
+				//move(this,"width",100,-10);
+				//move(this,"height",100,-10);
+				move(ball,"width",100,-10,function(){
+					move(ball,"height",100,-10);
+				});
+			}
+			var timer = null;
+			function move(obj,attr,target,speed,callback){
+				clearInterval(timer); //obj.timer缓存到各自的obj下
+				timer = setInterval(function(){
+				var curr = parseInt(getStyle(obj,attr));
+				if(curr == target){
+					clearInterval(timer);
+					callback && callback();
+			  	}else {
+			  	 	obj.style[attr] = curr+speed+"px";
+			  	 }
+				},1000/30);
+			}
+			
+			
+			
+			
+			function getStyle(obj,attr){
+				return getComputedStyle(obj)[attr]?getComputedStyle(obj)[attr]:obj.currentStyle[attr];
+			}
+		</script>
+	</body>
+</html>

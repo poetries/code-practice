@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content=" ">
+    <title>Document</title>
+    <style type="text/css">
+        *{margin: 0;padding: 0;}
+        a{text-decoration: none;}
+        ul,li{list-style: none;}
+        body{font-size: 14px;font-family: "微软雅黑";}
+    </style>
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+            for in专门用来遍历json
+         */
+
+        var json = {
+            "name":"xq",
+            age:18,
+            address:"湖南长沙",
+            tel:123123213
+        };
+
+        // var i = 0;
+        // for(i;i<10;i++){
+        //     alert(i);
+        // }
+
+        for(var key in json){
+            //var key 变量
+            //document.write(key+"----"+json.key+"<br />");
+            document.write(key+"----"+json[key]+"<br />");
+        };
+    </script>
+</body>
+</html>
