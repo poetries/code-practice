@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			ul,li {
+				list-style: none;
+			}
+			body{
+				font-size: 14px;
+				font-family: "微软雅黑";
+			}
+			.box {
+				
+				width: 800px;
+				height: 340px;
+				margin: 30px auto;
+				border-radius: 7px;
+				box-shadow: 2px 2px 1em #006600;
+				overflow: hidden;
+			}
+			.list li{
+				position: relative;
+				width: 160px;
+				height: 340px;
+				float: left;
+				border-radius: 7px;
+				transition: all 0.5s linear;
+			}
+			.list:hover li{
+				width: 50px;
+			}
+			.list li:hover {
+				width: 600px;
+			}
+			.list li img {
+				width: 600px;
+				height: 340px;
+			}
+			.list .title {
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				height: 40px;
+				line-height: 40px;
+				background: rgba(255,255,255,.5);
+				font-family: "Vivaldi";
+				font-size: 20px;
+				font-weight: bold;
+				color: #008080;
+				text-indent: 2em;
+				transition: all 0.5s linear;
+			}
+			.list li:hover .title{
+				bottom: -40px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<ul class="list">
+				<li>
+					<a href="javascript:;"><img src="img/1.jpg" alt="" /></a>
+					<div class="title">Poetries</div>
+				</li>
+				<li>
+					<a href="javascript:;"><img src="img/2.jpg" alt="" /></a>
+					<div class="title">jingguanliuye</div>
+				</li>
+				<li>
+					<a href="javascript:;"><img src="img/3.jpg" alt="" /></a>
+					<div class="title">yinghong</div>
+				</li>
+				<li>
+					<a href="javascript:;"><img src="img/4.jpg" alt="" /></a>
+					<div class="title">Poetries</div>
+				</li>
+				<li>
+					<a href="javascript:;"><img src="img/5.jpg" alt="" /></a>
+					<div class="title">yinghong</div>
+				</li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			
+		</script>
+	</body>
+</html>
