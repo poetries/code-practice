@@ -25,14 +25,9 @@
 			//问题二：当需要两个以上的时候，需要考虑是否可写一行代码变换多个属性
 			//问题三：变换不一致的时候，定时器被提前清除
 			ball.onmouseover = function(){
-				//同时变换 用的最多
-				//move(this,"width",500,10);
-				//move(this,"height",500,10);
 				move(ball,{"width":400,"height":300},10);
 			}
 			ball.onmouseout = function(){
-				//move(this,"width",100,-10);
-				//move(this,"height",100,-10);
 				move(ball,{"width":100,"height":100},-10);
 			}
 			function move(obj,json,speed){
