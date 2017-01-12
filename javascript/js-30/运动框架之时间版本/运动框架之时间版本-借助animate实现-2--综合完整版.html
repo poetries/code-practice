@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box1,#box2,#box3,#box4,#box5 {
+				position: relative;
+				width: 100px;
+				height: 100px;
+				line-height: 100px;
+				text-align: center;
+				background: red;
+				color: #fff;
+				font-size: 12px;
+				opacity: 0.5;
+				filter:alpha(opcity=20);/**兼容IE*/
+				margin: 10px;
+				
+			}
+		</style>
+	</head>
+	<body>
+		
+         <div id="box1"></div>
+         <div id="box2"></div>
+		 <div id="box3"></div>
+		 <div id="box4"></div>
+		 <div id="box5"></div>
+         <script src="Animate.js"></script>
+         <script type="text/javascript">
+
+			//速度版本
+         	getId("box1").onclick = function(){
+         		poetriesAnimateSpeed(getId("box1"),{
+         			"left":500,
+         			"opacity":100
+         		
+         		},function(){
+         			this.innerHTML = "我是速度版本";
+         		});
+         	}
+         	//时间版本
+ 			getId("box2").onclick = function(){
+         		poetriesAnimateTime(getId("box2"),{
+         			"left":500,
+         			"opacity":100
+         		},1000,"elasticOut",function(){
+         			this.innerHTML = "我是时间版本";
+         		});
+         	}
+			getId("box3").onclick = function(){
+         		poetriesAnimateTime(getId("box3"),{
+         			"left":500,
+         			"opacity":100
+         		},1000,"backIn",function(){
+         			this.innerHTML = "我是时间版本";
+         		});
+         	}
+			getId("box4").onclick = function(){
+         		poetriesAnimateTime(getId("box4"),{
+         			"left":500,
+         			"opacity":100
+         		},1000,"bounceIn",function(){
+         			this.innerHTML = "我是时间版本";
+         		});
+         	}
+			getId("box5").onclick = function(){
+         		poetriesAnimateTime(getId("box5"),{
+         			"left":500,
+         			"opacity":100
+         		},1000,"bounceBoth",function(){
+         			this.innerHTML = "我是时间版本";
+         		});
+         	}
+   	
+         	
+         	
+         </script>
+	</body>
+</html>

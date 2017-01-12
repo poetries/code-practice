@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box {
+				position: relative;
+				width: 100px;
+				height: 100px;
+				background: red;
+				opacity: 0.5;
+				filter:alpha(opcity=20);/**兼容IE*/
+			}
+		</style>
+	</head>
+	<body>
+		
+         <div id="box"></div>
+         <script type="text/javascript">
+         	var box = document.querySelector("#box");
+         	//第一个问题 opacity
+         	//第二个问题 多个属性的写法 需要传入对象 move(box,{"width":300,"height":200},130,1500)
+         	box.onclick = function(){
+         		move(box,{
+         			"width":200,
+         			"height":200,
+         			"left":100,
+         			"top":100,
+         			"opacity":100
+         		},1500,function(){
+         			move(box,{
+         				"width":100,
+         				"height":100,
+         				"left":0,
+         				"top":0
+         			},1000,function(){
+         				this.style.background = "green";
+         			});
+         		});
+         	}
+         
+         	function move(obj,json,time,callback){
+         		//一般定时器结束后最好清除
+         		clearInterval(obj.timer);
+         		var curr = {};
+         		var end = {};
+         		//通过for in 在上车前把所有东西装到包里
+         		for(var attr in json){
+         			if(attr == "opacity"){//opacity特殊东西特殊对待
+         				curr[attr] = getStyle(obj,attr)*100;//化为整数好计算
+         			}else{
+         				curr[attr] = parseInt(getStyle(obj,attr))||0;
+         			}
+         			end[attr] = json[attr];
+         			
+         		}
+         		
+         		
+         		//如果没写默认值 默认就是0 不然在IE出问题
+				//var curr = parseInt(getStyle(obj,attr))||0;
+         		//var end = target;
+         		var sTime = new Date();//开始时间T0
+         		//开始变换了
+         		obj.timer = setInterval(function(){
+         			var nTime = new Date();//当前时间Tt
+         			//St = (Tt-T0)/Time*(S-S0)+S0
+         			//(nTime-sTime)/time 比例最多为1
+         			var prop = (nTime-sTime)/time; 
+         			if(prop >=1){
+         				prop = 1;
+         				clearInterval(obj.timer);
+         				callback && callback.call(obj);
+         			}
+     				for(var attr in json){
+     					if(attr == "opacity"){
+     						var s = prop*(end[attr]-curr[attr])+curr[attr];
+     						obj.style[attr] = s/100;
+     						obj.style.filter = "alpha(opacity="+s+")";
+     					}else{
+     						var s = prop*(end[attr]-curr[attr])+curr[attr];
+     						obj.style[attr] = s+"px";
+     					}
+    
+     				}
+
+         			
+         		},13);
+         	}
+         	function getStyle(obj,attr){
+				return getComputedStyle(obj)[attr]?getComputedStyle(obj)[attr]:obj.currentStyle[attr];
+			}
+         	
+         	
+         </script>
+	</body>
+</html>
