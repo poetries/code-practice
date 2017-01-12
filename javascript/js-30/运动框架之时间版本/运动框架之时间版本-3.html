@@ -9,38 +9,26 @@
 				width: 100px;
 				height: 100px;
 				background: red;
+				opacity: 0.5;
+				filter:alpha(opcity=20);/*兼容IE*/
 			}
 		</style>
 	</head>
 	<body>
 		
-            <!--关于运动
-                速度的运动 通过速度来控制元素的 位移 / 折叠 / 淡入淡出
-                时间的运动 通过时间来控制元素的 位移 / 折叠 / 淡入淡出(jQuery)
-            时间的运动 基于一些数学公式 匀速运动 在路程的每一个点 速度都一样
-
-            move(box,width,400,2000);
-            move(obj,attr,target,time)
-            attr -----  width/height/left/top....
-            target ---  目标值
-            time   ---  经过多久可以到达target
-
-            S = S0 + vt;
-            S = S0 + 1/2at^2; //匀加速
-            -->
          <div id="box"></div>
          <script type="text/javascript">
          	var box = document.querySelector("#box");
          	//第一个问题 opacity
+         	//第二个问题 多个属性的写法 需要传入对象 move(box,{"width":300,"height":200},130,1500)
          	box.onclick = function(){
-         		move(box,"width",400,1500);
-         		move(box,"height",600,1500);
-         		move(box,"left",100,100);
+         		move(box,"opacity",100,1500);
+         		move(box,"left",300,1500);
          	}
          
-         	function move(obj,attr,target,time){
+         	function move(obj,json,time){
          		//如果没写默认值 默认就是0 不然在IE出问题
-         		var curr = parseInt(getStyle(obj,attr))||0;
+				var curr = parseInt(getStyle(obj,attr))||0;
          		var end = target;
          		var sTime = new Date();//开始时间T0
          		//开始变换了
@@ -53,8 +41,10 @@
          				prop = 1;
          				clearInterval(timer);
          			}
-         			var s = prop*(end-curr)+curr;
-         			obj.style[attr] = s+"px";
+     				var s = prop*(end-curr)+curr;
+     				obj.style[attr] = s+"px";
+
+         			
          		},13);
          	}
          	function getStyle(obj,attr){
