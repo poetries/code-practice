@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box {
+				width: 100px;
+				height: 100px;
+				background: red;
+			}
+		</style>
+	</head>
+	<body>
+		
+            <!--关于运动
+                速度的运动 通过速度来控制元素的 位移 / 折叠 / 淡入淡出
+                时间的运动 通过时间来控制元素的 位移 / 折叠 / 淡入淡出(jQuery)
+            时间的运动 基于一些数学公式 匀速运动 在路程的每一个点 速度都一样
+
+            move(box,width,400,2000);
+            move(obj,attr,target,time)
+            attr -----  width/height/left/top....
+            target ---  目标值
+            time   ---  经过多久可以到达target
+
+            S = S0 + vt;
+            S = S0 + 1/2at^2; //匀加速
+            -->
+         <div id="box"></div>
+         <script type="text/javascript">
+         	var box = document.querySelector("#box");
+         	box.onclick = function(){
+         		move(box,"width",400,1500);
+         	}
+         
+         	function move(obj,attr,target,time){
+         		var curr = parseInt(getStyle(obj,attr));
+         		var end = target;
+         		var sTime = new Date();//开始时间T0
+         		//开始变换了
+         		var timer = setInterval(function(){
+         			var nTime = new Date();//当前时间Tt
+         			//St = (Tt-T0)/Time*(S-S0)+S0
+         			//(nTime-sTime)/time 比例最多为1
+         			var prop = (nTime-sTime)/time; 
+         			if(prop >=1){
+         				prop = 1;
+         				clearInterval(timer);
+         			}
+         			var s = prop*(end-curr)+curr;
+         			obj.style[attr] = s+"px";
+         		},13);
+         	}
+         	function getStyle(obj,attr){
+				return getComputedStyle(obj)[attr]?getComputedStyle(obj)[attr]:obj.currentStyle[attr];
+			}
+         	
+         	
+         </script>
+	</body>
+</html>
