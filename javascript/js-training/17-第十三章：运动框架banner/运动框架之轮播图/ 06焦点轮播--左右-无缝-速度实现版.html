@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>05焦点轮播--左右-无缝-速度实现版</title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			body{
+				font-size: 14px;
+				font-family: "微软雅黑";
+			}
+			ul,li{
+				list-style: none;
+			}
+			#box {
+				position: relative;
+				width: 970px;
+				height: 350px;
+				margin: 30px auto;
+				overflow: hidden;
+			}
+			#imgBox {
+				width:1000%;/*自动计算百分比*/
+				position: absolute;
+				left: 0;
+			}
+			#imgBox li{
+				width: 970px;
+				height: 350px;
+				float: left;
+			}
+
+			#imgBox li img {
+				width: 970px;
+				height: 350px;
+			}
+			#btn {
+				width: 120px;
+				position: absolute;
+				right: 10px;
+				bottom: 10px;
+			}
+			#btn li {
+				width: 20px;
+				height: 20px;
+				line-height: 20px;
+				border-radius: 50%;
+				text-align: center;
+				cursor: pointer;
+				background: #fff;
+				margin: 0 2px;
+				float: left;
+			}
+			#btn li.active {
+				background: #F17A5C;
+				color: #fff;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<ul id="imgBox">
+				<li><img src="images/01.png" alt="" /></li>
+				<li><img src="images/02.png" alt="" /></li>
+				<li><img src="images/03.png" alt="" /></li>
+				<li><img src="images/04.png" alt="" /></li>
+				<li><img src="images/01.png" alt="" /></li>
+			</ul>
+			<ol id="btn">
+				<li class="active">1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+			</ol>
+		</div>
+		<script src="Animate.js"></script>
+		<script type="text/javascript">
+		    var box = document.querySelector("#box");
+			var imgUl = document.querySelector("#imgBox");
+			var btns = document.querySelector("#btn").querySelectorAll("li");
+			var len = btns.length;
+			var lenImg = imgUl.querySelectorAll("li").length;
+			var index = 0; //控制img的索引
+			var cindex = 0;//控制按钮的索引
+			var timer = null;
+			
+			for (var i=0;i<len;i++) {
+					(function(index){
+						btns[index].onmouseover = function(){
+							for (var j=0;j<len;j++){
+								btns[j].className = "";
+						}
+							cindex = index;//保持索引同步
+							animateSpeed(imgUl,{"left":-970*index});
+							this.className = "active";
+						}
+					})(i);
+			}
+			function autoPlay(){
+				index++;
+				cindex++;
+				cindex %=len;//限制长度
+				for (var j=0;j<len;j++){
+					btns[j].className = "";
+				}
+				animateSpeed(imgUl,{"left":-970*index},function(){
+					
+					if(index == lenImg-1){
+						this.style.left = 0;
+						index = 0;
+					}
+				});
+				btns[cindex].className = "active";
+			}
+			timer = setInterval(autoPlay,2000);
+			box.onmouseover = function(){
+				clearInterval(timer);
+			}
+			box.onmouseout = function(){
+				timer = setInterval(autoPlay,2000);
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				position: absolute;
+				width: 100px;
+				height: 100px;
+				border: 2px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<script src="http://7xq6al.com1.z0.glb.clouddn.com/Animate.min.js""></script>
+		<!--<script src="../../dist/js/demo2.js"></script>-->
+		<script type="text/javascript">
+			var box = document.querySelector("#box");
+box.onclick = function () {
+	animateTime(box, {
+		"width": 300,
+		"height": 300,
+		"left": 800
+	}, 1500, "linear", function () {
+		undefined.innerHTML = "运动结束";
+	});
+};
+		</script>
+	</body>
+</html>
