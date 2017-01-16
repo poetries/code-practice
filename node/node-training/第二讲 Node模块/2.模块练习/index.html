@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box {
+            width: 100px;
+            height:100px;
+            background-color: #f00;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+<div id="box"></div>
+<script src="node_modules/poetriesanimate/lib/poetriesanimate.js"></script>
+<script>
+    getId("box").onclick = function () {
+        animateTime(getId("box"),{
+            "left":800
+        },1000,"elasticOut",function () {
+            this.style.background = "yellow";
+        })
+    }
+</script>
+</body>
+</html>

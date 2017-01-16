@@ -1,18 +1,18 @@
 var webpack = require('webpack');
 module.exports = {
-	entry: './app/index.js',
+	entry: './app/main.js',
 	output: {
 		filename: 'bundle.js',
 		path:'./dist'
 	},
 	plugins:[
-        // 去除代码块内的告警语句
+        // 去锟斤拷锟斤拷锟斤拷锟斤拷诘母婢拷锟斤拷
         new webpack.optimize.UglifyJsPlugin({
           compress: {
             warnings: false
           }
         }),
-        // 优先考虑使用最多的模块，并为它们分配最小的ID
+        // 锟斤拷锟饺匡拷锟斤拷使锟斤拷锟斤拷锟斤拷模锟介，锟斤拷为锟斤拷锟角凤拷锟斤拷锟斤拷小锟斤拷ID
         new webpack.optimize.OccurenceOrderPlugin()
     ]
 }
