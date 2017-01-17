@@ -2,14 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78af330b-176d-45c0-9230-a238a1e28d61" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/.idea/express1.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/.idea/jsLibraryMappings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/.idea/runConfigurations/bin_www.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node/node-training/第七讲 Express介绍/testWebServer/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node/node-training/第七讲 Express介绍/testWebServer/route.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/public/fonts/iconfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/public/fonts/iconfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/public/fonts/iconfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/public/images/computer.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/public/css/font.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/public/css/index.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/public/css/reset.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/public/fonts/demo.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/public/fonts/demo_fontclass.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/public/fonts/demo_symbol.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/public/fonts/demo_unicode.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/public/fonts/iconfont.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/public/fonts/iconfont.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/public/fonts/iconfont.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/public/js/data.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/public/js/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/public/lib/bootstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/public/lib/bootstrap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/public/lib/jquery-3.1.0.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/views/about.hbs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/views/video.hbs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/.idea/workspace.xml" afterPath="$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/app.js" afterPath="$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/views/layout.hbs" afterPath="$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/views/layout.hbs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/node/demo01.js" afterPath="$PROJECT_DIR$/node/other/demo01.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/node/demo02.js" afterPath="$PROJECT_DIR$/node/other/demo02.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/node/demo03.js" afterPath="$PROJECT_DIR$/node/other/demo03.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/node/demo04.js" afterPath="$PROJECT_DIR$/node/other/demo04.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/node/input.txt" afterPath="$PROJECT_DIR$/node/other/input.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/public/stylesheets/style.css" afterPath="$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/public/css/style.css" />
     </list>
     <ignored path="code-practice.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,7 +52,108 @@
     <favorites_list name="code-practice" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="www" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/bin/www">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="about.hbs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/views/about.hbs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="18" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.hbs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/views/index.hbs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="13" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="312">
+              <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="video.hbs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/views/video.hbs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/public/css/index.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout.hbs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/views/layout.hbs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="338">
+              <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="font.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/public/css/font.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="demo.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/public/fonts/demo.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HTML5&amp;&amp;CSS3/HTML5/video/my-video-player/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="130">
+              <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="12" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -73,6 +197,11 @@
         <option value="$PROJECT_DIR$/node/node-training/第七讲 Express介绍/testWebServer/main.js" />
         <option value="$PROJECT_DIR$/node/node-training/第七讲 Express介绍/testWebServer/route.js" />
         <option value="$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/routes/index.js" />
+        <option value="$APPLICATION_CONFIG_DIR$/javascript/nodejs/6.2.2/core-modules/fs.js" />
+        <option value="$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/views/about.hbs" />
+        <option value="$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/views/video.hbs" />
+        <option value="$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/views/layout.hbs" />
+        <option value="$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/app.js" />
       </list>
     </option>
   </component>
@@ -237,7 +366,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="video" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -267,7 +400,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="routes" />
+              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -281,23 +414,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="node" />
+              <option name="myItemId" value="HTML5&amp;&amp;CSS3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="code-practice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="code-practice" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="node-training" />
+              <option name="myItemId" value="HTML5&amp;&amp;CSS3" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="第七讲 Express介绍" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="express" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bin" />
+              <option name="myItemId" value="HTML5" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -319,20 +454,22 @@
     <property name="js-jscs-package" value="C:\Users\poetries\AppData\Roaming\npm\node_modules\jscs" />
     <property name="javascript.nodejs.core.library.configured.version" value="6.2.2" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SearchEverywhereHistoryKey" value="itle&#9;FILE&#9;file://G:/code-practice/php/phpTraining/JsBasic/Coding/images/index_main_top_left_corner.gif" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\code-practice\node\node-training\第七讲 Express介绍\express\public" />
+      <recent name="G:\code-practice\node\node-training\第七讲 Express介绍\express\public\css" />
       <recent name="G:\code-practice\node\node-training\第二讲 Node模块\2.模块练习" />
       <recent name="G:\code-practice\node\node-training\第二讲 Node模块\2.模块练习\node_modules" />
       <recent name="G:\code-practice\node\node-training\第一讲 node简介\node_modules" />
-      <recent name="G:\code-practice\node\node-training\第一讲 node简介" />
-      <recent name="G:\code-practice\node\node-training\第二讲 Node模块\1.模块加载" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\code-practice\node\node-training\第七讲 Express介绍\express\public\images" />
+      <recent name="G:\code-practice\node\other" />
       <recent name="G:\code-practice\node\node-training\第二讲 Node模块\2.模块练习" />
       <recent name="G:\code-practice\node\node-training\第二讲 Node模块\1.模块加载" />
       <recent name="G:\code-practice\node\node-training\第一讲 node简介\node_modules\poetriesanimate\lib" />
-      <recent name="G:\code-practice\node\node-training\第一讲 node简介\node_modules\poetriesanimate" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.www">
@@ -436,12 +573,12 @@
       <updated>1484490550670</updated>
       <workItem from="1484490559612" duration="2415000" />
       <workItem from="1484539304857" duration="20181000" />
-      <workItem from="1484616694477" duration="6461000" />
+      <workItem from="1484616694477" duration="11958000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29057000" />
+    <option name="totallyTimeSpent" value="34554000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -454,9 +591,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="56" y="-8" width="1318" height="784" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24921875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24921875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32852563" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -495,24 +632,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node/node-training/第二讲 Node模块/core/fs/readFileAsync.js" />
-    <entry file="file://$PROJECT_DIR$/node/node-training/第二讲 Node模块/core/fs/readFileSync.js" />
-    <entry file="file://$PROJECT_DIR$/node/demo01.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node/node-training/第二讲 Node模块/core/fs/readFileSync.js" />
-    <entry file="file://$PROJECT_DIR$/node/node-training/第二讲 Node模块/core/fs/readFileAsync.js" />
-    <entry file="file://$PROJECT_DIR$/node/node-training/第二讲 Node模块/1.模块加载/testModule.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node/node-training/第二讲 Node模块/1.模块加载/testModule/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -568,6 +687,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-263477">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -713,14 +835,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/bin/www">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
@@ -729,10 +843,147 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/views/index.hbs">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/nodejs/6.2.2/core-modules/fs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="106" column="16" selection-start-line="106" selection-start-column="16" selection-end-line="106" selection-end-column="16" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/node_modules/hbs/lib/hbs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="19" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/node_modules/hbs/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="80" column="21" selection-start-line="80" selection-start-column="11" selection-end-line="80" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/javascript/nodejs/library/node-globals-stub.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/node_modules/express/lib/express.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/node_modules/express/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/views/error.hbs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/phpTraining/JsBasic/Coding/images/index_main_top_left_corner.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/views/index.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="13" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/views/about.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="18" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/public/css/font.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/public/fonts/demo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/views/video.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/public/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/bin/www">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML5&amp;&amp;CSS3/HTML5/video/my-video-player/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="12" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/views/layout.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node/node-training/第七讲 Express介绍/express/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
           <folding />
         </state>
       </provider>

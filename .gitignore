@@ -1,8 +1,6 @@
-HTML5&&CSS3/HTML5/video/examp.mp4
-HTML5&&CSS3/HTML5/video/examp.ogv
-HTML5&&CSS3/HTML5/video/my-video-player/video/examp.mp4
 node_modules
 **/node_modules
-ES6/node_modules
-nodejs/node_modules
 npm-debug.log
+**/npm-debug.log
+**/*.mp4
+**/*.ogv

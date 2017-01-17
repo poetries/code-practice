@@ -23,8 +23,19 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', index);
-app.use('/users', users);
+// app.use('/', index);
+// app.use('/users', users);
+
+app.get("/",function (req,res) {
+  res.render("index",{"title":"poetries"});
+});
+
+app.get("/about",function (req,res) {
+  res.render("about",{"title":"poetries"})
+});
+app.get("/video",function (req,res) {
+  res.render("video");
+})
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

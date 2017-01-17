@@ -1,0 +1,141 @@
+.head {
+	height: 44px;
+	width: 100%;
+	line-height: 44px;
+	background: #ccc;
+}
+.head .head-txt {
+	font-size: 20px;
+	font-family: "微软雅黑";
+}
+.main {
+	width: 600px;
+	height: 500px;
+	margin: 20px auto 0;
+}
+.main .content {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: url(../images/computer.jpg) no-repeat;
+	background-size: 100%;
+	
+}
+.video {
+	width: 600px;
+	height: 355px;
+    border-radius: 24px;
+}
+
+.controls {
+    position: absolute;
+    bottom: 119px;
+    left: 24px;
+    width: 117px;
+    height: 26px;
+}
+.controls .iconfont {
+    font-size: 18px;
+    color: #803517;
+}
+.controls span {
+	display: inline-block;
+	padding-left: 10px;
+	cursor: pointer;
+}
+.content .pro {
+    position: relative;
+    bottom: -8px;
+    left: 140px;
+    width: 180px;
+    height: 4px;
+    border-radius: 12px;
+    background: #858685;	
+}
+.pro .pro_bg {
+	width: 0;
+    height: 4px;
+    background: green;
+    border-radius: 10px;
+}
+.pro .pro_bar {
+    position: absolute;
+    bottom: -13px;
+    left: 0px;
+    width: 12px;
+    height: 12px;
+    background: #fbf8f8;
+    border-radius: 10px;
+    border: 1px solid #efabab;
+    cursor: pointer;
+}
+.pro .currTime {
+    display: inline-block;
+    position: absolute;
+    top: -9px;
+    left: 187px;
+    width: 61px;
+}
+.pro .currTime:after {
+	content: "/";
+	position: absolute;
+	top: 0;
+	left: 63px;
+	display: block;
+}
+.pro .totalTime {
+	display: inline-block;
+    position: absolute;
+    top: -9px;
+    left: 256px;
+    width: 67px;
+}
+.muteControls {
+    position: absolute;
+    bottom: 122px;
+    right: 18px;
+    width: 102px;
+    height: 20px;
+}
+.muteControls .iconfont {
+	cursor: pointer;
+}
+.muteControls .mute {
+    width: 44px;
+    height: 4px;
+    background: #717573;
+    position: absolute;
+    top: 8px;
+    left: 20px;
+    border-radius: 5px;
+}
+.muteControls .mute .mute_bg {
+	background: green;
+	display: inline-block;
+	height: 4px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.muteControls .mute .mute_bar {
+    position: absolute;
+    top: -3px;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background: #fbf8f8;
+    border-radius: 10px;
+    border: 1px solid #efabab;
+    cursor: pointer;
+}
+.full {
+    position: absolute;
+    bottom: 119px;
+    right: 11px;
+    cursor: pointer;
+}
+.full .iconfont {
+	font-size: 18px;
+	color: #000;
+}
