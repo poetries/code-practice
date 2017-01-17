@@ -14,8 +14,14 @@
 </head>
 <body>
 <div id="box"></div>
-<script src="node_modules/poetriesanimate/lib/poetriesanimate.js"></script>
+<!--<script src="node_modules/poetriesanimate/src/animate.js"></script>-->
+<script src="Animate.min.js"></script>
+<!--<script src="animate.js"></script>-->
 <script>
+    function getId(id) {
+        return document.getElementById(id);
+    }
+
     getId("box").onclick = function () {
         animateTime(getId("box"),{
             "left":800
