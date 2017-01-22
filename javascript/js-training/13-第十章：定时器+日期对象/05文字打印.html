@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content=" ">
+    <title>Document</title>
+    <style type="text/css">
+        *{margin: 0;padding: 0;}
+        a{text-decoration: none;}
+        ul,li{list-style: none;}
+        body{font-size: 14px;font-family: "微软雅黑";background: #ccc}
+        #wrap{width: 650px;margin: 150px auto;}
+        #wrap p{line-height: 35px;color: #ce3bb4;font-size: 18px;letter-spacing: 2px;font-weight: 500;
+                opacity: 0;
+                text-shadow:-1px 0 #999,
+                            0 -1px #999,
+                            1px 0 #4a4a4a,
+                            0 1px #4a4a4a;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <p>我好像答应过你 要和你 一起 走上那条美丽的山路</p>
+        <p>你说 那坡上种满了新茶 还有细密的相思树</p>
+        <p>我好像答应过你 在一个遥远的春日下午</p>
+        <p>而今夜 在灯下 梳我初白的发 忽然记起了</p>
+        <p>一些没能实现的诺言</p>
+        <p>一些无法 解释的悲伤</p>
+        <p>在那条山路上 少年的你 是不是</p>
+        <p>还在等我 还在急切地向来处张望</p>
+        <p style="text-indent: 18em">——席慕容</p>
+    </div>
+    <script type="text/javascript">
+
+        var pDoms = document.getElementById("wrap").getElementsByTagName("p");
+        var len = pDoms.length;
+        var index = 0;
+        function print(){
+            var arrP = [];
+            for(var i=0;i<len;i++){
+                arrP.push(pDoms[i]);
+            };
+            fadeOut(arrP[index]);
+            index++;
+            console.log(index);
+            timer = setTimeout(print,1000);
+            if(index == len)clearTimeout(timer);
+        };
+
+        print();
+
+
+        function fadeOut(obj){
+            var num = 0;
+            var timer = setInterval(function(){
+                num++;
+                obj.style.opacity = num/10;
+                if(num>=10){
+                    clearInterval(timer);
+                }
+            },50)
+        }
+    </script>
+</body>
+</html>

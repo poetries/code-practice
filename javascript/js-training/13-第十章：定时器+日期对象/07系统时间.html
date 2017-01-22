@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content=" ">
+    <title>Document</title>
+    <style type="text/css">
+        *{margin: 0;padding: 0;}
+        a{text-decoration: none;}
+        ul,li{list-style: none;}
+        body{font-size: 14px;font-family: "微软雅黑";}
+        #box{margin: 100px auto}
+        h1{width: 100%;text-align: center;}
+    </style>
+</head>
+<body>
+    <div id="box">
+        <h1 id="hh">现在是2016年12月7号,23:04:00</h1>
+    </div>
+    <script type="text/javascript">
+        /*
+            系统时间
+         */
+        function start(){
+            var now = new Date();
+            var year = now.getFullYear();
+            var mon = now.getMonth();
+            var date = now.getDate();
+            var day = now.getDay();
+            var hour = now.getHours();
+            var min = now.getMinutes();
+            var sec = now.getSeconds();
+            function toTime(n){
+                return n<10?"0"+n:n;
+            }
+            var html = "现在是"+year+"年"+(mon+1)+"月"+date+"号 星期"+day+","+toTime(hour)+":"+toTime(min)+":"+toTime(sec)+"";
+
+            document.getElementById("hh").innerHTML = html;
+        };
+
+        start();
+        setInterval(start,1000);
+    </script>
+</body>
+</html>

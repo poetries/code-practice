@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content=" ">
+    <title>Document</title>
+    <style type="text/css">
+        *{margin: 0;padding: 0;}
+        a{text-decoration: none;}
+        ul,li{list-style: none;}
+        body{font-size: 14px;font-family: "微软雅黑";}
+    </style>
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+            日期对象
+            var date = new Date()
+            1970 到现在的一个毫秒数 1s = 1000毫秒
+         */
+
+        //var date1 = new Date();
+        //alert(Number(date1));
+        //var date2 = new Date();
+        //alert(date2-date1);
+
+        // 月  0-11  1-12
+        // var date = new Date(2016,11,7,22);
+        // var date1 = new Date(1482331233300);
+        // alert(date);
+
+
+        //月1-12 日 年  GMT时间格式
+        // var date = Date.parse("12/7/2016");//返回的毫秒数
+        //alert(date);
+        // alert(new Date(date));
+
+        //UTC 年 月0-11 日 小时0-23   多8小时
+        // var date1 = Date.UTC(2016,11,7,-8,32,10);
+        // //alert(date);
+        // alert(new Date(date1));
+
+        /*
+            区别
+            UTC 年月日必须要有的 从8点开始
+         */
+
+        /*
+            通用方法
+            toString()
+            valueOf()
+            toLocaleString()
+         */
+
+        var date = new Date(Date.parse("12/7/2016"));
+        dw("toString:"+date.toString());
+        dw("valueOf:"+date.valueOf());
+        dw("toLocaleString:"+date.toLocaleString());
+        document.write("<br />");
+        document.write("<br />");
+
+
+        var date1 = new Date(Date.UTC(2016,11,7));
+        dw("toString:"+date1.toString());
+        dw("valueOf:"+date1.valueOf());
+        dw("toLocaleString:"+date1.toLocaleString());
+        document.write("<br />");
+        document.write("<br />");
+
+        /*
+            格式化的方法
+            toDateString()             星期 月份 日期 年份
+            toTimeString()             时分秒 时区
+            toLocaleDateString()       本地格式 年 月 日
+            toLocaleTimeString()       本地格式 时 分 秒
+            toUTCString()              UTC格式输出 少了8小时
+         */
+
+        var date2 = new Date();
+        dw("toDateString:"+date2.toDateString());
+        dw("toTimeString:"+date2.toTimeString());
+        dw("toLocaleDateString:"+date2.toLocaleDateString());
+        dw("toLocaleTimeString:"+date2.toLocaleTimeString());
+        dw("toUTCString:"+date2.toUTCString());
+        document.write("<br />");
+        document.write("<br />");
+
+
+        /*
+            日期的方法
+            为了单独可以获取想要的各种时间
+            getTime()           毫米数
+            getFullYear()       年
+            getMonth()          月0-11
+            getDate()           日
+            getDay()            星期几
+            getHours()          小时0-23
+            getMinutes()        分钟
+            getSeconds()        秒钟
+            getMillSeconds()    毫秒
+         */
+
+        dw("当前时间:"+date2.getFullYear()+"/"+(date2.getMonth()+1)+"/"+date2.getDate()+"星期"+date2.getDay()+","+date2.getHours()+":"+date2.getMinutes()+":"+date2.getSeconds());
+
+
+        function dw(w){
+            return document.write(w+"<hr />");
+        }
+    </script>
+</body>
+</html>

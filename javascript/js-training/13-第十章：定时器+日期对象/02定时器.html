@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content=" ">
+    <title>Document</title>
+    <style type="text/css">
+        *{margin: 0;padding: 0;}
+        a{text-decoration: none;}
+        ul,li{list-style: none;}
+        body{font-size: 14px;font-family: "微软雅黑";}
+        #box{width: 100px;height: 100px;background: red;position: absolute;}
+    </style>
+</head>
+<body>
+    <input type="button" value="开始" onclick="start()"/>
+    <input type="button" value="暂停" onclick="stop()"/>
+    <div id="box"></div>
+    <script type="text/javascript">
+        /*
+            定时器
+                一般来说定时器都要清除
+            setTimeout  一次性
+            clearTimeout
+
+            setInterval 循环执行的
+            clearInterval
+
+            动画---定时器
+         */
+
+        var cleft = 0;
+        var ctop = 0;
+        var box = document.getElementById("box");
+        function move(){
+            cleft += 5;
+            ctop += 5;
+            //console.log(cleft+"---"+ctop);
+            box.style.left = cleft+'px';
+            box.style.top = ctop +'px';
+        }
+
+        //jq里边24
+        var timer = null;
+        function start(){
+            timer = setInterval(move,1000);
+        }
+
+        function stop(){
+            clearInterval(timer);
+        }
+
+        /*
+                setInterval
+                setInterval(fn,1000/30)
+
+                setInterval(function(){
+                    fn(参数);
+                    fn1();
+                    fn2();
+                    fn3();
+                    fn4();
+                },1000/30)
+
+
+                setInterval("fn(1)",1000/30);
+                setInterval(function(){
+                    eval("fn(1)");
+                },1000/30)
+         */
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content=" ">
+    <title>Document</title>
+    <style type="text/css">
+        *{margin: 0;padding: 0;}
+        a{text-decoration: none;}
+        ul,li{list-style: none;}
+        body{font-size: 14px;font-family: "微软雅黑";}
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <script type="text/javascript">
+        /*
+            json
+            for in
+                for(var key in json){
+
+                }
+            用于对象的解析过程 像剥洋葱一样一层层筛选
+
+            对象 参数中使用对象更加的灵活
+                 组件开发中更具有模块化
+
+            move(dom,height,width,marginLeft,top)
+
+            move(dom,null,width,null,top)
+
+            move(dom,{
+                width:,
+                width:,
+                width:,
+                width:,
+            })
+         */
+
+        var json = {
+            name:"xq",
+            age:18,
+            address:"湖南长沙",
+            tel:1323124124,
+            arr:[1,2,3,4,5],
+            comment:[
+                {usename:"zhangsan1",password:123},
+                {usename:"zhangsan2",password:123},
+                {usename:"zhangsan3",password:123},
+                {usename:"zhangsan4",password:123}
+            ]
+        };
+
+        for(var key in json){
+            //判断一下是不是数组
+            var data = json[key];
+            if(Array.isArray(data)){
+                var html = "";
+                for(var i=0;i<data.length;i++){
+                    var fparma = data[i];
+                    if(typeof fparma == "object"){
+                        html += data[i].usename +"---"+data[i].password+"<br />";
+                    }
+                }
+                document.getElementById("box").innerHTML = html;
+            }
+            //console.log(key +"===="+json[key]);
+        }
+    </script>
+</body>
+</html>
