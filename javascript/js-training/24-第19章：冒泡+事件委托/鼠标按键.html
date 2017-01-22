@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="box">鼠标按键 0左键   1右键  2滚轮</div>
+		<script type="text/javascript">
+		//鼠标按键 0左键   1右键  2滚轮
+			document.onmousedown = function(ev){
+				var ev = ev || window.event;
+				var key = ev.button;
+				if(key == 2){
+					alert(" 不要看，人家害羞(*^__^*)")
+				}
+				document.title = key;
+			}
+			
+		//屏蔽默认的右键菜单
+		document.oncontextmenu = function(){
+			return false;
+		}
+		//不让选中 
+		//可以写在html中 <html onselectstart="return false;">
+		//写在样式中 body{-webkit-user-select:none;}
+		document.onselectstart = function(){
+			return false;
+		}
+		
+		</script>
+	</body>
+</html>

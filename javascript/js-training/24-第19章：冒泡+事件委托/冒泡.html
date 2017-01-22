@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box1 {
+				height: 500px;
+				width: 500px;
+				margin: 100px auto;
+				background: blue;
+			}
+			#box2 {
+				width: 300px;
+				height: 300px;
+				margin: 20px auto;
+				background: green;
+			}
+			#box3 {
+				width: 100px;
+				height: 100px;
+				margin: 20px auto;
+				background: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box1">
+			<div id="box2">
+				<div id="box3"></div>
+			</div>
+		</div>
+		<script type="text/javascript">
+		//cancelBubble 推荐 没有兼容问题 不是w3c规范
+		//stopPropagation 不支持IE 符合w3c规范
+		
+			var box1 = document.getElementById("box1");
+			var box2 = document.getElementById("box2");
+			var box3 = document.getElementById("box3");
+			
+			box1.onclick = function(){
+				alert("box1");
+			}
+			box2.onclick = function(ev){
+				ev.cancelBubble = "true";
+				alert("box2");
+			}
+			box3.onclick = function(ev){
+				ev.cancelBubble = "true";
+				alert("box3");
+			}
+		</script>
+	</body>
+</html>

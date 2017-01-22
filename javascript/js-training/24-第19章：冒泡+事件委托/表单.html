@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" name="" id="txt" />
+		<select name="" id="sel">
+			<option value="1">111</option>
+			<option value="1">222</option>
+			<option value="1">333</option>
+		</select>
+		<script type="text/javascript">
+			var txt =document.getElementById("txt");
+			var sel = document.getElementById("sel");
+			
+			txt.onfocus = function(){
+				document.title = "获得焦点";
+			}
+			txt.onblur = function(){
+				document.title = "失去焦点";
+			}
+			txt.onchange = function(){//当内容改变的时候
+				alert("内容改变了");
+			}
+			sel.onchange = function(){
+				//alert(11);
+				var value = sel.options[this.selectedIndex].text;
+				//alert(this.selectedIndex);
+				alert(value);
+			}
+		</script>
+	</body>
+</html>
