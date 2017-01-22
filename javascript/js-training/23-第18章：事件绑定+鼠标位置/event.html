@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box {
+				width: 100px;
+				height: 100px;
+				margin: 400px auto;
+				background: red;
+			}
+			
+		</style>
+	</head>
+	<body style="height: 1000px;width: 1800px;">
+		<div id="box"></div>
+		<script type="text/javascript">
+			var box = document.getElementById("box");
+			box.onclick = function(e){
+				var ev = e || window.event;
+				var clientx = ev.clientX;
+				var clienty = ev.clientY;
+				var pagex = ev.pageX;
+				var pagey = ev.pageY;
+				var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+				var scrollLeft = document.body.scrollLeft ||document.documentElement.scrollLeft;
+				console.log("clientx"+clientx);
+				console.log("clienty"+clienty);
+				console.log("pagex"+pagex);
+				console.log("pagey"+pagey);
+				console.log("scrollTop"+scrollTop);
+				console.log("scrollLeft"+scrollLeft);
+				
+			}
+			
+			function getXY(ev){
+				var ev = ev || window.event;
+				var xx  = 0;
+				var yy = 0;
+				if(ev.pageX){ //iE9+
+					xx = ev.pageX;
+					yy = ev.pageY;
+				}else{ 
+					//IE678 clientX,clientY + scroll
+					var scrollTop = document.documentElement.scrollTop || 
+					           document.body.scrollTop;//IE9+
+					var scrollLeft = document.documentElement.scrollLeft || 
+					            document.body.scrollLeft;//IE9+     
+					xx = ev.clientX + scrollLeft;
+					yy = ev.clientY + scrollTop;
+				}
+				return {
+					x:xx,
+					y:yy
+				};
+				
+			}
+		</script>
+	</body>
+</html>

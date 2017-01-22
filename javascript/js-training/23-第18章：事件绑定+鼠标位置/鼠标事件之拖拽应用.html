@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				width: 100px;
+				height: 100px;
+				background: red;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<script type="text/javascript">
+		//拖拽三个步骤 鼠标按下 鼠标移动 鼠标抬起
+		var box = document.getElementById("box");
+		box.onmousedown = function(ev){
+			var ev = ev || window.event;
+			
+			//第一次鼠标的位置
+			var sx = getXY(ev).x;
+			var sy = getXY(ev).y;
+			//移动前距离父级的距离
+			var ctop = box.offsetTop;
+			var cleft = box.offsetLeft;
+			
+			var _left = sx - cleft; //鼠标距离盒子的内部左侧距离
+			var _top = sy - ctop; 
+			
+			//能拖拽的范围
+			var maxW = window.innerWidth - this.offsetWidth;
+			var maxH = window.innerHeight -this.offsetHeight;
+			document.onmousemove = function(ev){
+				//第二次鼠标的位置
+				var endx = getXY(ev).x;
+				var endy = getXY(ev).y;
+				var top = endy - _top;
+				var left = endx - _left;
+				
+				//边界限制
+				if(top>=maxH)top=maxH;
+				if(top<0)top=0;
+				if(left>=maxW)left=maxW;
+				if(left<0)left=0;
+				
+				
+				box.style.top = top + "px";
+				box.style.left = left + "px";
+				document.title = _left +"--"+_top;
+				
+			}
+			document.onmouseup = function(){
+				document.onmousemove = null;
+				document.onmouseup = null;
+			}
+		}
+			function getXY(ev){
+				var ev = ev || window.event;
+				var xx  = 0;
+				var yy = 0;
+				if(ev.pageX){ //iE9+
+					xx = ev.pageX;
+					yy = ev.pageY;
+				}else{ 
+					//IE678 clientX,clientY + scroll
+					var scrollTop = document.documentElement.scrollTop || 
+					           document.body.scrollTop;//IE9+
+					var scrollLeft = document.documentElement.scrollLeft || 
+					            document.body.scrollLeft;//IE9+     
+					xx = ev.clientX + scrollLeft;
+					yy = ev.clientY + scrollTop;
+				}
+				return {
+					x:xx,
+					y:yy
+				};
+				
+			}
+		</script>
+	</body>
+</html>
