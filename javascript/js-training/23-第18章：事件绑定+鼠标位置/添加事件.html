@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				width: 100px;
+				height: 100px;
+				background: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<script type="text/javascript">
+			var box = document.getElementById("box");
+			var mark = true;
+			addEventHandler(box,"click",function(){
+				if(mark){
+					box.style.background = "blue";
+				}else{
+					box.style.background = "red";
+				}
+				mark = !mark;
+				
+			},false);
+		
+		
+			function addEventHandler(obj,eventName,fn,type){
+    			if(obj.attachEvent){
+      				  obj.attachEvent("on"+eventName,function(){
+        			  fn.call(obj);//改变this指向
+       		 });
+    		}else{
+       	 	obj.addEventListener(eventName,fn,type);
+   		 }
+}
+		</script>
+	</body>
+</html>
