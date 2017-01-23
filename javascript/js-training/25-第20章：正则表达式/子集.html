@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/**
+			 * 子集()
+                match 有子集的时候第二项返回的第一个子集子集内容 以此类推 第三项返回第二个子集
+                | 或者
+			 */
+			
+			var str1 = "poetries144poetries897poetries1143";
+			console.log(str1.match(/(poetries)\d+/g));
+			
+			//匹配zip rar 7z
+			var str2 = "413_fda-frlfd.zip";
+			console.log(/^[\w-]+\.zip|rar|7z$/g.test(str2));//true
+			
+			
+		</script>
+	</body>
+</html>

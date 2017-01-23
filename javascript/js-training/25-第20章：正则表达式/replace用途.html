@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+		/*
+            replace用途
+           		有子集$0 $1 $2 ...
+            	$0匹配项 $1第一个子集 ...
+         */
+        
+        //交换位置 
+        var str1 = "baidu google";
+       // console.log(str1.replace(/(.*)\s(.*)/,"$2 $1"))
+        
+        //回调函数写法
+        console.log(str1.replace(/(.*)\s(.*)/,function($0,$1,$2){
+        	return $2 +" "+$1;
+        }));
+        
+        var str = "你妹     妹,妹妹";
+        //document.write(str.replace(/妹妹/g,"**"))
+        //$0 指代 str 内容
+         document.write(str.replace(/妹.*妹/g,function($0){
+         	var res = "";
+         	for(var i=0;i<$0.length;i++){
+         		res +="*";
+         	}
+         	return res;
+         }))
+		</script>
+	</body>
+</html>

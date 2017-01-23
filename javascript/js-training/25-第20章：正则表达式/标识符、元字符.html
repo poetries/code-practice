@@ -6,7 +6,41 @@
 	</head>
 	<body>
 		<script type="text/javascript">
-			
+			  /*
+            标识符
+                g   global全局匹配
+                i   ignore忽略大小写
+
+            锚点
+                ^   开头  [^]代表非
+                $   结尾
+
+            转义字符
+                \
+                \r  回车
+                \n  换行
+                \t  tab制表符
+
+            元字符
+                \d  数字               [0-9]
+                \D  非数字             [^\d]
+                \w  字母数字下划线     [a-zA-Z0-9_]
+                \W  非字母数字下划线
+                \s  空格 tab
+                \S  非 空格 tab
+         */
+        
+        	var str1 = "this IS a girls";
+        	console.log(/\is/ig.test(str1)); //true
+        	
+        	var str2 = "a78fdafhkay78fad";
+        	//console.log(str2.match(/\d+/g));
+        	console.log(str2.match(/\D+/g)); //["a", "fdafhkay", "fad"]
+        	
+        	var str3 = "JKLH_fdajlfj89j";
+        	console.log(/\w+/g.test(str3)); //true
+        	
+        	
 		</script>
 	</body>
 </html>

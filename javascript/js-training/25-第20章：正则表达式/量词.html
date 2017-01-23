@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+		 /*
+            量词
+                *   区间[0-]  {0,}
+                +   区间[1-]  {1,}
+                ?   区间[0,1] {0,1}
+                .   任意字符
+                .*  大于0任意字符
+                    [m,n]     {m,n}
+         */
+        var str1 = "gooooogle";
+        console.log(/go*gle/.test(str1)); //true
+        
+        var str2 = "google";
+        console.log(/go{2,5}/.test(str2)) //true
+        
+        var str3 = "goo8996gle";
+        console.log(/goo\d{4}gle/.test(str3)) //true
+        
+        //惰性模式 量词后面加? 如 *?  {1,4}? +?
+        var str4 = "@poetries";
+        console.log(str4.replace(/\w+?/,"静观流叶"));	//@静观流叶oetries
+        
+        var str5 = "poetries";
+        console.log(str5.replace(/\w+?/,"映红")); //映红oetries
+        
+        
+        
+        
+		</script>
+	</body>
+</html>
