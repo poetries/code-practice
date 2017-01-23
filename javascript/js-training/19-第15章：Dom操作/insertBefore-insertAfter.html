@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box {
+				width: 200px;
+				height: 300px;
+				border: 1px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<p>@poetrie</p>
+			<span>span</span>
+			<h3>静观流叶</h3>
+		</div>
+		<script>
+			var box = document.getElementById("box");
+			var a = document.createElement("a");
+			var h1 = document.createElement("h1");
+			
+			h1.innerHTML = "这是h1标签";
+			a.href = "http://blog.poetries.top";
+			a.innerHTML = "poetries blog";
+			box.insertBefore(a,box.children[2]);
+			
+			insertAfter(h1,box.children[3])
+			
+			
+			//DOM没有提供insertAfter()方法
+			function insertAfter(newElement, targetElement){
+				var parent = targetElement.parentNode;
+				if (parent.lastChild == targetElement) {
+						// 如果最后的节点是目标元素，则直接添加。因为默认是最后
+						parent.appendChild(newElement);
+					}
+				else {
+				//如果不是，则插入在目标元素的下一个兄弟节点 的前面。也就是目标元素的后面
+					parent.insertBefore(newElement, targetElement.nextSibling);
+			}
+			}
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="box">
+			<h1 id="h"></h1>
+			<p></p>
+		</div>
+		<script type="text/javascript">
+			/**
+			 * 在JavaScript中 看的父子关系 --父亲操作孩子
+			 * 
+			 * parentNode[推荐]  -- 符合w3c规范
+			 * parentElement  -- 不符合
+			 * removeChild -- js中必须让父亲干掉自己	
+			 */
+			
+			var box = document.getElementById("box");
+			var h = document.getElementById("h");
+			
+			console.log(h.parentNode.id); //box
+			
+			h.parentNode.removeChild(h);
+			
+		</script>
+	</body>
+</html>

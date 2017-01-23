@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box {
+				position: relative;
+				width: 500px;
+				height: 500px;
+				margin: 50px auto;
+				border: 1px solid blue;
+				background: black;
+			}
+			#btn1,#btn2 {
+				display: inline-block;
+				width: 50px;
+				height: 30px;
+				margin-top: 10px;
+				line-height: 30px;
+				margin-left: 100px;
+				background-color: green;
+				color: #fff;
+				text-align: center;
+				cursor: pointer;
+			}
+			#ball {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				background: yellow;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="btn1">开始</div>
+		<div id="btn2">暂停</div>
+		<div id="box">
+			<div id="ball"></div>
+		</div>
+		
+		<script type="text/javascript">
+			var box = document.getElementById("box");
+			var btn1 = document.getElementById("btn1");
+			var btn2 = document.getElementById("btn2");
+			var x = 0,y=0,speed=0.09;
+			var ballArr = [];
+			
+			function draw(){
+				
+				x +=speed;
+				y +=speed;
+				var left = 195+Math.cos(x)*200;
+				var top = 195 + Math.sin(y)*200;
+				ball.style.left = left + "px";
+				ball.style.top = top + "px";
+				
+				var trunk = document.createElement("span");
+				trunk.style.position = "absolute";
+				trunk.style.left = ball.offsetLeft + "px";
+				trunk.style.top = ball.offsetTop + "px";
+				trunk.style.height = "5px";
+				trunk.style.width = "5px";
+				trunk.style.background = randomColor();
+				ballArr.push(trunk);
+				box.appendChild(trunk);
+				if(ballArr.length > 40){
+					//shift删除
+					//var removeBalls = ballArr.shift();
+					//box.removeChild(removeBalls);
+					
+					//spice删除
+					var balls = ballArr.splice(0,1);
+					box.removeChild(balls[0])
+					//console.log(removeBalls);
+				}
+				
+			}
+			function randomColor(){
+				var r = Math.floor(Math.random()*256);
+				var g = Math.floor(Math.random()*256);
+				var b = Math.floor(Math.random()*256);
+				var a = (Math.random()).toFixed(1); //保留一位小数
+				
+				return "rgba("+r+","+g+","+b+","+a+")";
+			}
+			
+			var timer = setInterval(draw,1000/30);
+			
+			btn1.onclick = function(){
+				if(timer){
+					clearInterval(timer);
+				}
+				timer = setInterval(draw,1000/30);
+			}
+			
+			//暂停
+			btn2.onclick = function(){
+				clearInterval(timer);
+				
+				var timer1 = setInterval(function(){
+					var removeBalls = ballArr.shift();
+					if(ballArr.length == 0){
+						clearInterval(timer1);
+					}
+					box.removeChild(removeBalls);
+				},1000/30);
+			}
+				
+			
+		</script>
+	</body>
+</html>

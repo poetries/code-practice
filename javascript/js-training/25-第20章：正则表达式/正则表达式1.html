@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+        /*
+            写法
+
+            var str = "qwe123";
+            var pattern = /123/;(推荐使用)
+            var pattern = new RegExp(表达式,标识符);
+
+            正则方法
+                test()
+                    匹配到返回true
+                    匹配不到返回false
+                exec()
+                    匹配到返回一个查找字符相关的数组
+                    匹配不到返回null
+                pattern.test(str);
+
+            字符串方法
+                match()
+                    匹配到返回数组(匹配的项  看是否有标识符g)
+                search()
+                    匹配总是返回匹配到的第一个符合条件的下标
+                    匹配不到 -1
+                replace()
+                    替换匹配的子表达式
+
+                str.match(pattern);
+         */
+        
+			var str1 = "poe482dsaf";
+			console.log(/[0-9]/.test(str1));// true
+			
+			var str2 = "poetries01";
+			console.log(/poetries/g.exec(str2));//["poetries", index: 0, input: "poetries01"]
+			
+			var str3 = 'jing891';
+			console.log(str3.search(/1/)); //6
+			
+			var str4 = "jin342ggua134fdan1liuye";
+			console.log(str4.match(/\d+/g)); //["342", "134", "1"]
+			
+			
+			var str5 = "映红,this is a test";
+			console.log(str5.replace(/映红/,"yinghong"));//yinghong,this is a test
+			
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100px;
+				height: 100px;
+				line-height: 100px;
+				text-align: center;
+				color: #fff;
+				font-size: 20px;
+				font-family: "微软雅黑";
+				background: red;
+				border-radius: 50%;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">点我</div>
+		<script type="text/javascript">
+			var box = document.getElementById("box");
+			
+			box.onclick	= function(){
+				play();
+			}
+			
+			var speed = 0;//步长
+			var timer = null;
+			function play(){
+				//保证只有一个定时器
+				if(timer){
+					clearInterval(timer);
+				}
+				timer = setInterval(function(){
+					var maxH = window.innerHeight - box.offsetHeight;
+					 speed +=5;
+					 var ctop = box.offsetTop + speed;
+					 if(ctop>maxH){
+					 	ctop = maxH;
+					 	speed = -speed;
+					 	
+					 //	console.log(box.offsetTop);
+					 	//摩擦力 每次减小一点
+					 	speed *=0.9;
+					 }
+					 box.style.top = ctop + "px";
+					 
+				},1000/30);
+				
+			}
+		</script>
+	</body>
+</html>

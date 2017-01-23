@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box {
+				position: relative;
+				width: 200px;
+				height: 200px;
+				margin: 100px auto;
+				background: cadetblue;
+			}
+			#box1 {
+				width: 100px;
+			    height: 100px;
+			    background: red;
+			    display: inline-block;
+			    margin: 48px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div id="box1"></div>
+		</div>
+		<script type="text/javascript">
+		/**
+		 * offsetLeft offsetTop 元素到定位父级的距离（父级需要定位）
+		 * 如没有定位父级，就是页面顶部、左边距离
+		 * 
+		 * offsetParent 找到定位父级
+		 * 
+		 */
+			var box = document.getElementById("box");
+			var box1 = document.getElementById("box1");
+			
+			console.log("box.offsetTop"+box.offsetTop);
+			console.log("box.offsetLeft"+box.offsetLeft);
+			
+			console.log("box1.offsetTop"+box1.offsetTop);
+			console.log("box1.offsetLeft"+box1.offsetLeft);
+			
+			console.log("box1.offsetParent"+box1.offsetParent);
+			
+			
+			function offset(obj){
+				var cleft = 0;
+				var ctop = 0;
+				while(obj){
+					cleft +=obj.offsetLeft;
+					ctop +=obj.offsetTop;
+					obj = obj.offsetParent;
+					//最后找到body
+					console.log(obj);
+				}
+				
+				return {
+					top: ctop,
+					left: cleft
+				};
+			}
+			
+			alert(offset(box1).top);
+		</script>
+	</body>
+</html>

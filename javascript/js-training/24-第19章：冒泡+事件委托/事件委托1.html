@@ -3,9 +3,51 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<style type="text/css">
+			#box {
+				width: 1000px;
+				height: 500px;
+				margin: 100px auto;
+				border: 1px solid red;
+				padding: 10px;
+			}
+			#box a {
+				float: left;
+				display: inline-block;
+				width: 50px;
+				height: 20px;
+				padding: 5px;
+				margin-right: 10px;
+				margin-bottom: 10px;
+				line-height: 20px;
+				background: green;
+				color: #fff;
+				text-align: center;
+			}
+			#btn {
+				margin-top: 10px;
+				display: inline-block;
+				width: 120px;
+				height: 30px;
+				line-height: 30px;
+				background: paleturquoise;
+				color: brown;
+				font-size: 16px;
+				text-align: center;
+				outline: none;
+				border: none;
+				cursor: pointer;
+				font-family: "微软雅黑";
+			}
+		</style>
 	</head>
 	<body>
-		
+		<button id="btn">点我增加节点</button>
+		<div id="box">
+			<a href="javascript:void(0)">点我</a>
+			<a href="javascript:void(0)">点我</a>
+			<a href="javascript:void(0)">点我</a>
+		</div>
 		<script type="text/javascript">
 			/**
 			 * 事件委托：
@@ -13,6 +55,56 @@
 			 * 	 event.currentTarget
 			 *   event.target
 			 */
+			
+			var box = document.getElementById("box");
+			var btn = document.getElementById("btn");
+			var index = 0;
+			/*
+			btn.onclick = function(){
+				add();
+			}*/
+			
+			function add(){
+				index++;
+				var aNode = document.createElement("a");
+				aNode.href = "javascript:void(0)";
+				aNode.innerHTML = "点我"+index;
+				box.appendChild(aNode);
+			}
+			
+			
+			//事件委托封装
+			
+			var poetries = function(id){
+            var dom = document.getElementById(id);
+            return {
+                on : function(eventType,targetName,callBack){
+                    //IE
+                    if(dom.attachEvent){
+                        dom.attachEvent('on'+eventType,function(e){
+                            var e = window.event;
+                            //IE目标对象 srcElement 非ie target
+                            var target = e.srcElement;
+                            if(target.tagName.toLowerCase() == targetName){
+                                callBack.call(target);
+                            };
+                        })
+                    }else{
+                        dom.addEventListener(eventType,function(e){
+                            var e = e || window.event;
+                            var target = e.target || e.srcElement;
+                            if(target.tagName.toLowerCase() == targetName){
+                                callBack.call(target);
+                            }
+                        });
+                    }
+                }
+            };
+        }
+		poetries("box").on('click','a',function(){
+		           add();
+		        });
+			
 			
 		</script>
 	</body>

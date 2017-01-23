@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 50px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				background: blueviolet;
+				border-radius: 50%;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<script type="text/javascript">
+			var box = document.getElementById("box");
+			var speed = 7;
+			var x = 0;
+			var y = 0;
+			var xstep = speed;
+			var ystep = speed;
+			
+			function play(){
+				var maxW = window.innerWidth - box.offsetWidth;
+				var maxH = window.innerHeight - box.offsetHeight;
+				x +=xstep;
+				y +=ystep;
+				
+				//x方向
+				if(x>maxW){
+					x = maxW;
+					xstep = -speed;
+					box.style.background = "greed";
+				}
+				if(x<0){
+					x = 0;
+					xstep = speed;
+					box.style.background = "blue";
+				}
+				//y方向
+				if(y>maxH){
+					y = maxH;
+					ystep = -speed;
+					box.style.background = "red";
+				}
+				if(y<0){
+					y = 0;
+					ystep = speed;
+					box.style.background = "yellow	";
+				}
+				box.style.left = x + "px";
+				box.style.top = y + "px";
+				
+			}
+			
+			setInterval(play,1000/30);
+		</script>
+	</body>
+</html>

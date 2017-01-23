@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="box" title="poetries">
+			<h1>poetries</h1>
+			<p>poetries</p>
+			<ul id="list">
+				<li>111</li>
+				<li>222</li>
+				<li>333</li>
+			</ul>
+			<p>@静观流叶</p>
+		</div>
+		<script type="text/javascript">
+		/**
+		 * prevSibling/nextSibling 所有浏览器都支持
+		 * prevElementSibling/nextElementSibling IE9+只拿元素节点
+		 * 	
+		 * 
+		 */
+		var box = document.getElementById("box");
+		var ulNode  = document.getElementById("list");
+		
+		console.log(box.nextSibling.nodeType);//3 文本
+		console.log(box.nextElementSibling.nodeType);//1元素	
+			
+		//兼容
+		
+		if(ulNode.nextElementSibling){
+			//iE9+
+			ulNode.nextElementSibling.style.color = "red";
+		}else{
+			if(ulNode.nextSibling && ulNode.nextSibling.nodeType == 1){
+				
+				ulNode.nextSibling.style.color = "blue";
+			}
+			
+		}
+		
+		</script>
+	</body>
+</html>

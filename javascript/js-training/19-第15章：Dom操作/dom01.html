@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="box" title="poetries">poetries</div>
+		<script type="text/javascript">
+		/**
+		 * nodeType常用来判断节点
+		 * 
+		 *         nodeName  nodeType nodeValue
+		 * 
+		 * 元素         元素名称             1         null
+		 *  
+		 * 属性         属性名称             2                  属性值
+		 * 
+		 * 文本          #text        3                   文本
+		 * 
+		 */
+		
+			var box = document.getElementById("box");
+			//children;//只拿元素节点(推荐使用)
+			//childNodes; //除了元素还拿到其他节点
+			
+			//元素节点 DIV--1--null
+			console.log(box.nodeName +"--"+box.nodeType+"--"+box.nodeValue);
+			console.log(box.tagName +"--"+box.localName);//DIV--div
+			
+			//属性节点 getAttributeNode
+			var boxAttr = box.getAttributeNode("title"); //获取属性节点
+			var removeTitle = box.removeAttribute("title"); //移除节点
+			
+			//title--2--poetries
+			console.log(boxAttr.nodeName +"--"+boxAttr.nodeType+"--"+boxAttr.nodeValue);
+			
+			//文本节点
+			var textNode = box.childNodes[0];
+			//#text--3--poetries
+			console.log(textNode.nodeName +"--"+textNode.nodeType+"--"+textNode.nodeValue);
+			
+		</script>
+	</body>
+</html>

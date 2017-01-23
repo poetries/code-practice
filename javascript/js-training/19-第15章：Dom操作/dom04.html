@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			table {
+				width: 100%;
+				height: 50px;
+				border: 1px solid red;
+				border-collapse: collapse;
+			}
+			td {
+				width: 50px;
+				height: 30px;
+				border: 1px solid blue;
+			}
+		</style>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<td>A111</td>
+                <td>A222</td>
+                <td>A333</td>
+                <td>A444</td>
+				<td><a href="">删除1</a></td>
+			</tr>
+			<tr>
+				<td>A111</td>
+                <td>A222</td>
+                <td>A333</td>
+                <td>A444</td>
+				<td><a href="">删除2</a></td>
+			</tr>
+			<tr>
+				<td>A111</td>
+                <td>A222</td>
+                <td>A333</td>
+                <td>A444</td>
+				<td><a href="">删除3</a></td>
+			</tr>
+			<tr>
+				<td>A111</td>
+                <td>A222</td>
+                <td>A333</td>
+                <td>A444</td>
+				<td><a href="">删除4</a></td>
+			</tr>
+			<tr>
+				<td>A111</td>
+                <td>A222</td>
+                <td>A333</td>
+                <td>A444</td>
+				<td><a href="">删除5</a></td>
+			</tr>
+		</table>
+		<script type="text/javascript">
+			
+			var aNodes = document.getElementsByTagName("a");
+			for (var i = 0;i<aNodes.length;i++) {
+				aNodes[i].onclick = function(ev){
+					var ev = ev || window.event;
+					ev.preventDefault();
+					
+					del(this);
+					
+					console.log(this);
+				};
+			}
+			
+			function del(obj){
+				var tr = obj.parentNode.parentNode;
+				var table = tr.parentNode.removeChild(tr);
+			}
+		</script>
+	</body>
+</html>

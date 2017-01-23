@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box {
+				width: 200px;
+				height: 200px;
+				background: cadetblue;
+				color: #fff;
+				overflow: scroll;
+				padding: 20px;
+			}
+			#pp {
+				font-size: 20px;
+					
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">bboxboxboxboxboxboxboxboxboxboxboxboxox</div>
+		<p id="pp"></p>
+		<script type="text/javascript">
+			/**
+			 * clientWidth / clientHeight
+			 * offsetWidth / offsetHeight
+			 * scrollWidth / scrollHeight
+			 */
+			var box = document.getElementById("box");
+			var pp = document.getElementById("pp");
+			
+			pp.innerHTML = "clientWidth"+box.clientWidth+"<br>";
+			pp.innerHTML += "offsetWidth"+box.offsetWidth+"<br>";
+			pp.innerHTML += "scrollWidth"+box.scrollWidth+"<br>";
+			
+			
+		</script>
+	</body>
+</html>

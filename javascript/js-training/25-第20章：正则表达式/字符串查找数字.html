@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//把str中的数字提取出来 放到一个数组里面
+			
+			var str = "pefi1289789fda88fda";
+			var arr = [];
+			var res = '';
+			for (var i=0;i<str.length;i++) {
+				if(!isNaN(str.charAt(i))){
+					res += str.charAt(i);
+				}else{
+					if(res){
+						arr.push(res);
+						res = '';
+						
+					}
+					
+				}
+			}
+			console.log(arr);
+			
+			//正则
+			var reg = /\d+/g;
+			console.log(str.match(reg));
+			
+			
+		</script>
+	</body>
+</html>
