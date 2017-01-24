@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+	        *{margin: 0;padding: 0;}
+	        a{text-decoration: none;}
+	        ul,li{list-style: none;}
+	        body{font-size: 14px;font-family: "微软雅黑";}
+	        #box{width: 700px;height: 500px;background: #FCF3B4;margin: 30px auto;padding: 20px;font-size: 16px;color: #333;position: relative;overflow: hidden;}
+	        .pbold{font-size: 20px;font-weight: bold;font-family: "Vivaldi";color: #EF41B7}
+	        #scrollBar{width: 20px;height: 100%;border-radius:10px;background:linear-gradient(#52C5FC,#E78EFD);position: absolute;top: 0;right: 0;display: none;}
+	        #bar{width: 20px;height: 50px;background: rgba(0,0,0,.5);border-radius:10px;position: absolute;top: 0;right;z-index: 2}
+	        #b_over{width: 100%;height: 100%;background: transparent;position: absolute;top: 0;right;z-index: 0}
+	        #content{position: relative;}
+    </style>
+	</head>
+	<body>
+		 <div id="box">
+        <div id="scrollBar">
+            <div id="bar"></div>
+            <div id="b_over"></div>
+        </div>
+
+        <div id="content">
+            <h2>阿甘正传</h2>
+            <br/>
+            <p class="pbold">1、Life was like a box of chocolates, you never know what you're going to get.</p>
+        　　<p>生命就像一盒巧克力，结果往往出人意料。</p>
+        　　<p class="pbold">2、Stupid is as stupid does.</p>
+        　　<p>蠢人做蠢事，也可理解为傻人有傻福。</p>
+        　　<p class="pbold">3、Miracles happen every day.</p>
+        　　<p>奇迹每天都在发生。</p>
+        　　<p class="pbold">4、it made me look like a duck in water.</p>
+        　　<p>它让我如鱼得水。</p>
+        　　<p class="pbold">5、I don't know if we each have a destiny, or if we're all just floating around accidental—like on a breeze.</p>
+        　　<p>我不懂我们是否有着各自的命运，还是只是到处随风飘荡。</p>
+        　　<p class="pbold">6、Death is just a part of life, something we're all destined to do.</p>
+        　　<p>死亡是生命的一部分，是我们注定要做的一件事。</p>
+        　　<p class="pbold">7、You have got to put the past behind you before you can move on.</p>
+        　　<p>放下包袱，继续前进。</p>
+        　　<p class="pbold">8、It was like just before the sun goes to bed down on the bayou. There was a million sparkles on the river.</p>
+        　　<p>就像太阳在落山前映射在河口上，有无数的亮点在闪闪发光。</p>
+        　　<p class="pbold">9、If there is anything you need, I will not be far away.</p>
+        　　<p>只要你需要，我就在这里。</p>
+        　　<p class="pbold">10、I am a man of my word.</p>
+        　　<p>我是信守承诺的人。</p>
+        　　<p class="pbold">11、There is one small step for a man,a giant leap for mankind.</p>
+        　　<p>某人的一小步就是人类的一大步。</p>
+        </div>
+    </div>
+    <script type="text/javascript">
+    	/**
+    	 * 拖动的三个步骤：
+    	 * 		按下：
+    	 * 			移动 -- document
+    	 * 			抬起 -- 清空事件
+    	 */
+    	var bar = document.getElementById("bar");
+    	var content = document.getElementById("content");
+    	var b_over = document.getElementById("b_over");
+    	var box = document.getElementById("box");
+    	var scrollBar = document.getElementById("scrollBar");
+    	
+    	var maxH = bar.parentNode.offsetHeight - bar.offsetHeight;
+    	var contentH = content.offsetHeight-content.parentNode.offsetHeight+20;
+    	
+    	bar.onmousedown = function(ev){
+    		var ev = ev || window.event;
+    		var pos = getXY(ev);
+    		//获取第一次点击的位置
+    		var ctop = pos.y - this.offsetTop;
+    		
+    		
+    		box.onmouseout = null;
+    		document.onmousemove = function(ev){
+    			ev.preventDefault();
+    			//获取第二次鼠标的坐标
+    			var ev = ev || window.event;
+    			var pos = getXY(ev);
+    			var ntop = pos.y-ctop;
+    			
+    			var maxH = bar.parentNode.offsetHeight - bar.offsetHeight;
+    			//范围限制
+    			if(ntop<=0)ntop=0;
+    			if(ntop>maxH)ntop=maxH;
+  
+    			bar.style.top = ntop + "px";
+    			
+    			
+    			content.style.top = -contentH*(ntop/maxH)+"px";
+    		};
+    		document.onmouseup = function(){
+    			document.onmouseup = null;
+    			document.onmousemove = null;
+    			box.onmouseout = function(){
+    				scrollBar.style.display = "none";
+    			}
+    			
+    		};
+    	}
+    	
+    	
+    	b_over.onmousedown = function(ev){
+    		var ev = ev || window.event;
+    		var pos = getXY(ev);
+    		var ctop = pos.y - bar.offsetHeight - box.offsetTop+bar.offsetHeight/2;
+    		var maxH = bar.parentNode.offsetHeight - bar.offsetHeight;
+    		if(ctop<=0)ctop=0;
+    		if(ctop>maxH)ctop=maxH;
+    		bar.style.top = ctop + "px";
+    		
+    		content.style.top = -contentH*(ctop/maxH)+"px";
+    	};
+    	
+    	//移入显示滚动条
+    	box.onmouseover = function(){
+    		var h1 = this.offsetHeight;
+    		var h2 = this.scrollHeight;
+    		//document.title = h1+'--'+h2;
+    		if(h2>h1){
+    			scrollBar.style.display = "block";
+    		}
+    	};
+    	box.onmouseout = function(){
+    		scrollBar.style.display = "none";
+    	}
+    	
+    	function getXY(ev){
+			var ev = ev || window.event;
+			var xx  = 0;
+			var yy = 0;
+			if(ev.pageX){ //iE9+
+				xx = ev.pageX;
+				yy = ev.pageY;
+			}else{ 
+				//IE678 clientX,clientY + scroll
+				var scrollTop = document.documentElement.scrollTop || 
+				           document.body.scrollTop;//IE9+
+				var scrollLeft = document.documentElement.scrollLeft || 
+				            document.body.scrollLeft;//IE9+     
+				xx = ev.clientX + scrollLeft;
+				yy = ev.clientY + scrollTop;
+			}
+			return {
+				x:xx,
+				y:yy
+			};
+			
+		}
+    </script>
+	</body>
+</html>

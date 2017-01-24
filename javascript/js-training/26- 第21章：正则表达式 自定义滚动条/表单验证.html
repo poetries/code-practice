@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		 <style type="text/css">
+        *{margin: 0;padding: 0;}
+        a{text-decoration: none;}
+        ul,li{list-style: none;}
+        body{font-size: 14px;font-family: "微软雅黑";}
+        #wrap{width:420px; height:520px; background:#00ccff; margin:0 auto; position:relative; }
+        #wrap h1{height:40px; line-height:40px; color:#fff; font-size:18px; background:rgb(0,153,204);text-align: center;}
+        div{margin:10px 0; height:42px; overflow:hidden; transition:height 0.5s; }
+        div.wrong{height:63px; }
+        div.right input{border:1px solid #00cc00; }
+        input{width:266px; height:40px; border:1px solid #ddd; outline:none; margin:0px auto; display:block; text-indent:10px; }
+        input+span{color:red; font-size:12px; }
+        .mail ul li {list-style:none; height:16px; font-size:12px; }
+        .submit input{text-indent:0; color:#fff; font-size:18px; background:RGB(0,153,204); border:none; }
+        #tip{background:rgba(0,0,0,.8); width:104px; height:40px; line-height:40px; color:#fff; font-size:14px; text-align:center; position:absolute; top:40%; left:50%; margin-top:-20px; margin-left:-52px; z-index:-1; opacity:0; transition:opacity .5s,top .5s; }
+        #tip.show{top:50%; z-index:1; opacity:1; }
+    </style>
+	</head>
+	<body>
+		 <div id="wrap">
+        <h1>注册</h1>
+        <div>
+            <input type="text" class='match' name='user' placeholder='请输入用户名' />
+            <span>字母开头,长度6-10位字母数字下划线</span>
+        </div>
+        <div>
+            <input type="password" class='match' name='pwd' id="pwd1" placeholder='请输入密码' />
+            <span>字母数字长度6-18位</span>
+        </div>
+        <div>
+            <input type="password" name='pwd2' id="pwd2" placeholder='请再次输入密码' />
+            <span>两次密码不一致</span>
+        </div>
+        <div>
+            <input type="text" class='match' name="tel" placeholder='请输入电话' />
+            <span>电话号码格式不正确</span>
+        </div>
+        <div>
+            <input type="text" class='match' name="mail" placeholder='请输入e-mail' />
+            <span>邮箱格式不正确</span>
+        </div>
+        <div>
+            <input type="text" class='match' name="IDCard" placeholder='请输入身份证' />
+            <span>证件格式不正确</span>
+        </div>
+        <div class='submit'>
+            <input type="submit" value='注册' />
+        </div>
+        <p id='tip'>请先输入密码</p>
+    </div>
+    <script type="text/javascript">
+    	var inputs = document.getElementsByClassName("match");
+    	var pwd1 = document.getElementById("pwd1");
+    	var pwd2 = document.getElementById("pwd2");
+    	
+    	var pattern = {
+    		"user": /^[a-zA-Z_]\w{5,10}$/,
+    		"pwd": /\w{6,12}/,
+    		"tel": /^1[3578]\d{9}$/,
+    		"e-mail": /^[^0][\w]+@\w+\.[a-z]+(\.[a-z]+)?$/,
+    		"IDCard": /^[1-9]\d{16}[0-9xX]$/
+    	};
+    	var arr = ["user","pwd","tel","e-mail","IDCard"];
+    	for (var i=0;i<inputs.length;i++) {
+    		inputs[i].index = i;
+    		inputs[i].onblur = function(){
+    			//alert(this.value);
+    			var val = this.value;
+    			
+    			//console.log(pattern[arr[this.index]].test(val));
+    			if(val){
+    				if(pattern[arr[this.index]].test(val)){
+    					this.parentNode.className = "right";
+    				}else{
+    					this.parentNode.className = "wrong";
+    					//不正确获取焦点
+    					this.focus();
+    				}
+    			}
+    		}
+    	}
+    	
+    	pwd2.onblur = function(){
+    		var val = this.value;
+    		console.log(val);
+    		if(val){
+    				if(val!=pwd1.value){
+    					this.parentNode.className = "wrong";
+    					//不正确获取焦点
+    					this.focus();
+    				}else{
+    					this.parentNode.className = "right";
+    				}
+    			}
+    	}
+    	var timer = null;
+    	pwd2.onfocus = function(){
+    		//没有输入的时候
+    		if(!pwd1.value){
+    			pwd1.focus();
+    			document.getElementById("tip").className = "show";
+    			if(timer)clearTimeout(timer);
+    			setTimeout(function(){
+    				document.getElementById("tip").className = "";
+    			},1000)
+    		}
+    	}
+
+    </script>
+	</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			
+		</style>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			//邮编57000
+			var str1 = "537000";
+			console.log(/^[1-9]\d{5}$/.test(str1));
+			
+			//邮箱 
+			
+			var str2 = "poetries@poetries.top"
+			console.log(/^[^0][\w]+@\w+\.[a-z]+(\.[a-z]+)?$/.test(str2));
+			
+			//手机号
+			var str3 = "18878554990";
+			console.log(/^1[3578]\d{9}$/.test(str3));
+			
+			//去除空格
+			var str4 = "   静观流叶 ";
+			console.log(str4.replace(/^\s+|\s+$/g,"").length);
+			
+			//用户名 字母+数字
+			var str5 = "poetries12";
+			console.log(/^[a-zA-Z_]\w{6,10}$/.test(str5));
+			
+			//密码
+			var str6 = "fadlk89JHKDS_fjda";
+			console.log(/\w{6,12}/.test(str6));
+			
+			//身份证
+			var str7 = "45051219970417078X"
+			console.log(/^[1-9]\d{16}[0-9xX]$/.test(str7));
+			
+			
+		</script>
+	</body>
+</html>

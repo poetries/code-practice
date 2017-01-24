@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#btn{
+				width: 200px;
+				height: 30px;
+				margin: 50px auto;
+			}
+			#box {
+				width: 400px;
+				height: 300px;
+				border: 1px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="btn">点击页面获取时间</button>
+		<div id="box"></div>
+		<script type="text/javascript">
+			var btn = document.getElementById("btn");
+			var box = document.getElementById("box");
+			
+			bind(btn,"click",function(){
+				//创建xhr对象
+				var xhr = createRequest();
+				
+				//准备发送
+				xhr.open('GET','index.php',true);
+				
+				//异步设置请求的头信息 当要发送数据的时候 需要
+				xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded"); 
+				
+				//发送请求 如果有数据提交就写 没有就不写
+				xhr.send();
+				
+				
+				xhr.onreadystatechange = function(){
+					if(xhr.readyState==4 && xhr.status==200){
+						//alert(xhr.responseText);
+						box.innerHTML = xhr.responseText;
+						
+						//获取响应头信息 服务器信息
+						alert(xhr.getAllResponseHeaders("Server"));
+					}
+				};
+				
+				
+			});
+			
+			
+			
+		
+			function createRequest(){
+			    if(typeof XMLHttpRequest != "undefined"){
+			        return new XMLHttpRequest();
+			    }else if(typeof ActiveXObject != "undefined"){
+			        var version = [
+			            'MSXML2.XMLHttp.6.0',
+			            'MSXML2.XMLHttp.3.0',
+			            'MSXML2.XMLHttp',
+			        ];
+			        for(var i=0;i<version.length;i++){
+			            try{
+			                return new ActiveXObject(version[i]);
+			            }catch(e){
+			                //跳过
+			            }
+			        }
+			    }else{
+			        throw new Error("你的系统或者浏览器不支持XHR对象");
+			    }
+			};
+			function bind(obj,eventName,fn,type){
+			    if(obj.attachEvent){
+			        obj.attachEvent("on"+eventName,function(){
+			          fn.call(obj);//改变this指向
+			        });
+			    }else{
+			        obj.addEventListener(eventName,fn,type);
+			    }
+			}
+		</script>
+	</body>
+</html>

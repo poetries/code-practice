@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	    <style type="text/css">
+	        *{margin: 0;padding: 0;}
+	        a{text-decoration: none;}
+	        ul,li{list-style: none;}
+	        body{font-size: 14px;font-family: "微软雅黑";}
+	        table{width: 300px;margin: 30px auto;font-size: 16px;border-collapse: collapse;}
+	        table td{text-align: center;color: #DA32B0}
+	    </style>
+	</head>
+	<body>
+	<button id="btn">点击获取数据</button>
+	<table border="1">
+        <tbody id="tbody">
+            <tr>
+                <th>name</th>
+                <th>age</th>
+            </tr>
+        </tbody>
+    </table>
+    
+    <script type="text/javascript">
+    	var btn = document.getElementById("btn");
+    	bind(btn,'click',function(){
+            var xhr = createXHR();
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState == 4){
+                    if(xhr.status == 200){
+                        var date = JSON.parse(xhr.responseText);
+                        td(date);
+                    }else{
+                        alert("错误信息:"+xhr.status+"---错误状态:"+xhr.statusText);
+                    };
+                };
+            };
+            xhr.open('get','person.json',true);
+            xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+            xhr.send(null);
+        });
+		
+		 var tbody = document.getElementById("tbody");
+		 
+		 function td(json){
+		 	for (var i=0;i<json.length;i++) {
+		 		 var tr = tbody.insertRow(tbody.rows.length);
+		 		 var obj = json[i];
+		 		 for(var k in obj){
+		 		 	var td = tr.insertCell(tr.cells.length);
+                    td.innerText = obj[k];
+		 		 }
+		 	}
+		 }
+		
+		
+		
+		  function createXHR(){
+            if(typeof XMLHttpRequest != "undefined"){
+                return new XMLHttpRequest();
+            }else if(typeof ActiveXObject != "undefined"){
+                var version = [
+                    'MSXML2.XMLHttp.6.0',
+                    'MSXML2.XMLHttp.3.0',
+                    'MSXML2.XMLHttp',
+                ];
+                for(var i=0;i<version.length;i++){
+                    try{
+                        return new ActiveXObject(version[i]);
+                    }catch(e){
+                        //跳过
+                    }
+                }
+            }else{
+                throw new Error("你的系统或者浏览器不支持XHR对象");
+            }
+        };
+
+
+        function bind(dom,eventType,Fn){
+            if(dom.attachEvent){
+                dom.attachEvent("on"+eventType,Fn);
+            }else{
+                dom.addEventListener(eventType,function(){
+                    Fn.call(dom);
+                },false);
+            };
+        }
+    </script>
+	</body>
+</html>
