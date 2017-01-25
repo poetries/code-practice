@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			
+		</style>
+	</head>
+	<body>
+		<button onclick="fn()">排序</button>
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+		<div>5</div>
+		<div>6</div>
+		<div>7</div>
+		<div>8</div>
+		<div>9</div>
+		<div>10</div>
+		<script type="text/javascript">
+			var divDoms = document.getElementsByTagName("div");
+			var arr = [].slice.call(divDoms);//slice复制一份divDOM放到数组[]中
+			var mark = true;
+			
+			function fn(){
+				mark = !mark;
+				arr.sort(function(a,b){
+					var d1 = a.innerHTML;
+					var d2 = b.innerHTML;
+					if(mark){
+						return d1 - d2;
+					}else{
+						return d2 - d1;
+					}
+				});
+				
+				//数组排序完 插入到页面中
+				for (var i=0;i<arr.length;i++) {
+					document.body.appendChild(arr[i]);
+				}
+			}
+		</script>
+	</body>
+</html>

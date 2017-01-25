@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			#box {
+				width: 500px;
+				height: 400px;
+				margin: 30px auto;
+				border: 1px solid #333;
+			}
+			#card {
+				height: 50px;
+				background: pink;
+			}
+			#card li{
+				float: left;
+				width: 60px;
+				height: 50px;
+				line-height: 50px;
+				border-right: 1px solid #333;
+				text-align: center;
+				list-style: none;
+				cursor: pointer;
+			}
+			#card li.active{
+				background-color: green;
+				color: #fff;
+			}
+			#tab li{
+				height: 450px;
+				width: 500px;
+				position: absolute;
+				display: none;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<ul id="card">
+				<li class="active">1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+			</ul>
+			<ul id="tab">
+				<li style="display: block;">1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			var cards = document.getElementById("card").children;
+			var tabs = document.getElementById("tab").children;
+			
+			//方法一 正常的做法
+			/*for (var i=0;i<cards.length;i++) {
+				cards[i].index= i;
+				cards[i].onclick = function(){
+					for(var j=0;j<cards.length;j++){
+						cards[j].className = "";
+						tabs[j].style.display = "none";
+					}
+					this.className = "active";
+					tabs[this.index].style.display = "block";
+				}
+			}*/
+			
+			//方法二
+			for (var i=0;i<cards.length;i++) {
+				cards[i].index= i;
+				cards[i].onclick = function(){
+
+					siblings(this,function(){
+						this.className = "";
+					});
+					this.className = "active";
+					
+					tabs[this.index].style.display = "block";
+					siblings(tabs[this.index],function(){
+						this.style.display = "none";
+					});
+				}
+			}
+			
+			/*function siblings(obj,callback){
+				var childDom = obj.parentNode.children;
+				for (var i=0;i<childDom.length;i++) {
+					if(childDom[i]!=obj){//当this不等于自己的时候，就是其他兄弟
+						callback.call(childDom[i]);
+					}
+					
+				}
+			}*/
+			
+			//方法三
+			function siblings(obj,callback){
+				var childDom = obj.parentNode.children;
+				
+				var tabs = [].slice.call(childDom);//复制一份childDom放到数组
+				tabs.filter(function(dom){
+					if(obj!=dom){
+						callback.call(dom);
+					}
+				})
+			}
+		</script>
+	</body>
+</html>
