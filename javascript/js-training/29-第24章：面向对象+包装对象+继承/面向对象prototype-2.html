@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function Person(name,age){
+				this.name = name;
+				this.age = age;
+			}
+			
+			//写法1 -- 字面量形式扩展prototype-但是需要手动修改构造器的指向
+			
+			//通过字面量形式扩展 p1 p2的构造器指向了Object
+			//所以 alert(p1.constructor === Person);//false
+			
+			Person.prototype = {
+				constructor:Person,//手动修改构造器指向
+				info: function(){
+					alert(this.name+"今年"+this.age+"岁了")
+				}
+			};
+			
+			//alert(Person.prototype)//object 原型本身也是一个对象
+			//Person.prototype 写法如 var json  = {};  
+			
+			var p1 = new Person("静观流叶",19);
+			var p2 = new Person("yinghong",12);
+			p1.info();
+			p2.info();
+			alert(p1.constructor === Person); //手动修改构造器后 这里变为了true
+		
+			
+			//写法2--在构造函数上扩展的--不占内存空间
+			
+			/*Person.prototype.info = function(){
+				alert(this.name+"今年"+this.age+"岁了")
+			};
+			
+			//通过在构造函数上扩展的 p1 p2的构造器指向了Person
+			//所以：alert(p1.constructor === Person);//true
+			
+			var p1 = new Person("静观流叶",19);
+			var p2 = new Person("yinghong",12);
+			p1.info();
+			p2.info();*/
+			
+			
+			//在构造器的属性叫做自有属性 prototype叫做扩展属性 首先会找自有属性--prototype--undefined
+		</script>
+	</body>
+</html>

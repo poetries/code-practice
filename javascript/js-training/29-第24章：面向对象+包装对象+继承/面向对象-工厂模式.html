@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/**
+			 * 面向对象的特点：
+			 * 	     抽象：抽取对象
+			 * 	     封装：只有对象才执行方法和属性
+			 *    继承： extend 从已有对象继承新的对象
+			 *    多态： 多个对象不同的形态展示
+			 */
+			
+			//封装 --工厂模式（Person）--为了解决多个对象的声明
+			//无法识别到底是谁创建的对象
+			
+			function Person(name,age){
+				//原料
+				var obj = new Object();
+				
+				//加工
+				obj.name = name;
+				obj.age = age;
+				obj.say = function(){
+					alert(this.name+"今年"+this.age+"岁了")
+				}
+				//出厂
+				return obj;
+			}
+			var p1 = Person("poetries",18);
+			p1.say();
+			alert(p1 instanceof Person)//false
+			var p2 = Person("映红",17);
+			p2.say();
+		</script>
+	</body>
+</html>

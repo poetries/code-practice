@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//prototype
+			//去改写对象下的方法属性 在内存中只有一份
+			//prototype只能给构造函数加[一定要记住]
+			//找到对象的构造构造函数加上 如 arr.constructor.prototype
+			
+			//js内置的构造函数只能添加 不可以修改
+			
+			var arr1 = [1,2,3,4,5,6,7,8,9,10];
+			var arr2 = [100,200,300,400,500];
+			
+			//对象底下扩展方法
+			/*arr.sum = function(){
+				var sum = 0;
+				for (var i=0;i<this.length;i++) {
+					sum +=this[i];
+				}
+				return sum;
+			}*/
+			
+			//prototype添加
+			Array.prototype.sum = function(){
+				var sum = 0;
+				for (var i=0;i<this.length;i++) {
+					sum +=this[i];
+				}
+				return sum;
+			}
+			
+
+			
+			console.log(arr1.sum());
+			console.log(arr2.sum());
+			
+			
+			
+		</script>
+	</body>
+</html>

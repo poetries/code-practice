@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="box"></div>
+		<script src="ajax.js"></script>
+		<script type="text/javascript">
+			var box = document.getElementById("box");
+			
+			ajax({
+				method:"GET",
+				url:"person.json",
+				data: {
+					"name":"poetries",
+					"age":22
+				},
+				async:true,
+				success:function(data){
+					var data = JSON.parse(data);
+					//console.log(data);
+					func(data);
+				}
+			});
+			function func(json){
+				
+				for(var i=0;i<json.length;i++){
+					var obj = json[i];
+					
+					for(var k in obj){
+						box.innerText = obj[k];
+					}
+					console.log(k)
+				}
+			}
+		</script>
+	</body>
+</html>

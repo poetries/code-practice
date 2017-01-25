@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/**
+			 * constructor判断来自哪一个构造函数
+			 * in 判断一个属性是否属于对象（in在自有属性和原型属性中遍历）
+			 * hasOwnProperty 判断一个属性是否属于对象（不会去原型中找）
+			 * isPropertyOf 来自哪一个原型链
+			 * 
+			 * toString 转成一个字符串
+			 * valueOf 生成一个副本 引用地址是一样的【基本不用 js在后台自己处理】
+			 */
+			
+			function Person(name,age){
+				this.name = name;
+				this.age = age;
+				this.say = function(){
+					alert(11);
+				};
+			};
+			Person.prototype.eat = function(){
+				alert(this.name+"在吃饭...");
+			}
+			Person.prototype.type = "人类"
+			
+			var p1 = new Person("Jingguanliuye",22);
+			var p2 = new Person("映红",18);
+			
+			//alert(Person.prototype.constructor);
+			
+			//alert(p1.eat === p2.eat);//true
+			//alert(p1.say === p2.say);//false
+			
+			// in
+			//自有属性没有eat属性 就去原型上找
+			//alert("eat" in p1); // true 
+			//alert("say" in p2); //true
+			
+			//hasOwnProperty只用来判断自有属性 不会去原型上找
+			//alert(p1.hasOwnProperty("eat")); //false 原型链 
+			//alert(p2.hasOwnProperty("say")); //true 自己的
+			//alert(p2.hasOwnProperty("valueOf")); //false Object上继承
+				
+			//isPropertyOf 来自哪一个原型链【用的少】
+			
+			alert(Person.prototype.isPrototypeOf(p1));//true
+			
+		</script>
+	</body>
+</html>

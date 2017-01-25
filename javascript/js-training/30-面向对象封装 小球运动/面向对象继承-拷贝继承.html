@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/**
+			 * 继承extends
+			 * 	 子类可以继承父类
+			 *   子类可以使用父类的方法属性
+			 *   子类不可以影响父类(重写)
+			 */
+			
+			function Person(name){
+				this.name = name;
+			};
+			Person.prototype.showName = function(){
+				alert(this.name);
+			}
+			var p = new Person("poetries");
+			//p.showName();
+			//p.showAge();
+			
+			//Child.prototype = new Person();//继承Person原型链上的方法
+			//Child.prototype = Person.prototype;//指向内存的地址一致化
+			//Child.prototype = extend(Person.prototype);
+			extend(Person.prototype,Child.prototype);
+			
+			function Child(name,age){
+				this.name = name;
+				this.age = age;
+			}
+			Child.prototype.showAge = function(){
+				alert(this.age);
+			}
+			var c= new Child("映红",18);
+			//c.showAge();
+			//c.showName();
+			//alert(c.constructor);//c的构造器指向了Object 
+			alert(c.constructor);
+			
+			//拷贝继承
+			function extend(obj,newObj){
+				//var newObj = {};
+				for(var k in obj){
+					newObj[k] = obj[k];
+				}
+				//return newObj;
+			}
+		</script>
+	</body>
+</html>

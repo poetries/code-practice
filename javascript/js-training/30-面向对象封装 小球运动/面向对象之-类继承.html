@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function Person(name){
+				this.name = name;
+			}
+			Person.prototype.showName = function(){
+				alert(this.name);
+			};
+			var p = new Person("静观流叶");
+			//p.showName();
+			
+			//创建一个中间变量Fn
+			function Fn(){
+				
+			}
+			Fn.prototype = Person.prototype;
+			Child.prototype = new Fn();
+			Child.prototype.constructor = Child;//手动修改构造器指向
+			
+			function Child(name,age){
+				Person.call(this,name);
+				this.age = age;
+			}
+			Child.prototype.showAge = function(){
+				alert(this.age);
+			}
+			var c = new Child("映红",18);
+			c.showAge();
+			c.showName();
+		</script>
+	</body>
+</html>

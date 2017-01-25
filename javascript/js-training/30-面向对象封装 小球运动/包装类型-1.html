@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/**
+			 * 	引用类型 	
+				var arr = new Array();
+				var date = new Date();
+				var pattern = new RegExp();
+				var obj = new Object();
+			
+			       包装类
+			    var string = new String();
+			    var Number = new Number();
+			    var Boolean = new Boolean();
+			    
+			    
+			    string number boolean
+			        每一个基本类型都有自己的包装对象
+			        当你基本类型去调用方法的时候，都会先找到包装对象--再去找对应的方法--执行完之后包装对象就会被销毁
+			        
+			    这也是js优秀的地方 节省很多代码
+			    
+			 */
+			
+			//var num1 = 12.333;
+			//var num2 = num1.toFixed(1);
+			//alert(num2);
+			//alert(typeof num1); //number
+			
+			//-----以上的执行过程分析
+			
+			var num1 = new Number(12.333);
+			//alert(typeof num1); object
+			//num1.prototype.toFixed
+			var num2 = num1.toFixed(1);
+			//delete num1;
+			//alert(num2);
+			//alert(num1.constructor);
+			
+			var str1 = "12345";
+			var str2 = str1.substring(0,3);
+			//alert(str2);
+			
+		</script>
+	</body>
+</html>

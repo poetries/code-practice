@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/**
+			 * instranceof 检测创建的对象是被谁new出来的
+			 * 
+			 * 构造函数单独执行无任何意义 只有在new的时候才有意义
+			 */
+			
+			//安全写法 就是为了防止忘记加new出现的后果
+			function Person(name,age){
+				
+				if(this instanceof Person){
+					this.name = name;
+					this.age = age;
+				}else{
+					return new Person(name,age);
+				};
+				
+			}
+			var p = Person("poetries",22);
+			console.log(p+'--'+p.name+'--'+p.age);
+			
+		</script>
+	</body>
+</html>

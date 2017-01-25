@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+		/**
+		 * 构造函数：和工厂模式最大区别是要通过new创建
+		 * 
+		 * 用new床架函数的时候 
+		 *   这个函数创建的对象就是this
+		 *   默认返回this（隐式返回）
+		 *   可以识别是谁创建的对象 instanceof
+		 * 
+		 * 
+		 * 构造函数和工厂模式区别：
+		 * 1、有无new
+		 * 2、没有直接将属性赋值给this
+		 * 3、没有return
+		 */
+			function Person(name,age){
+				this.name = name;
+				this.age = age;
+				this.say = function(){
+					alert(this.name+"今年"+this.age+"岁了")
+				}
+			}
+			var p1 = new Person("静观流叶",19);
+			var p2 = new Person("yinghong",12);
+			//p1.say();
+			//p2.say();
+			alert(p1 instanceof Person);//true;
+		</script>
+	</body>
+</html>
