@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h1 id="h"></h1>
+		<script type="text/javascript">
+			/**
+			 * 对象的混入
+			 */
+			
+			//把person person1融合到一起
+			var person = {
+				"name":"poetries"
+			};
+			var person1 = {
+				"age":22
+			}
+			//单一对象融合
+			function mixin(obj,obj1){
+				//obj1融入obj
+				for(var k in obj1){
+					//只融合自有属性
+					if(obj1.hasOwnProperty(k)){
+						obj[k] = obj1[k];
+					}
+				}
+				return obj;
+			}
+			//var json = mixin(person,person1);
+			//console.log(json);
+			
+			
+			//多融合
+			function mixin1(target,source){
+				var args = [].slice.call(arguments);
+				//console.log(args);
+				if(args.length==1){
+					return target;
+				};
+				var i=1;
+				while ((source=args[i++])){
+					for (var k in source) {
+						if(source.hasOwnProperty(k)){
+							target[k] = source[k];
+						}
+					}
+				};
+				return target;
+			};	
+			
+			var json = mixin(person,person1);
+			var json1 = mixin1(person,person1,{"address":"广西南宁"});
+			//alert(JSON.stringify(json1));
+			
+			
+			function loading(opts){
+				//默认
+				var defaults = {
+					title:"poetries"
+				};
+				var json = mixin1(defaults,opts);
+				document.getElementById("h").innerHTML = json.name+json.age;
+			}
+			//用户> 默认
+			loading({
+				name:"静观流叶",
+				age:22
+			});
+		</script>
+	</body>
+</html>

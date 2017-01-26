@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#canvas{
+				display: block;
+				margin: 30px auto;
+				border: 1px solid #333;
+			}
+			a{
+			    display: block;
+			    width: 50px;
+			    padding: 10px;
+			    background: red;
+			    color: #fff;
+			    text-decoration: none;
+			    border-radius: 10px;
+			    margin: 0 auto;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas" width="600" height="400"></canvas>
+		<a href="javascript:void(0);" onclick="addBall();">addBall</a>
+		<script type="text/javascript">
+			/**
+			 * ball构造函数：
+			 * x,y,radius,dx,dy(偏移量),color
+			 */
+			
+			var can,ctx;
+				
+			var balls = [];	
+			//预加载
+			window.onload = function(){
+				can = document.getElementById("canvas");
+				ctx = can.getContext("2d");
+				
+				//偏移量
+				//xspeed = 2;
+				//yspeed = 3;
+				
+				//绘画
+				(function draw(){
+					//清除绘画路径
+					ctx.clearRect(0,0,can.width,can.height);
+					for (var i=0;i<balls.length;i++) {
+						ball = balls[i];
+						ball.x += ball.dx;
+						ball.y += ball.dy;
+						
+						//边界判断
+						if((ball.x+ball.radius)>can.width 
+							|| (ball.x-ball.radius)<0){
+							ball.dx = -ball.dx;
+						}
+						if((ball.y+ball.radius)>can.height 
+							|| (ball.y-ball.radius)<0){
+							ball.dy = -ball.dy;
+						}	
+						
+						ctx.beginPath();
+						//console.log(ball.randomColor());
+						ctx.fillStyle = ball.randomColor();
+						ctx.arc(ball.x,ball.y,ball.radius,0,Math.PI*2);
+						ctx.fill();
+					}
+					//setTimeout(draw,30);
+					window.requestAnimationFrame(draw);//每秒60帧 不掉帧
+				})();
+			}
+			
+
+			function Ball(x,y,dx,dy,radius){
+				//ball的基本特征
+				this.x = x;
+				this.y = y;
+				this.dx = dx*Math.random()*2-1;
+				this.dy = dy*Math.random()*2-1;
+				this.radius = radius;
+			}
+			
+			Ball.prototype.randomColor = function(){
+				var r = Math.floor(Math.random()*256);
+				var g = Math.floor(Math.random()*256);
+				var b = Math.floor(Math.random()*256);
+				return "rgb("+r+","+g+","+b+")";
+			}
+			
+			function addBall(){
+				var ball = new Ball(can.width/2,can.height/2 ,3,6,20);
+				balls.push(ball);
+			}
+			
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+		    var arr = [1,2,3,4,5,1,2,3];
+
+        var arrCon = (function(){
+            var add = function(index,info){
+                arr.splice(index,0,info);
+            };
+            var del = function(index,num){
+                arr.splice(index,num);
+            };
+            var change = function(index,num,info){
+                arr.splice(index,num,info);
+            };
+            var search = function(info){
+                var infoArr = [];
+                var index = 0;
+                for(var i=0;i<arr.length;i++){
+                    if(arr[i] == info){
+                        infoArr.push(arr[i]);
+                        index = i;
+                    };
+                };
+                console.log(infoArr);
+                if(infoArr.length){
+                    alert(info+"在第"+(index+1)+"个位置");
+                }else{
+                    alert("没找到");
+                };
+            };
+            var dp = function(){
+                //从前往后 从后往前 找
+                for(var i=0;i<arr.length;i++){
+                    for(var j=arr.length;j>0;j--){
+                        if(arr[i]==arr[j] && i != j){
+                            arr.splice(j,1);
+                        };
+                    };
+                };
+            };
+
+            return {
+                add:add,
+                del:del,
+                change:change,
+                search:search,
+                dp:dp
+            }
+        })()
+
+        arrCon.dp(1,"123123");
+        alert(arr);
+		</script>
+	</body>
+</html>

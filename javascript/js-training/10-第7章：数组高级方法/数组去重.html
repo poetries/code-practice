@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var arr = [1,2,3,4,5,1,2,3];
+			
+			function qc(){
+				//从前往后 从后往前 找
+				for(var i=0;i<arr.length;i++){
+		            for(var j=arr.length;j>0;j--){
+		                if(arr[i]==arr[j] && i != j){
+		                    arr.splice(j,1);
+		                }
+		            }
+	 		 	};
+	 		 	return arr;
+			};
+			
+			alert(qc());
+		</script>
+	</body>
+</html>
