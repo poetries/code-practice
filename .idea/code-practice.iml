@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
+    <content url="file://E:/Program Files/wamp/www/h5-music" />
     <content url="file://$MODULE_DIR$" />
+    <content url="file://G:/drawing-board" />
+    <content url="file://G:/project-in-action/game/plane" />
+    <content url="file://G:/project-in-action/web/shop" />
+    <content url="file://G:/project/sell" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="vue-resource-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="sell node_modules" level="project" />
+    <orderEntry type="library" name="h5-music node_modules" level="project" />
+    <orderEntry type="library" name="drawing-board node_modules" level="project" />
+    <orderEntry type="library" name="plane node_modules" level="project" />
+    <orderEntry type="library" name="shop node_modules" level="project" />
   </component>
 </module>

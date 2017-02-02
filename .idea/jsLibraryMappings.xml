@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
+    <file url="file://E:/Program Files/wamp/www/h5-music" libraries="{h5-music node_modules}" />
+    <file url="file://G:/drawing-board" libraries="{drawing-board node_modules}" />
+    <file url="file://G:/project-in-action/game/plane" libraries="{plane node_modules}" />
+    <file url="file://G:/project-in-action/web/shop" libraries="{shop node_modules}" />
+    <file url="file://G:/project/sell" libraries="{sell node_modules}" />
+    <file url="PROJECT" libraries="{vue-resource-DefinitelyTyped}" />
     <includedPredefinedLibrary name="ECMAScript 6" />
     <includedPredefinedLibrary name="Node.js Core" />
   </component>
