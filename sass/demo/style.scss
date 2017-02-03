@@ -1,0 +1,76 @@
+@charset "UTF-8";
+@import "mixin.scss";
+@import "base.scss";
+
+/** 嵌套CSS的选择器 **/
+
+ul.nav {
+  float: right;
+  li {
+    float: left;
+    a {
+      color: red;
+    }
+    &.active {
+      background: yellow;
+    }
+  }
+}
+
+/** 通过使用 @mixin 和 @include 重用代码 **/
+
+#header ul.nav {
+  @include horizontal-list;
+  float: right;
+}
+#footer ul.nav {
+  @include horizontal-list;
+  margin-top: 1em;
+}
+
+/*在混合器中应用变量*/
+
+#header {
+  background: $bgColor;
+  @include radius(10px);
+}
+
+/*使用选择器继承来避免重复属性*/
+
+.error {
+  @include radius(20px);
+  background: $bgColor;
+}
+.error .intro {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.error .intro p {
+  color: blue;
+}
+.badError {
+  @extend .error;
+  border-width: 3px;
+}
+
+/*在选择器继承中使用占位选择器*/
+
+%button-reset {
+  margin-bottom: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+.save {
+  @extend %button-reset;
+  color: green;
+}
+.delete {
+  @extend %button-reset;
+  color: black;
+  display: flex;
+  animation: all 1s;
+  font-size: 12px;
+}
+
+
+

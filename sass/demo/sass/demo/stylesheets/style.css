@@ -1,0 +1,60 @@
+@charset "UTF-8";
+/** 嵌套CSS的选择器 **/
+ul.nav {
+  float: right; }
+  ul.nav li {
+    float: left; }
+    ul.nav li a {
+      color: red; }
+    ul.nav li.active {
+      background: yellow; }
+
+/** 通过使用 @mixin 和 @include 重用代码 **/
+#header ul.nav {
+  float: right; }
+  #header ul.nav li {
+    float: left;
+    margin-right: 10px; }
+
+#footer ul.nav {
+  margin-top: 1em; }
+  #footer ul.nav li {
+    float: left;
+    margin-right: 10px; }
+
+/*在混合器中应用变量*/
+#header {
+  background: #f00;
+  border-radius: 10px; }
+
+/*使用选择器继承来避免重复属性*/
+.error, .badError {
+  border-radius: 20px;
+  background: #f00; }
+
+.error .intro, .badError .intro {
+  font-size: 1.2em;
+  font-weight: bold; }
+
+.error .intro p, .badError .intro p {
+  color: blue; }
+
+.badError {
+  border-width: 3px; }
+
+/*在选择器继承中使用占位选择器*/
+.save, .delete {
+  margin-bottom: 10px;
+  padding: 10px;
+  cursor: pointer; }
+
+.save {
+  color: green; }
+
+.delete {
+  color: black;
+  display: flex;
+  animation: all 1s;
+  font-size: 12px; }
+
+/*# sourceMappingURL=style.css.map */

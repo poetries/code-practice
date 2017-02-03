@@ -1,0 +1,9 @@
+@mixin horizontal-list {
+  li {
+    float: left;
+    margin-right: 10px;
+  }
+}
+@mixin radius($size) {
+  border-radius: $size;
+}
