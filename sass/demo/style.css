@@ -1,0 +1,134 @@
+ul.nav {
+  float: right;
+}
+ul.nav li {
+  float: left;
+}
+ul.nav li a {
+  color: red;
+}
+ul.nav li.active {
+  background: yellow;
+}
+
+#header ul.nav {
+  float: right;
+}
+#header ul.nav li {
+  float: left;
+  margin-right: 10px;
+}
+
+#footer ul.nav {
+  margin-top: 1em;
+}
+#footer ul.nav li {
+  float: left;
+  margin-right: 10px;
+}
+
+#header {
+  background: #f00;
+  border-radius: 10px;
+}
+
+.error, .badError {
+  border-radius: 20px;
+  background: #f00;
+}
+
+.error .intro, .badError .intro {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.error .intro p, .badError .intro p {
+  color: blue;
+}
+
+.badError {
+  border-width: 3px;
+}
+
+.save, .delete {
+  margin-bottom: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.save {
+  color: green;
+}
+
+.delete {
+  color: black;
+  display: flex;
+  animation: all 1s;
+  font-size: 12px;
+}
+
+nav {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #f00;
+}
+
+nav {
+  border: 1px solid #ccc;
+  border-left: 0px;
+  border-right: 0px;
+}
+
+.fancybox {
+  width: 400px;
+}
+
+.notice {
+  background-color: green;
+  border: 2px solid #00aa00;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+ul.plain {
+  color: #444;
+  list-style: none;
+}
+ul.plain li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0px;
+}
+
+a {
+  color: blue;
+}
+a:hover {
+  color: red;
+}
+a:visited {
+  color: green;
+}
+
+a.anhor {
+  color: blue;
+}
+a.anhor:hover {
+  color: red;
+}
+a.anhor:visited {
+  color: green;
+}
+
+.a {
+  color: red;
+}
+.a:hover {
+  color: red;
+}
+.a:visited {
+  color: red;
+}
+
+/*# sourceMappingURL=style.css.map */

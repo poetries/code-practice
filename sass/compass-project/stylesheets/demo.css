@@ -1,0 +1,6 @@
+/* line 3, ../sass/demo.scss */
+.notice {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}

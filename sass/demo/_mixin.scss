@@ -1,0 +1,36 @@
+@mixin horizontal-list {
+  li {
+    float: left;
+    margin-right: 10px;
+  }
+}
+@mixin radius($size) {
+  border-radius: $size;
+}
+@mixin rounded-corners {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+@mixin no-bullets {
+  list-style: none;
+  li {
+    list-style-image: none;
+    list-style-type: none;
+    margin-left: 0px;
+  }
+}
+@mixin link-colors($normal, $hover, $visited) {
+  color: $normal;
+  &:hover { color: $hover; }
+  &:visited { color: $visited; }
+}
+@mixin link-color(
+  $normal,
+  $hover: $normal,
+  $visited: $normal
+) {
+  color: $normal;
+  &:hover { color: $hover; }
+  &:visited { color: $visited; }
+}

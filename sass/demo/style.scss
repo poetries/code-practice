@@ -2,7 +2,7 @@
 @import "mixin.scss";
 @import "base.scss";
 
-/** 嵌套CSS的选择器 **/
+// 嵌套CSS的选择器 *
 
 ul.nav {
   float: right;
@@ -17,7 +17,7 @@ ul.nav {
   }
 }
 
-/** 通过使用 @mixin 和 @include 重用代码 **/
+// 通过使用 @mixin 和 @include 重用代码
 
 #header ul.nav {
   @include horizontal-list;
@@ -28,14 +28,14 @@ ul.nav {
   margin-top: 1em;
 }
 
-/*在混合器中应用变量*/
+// 在混合器中应用变量
 
 #header {
   background: $bgColor;
   @include radius(10px);
 }
 
-/*使用选择器继承来避免重复属性*/
+// 使用选择器继承来避免重复属性
 
 .error {
   @include radius(20px);
@@ -53,7 +53,7 @@ ul.nav {
   border-width: 3px;
 }
 
-/*在选择器继承中使用占位选择器*/
+// 在选择器继承中使用占位选择器
 
 %button-reset {
   margin-bottom: 10px;
@@ -72,5 +72,43 @@ ul.nav {
   font-size: 12px;
 }
 
+nav {
+  border: {
+    width: 1px;
+    style: solid;
+    color: #f00;
+  }
+}
+nav {
+  border: 1px solid #ccc {
+    left: 0px;
+    right: 0px;
+  }
+}
 
+.fancybox {
+  width: $fancybox-width;
+}
+.notice {
+  background-color: green;
+  border: 2px solid #00aa00;
+  @include rounded-corners;
+}
+ul.plain {
+  color: #444;
+  @include no-bullets;
+}
+a {
+  @include link-colors(blue, red, green);
+}
+a.anhor {
+  @include link-colors(
+          $normal: blue,
+          $visited: green,
+          $hover: red
+  );
+}
+.a{
+  @include link-color(red);
+}
 
