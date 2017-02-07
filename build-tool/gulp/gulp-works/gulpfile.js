@@ -1,7 +1,7 @@
 //组件
 
 let gulp = require('gulp'),
-	browserSync = require('browser-sync').create(), //监听刷新
+    browserSync = require('browser-sync').create(), //监听刷新
     reload = browserSync.reload,
     ftp = require('gulp-ftp'), // ftp上传
     gutil = require('gulp-util'),
@@ -16,8 +16,8 @@ let gulp = require('gulp'),
     zip = require('gulp-zip'), //打包文件
     rev = require('gulp-rev-append'), //添加MD5
     htmlmin = require('gulp-htmlmin'), // 压缩html
-	git = require('gulp-git'),     //git
-	babel = require("gulp-babel"); //ES6 转es5
+    git = require('gulp-git'),     //git
+    babel = require("gulp-babel"); //ES6 转es5
 
 
 // =========== 开发构建流程 [单文件输出] ==============
@@ -25,7 +25,9 @@ let gulp = require('gulp'),
 //dev
 gulp.task('sass:dev', () => {
     gulp.src('src/sass/*.scss')
-        .pipe(sass())
+        .pipe(sass({
+            outputStyle: 'expanded'
+        }))
         .pipe(gulp.dest('src/css/'))
         .pipe(reload({ stream: true }))
 });
@@ -40,9 +42,9 @@ gulp.task('css:dev', ['sass:dev'], () => {
 // 合并、重命名js
 gulp.task('js:dev', () => {
     gulp.src('src/js/*.js')
-    	.pipe(babel({
-		      	 	presets: ['es2015']
-     			})) //ES6转ES5
+        .pipe(babel({
+            presets: ['es2015']
+        })) //ES6转ES5
         //.pipe(concat('all.js')) 开发阶段分开输出js文件
         .pipe(gulp.dest('dist/js/'))
         .pipe(reload({ stream: true }))
@@ -65,7 +67,7 @@ gulp.task('lib:dev', () => {
 
 
 //开发构建
-gulp.task('dev', ['css:dev', 'js:dev', 'html:dev', 'img','copyFonts','lib'], () => {
+gulp.task('dev', ['css:dev', 'js:dev', 'html:dev', 'img','copyFonts','lib:dev'], () => {
     browserSync.init({
         server: {
             baseDir: "dist" // 设置服务器的根目录为dist目录
@@ -79,7 +81,7 @@ gulp.task('dev', ['css:dev', 'js:dev', 'html:dev', 'img','copyFonts','lib'], () 
     gulp.watch('src/tpl/*.html', ['html:dev']);
     gulp.watch('src/fonts/**', ['copyFonts']);
     gulp.watch('src/images/**', ['img']);
-    gulp.watch('src/lib/**', ['lib']);
+    gulp.watch('src/lib/**', ['lib:dev']);
 });
 
 
@@ -92,9 +94,9 @@ gulp.task('dev', ['css:dev', 'js:dev', 'html:dev', 'img','copyFonts','lib'], () 
 gulp.task('sass', () => {
     gulp.src('src/sass/*.scss')
         //输出为压缩
-         .pipe(sass({
-             outputStyle: 'compressed'
-         }))
+        .pipe(sass({
+            outputStyle: 'compressed'
+        }))
         .pipe(sass())
         .pipe(gulp.dest('src/css/'))
 });
@@ -107,7 +109,7 @@ gulp.task('css', ['sass'], () => {
         .pipe(autoprefixer({
             browsers: ['last 2 versions', 'Android >= 4.0'],
             cascade: true, //是否美化属性值 默认：true 像这样：
-            remove: false //是否去掉不必要的前缀 默认：true 
+            remove: false //是否去掉不必要的前缀 默认：true
         }))
         .pipe(cleancss()) //压缩css
         .pipe(gulp.dest('dist/css'));
@@ -117,9 +119,9 @@ gulp.task('css', ['sass'], () => {
 
 gulp.task('js', () => {
     gulp.src('src/js/*.js')
-    	.pipe(babel({
-		      	 	presets: ['es2015']
-     			})) //ES6转ES5
+        .pipe(babel({
+            presets: ['es2015']
+        })) //ES6转ES5
         .pipe(concat('all.js'))
         .pipe(uglify())
         .pipe(gulp.dest('dist/js'));
@@ -132,8 +134,8 @@ gulp.task('js', () => {
 gulp.task('html', () => {
     gulp.src('src/tpl/*.html')
         .pipe(rev())//记得在引用地址后面加后缀，插件原本是ver=@@hash ,这里改成了v=@@hash
-      //<link rel="stylesheet" href="css/all.css?v=@@hash">
-      //<script src="js/all.js?v=@@hash"></script>
+        //<link rel="stylesheet" href="css/all.css?v=@@hash">
+        //<script src="js/all.js?v=@@hash"></script>
         .pipe(htmlmin({
             removeComments: true, //清除HTML注释
             collapseWhitespace: true, //压缩HTML
@@ -183,21 +185,21 @@ gulp.task('lib', () => {
 
 //打包主体dist 文件夹并按照时间重命名
 gulp.task('zip', function(){
-      function checkTime(i) {
-          if (i < 10) {
-              i = "0" + i
-          }
-          return i
-      }
-          
-      var d=new Date();
-      var year=d.getFullYear();
-      var month=checkTime(d.getMonth() + 1);
-      var day=checkTime(d.getDate());
-      var hour=checkTime(d.getHours());
-      var minute=checkTime(d.getMinutes());
+    function checkTime(i) {
+        if (i < 10) {
+            i = "0" + i
+        }
+        return i
+    }
 
-  return gulp.src('./dist/**')
+    var d=new Date();
+    var year=d.getFullYear();
+    var month=checkTime(d.getMonth() + 1);
+    var day=checkTime(d.getDate());
+    var hour=checkTime(d.getHours());
+    var minute=checkTime(d.getMinutes());
+
+    return gulp.src('./dist/**')
         .pipe(zip(year+month+day +hour+minute+'.zip'))
         .pipe(gulp.dest('./zip'));
 });
