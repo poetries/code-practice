@@ -11,13 +11,10 @@
     </option>
   </component>
   <component name="NewModuleRootManager">
-    <content url="file://E:/Program Files/wamp/www/Ajax" />
-    <content url="file://E:/Program Files/wamp/www/h5-music" />
     <content url="file://$MODULE_DIR$" />
     <content url="file://G:/drawing-board" />
     <content url="file://G:/project-in-action/game/plane" />
     <content url="file://G:/project-in-action/web/shop" />
-    <content url="file://G:/project/sell" />
     <content url="file://G:/project/webapp-reader" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
