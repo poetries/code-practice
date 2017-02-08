@@ -2,100 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78af330b-176d-45c0-9230-a238a1e28d61" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javascript/js-training/17-第13章：运动框架banner/运动框架之轮播图/banner-all-test.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javascript/js-training/17-第13章：运动框架banner/运动框架之轮播图/js/banner.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Ajax_node_modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/webapp_reader_node_modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/code-practice.iml" afterPath="$PROJECT_DIR$/.idea/code-practice.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build-tool/gulp/gulp-works/gulpfile.js" afterPath="$PROJECT_DIR$/build-tool/gulp/gulp-works/gulpfile.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/BFC实现两栏布局.html" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/BFC实现两栏布局.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/Login.html" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/Login.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/Noname1.html" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/Noname1.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/Noname2.html" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/Noname2.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/banner-practice.html" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/banner-practice.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/banner.html" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/banner.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/box-sizing用法案例.html" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/box-sizing用法案例.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/felx.html" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/felx.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/flex布局之-基本网格布局.html" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/flex布局之-基本网格布局.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/flex布局之-百分比布局.html" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/flex布局之-百分比布局.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/flex布局之圣杯布局.html" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/flex布局之圣杯布局.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/icons.png" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/icons.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/images/0.png" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/images/0.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/images/1.jpg" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/images/1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/images/10.jpg" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/images/10.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/images/11.jpg" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/images/11.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/images/12.jpg" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/images/12.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/images/13.jpg" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/images/13.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/images/14.jpg" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/images/14.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/images/15.jpg" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/images/15.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/images/16.jpg" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/images/16.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/images/17.jpg" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/images/17.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/images/18.jpg" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/images/18.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/images/19.jpg" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/images/19.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/images/2.jpg" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/images/2.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/images/20.jpg" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/images/20.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/images/21.jpg" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/images/21.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/images/22.jpg" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/images/22.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/images/23.jpg" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/images/23.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/images/24.jpg" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/images/24.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/images/3.jpg" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/images/3.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/images/4.jpg" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/images/4.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/images/5.jpg" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/images/5.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/images/6.jpg" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/images/6.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/images/7.jpg" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/images/7.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/images/8.jpg" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/images/8.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/images/9.jpg" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/images/9.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/images/Git工作流.png" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/images/Git工作流.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/images/banner.jpg" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/images/banner.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/images/banner1.jpg" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/images/banner1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/images/banner2.jpg" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/images/banner2.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/images/banner3.jpg" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/images/banner3.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/images/button.png" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/images/button.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/images/icon.png" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/images/icon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/images/mysql架构整体图.png" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/images/mysql架构整体图.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/images/phone.png" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/images/phone.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/images/pic1.jpg" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/images/pic1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/images/pic2.jpg" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/images/pic2.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/images/pic3.jpg" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/images/pic3.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/images/review.png" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/images/review.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/images/web.png" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/images/web.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/images/下载 (1).png" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/images/下载 (1).png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/images/下载.png" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/images/下载.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/jquery-2.1.3.min.js" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/jquery-2.1.3.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/lesson01-demo.html" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/lesson01-demo.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/lesson01.html" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/lesson01.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/lesson02.html" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/lesson02.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/lesson03-demo.html" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/lesson03-demo.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/lesson03.html" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/lesson03.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/lesson04-1.html" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/lesson04-1.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/lesson04-2.html" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/lesson04-2.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/lesson04-Demo.html" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/lesson04-Demo.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/lesson04.html" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/lesson04.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/lesson05-1.html" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/lesson05-1.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/lesson06-1.html" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/lesson06-1.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/lesson06-Demo.html" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/lesson06-Demo.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/lesson07.html" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/lesson07.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/lesson3-1.html" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/lesson3-1.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/nth-of-type--选中第一个css3的用法.html" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/nth-of-type--选中第一个css3的用法.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/tab组件.html" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/tab组件.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/test-background-postion.html" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/test-background-postion.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/test.html" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/test.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/web.png" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/web.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/伪类before=after用法.html" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/伪类before=after用法.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/使用padding+background-clip+border-radius绘制眼睛.html" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/使用padding+background-clip+border-radius绘制眼睛.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/关于登陆框背景图片的定位应用案列（不懂定位的时候回来看看）.html" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/关于登陆框背景图片的定位应用案列（不懂定位的时候回来看看）.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/定位.html" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/定位.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/文字溢出点点省略.html" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/文字溢出点点省略.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/文本显示一行的做法.html" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/文本显示一行的做法.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/日历练习-静态yemian.html" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/日历练习-静态yemian.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/浮动元素水平居中的办法.html" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/浮动元素水平居中的办法.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/绝对定位-背景定位案列.html" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/绝对定位-背景定位案列.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/背景设置透明的三种方式/bg.jpg" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/背景设置透明的三种方式/bg.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/背景设置透明的三种方式/bg.png" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/背景设置透明的三种方式/bg.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/背景设置透明的三种方式/方式一opacity.html" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/背景设置透明的三种方式/方式一opacity.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/背景设置透明的三种方式/方式三 用一个图片做透明.html" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/背景设置透明的三种方式/方式三 用一个图片做透明.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/背景设置透明的三种方式/方式二rgba.html" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/背景设置透明的三种方式/方式二rgba.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/背景设置透明的三种方式/遮罩层.html" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/背景设置透明的三种方式/遮罩层.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HTML&amp;&amp;CSS/表单验证.html" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/demo-mess/表单验证.html" />
     </list>
     <ignored path="code-practice.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -115,32 +26,22 @@
     <favorites_list name="code-practice" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="music.html" pinned="false" current-in-tab="true">
-        <entry file="file://E:/Program Files/wamp/www/Ajax/demo/music.html">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://E:/Program Files/wamp/www/h5-music/src/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="324">
+              <caret line="141" column="46" selection-start-line="141" selection-start-column="46" selection-end-line="141" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test02.html" pinned="false" current-in-tab="false">
-        <entry file="file://E:/Program Files/wamp/www/Ajax/test02.html">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
+        <entry file="file://E:/Program Files/wamp/www/h5-music/src/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="13" column="80" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="80" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.html" pinned="false" current-in-tab="false">
-        <entry file="file://E:/Program Files/wamp/www/Ajax/test.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+            <state relative-caret-position="598">
+              <caret line="82" column="23" selection-start-line="82" selection-start-column="23" selection-end-line="82" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -163,12 +64,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/sass/src/sass/style.css" />
-        <option value="$PROJECT_DIR$/sass/src/sass/style.scss" />
-        <option value="$PROJECT_DIR$/sass/src/sass/demo.sass" />
-        <option value="$PROJECT_DIR$/sass/src/sass/fdadf.scss" />
-        <option value="$PROJECT_DIR$/sass/src/sass/dd.scss" />
-        <option value="$PROJECT_DIR$/sass/src/stylesheets/dd.css" />
         <option value="$PROJECT_DIR$/sass/src/sass/ddd.scss" />
         <option value="$PROJECT_DIR$/sass/stylesheets/autoprefixer.json" />
         <option value="$PROJECT_DIR$/sass/test.scss.html" />
@@ -214,6 +109,12 @@
         <option value="$PROJECT_DIR$/javascript/js-training/17-第13章：运动框架banner/运动框架之轮播图/js/banner.js" />
         <option value="$PROJECT_DIR$/javascript/js-training/17-第13章：运动框架banner/运动框架之轮播图/banner-all-test.html" />
         <option value="E:/Program Files/wamp/www/Ajax/demo/music.html" />
+        <option value="E:/Program Files/wamp/www/Ajax/songs.js" />
+        <option value="E:/Program Files/wamp/www/Ajax/test03.html" />
+        <option value="E:/Program Files/wamp/www/Ajax/test02.html" />
+        <option value="E:/Program Files/wamp/www/h5-music/src/index.html" />
+        <option value="E:/Program Files/wamp/www/Ajax/ajax_test_examp/demo.html" />
+        <option value="E:/Program Files/wamp/www/h5-music/src/js/main.js" />
       </list>
     </option>
   </component>
@@ -375,7 +276,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -462,8 +362,27 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="code-practice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="code-practice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Ajax" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ajax_test_examp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -486,11 +405,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Program Files\wamp\www\h5-music\src\js" />
+      <recent name="E:\Program Files\wamp\www\Ajax\ajax_test_examp" />
       <recent name="G:\project\webapp-reader" />
       <recent name="G:\project\reader\src" />
       <recent name="G:\project\reader\src\lib" />
-      <recent name="G:\code-practice\python\case" />
-      <recent name="G:\code-practice\sass\demo" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="G:\project\webapp-reader\src\tpl" />
@@ -625,12 +544,13 @@
       <workItem from="1486270069731" duration="2867000" />
       <workItem from="1486377925196" duration="1777000" />
       <workItem from="1486432051570" duration="3993000" />
-      <workItem from="1486463035990" duration="11170000" />
+      <workItem from="1486463035990" duration="25378000" />
+      <workItem from="1486524670488" duration="825000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="277276000" />
+    <option name="totallyTimeSpent" value="292309000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -649,18 +569,18 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.029363785" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" x="257" y="385" width="887" height="149" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2593801" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.029363785" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" x="257" y="385" width="887" height="149" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32852563" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -684,59 +604,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sass/compass-project/sass/demo.css.map">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider editor-type-id="sourcemapFileViewerProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sass/compass-project/config.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sass/compass-project/sass/demo.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1430">
-          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sass/compass-project/sass/demo.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sass/compass-project/stylesheets/demo.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sass/simple/sass/partials/_base.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sass/simple/sass/print.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ES6/learn-babel/src/js/demo1.js" />
     <entry file="file://$PROJECT_DIR$/ES6/learn-babel/src/js/modules/index.js" />
     <entry file="file://$PROJECT_DIR$/python/case/spider.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -787,13 +654,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://G:/project/reader/src/lib/zepto.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://G:/project/reader/src/lib/zepto.min.js" />
     <entry file="file://G:/project-in-action/web/shop/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="338">
@@ -808,47 +669,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://G:/project/reader/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/project/reader/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://G:/project/reader/.gitignore" />
+    <entry file="file://G:/project/reader/package.json" />
     <entry file="file://G:/project/reader/dist/css/all.css" />
-    <entry file="file://G:/project/reader/src/css/reader.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/project/reader/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="98" column="16" selection-start-line="98" selection-start-column="16" selection-end-line="98" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/project/reader/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://G:/project/reader/src/css/reader.css" />
+    <entry file="file://G:/project/reader/gulpfile.js" />
+    <entry file="file://G:/project/reader/src/index.html" />
     <entry file="file://G:/project/webapp-reader/src/sass/test.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -856,7 +686,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
           <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -864,7 +693,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -872,7 +700,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -880,7 +707,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="766">
           <caret line="224" column="2" selection-start-line="224" selection-start-column="2" selection-end-line="224" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -888,7 +714,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="64" column="3" selection-start-line="0" selection-start-column="0" selection-end-line="224" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -896,7 +721,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
           <caret line="79" column="12" selection-start-line="79" selection-start-column="12" selection-end-line="93" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -904,7 +728,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
           <caret line="79" column="12" selection-start-line="79" selection-start-column="12" selection-end-line="84" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -912,7 +735,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -920,7 +742,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="246">
           <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -928,7 +749,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
           <caret line="31" column="13" selection-start-line="24" selection-start-column="12" selection-end-line="31" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -936,7 +756,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="123" column="13" selection-start-line="80" selection-start-column="12" selection-end-line="123" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -944,7 +763,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1404">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -952,7 +770,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1820">
           <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -960,7 +777,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1574">
           <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -968,7 +784,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="26">
           <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -976,7 +791,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="113" column="4" selection-start-line="113" selection-start-column="4" selection-end-line="113" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -984,7 +798,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4538">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -992,23 +805,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
           <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/Program Files/wamp/www/h5-music/src/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1716">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/Program Files/wamp/www/Ajax/test03.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1016,23 +812,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-716">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/Program Files/wamp/www/Ajax/test02.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="13" column="80" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="80" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/Program Files/wamp/www/Ajax/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1044,10 +823,95 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/js-training/28-第23章：jsonp 面向对象/百度关键字搜索.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="49" column="9" selection-start-line="42" selection-start-column="7" selection-end-line="49" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/Program Files/wamp/www/Ajax/songs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="12" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/Program Files/wamp/www/Ajax/ajax_test_examp/get.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/Program Files/wamp/www/Ajax/ajax_test_examp/jsonp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/Program Files/wamp/www/Ajax/demo/demo2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/Program Files/wamp/www/Ajax/test03.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="21" column="13" selection-start-line="9" selection-start-column="12" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/Program Files/wamp/www/Ajax/test02.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="34" column="17" selection-start-line="7" selection-start-column="8" selection-end-line="34" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/Program Files/wamp/www/Ajax/ajax_test_examp/XMLHttpRequest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="53" column="18" selection-start-line="0" selection-start-column="0" selection-end-line="98" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://E:/Program Files/wamp/www/Ajax/demo/music.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state relative-caret-position="350">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/Program Files/wamp/www/Ajax/ajax_test_examp/demo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="52" column="9" selection-start-line="40" selection-start-column="8" selection-end-line="52" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/Program Files/wamp/www/Ajax/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="21" column="55" selection-start-line="16" selection-start-column="24" selection-end-line="21" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/Program Files/wamp/www/h5-music/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="141" column="46" selection-start-line="141" selection-start-column="46" selection-end-line="141" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/Program Files/wamp/www/h5-music/src/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="82" column="23" selection-start-line="82" selection-start-column="23" selection-end-line="82" selection-end-column="23" />
           <folding />
         </state>
       </provider>

@@ -27,5 +27,7 @@
     <orderEntry type="library" name="drawing-board node_modules" level="project" />
     <orderEntry type="library" name="plane node_modules" level="project" />
     <orderEntry type="library" name="shop node_modules" level="project" />
+    <orderEntry type="library" name="Ajax node_modules" level="project" />
+    <orderEntry type="library" name="webapp-reader node_modules" level="project" />
   </component>
 </module>
