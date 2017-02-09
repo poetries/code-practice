@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78af330b-176d-45c0-9230-a238a1e28d61" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/css/css-layout/1、流体布局.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/css/css-layout/2、BFC 三栏布局.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/music_player_node_modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/css/css-layout/3. 双飞翼布局.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/css/css-layout/4. 圣杯布局.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/css/css-layout/5. Flex 布局.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/css/css-layout/6. Table 布局.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/css/css-layout/7. 绝对定位布局.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/code-practice.iml" afterPath="$PROJECT_DIR$/.idea/code-practice.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build-tool/gulp/gulp-works/gulpfile.js" afterPath="$PROJECT_DIR$/build-tool/gulp/gulp-works/gulpfile.js" />
     </list>
     <ignored path="code-practice.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,22 +31,12 @@
     <favorites_list name="code-practice" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="1、流体布局.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HTML&amp;&amp;CSS/css/css-layout/1、流体布局.html">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="204">
+      <file leaf-file-name="game.js" pinned="false" current-in-tab="true">
+        <entry file="file://G:/interview-project/plane/src/js/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="23" column="9" selection-start-line="0" selection-start-column="0" selection-end-line="34" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2、BFC 三栏布局.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/HTML&amp;&amp;CSS/css/css-layout/2、BFC 三栏布局.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="514">
-              <caret line="33" column="6" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
+            <state relative-caret-position="1222">
+              <caret line="47" column="22" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -63,57 +59,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/sass/dfa.scss" />
-        <option value="$PROJECT_DIR$/sass/style.css" />
-        <option value="$PROJECT_DIR$/sass/demo/style.css" />
-        <option value="$PROJECT_DIR$/sass/demo/dd.sass" />
-        <option value="$PROJECT_DIR$/sass/demo/dd.scss" />
-        <option value="$PROJECT_DIR$/sass/demo/ee.scss" />
-        <option value="$PROJECT_DIR$/sass/demo/_base.scss" />
-        <option value="$PROJECT_DIR$/sass/demo/_mixin.scss" />
-        <option value="$PROJECT_DIR$/sass/demo/stylesheets/style.css" />
-        <option value="$PROJECT_DIR$/sass/test01.html" />
-        <option value="$PROJECT_DIR$/sass/demo/test01.html" />
-        <option value="$PROJECT_DIR$/sass/demo/style.scss" />
-        <option value="$PROJECT_DIR$/sass/compass-project/sass/test.css" />
-        <option value="$PROJECT_DIR$/sass/compass-project/sass/test.scss" />
-        <option value="$PROJECT_DIR$/sass/demo/test.scss" />
-        <option value="$PROJECT_DIR$/sass/compass-project/config.rb" />
-        <option value="$PROJECT_DIR$/sass/compass-project/sass/demo.scss" />
-        <option value="$PROJECT_DIR$/sass/compass-project/sass/demo.css" />
-        <option value="$PROJECT_DIR$/ES6/demo/let and const.es6.js" />
-        <option value="$PROJECT_DIR$/ES6/learn-babel/src/js/let and const.es6.js" />
-        <option value="$PROJECT_DIR$/ES6/learn-babel-es6/dist/index.html" />
-        <option value="$PROJECT_DIR$/ES6/learn-babel-es6/src/js/constants.js" />
-        <option value="$PROJECT_DIR$/ES6/learn-babel-es6/src/js/let and const.js" />
-        <option value="$PROJECT_DIR$/ES6/learn-babel-es6/dist/js/let and const.js" />
-        <option value="$PROJECT_DIR$/ES6/learn-babel-es6/src/js/es6.js" />
-        <option value="$PROJECT_DIR$/ES6/learn-babel-es6/dist/js/es6.js" />
-        <option value="G:/project/reader/src/.gitignore" />
-        <option value="G:/project/reader/package.json" />
-        <option value="G:/project/reader/src/index.html" />
-        <option value="G:/project/reader/src/css/reader.css" />
-        <option value="G:/project/reader/gulpfile.js" />
-        <option value="G:/project/webapp-reader/src/sass/test.scss" />
-        <option value="G:/project/webapp-reader/src/css/test.css" />
-        <option value="G:/project/webapp-reader/gulpfile.js" />
+        <option value="G:/project-in-action/game/plane/src/sass/main.css" />
+        <option value="G:/project/music-player/src/sass/_header.scss" />
+        <option value="G:/project/music-player/src/sass/_music-info.scss" />
+        <option value="G:/project/music-player/src/sass/_base.scss" />
+        <option value="G:/project/music-player/src/css/index.css" />
+        <option value="G:/project/music-player/src/sass/_lyric.scss" />
+        <option value="G:/project/music-player/src/sass/main.scss" />
+        <option value="G:/project/music-player/src/sass/_play-controls.scss" />
+        <option value="G:/project/music-player/src/sass/_reset.scss" />
+        <option value="G:/project/music-player/src/sass/_scroll.scss" />
+        <option value="G:/project/music-player/src/sass/main.css" />
+        <option value="G:/project/music-player/dist/index.html" />
+        <option value="G:/project/music-player/src/index.html" />
+        <option value="G:/drawing-board/src/sass/_header.scss" />
+        <option value="G:/drawing-board/src/sass/_footer.scss" />
+        <option value="G:/drawing-board/src/css/canvas.css" />
+        <option value="G:/drawing-board/src/sass/_base.scss" />
+        <option value="G:/drawing-board/src/css/iconfont.css" />
+        <option value="G:/drawing-board/src/sass/_iconfont.scss" />
+        <option value="G:/drawing-board/src/sass/_reset.scss" />
+        <option value="G:/drawing-board/src/sass/main.scss" />
         <option value="$PROJECT_DIR$/build-tool/gulp/gulp-works/gulpfile.js" />
-        <option value="G:/project/webapp-reader/src/tpl/index.html" />
-        <option value="$PROJECT_DIR$/javascript/js-training/17-第13章：运动框架banner/运动框架之轮播图/js/banner.js" />
-        <option value="$PROJECT_DIR$/javascript/js-training/17-第13章：运动框架banner/运动框架之轮播图/banner-all-test.html" />
-        <option value="E:/Program Files/wamp/www/Ajax/demo/music.html" />
-        <option value="E:/Program Files/wamp/www/Ajax/songs.js" />
-        <option value="E:/Program Files/wamp/www/Ajax/test03.html" />
-        <option value="E:/Program Files/wamp/www/Ajax/test02.html" />
-        <option value="E:/Program Files/wamp/www/h5-music/src/index.html" />
-        <option value="E:/Program Files/wamp/www/Ajax/ajax_test_examp/demo.html" />
-        <option value="E:/Program Files/wamp/www/h5-music/src/js/main.js" />
-        <option value="E:/Program Files/wamp/www/src/index.html" />
-        <option value="E:/Program Files/wamp/www/src/js/main.js" />
-        <option value="$PROJECT_DIR$/HTML&amp;&amp;CSS/css/css布局练习/demo01.html" />
-        <option value="$PROJECT_DIR$/HTML&amp;&amp;CSS/css/css-layout/demo01.html" />
-        <option value="$PROJECT_DIR$/HTML&amp;&amp;CSS/css/css-layout/流体布局.html" />
-        <option value="$PROJECT_DIR$/HTML&amp;&amp;CSS/css/css-layout/BFC 三栏布局.html" />
+        <option value="G:/drawing-board/src/tpl/index.html" />
+        <option value="G:/project/music-player/src/tpl/index.html" />
+        <option value="G:/project/music-player/gulpfile.js" />
+        <option value="G:/drawing-board/gulpfile.js" />
+        <option value="G:/project/music-player/src/js/data.js" />
+        <option value="G:/project-in-action/game/plane/src/tpl/index.html" />
+        <option value="G:/project-in-action/game/plane/gulpfile.js" />
+        <option value="G:/interview-project/shop/gulpfile.js" />
+        <option value="G:/interview-project/shop/src/tpl/login.html" />
+        <option value="G:/interview-project/shop/src/tpl/register.html" />
+        <option value="G:/interview-project/shop/src/css/goods.css" />
+        <option value="G:/interview-project/shop/src/tpl/index.html" />
+        <option value="G:/interview-project/shop/src/tpl/dd.html" />
+        <option value="G:/interview-project/shop/src/tpl/dd_pay.html" />
+        <option value="G:/interview-project/shop/src/tpl/dd_success.html" />
+        <option value="G:/interview-project/shop/src/tpl/dd_xq.html" />
+        <option value="G:/interview-project/shop/src/tpl/goods.html" />
+        <option value="G:/interview-project/shop/src/tpl/LoginAndRegister.html" />
+        <option value="G:/interview-project/shop/src/tpl/produce.html" />
+        <option value="G:/interview-project/shop/src/tpl/user-address-info.html" />
+        <option value="G:/interview-project/shop/src/sass/font.scss" />
+        <option value="G:/interview-project/shop/src/css/login.css" />
+        <option value="G:/interview-project/shop/src/sass/login.scss" />
+        <option value="G:/interview-project/shop/src/sass/product.scss" />
+        <option value="G:/interview-project/shop/src/sass/index.scss" />
+        <option value="G:/interview-project/shop/src/sass/goods.scss" />
+        <option value="G:/interview-project/shop/src/sass/dd.scss" />
+        <option value="G:/interview-project/shop/src/css-bak/login_register.css" />
+        <option value="G:/interview-project/shop/src/sass/login_register.scss" />
       </list>
     </option>
   </component>
@@ -275,6 +271,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -303,7 +301,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="code-practice" />
+              <option name="myItemId" value="interview-project" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -317,11 +315,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="code-practice" />
+              <option name="myItemId" value="interview-project" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="HTML&amp;&amp;CSS" />
+              <option name="myItemId" value="drawing-board" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -335,30 +333,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="code-practice" />
+              <option name="myItemId" value="interview-project" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="HTML&amp;&amp;CSS" />
+              <option name="myItemId" value="drawing-board" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css-layout" />
+              <option name="myItemId" value="dist" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="E:/Program Files/wamp/www/src" />
+    <property name="last_opened_file_path" value="G:/interview-project" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
@@ -376,18 +368,18 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\project\music-player\src\tpl" />
+      <recent name="G:\drawing-board\src\tpl" />
       <recent name="G:\project\webapp-reader\src\tpl" />
       <recent name="G:\project\reader" />
       <recent name="G:\code-practice\HTML&amp;&amp;CSS\demo-mess" />
-      <recent name="G:\code-practice\ES6\learn-babel\src\js" />
-      <recent name="G:\code-practice\sass\demo" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Program Files\wamp\www\src\js" />
+      <recent name="G:\interview-project\shop\src\sass" />
+      <recent name="G:\interview-project\shop\src\css" />
+      <recent name="G:\project\music-player\dist" />
+      <recent name="G:\project\music-player\src\images" />
       <recent name="G:\project\music-player\src\js" />
-      <recent name="E:\Program Files\wamp\www\h5-music\src\js" />
-      <recent name="E:\Program Files\wamp\www\Ajax\ajax_test_examp" />
-      <recent name="G:\project\webapp-reader" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.www">
@@ -516,12 +508,14 @@
       <workItem from="1486377925196" duration="1777000" />
       <workItem from="1486432051570" duration="3993000" />
       <workItem from="1486463035990" duration="25378000" />
-      <workItem from="1486524670488" duration="12056000" />
+      <workItem from="1486524670488" duration="20317000" />
+      <workItem from="1486550078546" duration="24923000" />
+      <workItem from="1486607520569" duration="7941000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="303540000" />
+    <option name="totallyTimeSpent" value="344665000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -533,14 +527,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="56" y="-8" width="1318" height="772" extended-state="0" />
-    <editor active="true" />
+    <frame x="56" y="-8" width="1318" height="772" extended-state="1" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2015625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16015625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.029363785" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" x="257" y="385" width="887" height="149" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.019575857" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" x="257" y="385" width="887" height="149" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2593801" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -550,7 +544,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32852563" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32626426" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -567,296 +561,331 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://G:/interview-project/drawing-board/dist/js/all.js</url>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="3" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://G:/project/reader/package.json" />
-    <entry file="file://G:/project/reader/dist/css/all.css" />
-    <entry file="file://G:/project/reader/src/css/reader.css" />
-    <entry file="file://G:/project/reader/gulpfile.js" />
-    <entry file="file://G:/project/reader/src/index.html" />
-    <entry file="file://G:/project/webapp-reader/src/sass/test.css">
+    <entry file="file://G:/project-in-action/game/plane/src/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/project-in-action/game/plane/dist/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="75" selection-start-line="0" selection-start-column="74" selection-end-line="0" selection-end-column="75" />
         </state>
       </provider>
     </entry>
-    <entry file="file://G:/project/webapp-reader/src/sass/test.scss">
+    <entry file="file://G:/interview-project/shop/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        <state relative-caret-position="278">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://G:/project/webapp-reader/src/css/test.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/project/webapp-reader/dist/css/all.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build-tool/gulp/gulp-works/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="766">
-          <caret line="224" column="2" selection-start-line="224" selection-start-column="2" selection-end-line="224" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/project/webapp-reader/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="64" column="3" selection-start-line="0" selection-start-column="0" selection-end-line="224" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/js-training/17-第13章：运动框架banner/运动框架之轮播图/01焦点轮播--基本版本.html">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
-          <caret line="79" column="12" selection-start-line="79" selection-start-column="12" selection-end-line="93" selection-end-column="13" />
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/js-training/17-第13章：运动框架banner/运动框架之轮播图/02焦点轮播--淡入淡出.html">
+    <entry file="file://G:/interview-project/shop/src/tpl/dd.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="79" column="12" selection-start-line="79" selection-start-column="12" selection-end-line="84" selection-end-column="29" />
+        <state relative-caret-position="234">
+          <caret line="30" column="100" selection-start-line="30" selection-start-column="100" selection-end-line="30" selection-end-column="100" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/js-training/17-第13章：运动框架banner/运动框架之轮播图/js/move.js">
+    <entry file="file://G:/interview-project/shop/src/tpl/dd_pay.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="312">
+          <caret line="30" column="100" selection-start-line="30" selection-start-column="100" selection-end-line="30" selection-end-column="100" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/js-training/17-第13章：运动框架banner/运动框架之轮播图/03焦点轮播--左右.html">
+    <entry file="file://G:/interview-project/shop/src/tpl/dd_success.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+        <state relative-caret-position="158">
+          <caret line="30" column="100" selection-start-line="30" selection-start-column="100" selection-end-line="30" selection-end-column="100" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/js-training/17-第13章：运动框架banner/运动框架之轮播图/04焦点轮播--上下.html">
+    <entry file="file://G:/interview-project/shop/src/tpl/dd_xq.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="31" column="13" selection-start-line="24" selection-start-column="12" selection-end-line="31" selection-end-column="13" />
+        <state relative-caret-position="312">
+          <caret line="30" column="100" selection-start-line="30" selection-start-column="100" selection-end-line="30" selection-end-column="100" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/js-training/17-第13章：运动框架banner/运动框架之轮播图/05焦点轮播--左右-无缝.html">
+    <entry file="file://G:/interview-project/shop/src/tpl/goods.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="123" column="13" selection-start-line="80" selection-start-column="12" selection-end-line="123" selection-end-column="13" />
+        <state relative-caret-position="165">
+          <caret line="32" column="100" selection-start-line="32" selection-start-column="100" selection-end-line="32" selection-end-column="100" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/js-training/18-第14章：运动框架之时间版本/运动框架之时间版本-借助animate实现-2--综合完整版.html">
+    <entry file="file://G:/interview-project/shop/src/tpl/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1404">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="442">
+          <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/js-training/30-面向对象封装 小球运动/面向对象封装banner/面向对象之封装--banner-2.html">
+    <entry file="file://G:/interview-project/shop/src/tpl/LoginAndRegister.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1820">
-          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+        <state relative-caret-position="355">
+          <caret line="19" column="100" selection-start-line="19" selection-start-column="100" selection-end-line="19" selection-end-column="100" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/js-training/30-面向对象封装 小球运动/面向对象封装banner/面向对象之封装--banner-3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1574">
-          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/js-training/17-第13章：运动框架banner/运动框架之轮播图/banner-all-test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="113" column="4" selection-start-line="113" selection-start-column="4" selection-end-line="113" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/js-training/17-第13章：运动框架banner/运动框架之轮播图/js/banner.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4538">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/project/webapp-reader/src/tpl/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/Program Files/wamp/www/Ajax/test04.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-716">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/Program Files/wamp/www/Ajax/demo/ajax.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-208">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/js-training/28-第23章：jsonp 面向对象/百度关键字搜索.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="49" column="9" selection-start-line="42" selection-start-column="7" selection-end-line="49" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/Program Files/wamp/www/Ajax/songs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="12" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/Program Files/wamp/www/Ajax/ajax_test_examp/get.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/Program Files/wamp/www/Ajax/ajax_test_examp/jsonp.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/Program Files/wamp/www/Ajax/demo/demo2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/Program Files/wamp/www/Ajax/test03.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="21" column="13" selection-start-line="9" selection-start-column="12" selection-end-line="21" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/Program Files/wamp/www/Ajax/test02.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="34" column="17" selection-start-line="7" selection-start-column="8" selection-end-line="34" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/Program Files/wamp/www/Ajax/ajax_test_examp/XMLHttpRequest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="53" column="18" selection-start-line="0" selection-start-column="0" selection-end-line="98" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/Program Files/wamp/www/Ajax/demo/music.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/Program Files/wamp/www/Ajax/test.html">
+    <entry file="file://G:/interview-project/shop/src/tpl/register.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
-          <caret line="21" column="55" selection-start-line="16" selection-start-column="24" selection-end-line="21" selection-end-column="55" />
+          <caret line="18" column="42" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://G:/project/music-player/src/index.html">
+    <entry file="file://G:/interview-project/shop/src/tpl/user-address-info.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/interview-project/shop/src/tpl/produce.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="31" column="100" selection-start-line="31" selection-start-column="100" selection-end-line="31" selection-end-column="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/interview-project/shop/src/tpl/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/interview-project/shop/src/css - 副本/dd.css" />
+    <entry file="file://G:/interview-project/shop/src/sass/font.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/interview-project/shop/src/css/goods.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6280">
+          <caret line="50" column="18" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/interview-project/shop/src/sass/login.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1118">
+          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/interview-project/shop/src/sass/product.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/interview-project/shop/src/css/font.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/interview-project/shop/src/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/interview-project/shop/src/css/login.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="4" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/interview-project/shop/src/css/login_register.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/interview-project/shop/src/css/reset.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/interview-project/shop/src/css/product.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/interview-project/shop/src/css/dd.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
-          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
-          <folding />
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://E:/Program Files/wamp/www/h5-music/src/index.html">
+    <entry file="file://G:/interview-project/shop/dist/css/dd.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="141" column="46" selection-start-line="141" selection-start-column="46" selection-end-line="141" selection-end-column="46" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://E:/Program Files/wamp/www/h5-music/src/js/main.js">
+    <entry file="file://G:/interview-project/shop/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="64" column="8" selection-start-line="64" selection-start-column="8" selection-end-line="68" selection-end-column="9" />
-          <folding />
+        <state relative-caret-position="742">
+          <caret line="124" column="8" selection-start-line="124" selection-start-column="8" selection-end-line="124" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://E:/Program Files/wamp/www/h5-music/gulpfile.js">
+    <entry file="file://G:/interview-project/shop/src/sass/index.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1938">
+        <state relative-caret-position="1222">
+          <caret line="892" column="0" selection-start-line="892" selection-start-column="0" selection-end-line="892" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/interview-project/shop/src/sass/goods.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6838">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://E:/Program Files/wamp/www/h5-music/src/js/XMLHttpRequest.js">
+    <entry file="file://G:/interview-project/shop/src/css-bak/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="37" column="10" selection-start-line="37" selection-start-column="10" selection-end-line="37" selection-end-column="10" />
+        <state relative-caret-position="-678">
+          <caret line="153" column="32" selection-start-line="153" selection-start-column="24" selection-end-line="153" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://E:/Program Files/wamp/www/Ajax/ajax_test_examp/demo.html">
+    <entry file="file://G:/interview-project/shop/dist/dd.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="21" selection-end-column="15" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://E:/Program Files/wamp/www/src/js/main.js">
+    <entry file="file://G:/interview-project/shop/src/css-bak/login_register.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1144">
-          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+        <state relative-caret-position="335">
+          <caret line="71" column="22" selection-start-line="71" selection-start-column="4" selection-end-line="71" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://E:/Program Files/wamp/www/src/index.html">
+    <entry file="file://G:/interview-project/shop/src/sass/login_register.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="15" column="38" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="38" />
+        <state relative-caret-position="229">
+          <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://E:/Program Files/wamp/www/h5-music/src/css/index.css">
+    <entry file="file://G:/interview-project/shop/src/sass/dd.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="373" column="23" selection-start-line="373" selection-start-column="23" selection-end-line="373" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/interview-project/shop/src/sass/goods.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="49" column="30" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
+          <folding>
+            <element signature="e#152#760#0" expanded="false" />
+            <element signature="e#225#448#0" expanded="false" />
+            <element signature="e#460#677#0" expanded="false" />
+            <element signature="e#1196#3523#0" expanded="false" />
+            <element signature="e#1236#3519#0" expanded="false" />
+            <element signature="e#1332#3514#0" expanded="false" />
+            <element signature="e#1374#1408#0" expanded="false" />
+            <element signature="e#1422#1456#0" expanded="false" />
+            <element signature="e#1469#1552#0" expanded="false" />
+            <element signature="e#1566#1641#0" expanded="false" />
+            <element signature="e#1655#2333#0" expanded="false" />
+            <element signature="e#1759#1967#0" expanded="false" />
+            <element signature="e#1980#2272#0" expanded="false" />
+            <element signature="e#2097#2264#0" expanded="false" />
+            <element signature="e#2344#2518#0" expanded="false" />
+            <element signature="e#2529#2709#0" expanded="false" />
+            <element signature="e#2723#3090#0" expanded="false" />
+            <element signature="e#3102#3508#0" expanded="false" />
+            <element signature="e#3538#4398#0" expanded="false" />
+            <element signature="e#3608#3747#0" expanded="false" />
+            <element signature="e#3916#4015#0" expanded="false" />
+            <element signature="e#4080#4386#0" expanded="false" />
+            <element signature="e#4422#4964#0" expanded="false" />
+            <element signature="e#5078#5219#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/interview-project/shop/src/js/banner.js.bak">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/interview-project/shop/src/js/goods.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/interview-project/shop/src/js/banner-jq-version.js.bak">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2028">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/interview-project/shop/src/js/banner.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
@@ -864,15 +893,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://G:/project-in-action/game/plane/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/project-in-action/game/plane/src/sass/game.scss">
+    <entry file="file://$PROJECT_DIR$/HTML5&amp;&amp;CSS3/HTML5/ajax跨域及文件上传/ajax1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -880,42 +901,76 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://G:/project-in-action/game/plane/src/css/game.css">
+    <entry file="file://$PROJECT_DIR$/HTML5&amp;&amp;CSS3/HTML5/ajax跨域及文件上传/ajax2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        <state relative-caret-position="-390">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://G:/project-in-action/game/plane/src/js/game.js">
+    <entry file="file://$PROJECT_DIR$/HTML5&amp;&amp;CSS3/HTML5/ajax跨域及文件上传/ajaxIe.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+        <state relative-caret-position="312">
+          <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HTML&amp;&amp;CSS/css/css-layout/demo01.html">
+    <entry file="file://$PROJECT_DIR$/HTML5&amp;&amp;CSS3/HTML5/ajax跨域及文件上传/upload.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
+        <state relative-caret-position="-1404">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HTML&amp;&amp;CSS/css/css-layout/1、流体布局.html">
+    <entry file="file://G:/interview-project/drawing-board/dist/css/all.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="23" column="9" selection-start-line="0" selection-start-column="0" selection-end-line="34" selection-end-column="7" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HTML&amp;&amp;CSS/css/css-layout/2、BFC 三栏布局.html">
+    <entry file="file://G:/interview-project/drawing-board/dist/js/all.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="514">
-          <caret line="33" column="6" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
+        <state relative-caret-position="414">
+          <caret line="0" column="8761" selection-start-line="0" selection-start-column="8761" selection-end-line="0" selection-end-column="8761" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/interview-project/drawing-board/dist/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/interview-project/drawing-board/dist/lib/jquery.bigcolorpicker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/interview-project/drawing-board/dist/lib/jquery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-702">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/interview-project/plane/src/js/game.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1222">
+          <caret line="47" column="22" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
           <folding />
         </state>
       </provider>

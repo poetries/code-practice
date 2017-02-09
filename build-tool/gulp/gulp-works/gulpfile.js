@@ -178,8 +178,8 @@ gulp.task('clean', () => {
 // 将bower的库文件对应到指定位置
 
 gulp.task('lib', () => {
-    gulp.src('/src/lib/*')
-        .pipe(gulp.dest('/dist/lib/'));
+    gulp.src('./src/lib/*')
+        .pipe(gulp.dest('./dist/lib/'));
 });
 
 

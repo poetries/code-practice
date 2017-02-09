@@ -6,6 +6,7 @@
     <file url="file://G:/drawing-board" libraries="{drawing-board node_modules}" />
     <file url="file://G:/project-in-action/game/plane" libraries="{plane node_modules}" />
     <file url="file://G:/project-in-action/web/shop" libraries="{shop node_modules}" />
+    <file url="file://G:/project/music-player" libraries="{music-player node_modules}" />
     <file url="file://G:/project/sell" libraries="{sell node_modules}" />
     <file url="file://G:/project/webapp-reader" libraries="{webapp-reader node_modules}" />
     <file url="PROJECT" libraries="{vue-resource-DefinitelyTyped}" />
