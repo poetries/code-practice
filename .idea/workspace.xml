@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78af330b-176d-45c0-9230-a238a1e28d61" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/music_player_node_modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/css/css-layout/3. 双飞翼布局.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/css/css-layout/4. 圣杯布局.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/css/css-layout/5. Flex 布局.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/css/css-layout/6. Table 布局.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HTML&amp;&amp;CSS/css/css-layout/7. 绝对定位布局.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/code-practice.iml" afterPath="$PROJECT_DIR$/.idea/code-practice.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build-tool/webpack/demo/dist/poetries.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build-tool/gulp/gulp-works/gulpfile.js" afterPath="$PROJECT_DIR$/build-tool/gulp/gulp-works/gulpfile.js" />
     </list>
     <ignored path="code-practice.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,13 +23,15 @@
     <favorites_list name="code-practice" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="204">
-      <file leaf-file-name="game.js" pinned="false" current-in-tab="true">
-        <entry file="file://G:/interview-project/plane/src/js/game.js">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+        <entry file="file://G:/project/webapp-reader/src/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1222">
-              <caret line="47" column="22" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
-              <folding />
+            <state relative-caret-position="312">
+              <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -48,8 +42,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Vue File" />
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -59,33 +53,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="G:/project-in-action/game/plane/src/sass/main.css" />
-        <option value="G:/project/music-player/src/sass/_header.scss" />
-        <option value="G:/project/music-player/src/sass/_music-info.scss" />
-        <option value="G:/project/music-player/src/sass/_base.scss" />
-        <option value="G:/project/music-player/src/css/index.css" />
-        <option value="G:/project/music-player/src/sass/_lyric.scss" />
-        <option value="G:/project/music-player/src/sass/main.scss" />
-        <option value="G:/project/music-player/src/sass/_play-controls.scss" />
-        <option value="G:/project/music-player/src/sass/_reset.scss" />
-        <option value="G:/project/music-player/src/sass/_scroll.scss" />
-        <option value="G:/project/music-player/src/sass/main.css" />
-        <option value="G:/project/music-player/dist/index.html" />
-        <option value="G:/project/music-player/src/index.html" />
-        <option value="G:/drawing-board/src/sass/_header.scss" />
-        <option value="G:/drawing-board/src/sass/_footer.scss" />
-        <option value="G:/drawing-board/src/css/canvas.css" />
-        <option value="G:/drawing-board/src/sass/_base.scss" />
-        <option value="G:/drawing-board/src/css/iconfont.css" />
-        <option value="G:/drawing-board/src/sass/_iconfont.scss" />
-        <option value="G:/drawing-board/src/sass/_reset.scss" />
-        <option value="G:/drawing-board/src/sass/main.scss" />
-        <option value="$PROJECT_DIR$/build-tool/gulp/gulp-works/gulpfile.js" />
-        <option value="G:/drawing-board/src/tpl/index.html" />
-        <option value="G:/project/music-player/src/tpl/index.html" />
-        <option value="G:/project/music-player/gulpfile.js" />
-        <option value="G:/drawing-board/gulpfile.js" />
-        <option value="G:/project/music-player/src/js/data.js" />
         <option value="G:/project-in-action/game/plane/src/tpl/index.html" />
         <option value="G:/project-in-action/game/plane/gulpfile.js" />
         <option value="G:/interview-project/shop/gulpfile.js" />
@@ -110,6 +77,33 @@
         <option value="G:/interview-project/shop/src/sass/dd.scss" />
         <option value="G:/interview-project/shop/src/css-bak/login_register.css" />
         <option value="G:/interview-project/shop/src/sass/login_register.scss" />
+        <option value="G:/interview-project/shop/src/js/banner.js" />
+        <option value="G:/interview-project/shop/src/js/goods.js" />
+        <option value="G:/interview-project/shop/src/js/login.js" />
+        <option value="G:/interview-project/shop/src/js/index.js" />
+        <option value="G:/interview-project/plane/src/js/game.js" />
+        <option value="G:/project/webapp-reader/src/sass/main.css" />
+        <option value="G:/project/webapp-reader/src/sass/_reset.scss" />
+        <option value="G:/project/webapp-reader/src/sass/_base.scss" />
+        <option value="G:/project/webapp-reader/src/css/main.css" />
+        <option value="G:/project/webapp-reader/src/sass/_icon.scss" />
+        <option value="G:/project/webapp-reader/.gitignore" />
+        <option value="G:/project/webapp-reader/src/sass/_base64.scss" />
+        <option value="G:/project/webapp-reader/src/sass/_mixin.scss" />
+        <option value="G:/project/webapp-reader/dist/js/reader.js" />
+        <option value="G:/project/webapp-reader/src/js/reader.js" />
+        <option value="G:/project/webapp-reader/dist/js/main.js" />
+        <option value="G:/project/webapp-reader/dist/index.html" />
+        <option value="G:/project/webapp-reader/src/sass/_reader.scss" />
+        <option value="G:/project/webapp-reader/src/sass/main.scss" />
+        <option value="G:/project/webapp-reader/gulpfile.js" />
+        <option value="G:/project/webapp-reader/src/js/eventHandle.js" />
+        <option value="G:/project/webapp-reader/dist/js/all.js" />
+        <option value="G:/project/webapp-reader/src/tpl/index.html" />
+        <option value="G:/project/webapp-reader/src/js/getJonpData.js" />
+        <option value="G:/project/webapp-reader/src/js/storage.js" />
+        <option value="G:/project/webapp-reader/src/js/main.js" />
+        <option value="G:/project/webapp-reader/src/js/app.js" />
       </list>
     </option>
   </component>
@@ -271,8 +265,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -305,48 +297,10 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="code-practice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="code-practice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="interview-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drawing-board" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="code-practice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="code-practice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="interview-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drawing-board" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dist" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -365,6 +319,7 @@
     <property name="SearchEverywhereHistoryKey" value="itle&#9;FILE&#9;file://G:/code-practice/php/phpTraining/JsBasic/Coding/images/index_main_top_left_corner.gif" />
     <property name="editor.config.accepted" value="true" />
     <property name="nodejs.mocha.mocha_node_package_dir" value="G:\project\node_modules\mocha" />
+    <property name="jsx.switch.disabled" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -375,11 +330,11 @@
       <recent name="G:\code-practice\HTML&amp;&amp;CSS\demo-mess" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="G:\interview-project\shop\src\sass" />
-      <recent name="G:\interview-project\shop\src\css" />
-      <recent name="G:\project\music-player\dist" />
-      <recent name="G:\project\music-player\src\images" />
-      <recent name="G:\project\music-player\src\js" />
+      <recent name="G:\project\webapp-reader\dist\js" />
+      <recent name="G:\project\webapp-reader\src\js" />
+      <recent name="G:\project\webapp-reader\dist" />
+      <recent name="G:\project\webapp-reader\src\data" />
+      <recent name="G:\project\webapp-reader\src\sass" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.www">
@@ -510,12 +465,14 @@
       <workItem from="1486463035990" duration="25378000" />
       <workItem from="1486524670488" duration="20317000" />
       <workItem from="1486550078546" duration="24923000" />
-      <workItem from="1486607520569" duration="7941000" />
+      <workItem from="1486607520569" duration="13996000" />
+      <workItem from="1486691671164" duration="43275000" />
+      <workItem from="1486780935579" duration="11868000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="344665000" />
+    <option name="totallyTimeSpent" value="405863000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -527,14 +484,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="56" y="-8" width="1318" height="772" extended-state="1" />
+    <frame x="56" y="-8" width="1318" height="772" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16015625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2828125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.019575857" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" x="257" y="385" width="887" height="149" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.02446982" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" x="257" y="385" width="887" height="149" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2593801" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -547,6 +504,24 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32626426" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.019575857" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" x="257" y="385" width="887" height="149" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2593801" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32626426" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -564,7 +539,6 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://G:/interview-project/drawing-board/dist/js/all.js</url>
-          <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
@@ -576,255 +550,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://G:/project-in-action/game/plane/src/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/project-in-action/game/plane/dist/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="75" selection-start-line="0" selection-start-column="74" selection-end-line="0" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/interview-project/shop/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/interview-project/shop/src/tpl/dd.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="30" column="100" selection-start-line="30" selection-start-column="100" selection-end-line="30" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/interview-project/shop/src/tpl/dd_pay.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="30" column="100" selection-start-line="30" selection-start-column="100" selection-end-line="30" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/interview-project/shop/src/tpl/dd_success.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="30" column="100" selection-start-line="30" selection-start-column="100" selection-end-line="30" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/interview-project/shop/src/tpl/dd_xq.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="30" column="100" selection-start-line="30" selection-start-column="100" selection-end-line="30" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/interview-project/shop/src/tpl/goods.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="32" column="100" selection-start-line="32" selection-start-column="100" selection-end-line="32" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/interview-project/shop/src/tpl/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/interview-project/shop/src/tpl/LoginAndRegister.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="19" column="100" selection-start-line="19" selection-start-column="100" selection-end-line="19" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/interview-project/shop/src/tpl/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="18" column="42" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/interview-project/shop/src/tpl/user-address-info.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/interview-project/shop/src/tpl/produce.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="31" column="100" selection-start-line="31" selection-start-column="100" selection-end-line="31" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/interview-project/shop/src/tpl/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/interview-project/shop/src/css - 副本/dd.css" />
-    <entry file="file://G:/interview-project/shop/src/sass/font.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/interview-project/shop/src/css/goods.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6280">
-          <caret line="50" column="18" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/interview-project/shop/src/sass/login.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1118">
-          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/interview-project/shop/src/sass/product.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/interview-project/shop/src/css/font.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/interview-project/shop/src/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/interview-project/shop/src/css/login.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="4" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/interview-project/shop/src/css/login_register.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/interview-project/shop/src/css/reset.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/interview-project/shop/src/css/product.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/interview-project/shop/src/css/dd.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/interview-project/shop/dist/css/dd.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/interview-project/shop/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="742">
-          <caret line="124" column="8" selection-start-line="124" selection-start-column="8" selection-end-line="124" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/interview-project/shop/src/sass/index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1222">
-          <caret line="892" column="0" selection-start-line="892" selection-start-column="0" selection-end-line="892" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/interview-project/shop/src/sass/goods.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6838">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/interview-project/shop/src/css-bak/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-678">
-          <caret line="153" column="32" selection-start-line="153" selection-start-column="24" selection-end-line="153" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/interview-project/shop/dist/dd.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/interview-project/shop/src/css-bak/login_register.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="71" column="22" selection-start-line="71" selection-start-column="4" selection-end-line="71" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/interview-project/shop/src/sass/login_register.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://G:/interview-project/shop/src/sass/dd.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="241">
           <caret line="373" column="23" selection-start-line="373" selection-start-column="23" selection-end-line="373" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -832,72 +561,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="279">
           <caret line="49" column="30" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
-          <folding>
-            <element signature="e#152#760#0" expanded="false" />
-            <element signature="e#225#448#0" expanded="false" />
-            <element signature="e#460#677#0" expanded="false" />
-            <element signature="e#1196#3523#0" expanded="false" />
-            <element signature="e#1236#3519#0" expanded="false" />
-            <element signature="e#1332#3514#0" expanded="false" />
-            <element signature="e#1374#1408#0" expanded="false" />
-            <element signature="e#1422#1456#0" expanded="false" />
-            <element signature="e#1469#1552#0" expanded="false" />
-            <element signature="e#1566#1641#0" expanded="false" />
-            <element signature="e#1655#2333#0" expanded="false" />
-            <element signature="e#1759#1967#0" expanded="false" />
-            <element signature="e#1980#2272#0" expanded="false" />
-            <element signature="e#2097#2264#0" expanded="false" />
-            <element signature="e#2344#2518#0" expanded="false" />
-            <element signature="e#2529#2709#0" expanded="false" />
-            <element signature="e#2723#3090#0" expanded="false" />
-            <element signature="e#3102#3508#0" expanded="false" />
-            <element signature="e#3538#4398#0" expanded="false" />
-            <element signature="e#3608#3747#0" expanded="false" />
-            <element signature="e#3916#4015#0" expanded="false" />
-            <element signature="e#4080#4386#0" expanded="false" />
-            <element signature="e#4422#4964#0" expanded="false" />
-            <element signature="e#5078#5219#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://G:/interview-project/shop/src/js/banner.js.bak">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/interview-project/shop/src/js/goods.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/interview-project/shop/src/js/banner-jq-version.js.bak">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2028">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/interview-project/shop/src/js/banner.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://G:/interview-project/shop/src/js/banner.js.bak" />
+    <entry file="file://G:/interview-project/shop/src/js/banner-jq-version.js.bak" />
     <entry file="file://$PROJECT_DIR$/HTML5&amp;&amp;CSS3/HTML5/ajax跨域及文件上传/ajax1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -905,7 +577,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-390">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -913,7 +584,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
           <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -921,7 +591,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1404">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -929,7 +598,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -945,7 +613,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -953,7 +620,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -961,17 +627,256 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-702">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/interview-project/shop/src/js/banner.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-78">
+          <caret line="81" column="9" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/interview-project/shop/src/js/goods.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-130">
+          <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/interview-project/shop/src/js/head.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-208">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/interview-project/shop/src/js/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1222">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/interview-project/shop/src/js/move.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-598">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/interview-project/shop/src/js/nav.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/interview-project/shop/src/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="936">
+          <caret line="36" column="7" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://G:/interview-project/plane/src/js/game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1222">
-          <caret line="47" column="22" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
+        <state relative-caret-position="-1482">
+          <caret line="240" column="8" selection-start-line="240" selection-start-column="8" selection-end-line="240" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/interview-project/drawing-board/src/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-780">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/interview-project/drawing-board/src/js/draw.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/project/webapp-reader/src/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-988">
+          <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/project/webapp-reader/src/css/reader.css" />
+    <entry file="file://G:/project/webapp-reader/src/sass/_icon.scss" />
+    <entry file="file://G:/project/webapp-reader/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/project/webapp-reader/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/project/webapp-reader/dist/js/reader.js" />
+    <entry file="file://G:/project/webapp-reader/dist/js/app.js" />
+    <entry file="file://G:/project/webapp-reader/dist/js/storage.js" />
+    <entry file="file://G:/project/webapp-reader/dist/js/main.js" />
+    <entry file="file://G:/project/webapp-reader/src/js - es6/main.js" />
+    <entry file="file://G:/project/webapp-reader/src/sass/main.css.map">
+      <provider editor-type-id="sourcemapFileViewerProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/project/webapp-reader/src/sass/_base64.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/project/webapp-reader/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/project/webapp-reader/src/js/eventHandle.js" />
+    <entry file="file://G:/project/webapp-reader/dist/css/all.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-770">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/project/webapp-reader/dist/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="56" selection-start-line="0" selection-start-column="56" selection-end-line="0" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/project/webapp-reader/src/sass/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="244" column="0" selection-start-line="244" selection-start-column="0" selection-end-line="244" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/project/webapp-reader/src/sass/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/project/webapp-reader/dist/js/all.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/project/webapp-reader/src/tpl/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1846">
+          <caret line="71" column="6" selection-start-line="71" selection-start-column="6" selection-end-line="71" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#span#1;n#div#0;n#div#2;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#7;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#7;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/project/webapp-reader/src/sass/_reset.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="10" column="113" selection-start-line="10" selection-start-column="113" selection-end-line="10" selection-end-column="113" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/project/webapp-reader/src/sass/_mixin.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/project/webapp-reader/src/sass/_base.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/project/webapp-reader/src/sass/_app.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="127" column="21" selection-start-line="127" selection-start-column="21" selection-end-line="127" selection-end-column="21" />
+          <folding>
+            <element signature="e#53#366#0" expanded="false" />
+            <element signature="e#374#857#0" expanded="false" />
+            <element signature="e#867#1240#0" expanded="false" />
+            <element signature="e#1269#1310#0" expanded="false" />
+            <element signature="e#1326#1397#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/project/webapp-reader/src/js/getJonpData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/project/webapp-reader/src/js/storage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="1" column="11" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/project/webapp-reader/src/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/project/webapp-reader/src/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
