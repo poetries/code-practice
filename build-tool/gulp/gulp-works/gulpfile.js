@@ -4,6 +4,7 @@ let gulp = require('gulp'),
     browserSync = require('browser-sync').create(), //监听刷新
     reload = browserSync.reload,
     ftp = require('gulp-ftp'), // ftp上传
+	plumber = require('gulp-plumber'), // 使用plumber 模块可以在纠正错误后继续执行任务
     gutil = require('gulp-util'),
     sass = require('gulp-sass'), // sass
     cleancss = require('gulp-clean-css'), // CSS压缩
@@ -25,6 +26,7 @@ let gulp = require('gulp'),
 //dev
 gulp.task('sass:dev', () => {
     gulp.src('src/sass/*.scss')
+		.pipe(plumber())
         .pipe(sass({
             outputStyle: 'expanded'
         }))

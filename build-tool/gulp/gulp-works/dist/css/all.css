@@ -1,14 +1,26 @@
-.div1 .span1 {
-  height: 12px; }
+.box1 {
+  width: 300px;
+  height: 500px;
+  background: blue;
+  float: left;
+}
 
-.div1 .div2 {
-  width: 16px; }
+.box2 {
+  width: 300px;
+  height: 500px;
+  background: red;
+  overflow: hidden;
+}
+
 
 .popover .p1 {
-  height: 12px; }
+  height: 12px;
+}
 
 .popover .p2 {
-  width: 16px; }
+  width: 16px;
+}
 
 #box .p1 {
-  height: 12px; }
+  height: 12px;
+}
