@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue起步</title>
+</head>
+<body>
+
+<div id="app"></div>
+
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script>
+    var app = new Vue({
+       'el': '#app' // 绑定元素 相当于 document.getElementById("app")
+    });
+    console.log(app);
+    console.log(app.$el === document.getElementById("app")) //true
+
+</script>
+</body>
+</html>
