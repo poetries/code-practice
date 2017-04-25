@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue起步3</title>
+</head>
+<body>
+
+<!-- v-once只绑定一次 -->
+<!--<div id="app" v-once>{{name}}</div>-->
+<div id="app" v-html="name"></div>
+
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script>
+    var app = new Vue({
+       el: '#app',
+       data: {
+           name: "<h2>hello world</h2>"
+       }
+
+    })
+
+    
+    
+</script>
+</body>
+</html>

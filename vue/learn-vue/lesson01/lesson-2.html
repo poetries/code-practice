@@ -18,6 +18,11 @@
 
     });
 
+    //第一个监听什么值 回调  变化之前的值 变化之后的值
+    app.$watch('name', function (oldVal,newVal) {
+        console.log(oldVal, newVal)
+    });
+
     
 </script>
 </body>
