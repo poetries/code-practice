@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue起步6</title>
+    <style>
+        #app {
+            height: 50px;
+        }
+        .red {
+            color: red;
+            font-size:20px;
+        }
+        .yellow {
+            background: yellow;
+            font-size:20px;
+        }
+        .green {
+            border: 3px solid green;
+        }
+    </style>
+</head>
+<body>
+
+<div id="app" class="green" :class="[redClass,yellowClass]">div盒子</div>
+
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script>
+    var app = new Vue({
+        // 绑定元素
+       el: '#app',
+       data: {
+           name: 'poetries',
+           redClass: 'red',
+           yellowClass: 'yellow'
+       }
+
+    })
+
+    
+    
+</script>
+</body>
+</html>

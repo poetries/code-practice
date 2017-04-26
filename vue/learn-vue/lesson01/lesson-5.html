@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue起步5</title>
+    <style>
+        .box {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<!--
+    v-bind 用于绑定属性 简写： :
+    v-model 绑定表单元素 相当于绑定value
+
+-->
+<div id="app">
+    <p :class="className">p标签</p>
+</div>
+
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script>
+    var app = new Vue({
+        // 绑定元素
+       el: '#app',
+       data: {
+           name: 'poetries',
+           className: 'box'
+       }
+
+    })
+
+    
+    
+</script>
+</body>
+</html>

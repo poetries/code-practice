@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue起步4</title>
+</head>
+<body>
+
+<!--
+    v-bind 用于绑定属性 简写： :
+    v-model 绑定表单元素 相当于绑定value
+
+-->
+<div id="app">
+    <a v-bind:href="tar">{{name}}</a>
+    <img :src="pic" >
+    <input type="text" v-model="tar">
+    <input v-model="tar" type="button">
+    <input :type="tar">
+</div>
+
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script>
+    var app = new Vue({
+        // 绑定元素
+       el: '#app',
+       data: {
+           name: 'poetries',
+           tar: "http://blog.poetries.top",
+           pic: "https://avatars3.githubusercontent.com/u/16177576?v=3&s=460",
+           title: "github头像"
+       }
+
+    })
+
+    
+    
+</script>
+</body>
+</html>

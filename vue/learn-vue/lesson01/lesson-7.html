@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绑定class的方式</title>
+    <style>
+        #app {
+            height: 50px;
+        }
+        .red {
+            color: red;
+            font-size:20px;
+        }
+        .yellow {
+            background: yellow;
+            font-size:20px;
+        }
+        .green {
+            border: 3px solid green;
+        }
+    </style>
+</head>
+<body>
+
+<!--
+    属性是css样式名字 值是data（true  false控制是否添加）
+-->
+<div id="app" :class="{ red:redClass,yellow:yellowClass,green:greenClass }">
+    <input type="checkbox" name="a" v-model="redClass">
+    <input type="checkbox"  name="a" v-model="yellowClass">
+    <input type="checkbox"  name="a" v-model="greenClass">
+</div>
+
+
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script>
+    var app = new Vue({
+        // 绑定元素
+        el: '#app',
+        data: {
+            name: 'poetries',
+            redClass: false,
+            yellowClass: true,
+            greenClass: true
+        }
+
+    })
+
+
+
+</script>
+</body>
+</html>
