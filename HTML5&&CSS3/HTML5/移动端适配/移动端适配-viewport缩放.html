@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>Document</title>
+	</head>
+	<body>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			div{
+				width:640px;
+			}
+			div img{
+				display:block;
+				width:100%;
+			}
+		</style>
+		<div>
+			<img src="images/1.jpg">
+			<img src="images/2.jpg">
+			<img src="images/3.jpg">
+			<img src="images/4.jpg">
+		</div>
+	</body>
+	<script>
+		//第一种:固定高度,宽度自适应(百分比，flex布局)（目前用的较多）
+		//第二种:固定宽度,viewport缩放(width=640) 慢慢的用的越来越多(目前低版本的安卓不支持数字)
+		(function(){
+			var sw = window.screen.width,
+				createMeta = document.createElement("meta"),
+				scale = sw/640;//计算缩放比
+			var metaAttr = {
+				"name" : "viewport",
+				"content" : "width=640,initial-scale="+scale+",maximum-scale="+scale+",minimum-scale="+scale+",user-scalable=no"
+			}
+			for(var key in metaAttr){
+				createMeta[key] = metaAttr[key];
+			}
+			document.getElementsByTagName("head")[0].appendChild(createMeta);
+		})()
+	</script>
+</html>
