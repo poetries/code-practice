@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>Document</title>
+	</head>
+	<body>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			div{
+				width:10rem;/*若果需要固定尺寸的盒子就用px*/
+			}
+			div img{
+				display:block;
+				width:2.5rem;
+				float:left;
+			}
+		</style>
+		<div>
+			<img src="images/1.jpg">
+			<img src="images/2.jpg">
+			<img src="images/3.jpg">
+			<img src="images/4.jpg">
+		</div>
+	</body>
+	<script>
+		//rem适配方法
+		//第一种:rem做宽度自适应,窗口为设备宽度
+		//第二种:rem做宽度,viewport缩放(手机淘宝的适配方案)
+		var dpr = window.devicePixelRatio;
+		console.log(dpr);
+		/*
+			<meta name="viewport" content=" initial-scale=1/dpr, maximum-scale=1/dpr, user-scalable=0,minimum-scale=1/dpr">
+			dpr == 1  
+			物理像素 == 独立像素 缩放比为1 直接布局 和上一种方法一样
+			1rem = 设备宽度/10
+
+			dpr == 2
+			物理像素 == 2*独立像素 
+			1rem = 2*设备宽度/10 这样布局出来的页面宽度就是设备宽度的两倍 所以在meta里面缩小两倍
+
+			dpr == 3
+			物理像素 == 3*独立像素 
+			1rem = 3*设备宽度/10 这样布局出来的页面宽度就是设备宽度的三倍 所以在meta里面缩小三倍
+		*/
+		//检测设备，设置相应的像素比
+		if (!dpr && !scale) {  
+			var isAndroid = window.navigator.appVersion.match(/android/gi);
+			var isIPhone = window.navigator.appVersion.match(/iphone/gi);
+			var devicePixelRatio = window.devicePixelRatio;
+			if (isIPhone) {
+				// iOS下，对于2和3的屏，用2倍的方案，其余的用1倍方案
+				if (devicePixelRatio >= 3 && (!dpr || dpr >= 3)) {                
+					dpr = 3;
+				} else if (devicePixelRatio >= 2 && (!dpr || dpr >= 2)){
+					dpr = 2;
+				} else {
+					dpr = 1;
+				}
+			} else {
+				// 其他设备下，仍旧使用1倍的方案
+				dpr = 1;
+			}
+			scale = 1 / dpr;//meta 缩放比例
+		}
+		//动态生成meta
+		var metaEl = doc.createElement('meta');  
+		var scale = isRetina ? 0.5:1;  
+		metaEl.setAttribute('name', 'viewport');  
+		metaEl.setAttribute('content', 'initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');  
+		if (docEl.firstElementChild) {  
+		 document.documentElement.firstElementChild.appendChild(metaEl);
+		} else {
+			var wrap = doc.createElement('div');
+			wrap.appendChild(metaEl);
+			documen.write(wrap.innerHTML);
+		}
+		//文字适配
+		/*
+		给html标签设置data-dpr属性 data-dpr = dpr
+		[data-dpr=1] body{
+			font-size:12px;
+		}
+		[data-dpr=2] body{
+			font-size:24px;
+		}
+		[data-dpr=3] body{
+			font-size:36px;
+		}*/
+		//http://www.w3cfuns.com/notes/23659/5e3cd2904a56f5e6b86c4d49e90e0f34.html
+	</script>
+</html>
