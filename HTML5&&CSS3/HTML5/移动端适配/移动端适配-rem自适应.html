@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimum-scale=1.0">
+		<title>Document</title>
+	</head>
+	<body>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			div{
+				width:10rem;/*如果需要固定尺寸的盒子就用px*/
+			}
+			div img{
+				display:block;
+				width:2.5rem;
+				float:left;
+			}
+		</style>
+		<div>
+			<img src="images/1.jpg">
+			<img src="images/2.jpg">
+			<img src="images/3.jpg">
+			<img src="images/4.jpg">
+		</div>
+	</body>
+	<script>
+		//rem适配方法
+		//第一种:rem做宽度自适应,窗口为设备宽度(用的也比较多)
+		
+		(function(win){
+			var docEl = win.document.documentElement;
+			var timer = null;
+			function changeRem(){
+			  var width = docEl.getBoundingClientRect().width;
+			  if (width > 540) {// 最大宽度，如果兼容到iPad，去掉即可
+			    width = 540;
+			  }
+			  var fontS = width/10;//把设备的宽度十等分
+			  docEl.style.fontSize = fontS + 'px';
+			}
+			//页面尺寸发生改变修改rem
+			win.addEventListener("resize", function(){
+				clearTimeout(timer);
+				timer = setTimeout(changeRem, 30)
+			}, false);
+			
+			//页面加载的时候，如果是调用缓存的话就在重新执行changRem
+			win.addEventListener("pageshow", function(e){
+				if (e.persisted){ //缓存
+				  clearTimeout(timer);
+				  timer = setTimeout(changeRem, 30)
+				}
+			}, false);
+			
+			changeRem();
+			
+		})(window)
+		
+		//字体大小设置
+		/**
+			重置样式里面：body{font-size:12px;}
+			一般情况内容的字体大小就用px做固定值
+			标题类的就用rem
+		
+		**/
+	
+		//第二种:rem做宽度,viewport缩放(手机淘宝的适配方案)
+	</script>
+</html>
