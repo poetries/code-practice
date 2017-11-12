@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>react demo</title>
+    <script src="js/react.min.js"></script>
+    <script src="js/react-dom.min.js"></script>
+    <script src="js/browser.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        // console.log(React)
+        // console.log(ReactDOM)
+
+        //使用原生js创建节点 基本上不使用这种方式
+        var Hello = React.createElement(
+            "div",
+            null,
+            'hello world'
+        );
+        ReactDOM.render(Hello,document.getElementById("root"))
+    </script>
+</body>
+</html>

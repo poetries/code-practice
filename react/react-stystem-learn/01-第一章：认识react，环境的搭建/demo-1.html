@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>react demo</title>   
+    <!-- react核心组件 -->
+    <script src="js/react.min.js"></script>
+    <!-- 对DOM的一些操作 -->
+    <script src="js/react-dom.min.js"></script>
+    <!-- 将jsx语法转化为js语法 -->
+    <script src="js/browser.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+      // 创建虚拟的节点 常用的写法
+    //   创建的是一个组件
+        var Hello = React.createClass({
+            render:function(){
+                return (
+                    <div>Hello world</div>
+                )
+            }
+        })
+        ReactDOM.render(<Hello />,document.getElementById("root"))
+    </script>
+</body>
+</html>
