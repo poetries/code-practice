@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>react demo</title>   
+    <style>
+        .test {
+            color:red;
+        }
+    </style>
+    <!-- react核心组件 -->
+    <script src="js/react.min.js"></script>
+    <!-- 对DOM的一些操作 -->
+    <script src="js/react-dom.min.js"></script>
+    <!-- 将jsx语法转化为js语法 -->
+    <script src="js/browser.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+
+        var Hello = React.createClass({
+            render:function(){
+                
+                return (
+                     /*这里是注释写法*/
+                    <div className="test">Hello world</div>
+                )
+            }
+        })
+        console.log(Hello)
+        ReactDOM.render(<Hello />,document.getElementById("root"))
+    </script>
+</body>
+</html>
