@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+</head>
+
+<body>
+    <div id="example"></div>
+    <script type="text/babel">
+    //渲染数组map
+        var arrName = ["poetries","yingong","lianying"];
+         ReactDOM.render(
+        <ul>
+            { arrName.map(function(v,i){
+                return <li key={i}>{v}</li>
+            }) }
+        </ul>,
+         document.getElementById('example') )
+    </script>
+</body>
+
+</html>
