@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>react demo</title>   
+    <style>
+        .test1 {
+            color:rgb(0, 255, 34);
+            font-size: 16px;
+        }
+        .test2 {
+            color:rgb(255, 0, 98);
+            font-size: 18px;
+        }
+    </style>
+    <!-- react核心组件 -->
+    <script src="js/react.min.js"></script>
+    <!-- 对DOM的一些操作 -->
+    <script src="js/react-dom.min.js"></script>
+    <!-- 将jsx语法转化为js语法 -->
+    <script src="js/browser.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        // var onOff = true; // 不能这样写
+        var Hello = React.createClass({
+            /*设置属性的初始状态*/
+            getInitialState:function(){
+                return {
+                    onOff:true
+                }
+            },
+            handleClick:function(){
+                this.setState({
+                    onOff:!this.state.onOff
+                })
+            },
+            render:function(){
+                return (
+                    <div>
+                        <h3 onClick={this.handleClick}>你好!!</h3>
+                        {/*三元表达式*/}
+                        <p className={this.state.onOff?"test1":"test2"}>哈哈哈</p>
+                    </div>
+                )
+            }
+        })
+        ReactDOM.render(<Hello />,document.getElementById("root"))
+    </script>
+</body>
+</html>

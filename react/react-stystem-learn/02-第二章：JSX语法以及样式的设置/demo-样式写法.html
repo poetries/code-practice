@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>react demo</title>   
+    <style>
+        .test {
+            color:rgb(0, 255, 34);
+        }
+    </style>
+    <!-- react核心组件 -->
+    <script src="js/react.min.js"></script>
+    <!-- 对DOM的一些操作 -->
+    <script src="js/react-dom.min.js"></script>
+    <!-- 将jsx语法转化为js语法 -->
+    <script src="js/browser.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+
+        var Hello = React.createClass({
+            render:function(){
+               
+                var styles = {
+                    color:"blue",
+                    fontSize:"20",
+                    width:"300"
+                };
+                return (
+                     /*写法一 内联样式*/
+                     /*写法二 className*/
+                    <div className="box" style={{color:"red",background:"yellow"}}>
+                        <h3>你好!!</h3>
+                        {/*写法三 插值渲染*/}
+                        <p style={styles}>哈哈哈</p>
+                    </div>
+                )
+            }
+        })
+        ReactDOM.render(<Hello />,document.getElementById("root"))
+    </script>
+</body>
+</html>
