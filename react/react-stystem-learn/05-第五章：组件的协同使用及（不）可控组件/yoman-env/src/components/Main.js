@@ -4,6 +4,7 @@ require('normalize.css/normalize.css');
 import React from 'react';
 import SinlgleForm from './form';
 import Binding from './Mixin';
+import Uncontrol from './Control';
 
 let yeomanImage = require('../images/yeoman.png');
 
@@ -15,6 +16,7 @@ class AppComponent extends React.Component {
           <div className="notice">Hello {this.props.author} - {this.props.age}</div>
           <SinlgleForm />
           <Binding />
+          <Uncontrol />
       </div>
 
     );
