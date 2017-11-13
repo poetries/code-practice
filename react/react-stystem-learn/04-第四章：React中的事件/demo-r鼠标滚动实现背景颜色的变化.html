@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>react demo</title>   
+    <!-- react核心组件 -->
+    <script src="js/react.min.js"></script>
+    <!-- 对DOM的一些操作 -->
+    <script src="js/react-dom.min.js"></script>
+    <!-- 将jsx语法转化为js语法 -->
+    <script src="js/browser.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+
+        var Hello = React.createClass({
+            getInitialState:function(){
+                return {
+                    width:100,
+                    height:200,
+                    backgroundColor:"#ccc",
+                    fontSize:20
+                }
+            },
+            handleWheel:function(e){
+                var newColor = (parseInt(this.state.backgroundColor.substr(1),16)+e.deltaY).toString(16).toUpperCase();
+                this.setState({
+                    backgroundColor:"#"+newColor
+                })
+                console.log(newColor);
+            },
+            render:function(){
+                
+                return (
+                    <div style={this.state} onWheel={this.handleWheel} >鼠标滚动实现背景颜色变化</div>
+                )
+            }
+        })
+        ReactDOM.render(<Hello />,document.getElementById("root"))
+    </script>
+</body>
+</html>

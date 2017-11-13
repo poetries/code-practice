@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>react demo</title>   
+    <style>
+        .test {
+            color:rgb(255, 60, 0);
+        }
+    </style>
+    <!-- react核心组件 -->
+    <script src="js/react.min.js"></script>
+    <!-- 对DOM的一些操作 -->
+    <script src="js/react-dom.min.js"></script>
+    <!-- 将jsx语法转化为js语法 -->
+    <script src="js/browser.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+       
+        var Hello = React.createClass({
+            handleClick:function (e) {
+
+            },
+            render:function(){
+                return (
+                     /*这里是注释写法*/
+                   <div>
+                       <div className="test" onClick={this.handleClick}> {this.props.name} </div>
+
+                       <a {...this.props}>aa</a>
+                    </div>
+                )
+            }
+        })
+        var obj = {
+            title:"poetries",
+            href:"https://baidu.com"
+        }
+        /*...把对象属性展开*/
+        ReactDOM.render(<Hello  {...obj} name="你好" />,document.getElementById("root"))
+    </script>
+</body>
+</html>

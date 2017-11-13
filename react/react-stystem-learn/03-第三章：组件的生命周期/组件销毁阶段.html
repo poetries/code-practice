@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>组件的生命周期-销毁阶段</title>
+    <script src="js/react.min.js"></script>
+    <script src="js/react-dom.min.js"></script>
+    <script src="js/browser.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+    <script type="text/babel"> 
+        const Child = React.createClass({
+            
+            // 接收来自父组件的时候触发次函数
+            componentWillReceiveProps(nextProps) {
+                console.log("componentWillReceiveProps")
+                console.log(nextProps)
+            },
+            // 是否允许组件更新，返回true或者false，一般不会改变它的默认值：true
+            shouldComponentUpdate(newProps,newStat){
+                console.log("shouldComponentUpdate")
+                console.log(newProps,newStat)
+                return true;
+            },
+            // 组件将要更新
+            componentWillUpdate() {
+                console.log("组件将要更新")
+            },
+           
+            render(){
+                console.log("组件render")
+                return (
+                    <p>hello {this.props.name?this.props.name:"React"}</p>
+                )
+            },
+            componentDidUpdate(){
+                console.log("组件更新完毕")
+            },
+            
+            componentWillUnmount() {
+                alert("组件已经卸载")
+            }
+            
+        })
+        const Parent = React.createClass({
+            getInitialState(){
+                return {
+                    name:''
+                }
+            },
+            handleChange(e){
+                // 利用input输入的内容来卸载组件
+                if (e.target.value === "123"){
+                    ReactDOM.unmountComponentAtNode(document.getElementById("app"));
+                     // 写上这个return是为了不执行下面的语句，减少代码执行时间
+                    return;
+                }
+                this.setState({
+                    name:e.target.value
+                });
+                console.log(e.target.value)
+            },
+            render(){
+                return (
+                    <div>
+                        <Child name={this.state.name} />
+                        <input type="text" onChange={this.handleChange} placeholder="卸载组件口令：123" />
+                    </div>
+                )
+            }
+        })
+        ReactDOM.render(<Parent />,document.getElementById("app"));
+    </script>
+</body>
+</html>

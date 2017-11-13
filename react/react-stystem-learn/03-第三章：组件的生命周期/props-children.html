@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>react demo</title>   
+    <style>
+        .test {
+            color:rgb(255, 60, 0);
+        }
+    </style>
+    <!-- react核心组件 -->
+    <script src="js/react.min.js"></script>
+    <!-- 对DOM的一些操作 -->
+    <script src="js/react-dom.min.js"></script>
+    <!-- 将jsx语法转化为js语法 -->
+    <script src="js/browser.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+       
+        var List = React.createClass({
+            handleClick:function (e) {
+
+            },
+            render:function(){
+                return (
+                   <div>
+                    {/*map遍历children*/}
+                       <div>{this.props.children.map(function (item) {
+                           return <li>{item}</li>
+                       })}</div>
+                       {/*<div>{this.props.children}</div>*/}
+                    </div>
+                )
+            }
+        })
+        
+        /*chilren表示属性的所有子节点*/
+        var arr = [1,2,3,4,5];
+        ReactDOM.render(
+            <List>
+                {arr}
+                {/*<span>测试123</span>
+                <span>测试123</span>
+                <span>测试123</span>*/}
+            </List>,document.getElementById("root"))
+    </script>
+</body>
+</html>

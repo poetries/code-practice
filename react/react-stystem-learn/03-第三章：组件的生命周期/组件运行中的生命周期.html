@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>组件的生命周期-运行中阶段</title>
+    <script src="js/react.min.js"></script>
+    <script src="js/react-dom.min.js"></script>
+    <script src="js/browser.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+    <script type="text/babel">
+        var HelloReact = React.createClass({
+            // 组件将要接收新的属性
+            componentWillReceiveProps:function(newProps){
+                console.log('componnetWillReceiveProps',1)
+                console.log(newProps)
+            },
+            // 是否允许组件更新，返回true或者false，一般不会改变它的默认值：true
+            shouldComponentUpdate:function(newProps,newState){
+                console.log('shouldComponentUpdate',2)
+                console.log(newProps,newState)
+                return true;
+            },
+            // 组件将要更新
+            componentWillUpdate:function(){
+                console.log('componentWillUpdate',3)
+            },
+            render:function(){
+                console.log('render',4)
+                return <p>Hello {this.props.name?this.props.name:'React'}</p>
+            },
+            // 组件更新完毕
+            componentDidUpdate:function(){
+                console.log('componentDidUpdate',5)
+            }
+        })
+        var Demo = React.createClass({
+            getInitialState:function(){
+                return {
+                    name:''
+                }
+            },
+            handleChange:function(e){
+                this.setState({
+                    name:e.target.value
+                })
+            },
+            render:function(){ 
+                return(
+                    <div>
+                        <HelloReact name={this.state.name}/>
+                        <input type="text" onChange={this.handleChange} />
+                    </div>
+                )
+            }
+        })
+        ReactDOM.render(<Demo/>,document.getElementById("app"))
+    </script>
+</body>

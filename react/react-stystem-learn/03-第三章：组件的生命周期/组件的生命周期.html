@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>react demo</title>   
+    <!-- react核心组件 -->
+    <script src="js/react.min.js"></script>
+    <!-- 对DOM的一些操作 -->
+    <script src="js/react-dom.min.js"></script>
+    <!-- 将jsx语法转化为js语法 -->
+    <script src="js/browser.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        var Child = React.createClass({
+             // 设置初始属性
+            getDefaultProps:function () {
+                console.log("第一步执行：getDefaultProps设置初始属性")
+                return {
+                    title:"设置初始属性",
+                    sex:"男"
+                }
+            },
+            // 设置初始状态
+            getInitialState:function () {
+                console.log("第二步执行：getInitialState设置初始状态")
+                return {
+                    st:"设置初始状态",
+                    ss:this.props.sex
+                }
+            },
+            componentWillMount:function () { 
+                console.log("第三步：componentWillMount组件将要挂载的时候，最后一次可以设置状态.")
+                
+                this.setState({
+                    ss:"在componentWillMount阶段修改最后一次状态"
+                })
+            },
+            handleChange:function (e) { 
+                this.setState({
+                    name:e.target.value
+                })
+            },
+            render:function(){
+                console.log("第四步执行：渲染页面")
+                var {name,age} = this.props;
+                console.log(this)
+
+                var styles= {
+                    width:200,
+                    height:200,
+                    background:"#ccc",
+                    position:"absolute"
+                }
+
+                return (
+                   <div ref="mydiv" style={styles} >
+                         <p>{name}</p>
+                         <p>{age}</p>
+                         <p>{this.props.title}</p>
+                         <p>{this.state.ss}</p>
+                         <input type="text" onChange={this.handleChange} placeholder="请在这里输入，触发shouldComponentUpdate"/>
+                         <p>{this.state.name}</p>
+                   </div>
+                )
+            },
+            componentDidMount:function () { 
+                console.log("第五步执行：componentDidMount组件已经渲染到页面上,可以修改DOM操作DOM")
+
+                // 修改状态 触发了shouldComponentUpdate是否要重新渲染
+                // this.setState({
+                //     ss:"aa"
+                // })
+                //组件加载完毕后就可以操作DOM节点了
+                var box = this.refs.mydiv;
+                // alert(box.clientWidth)
+
+                var timer = null,n=0;
+                box.onclick = function () {
+                    // alert("componentDidMount")
+                    timer = setInterval(() => {
+                      this.style.left = (n++) + "px";
+                      this.style.top = (n++) + "px";
+                      if(n>10) {
+                          clearInterval(timer)
+                      }
+                    }, 1000)
+                }
+            },
+
+            //---- 以下是组件的运行阶段触发
+
+            // 来自父组件的props更新才会触发这个函数
+            componentWillReceiveProps:function(newProps){
+                console.log(newProps)
+                alert("componentWillReceiveProps 组件将要接受新的属性...")
+            },
+            shouldComponentUpdate:function (newProps,newState) { 
+                console.log("第六步执行：shouldComponentUpdate组件是否要重新渲染？")
+                console.log(newProps,newState)
+                return true;
+            },
+            componentWillUpdate:function () { 
+                console.log("第七步执行：componentWillUpdate组件将要加载...")
+            },
+            componentDidUpdate:function () { 
+                console.log("在第四步执行完之后，componentDidUpdate组件已经加载完毕")
+            },
+            componentWillUnmount:function () { 
+                console.log("组件销毁")
+            }
+        });
+        //子组件 传递到List父组件去检测 componentWillReceiveProps
+        var Parents = React.createClass({
+            getDefaultProps:function(){
+                return {
+                    name:""
+                }
+            },
+            handleClick:function (e) { 
+                this.setState({
+                    name:e.target.value
+                })
+            },
+            render:function () {
+                var styles = {
+                    margin:"210px 0"
+                }
+                return (
+                    <div>
+                        <Child name={this.props.name} />
+                        <input style={styles} type="text" onChange={this.handleClick}  placeholder="componentWillReceiveProps"/>
+                    </div>
+                )   
+            }
+        })
+        ReactDOM.render(
+            <Parents name="poetries" age="22" />,document.getElementById("root"))
+    </script>
+</body>
+</html>
