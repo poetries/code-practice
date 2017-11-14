@@ -1,14 +1,19 @@
 import React from 'react';
 
 const Todo = ({ onClick, completed, text }) => {
-    console.log(onClick)
     return (
-        <li onClick={onClick} style={{
+        <li
+            onClick={onClick}
+            style={{
                 textDecoration: completed ? 'line-through' : 'none',
                 color: completed ? 'red' : 'black'
             }}
         >
-            {text}
+            <div className='view'>
+                <input type="checkbox" className='toggle'/>
+                <label>{text}</label>
+                <button className='destroy'></button>
+            </div>
         </li>
     )
 }

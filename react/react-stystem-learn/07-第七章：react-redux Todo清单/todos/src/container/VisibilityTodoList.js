@@ -34,17 +34,20 @@ const getVisibilityTodos = (todos,filter)=>{
 
 const mapStateToProps = (state) => {
   return {
-    todos: getVisibilityTodos(state.todos,state.visibilityFilter)
+    todos: getVisibilityTodos(state.todos,state.visibilityFilter),
+    count:state.todos.length
   }
 }
 
-const mapDispatchToProps = () => {
+/**
+ * 如果mapDispatchToProps是一个对象，它的每个键名也是对应 UI 组件的同名参数，键值应该是一个函数，会被当作 Action creator ，返回的 Action 会由 Redux 自动发出
+ */
+const mapDispatchToProps = {
     onTodoClick: toggleTodo
 }
 
-const VisibileTodoList = connect(
+export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(TodoList)
 
-export default VisibileTodoList;

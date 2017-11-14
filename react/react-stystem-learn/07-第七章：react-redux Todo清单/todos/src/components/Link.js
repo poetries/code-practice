@@ -1,12 +1,23 @@
-import React from 'react'
 
-const Link = ({active,children,onClick})=>{
-  if(active)return <span>{children}</span>
-  return (
-    <a href='#' onClick={e=>{
-      e.preventDefault();
-      onClick();
-    }}>{children}</a>
-  )
+import React from 'react';
+import Count from './count';
+
+const Link = ({ active, children, onClick }) => {
+    if (active) {
+        return <span>{children}</span>
+    }
+    return (
+        <li 
+            onClick={
+                e => {
+                    e.preventDefault()
+                    onClick()
+                }
+            }
+        >
+            <a href="#" className='selected'>{children}</a>
+        </li>
+    )
 }
-export default Link;
+
+export default Link

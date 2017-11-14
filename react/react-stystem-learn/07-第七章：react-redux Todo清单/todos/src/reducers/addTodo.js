@@ -18,8 +18,7 @@ export const todos = (state = [],action)=>{
       ]
       // TODO列表来回切换 遍历add_todo返回的数组 通过completed来判断
     case actionType.TOGGLE_TODO:
-      console.log(111)
-      return state.map(todo=>(todo.id===action.id)?{...todo,completed:!action.completed}:todo)
+      return state.map(todo=>(todo.id===action.id)?{...todo,completed:!todo.completed}:todo)
     default:
       return state;//匹配不到返回state
   }
