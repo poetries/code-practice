@@ -50,9 +50,7 @@ const App = ()=>{
                     <li><Link to='/topics'>Topics</Link></li>
                 </ul>
                 <hr/>
-                {/*exact    精确匹配 不填就是false
-
-                */}
+                {/*exact    精确匹配 不填就是false*/}
                 <Route exact  path='/' component={Home} />
                 <Route path='/about' component={About} />
                 <Route path='/topics' component={Topics} />
