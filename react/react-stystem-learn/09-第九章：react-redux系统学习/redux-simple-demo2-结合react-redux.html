@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>react demo</title>
+    <script src="js/react.min.js"></script>
+    <script src="js/react-dom.min.js"></script>
+    <script src="https://cdn.bootcss.com/redux/3.7.2/redux.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.6/react-redux.min.js"></script>
+    <script src="js/browser.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+    console.log(ReactRedux)
+    var connect = ReactRedux.connect;
+    var Provider = ReactRedux.Provider;
+    
+       var actions = {
+           changeName(name) {
+               return {
+                   type:'changeName',
+                   payload:{name}
+               }
+           },
+           access(){
+               return {
+                   type:"access"
+               }
+           }
+        }
+        function reducer (state,action) {
+            if (typeof state === 'undefined') return {name:'',num:0};
+            switch (action.type) {
+                case 'changeName':
+                    console.log(state)
+                    return Object.assign({},state,action.payload)
+                case 'access':
+                    console.log(state)                
+                    return Object.assign({},state,{num:++state.num})
+                default:
+                    return state;
+            }
+        }
+        var store = Redux.createStore(reducer)
+        
+
+        actions = Redux.bindActionCreators(actions,store.dispatch)
+
+        // ==================
+        var UI = React.createClass({
+            render:function(){
+                return (
+                    <div>
+                        <p>{this.props.name}</p>
+                        <p>{this.props.num}</p>
+                        <input onChange={e=>this.props.changeName(e.target.value)} />
+                        <button onClick={e=>this.props.access()}>access</button>
+                    </div>
+                )
+            }
+        })
+
+
+        function getState(state){
+            return state;
+        }
+        function getActions(){
+            return actions;
+        }
+
+        UI =connect(getState,getActions)(UI)
+
+        ReactDOM.render(<Provider store={store}> <UI /> </Provider>,document.getElementById('root'))  
+
+    </script>
+</body>
+</html>
