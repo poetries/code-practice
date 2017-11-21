@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>List</title>
+    <script src=""></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/immutable/3.8.2/immutable.min.js"></script>
+</head>
+<body>
+    <script>
+        var m = Immutable;
+        
+        // List 创建一个类数组
+        var emptyList = m.List();// []
+        console.log(emptyList)
+
+        const plainArray = [ 1, 2, 3, 4 ]
+        const listFromPlainArray = m.List(plainArray)
+        console.log(listFromPlainArray)        
+        // List [ 1, 2, 3, 4 ]
+
+
+        const plainSet = m.Set([ 1, 2, 3, 4 ])
+        const listFromPlainSet = m.List(plainSet)
+        // List [ 1, 2, 3, 4 ]
+        console.log(listFromPlainSet)
+
+
+        //=================== Static methods
+
+       console.log(m.List.isList([])); // false
+       console.log(m.List.isList(m.List())); // true
+
+       console.log(m.List.of(1,2,3,4)) //创建一个列表容器，值不会被修改
+       console.log(m.List.of({name:'poetries',age:22},[1,2,3]).size) // 2
+
+        
+        
+    </script>
+</body>
+</html>
