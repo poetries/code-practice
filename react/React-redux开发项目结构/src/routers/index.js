@@ -1,5 +1,5 @@
 import React from 'react';
-import configureStore from '../store';
+import configureStore from '../store/configureStore';
 import {Router,Route,browserHistory} from 'react-router';
 import {App,UserListApp,UserDetailApp} from '../containers';
 

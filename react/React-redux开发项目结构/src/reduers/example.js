@@ -1,4 +1,4 @@
-import * as ActionType from '../../constants/ActionTypes';
+import * as ActionTypes from '../../constants/ActionTypes';
 
 // 必须初始化结构。否则redux init的时候出现undefined
 const initialState = {
