@@ -1,4 +1,4 @@
-import * as ActionTypes from '../../constants/ActionTypes';
+import * as ActionTypes from '../constants/ActionTypes';
 
 // 必须初始化结构。否则redux init的时候出现undefined
 const initialState = {
@@ -7,15 +7,14 @@ const initialState = {
 }
 
 const User = (state=initialState,action) =>{
-    switch (action.type) {
-        case ActionType.SET_USER:
+    switch (ActionTypes.type) {
+        case ActionTypes.SET_USER:
             return  {
                 ...state,
-                users:action.data.users,
-                usersById:action.data.usersById
+                users:'test'
             }
         default:
             return state;
     }
 }
-export default User 
+export default User
