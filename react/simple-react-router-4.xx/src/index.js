@@ -6,7 +6,7 @@ import 'core-js/fn/object/assign';
 import React from 'react';
 import ReactDOM from 'react-dom';
 // 4.xx写法
-import {BrowserRouter as Router,Route,Link,NavLink,Redirect } from 'react-router-dom'
+import {BrowserRouter as Router,Route,Link,NavLink,Redirect,withRouter,Prompt } from 'react-router-dom'
 
 /*
   Link的属性：to:string
@@ -49,8 +49,11 @@ const App = ()=>{
                     <li><Link to='/about'>About</Link></li>
                     <li><Link to='/topics'>Topics</Link></li>
                 </ul>
+                <Test />
                 <hr/>
                 {/*exact    精确匹配 不填就是false*/}
+                {/*重定向到首页*/}
+                {/* <Route exact  path='/'  render={()=><Redirect to="/about"/>} /> */}
                 <Route exact  path='/' component={Home} />
                 <Route path='/about' component={About} />
                 <Route path='/topics' component={Topics} />
@@ -59,9 +62,19 @@ const App = ()=>{
     )
 }
 
+const  Test   = withRouter(({history,location,match})=>{ 
+    console.log(history,match,location)
+    return <div>{location.pathname}</div>
+})
+const NotFind = ()=>(
+    <div>
+        <h1>NotFind</h1>
+    </div>
+)
 const Home = ()=>(
     <div>
-        <h1>Home</h1>
+        <h1>Home</h1><Prompt message="您确定您要离开当前页面吗？"/>
+
     </div>
 )
 const About = ()=>(
@@ -70,7 +83,7 @@ const About = ()=>(
     </div>
 )
 const Topics = ({match,location,history})=>{
-    console.log(match)
+    console.log(history)
     return (
         <div>
             <h2>Topics</h2>
@@ -78,6 +91,7 @@ const Topics = ({match,location,history})=>{
                 <li><Link to={`${match.url}/rendering`}>Rendering with React</Link></li>
                 <li><Link to={`${match.url}/Components`}>Components</Link></li>
                 <li><Link to={`${match.url}/Props-v-State`}>Props v. State </Link></li>
+                <button onClick={()=>history.push('/about')}>跳转到About</button>
                 <li>
                     {/*NavLink当它与当前URL匹配时，它的特殊版本将为呈现的元素添加样式属性*/}
                     <NavLink to={`${match.url}/text`} activeStyle={{
