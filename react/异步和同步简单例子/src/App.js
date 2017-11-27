@@ -34,7 +34,15 @@ const async_fetch_data = (data)=>(dispatch,getState)=>{
     })
   },2000)
 }
-
+const async_fetch_promise_data = (data)=>(dispatch,getState)=>new Promise((resolve,reject)=>{
+  dispatch({type:"PROMISE_START"})
+  return setTimeout(()=>{
+    dispatch({
+      type:"ASYNC_FETCH_PROMISE_DATA",
+      payload:data
+    })
+  },2000)
+})
 
 // state状态 是基本类型
 const count = (state =0, action) => {
@@ -91,13 +99,25 @@ const get_async_data = (state =[], action) => {
       return state
   }
 }
+const get_async_promise_data = (state =[], action) => {
+  switch (action.type) {
+    case 'ASYNC_FETCH_PROMISE_DATA':
+      return [
+        ...state,
+        action.payload
+      ];
+    default:
+      return state
+  }
+}
 
 const rootReducers = combineReducers({
   count,
   BoolState,
   get_data_arr,
   get_data_obj,
-  get_async_data
+  get_async_data,
+  get_async_promise_data
 })
 
 const store = createStore(rootReducers,applyMiddleware(thunk,createLogger()))
@@ -118,7 +138,8 @@ class App extends Component {
         </header>
           <Button onClick={()=>store.dispatch(actionCreator_count())}>点击+1</Button>
           <Button onClick={()=>store.dispatch(actionCreator_fetchdata_arr('state返回的状态是arr'))}>fetch数据,state是数组</Button>
-          <Button onClick={()=>store.dispatch(async_fetch_data({name:'poetries',age:22}))}>异步获取数据</Button>
+          <Button onClick={()=>store.dispatch(async_fetch_data({name:'poetries',age:22}))}>redux异步获取数据</Button>
+          <Button onClick={()=>store.dispatch(async_fetch_promise_data({name:'poetries',age:22}))}>promise异步获取数据</Button>
           <Button onClick={()=>store.dispatch(actionCreator_fetchdata_obj('state返回的状态是obj'))}>fetch数据,state是对象</Button>
           <Button onClick={()=>store.dispatch(actionCreator_bool())}>state是布尔值</Button>
       </div>
