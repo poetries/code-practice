@@ -1,8 +1,9 @@
 import {combineReducers} from 'redux';
-import Auth from './example';
+import {Auth,News_data} from './example';
 
 const reducers = {
-  Auth
+  Auth,
+  News_data
 }
 
 export default combineReducers({

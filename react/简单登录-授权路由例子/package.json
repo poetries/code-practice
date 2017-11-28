@@ -5,6 +5,7 @@
   "dependencies": {
     "antd-mobile": "^2.0.3",
     "autoprefixer": "7.1.6",
+    "axios": "^0.17.1",
     "babel-core": "6.26.0",
     "babel-eslint": "7.2.3",
     "babel-jest": "20.0.3",
@@ -60,7 +61,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
-	"server": "nodemon server/server.js"
+    "server": "nodemon server/server.js"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -112,5 +113,6 @@
   },
   "eslintConfig": {
     "extends": "react-app"
-  }
+  },
+  "proxy": "http://localhost:3000"
 }
